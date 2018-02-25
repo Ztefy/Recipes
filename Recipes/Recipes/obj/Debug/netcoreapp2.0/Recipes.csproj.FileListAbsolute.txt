@@ -1,0 +1,11 @@
+F:\Coding\Projects\Recipes\Recipes\Recipes\bin\Debug\netcoreapp2.0\Recipes.deps.json
+F:\Coding\Projects\Recipes\Recipes\Recipes\bin\Debug\netcoreapp2.0\Recipes.runtimeconfig.json
+F:\Coding\Projects\Recipes\Recipes\Recipes\bin\Debug\netcoreapp2.0\Recipes.runtimeconfig.dev.json
+F:\Coding\Projects\Recipes\Recipes\Recipes\bin\Debug\netcoreapp2.0\Recipes.dll
+F:\Coding\Projects\Recipes\Recipes\Recipes\bin\Debug\netcoreapp2.0\Recipes.pdb
+F:\Coding\Projects\Recipes\Recipes\Recipes\obj\Debug\netcoreapp2.0\Recipes.csprojResolveAssemblyReference.cache
+F:\Coding\Projects\Recipes\Recipes\Recipes\obj\Debug\netcoreapp2.0\Recipes.csproj.CoreCompileInputs.cache
+F:\Coding\Projects\Recipes\Recipes\Recipes\obj\Debug\netcoreapp2.0\Recipes.AssemblyInfoInputs.cache
+F:\Coding\Projects\Recipes\Recipes\Recipes\obj\Debug\netcoreapp2.0\Recipes.AssemblyInfo.cs
+F:\Coding\Projects\Recipes\Recipes\Recipes\obj\Debug\netcoreapp2.0\Recipes.dll
+F:\Coding\Projects\Recipes\Recipes\Recipes\obj\Debug\netcoreapp2.0\Recipes.pdb
