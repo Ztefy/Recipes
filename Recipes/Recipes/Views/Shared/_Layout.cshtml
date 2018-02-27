@@ -7,20 +7,20 @@
     <link href="~/lib/font-awesome/web-fonts-with-css/css/fontawesome-all.min.css" rel="stylesheet" />
 </head>
 <body>
-    <div class="navbar navbar-inverse">
-        <header class="container">
-            <div class="navbar-header">
-            <div class="navbar-brand"><i class="fa fa-utensils"></i> Recipe Project</div>
-            <button class="navbar-toggle" data-toggle="collapse" data-target="#menu">&#9776;</button>
-            </div>
-            <div id="menu" class="collapse navbar-collapse">
-                <ul class="nav navbar-nav">
-                    <li><a asp-controller="App" asp-action="Index">Home</a></li>
-                    <li><a asp-controller="App" asp-action="Recipe">Recipe</a></li>
-                </ul>
-            </div>
-        </header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" asp-controller="App" asp-action="Index"><i class="fa fa-utensils"></i> Recipe Project</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" asp-controller="App" asp-action="Recipe">Recipe</a>
+                </li>
+            </ul>
         </div>
+    </nav>
 
     <section class="container">
         <h2 class="text-center">@ViewBag.Title</h2>
