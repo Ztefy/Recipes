@@ -20,5 +20,12 @@ namespace Recipes.Controllers
 
             return View();
         }
+
+        public IActionResult RecipeResults()
+        {
+            ViewBag.Title = "Recipe Results";
+
+            return View();
+        }
     }
 }
