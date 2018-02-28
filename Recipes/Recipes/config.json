@@ -1,0 +1,5 @@
+{
+  "ConnectionStrings": {
+    "RecipeConnectionString":  "server=(localdb)\\ProjectsV13;Database=RecipeDb;Integrated Security=true;MultipleActiveResultSets=true;"
+  }
+}
