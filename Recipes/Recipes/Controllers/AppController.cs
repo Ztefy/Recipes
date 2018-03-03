@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Recipes.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,13 @@ namespace Recipes.Controllers
 {
     public class AppController : Controller
     {
+        private readonly IRecipeRepository _repository;
+
+        public AppController(IRecipeRepository repository)
+        {
+            _repository = repository;
+        }
+
         public IActionResult Index()
         {
             return View();
@@ -26,6 +34,13 @@ namespace Recipes.Controllers
             ViewBag.Title = "Recipe Results";
 
             return View();
+        }
+
+        public IActionResult Test()
+        {
+            var results = _repository.GetAllRecipes();
+
+            return View(results);
         }
     }
 }

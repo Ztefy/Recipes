@@ -6,6 +6,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Data\ingredientpreparation.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Data\Seeders\ingredientpreparation.json" />
+    <None Include="wwwroot\img\balsamiclamb.jpg" />
+    <None Include="wwwroot\img\vealragu.jpg" />
+    <None Include="wwwroot\img\venetianduck.jpg" />
     <None Include="wwwroot\index.html" />
   </ItemGroup>
 

@@ -1,0 +1,50 @@
+[
+  {
+    "Measurement": "pinch"
+  },
+  {
+    "Measurement": "tsp"
+  },
+  {
+    "Measurement": "tbsp"
+  },
+  {
+    "Measurement": "dl"
+  },
+  {
+    "Measurement": "cup"
+  },
+  {
+    "Measurement": "g"
+  },
+  {
+    "Measurement": "kg"
+  },
+  {
+    "Measurement": "lb"
+  },
+  {
+    "Measurement": "oz"
+  },
+  {
+    "Measurement": "stick"
+  },
+  {
+    "Measurement": "ml"
+  },
+  {
+    "Measurement": "L"
+  },
+  {
+    "Measurement": "fl oz"
+  },
+  {
+    "Measurement": "pt"
+  },
+  {
+    "Measurement": "qt"
+  },
+  {
+    "Measurement": "gal"
+  }
+]

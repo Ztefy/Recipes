@@ -14,11 +14,13 @@ namespace Recipes
 {
     public class Startup
     {
-        public IConfiguration _config;
+        private readonly IConfiguration _config;
+        private readonly IHostingEnvironment _env;
 
-        public Startup(IConfiguration config)
+        public Startup(IConfiguration config, IHostingEnvironment env)
         {
             _config = config;
+            _env = env;
         }
 
         // This method gets called by the runtime. Use this method to add services to the container.
@@ -29,6 +31,10 @@ namespace Recipes
             {
                 cfg.UseSqlServer(_config.GetConnectionString("RecipeConnectionString"));
             });
+
+            services.AddTransient<RecipeSeeder>();
+
+            services.AddScoped<IRecipeRepository, RecipeRepository>();
 
             services.AddMvc();
         }
@@ -53,6 +59,16 @@ namespace Recipes
                 "{controller}/{action}/{id?}",
                 new { controller = "App", Action = "Index" });
             });
+
+            if (env.IsDevelopment())
+            {
+                // Seed the database
+                using (var scope = app.ApplicationServices.CreateScope())
+                {
+                    var seeder = scope.ServiceProvider.GetService<RecipeSeeder>();
+                    seeder.Seed();
+                }
+            }
         }
     }
 }

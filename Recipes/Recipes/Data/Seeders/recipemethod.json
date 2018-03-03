@@ -1,0 +1,57 @@
+[
+  {
+    "StepNumber": 1,
+    "Method": "Heat 1 tbsp oil in a large pan over a medium heat. Sauté the onion, stirring occasionally, for 5 minutes or until softened. Spoon onto a plate and set aside.",
+    "RecipeId": 1
+  },
+  {
+    "StepNumber": 2,
+    "Method": "Return the pan to the heat and increase the temperature to high. When hot, add the remaining oil and warm through for a few seconds before adding the veal. Fry for 8-10 minutes, stirring very occasionally, until well browned.",
+    "RecipeId": 1
+  },
+  {
+    "StepNumber": 3,
+    "Method": "Return the onion to the pan and stir in the flour. Add the wine, bay leaves, stock and 250ml boiling water. Bring to the boil, reduce the heat and leave to simmer for about 1 hour, uncovered, or until reduced slightly, adding a splash of extra boiling water if the mixture starts to look dry. Remove the bay leaves. Season to taste.",
+    "RecipeId": 1
+  },
+  {
+    "StepNumber": 4,
+    "Method": "Serve with hot tagliatelle pasta and a generous amount of finely chopped flat leaf parsley and grated Parmigiano Reggiano cheese.",
+    "RecipeId": 1
+  },
+  {
+    "StepNumber": 1,
+    "Method": "Make the marinade: mix the sugar, lemon juice and zest with the olive oil, balsamic and some seasoning. Stir to dissolve the sugar then mix in the garlic and mint. Reserve half of the marinade to use as a dressing for the lamb later.",
+    "RecipeId": 2
+  },
+  {
+    "StepNumber": 2,
+    "Method": "Open out the meat and lay it in a deep tray. Pour the marinade on top then turn to coat all over in the mix. Cover with cling film and leave for 1 hr or overnight in the fridge.",
+    "RecipeId": 2
+  },
+  {
+    "StepNumber": 3,
+    "Method": "Remove the lamb from the fridge and shake off any excess marinade back into the tray. Insert a skewer so that it goes from one corner to the opposite one. Do the same with another skewer in the opposite direction – this makes it really easy to turn the meat on the barbecue.",
+    "RecipeId": 2
+  },
+  {
+    "StepNumber": 4,
+    "Method": "Heat a barbecue or griddle pan until it’s a medium heat. Cook the lamb for 15-20 mins, turning frequently for pink lamb or longer if you prefer it more done. When cooked, rest for 5-10 mins before taking out the skewers, slicing and serving with the reserved marinade for pouring over.",
+    "RecipeId": 2
+  },
+  {
+    "StepNumber": 1,
+    "Method": "Heat the oil in a large pan. Add the duck legs and brown on all sides for about 10 mins. Remove to a plate and set aside. Add the onions to the pan and cook for 5 mins until softened. Add the garlic and cook for a further 1 min, then stir in the cinnamon and flour and cook for a further min. Return the duck to the pan, add the wine, tomatoes, stock, herbs, sugar and seasoning. Bring to a simmer, then lower the heat, cover with a lid and cook for 2 hrs, stirring every now and then.",
+    "RecipeId": 3
+  },
+  {
+    "StepNumber": 2,
+    "Method": "Carefully lift the duck legs out of the sauce and place on a plate – they will be very tender so try not to lose any of the meat. Pull off and discard the fat, then shred the meat with 2 forks and discard the bones. Add the meat back to the sauce with the milk and simmer, uncovered, for a further 10-15 mins while you cook the pasta.",
+    "RecipeId": 3
+  },
+  {
+    "StepNumber": 3,
+    "Method": "Cook the pasta following pack instructions, then drain, reserving a cup of the pasta water, and add the pasta to the ragú. Stir to coat all the pasta in the sauce and cook for 1 min more, adding a splash of cooking liquid if it looks dry. Serve with grated Parmesan, if you like.",
+    "RecipeId": 3
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "TimingTypeId": 2,
+    "Quantity": 5,
+    "TimeMeasId": 2,
+    "RecipeId": 1
+  },
+  {
+    "TimingTypeId": 3,
+    "Quantity": 75,
+    "TimeMeasId": 2,
+    "RecipeId": 1
+  },
+  {
+    "TimingTypeId": 1,
+    "Quantity": 1,
+    "TimeMeasId": 3,
+    "RecipeId": 2
+  },
+  {
+    "TimingTypeId": 2,
+    "Quantity": 20,
+    "TimeMeasId": 2,
+    "RecipeId": 2
+  },
+  {
+    "TimingTypeId": 3,
+    "Quantity": 20,
+    "TimeMeasId": 2,
+    "RecipeId": 2
+  },
+  {
+    "TimingTypeId": 2,
+    "Quantity": 15,
+    "TimeMeasId": 2,
+    "RecipeId": 3
+  },
+  {
+    "TimingTypeId": 3,
+    "Quantity": 150,
+    "TimeMeasId": 2,
+    "RecipeId": 3
+  }
+]

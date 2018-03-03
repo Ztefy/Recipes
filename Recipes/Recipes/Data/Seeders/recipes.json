@@ -1,0 +1,31 @@
+[
+  {
+    "RecipeName": "Easy veal ragú with red wine",
+    "RecipeImage": "vealragu",
+    "Portions": 4,
+    "Rating": 5,
+    "SkillId": 2,
+    "CourseId": 7,
+    "CategoryId": 20
+  },
+
+  {
+    "RecipeName": "Barbecued lamb with sweet mint dressing",
+    "RecipeImage": "balsamiclamb",
+    "Portions": 2,
+    "Rating": 5,
+    "SkillId": 2,
+    "CourseId": 7,
+    "CategoryId": 18
+  },
+
+  {
+    "RecipeName": "Venetian duck ragu",
+    "RecipeImage": "venetianduck",
+    "Portions": 6,
+    "Rating": 5,
+    "SkillId": 3,
+    "CourseId": 7,
+    "CategoryId": 16
+  }
+]

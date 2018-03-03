@@ -1,0 +1,17 @@
+[
+  {
+    "Type": "Marinade"
+  },
+  {
+    "Type": "Prep"
+  },
+  {
+    "Type": "Cook"
+  },
+  {
+    "Type": "Rest"
+  },
+  {
+    "Type": "Cooling"
+  }
+]

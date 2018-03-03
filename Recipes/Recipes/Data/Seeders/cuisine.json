@@ -1,0 +1,557 @@
+[
+  {
+    "Name": "Asian"
+  },
+  {
+    "Name": "African"
+  },
+  {
+    "Name": "Balkans"
+  },
+  {
+    "Name": "Cajun"
+  },
+  {
+    "Name": "Carribean"
+  },
+  {
+    "Name": "Central African"
+  },
+  {
+    "Name": "Creole"
+  },
+  {
+    "Name": "East African"
+  },
+  {
+    "Name": "European"
+  },
+  {
+    "Name": "Iberian"
+  },
+  {
+    "Name": "Jewish"
+  },
+  {
+    "Name": "Latin American"
+  },
+  {
+    "Name": "Mediterranean"
+  },
+  {
+    "Name": "Middle Eastern"
+  },
+  {
+    "Name": "North African"
+  },
+  {
+    "Name": "Scandinavian"
+  },
+  {
+    "Name": "Texan"
+  },
+  {
+    "Name": "West African"
+  },
+  {
+    "Name": "Afghan"
+  },
+  {
+    "Name": "Albanian"
+  },
+  {
+    "Name": "Algerian"
+  },
+  {
+    "Name": "American"
+  },
+  {
+    "Name": "Anguillan"
+  },
+  {
+    "Name": "Antigua and Barbuda"
+  },
+  {
+    "Name": "Argetinian"
+  },
+  {
+    "Name": "Aruban"
+  },
+  {
+    "Name": "Assyrian"
+  },
+  {
+    "Name": "Australian"
+  },
+  {
+    "Name": "Austrian"
+  },
+  {
+    "Name": "Azerbaijani"
+  },
+  {
+    "Name": "Bahamian"
+  },
+  {
+    "Name": "Bahraini"
+  },
+  {
+    "Name": "Bangladeshi"
+  },
+  {
+    "Name": "Barbadian"
+  },
+  {
+    "Name": "Belarusian"
+  },
+  {
+    "Name": "Belgian"
+  },
+  {
+    "Name": "Belizean"
+  },
+  {
+    "Name": "Bermudian"
+  },
+  {
+    "Name": "Bhutanese"
+  },
+  {
+    "Name": "Bolivian"
+  },
+  {
+    "Name": "Bosnian"
+  },
+  {
+    "Name": "Botswana"
+  },
+  {
+    "Name": "Burkinabe"
+  },
+  {
+    "Name": "Brazilian"
+  },
+  {
+    "Name": "British"
+  },
+  {
+    "Name": "Bruneian"
+  },
+  {
+    "Name": "Bulgarian"
+  },
+  {
+    "Name": "Burmese"
+  },
+  {
+    "Name": "Burundian"
+  },
+  {
+    "Name": "Cambodian"
+  },
+  {
+    "Name": "Cameroonian"
+  },
+  {
+    "Name": "Canadian"
+  },
+  {
+    "Name": "Chilean"
+  },
+  {
+    "Name": "Chinese"
+  },
+  {
+    "Name": "Colombian"
+  },
+  {
+    "Name": "Congolese"
+  },
+  {
+    "Name": "Costa Rican"
+  },
+  {
+    "Name": "Croatian"
+  },
+  {
+    "Name": "Cuban"
+  },
+  {
+    "Name": "Cypriot"
+  },
+  {
+    "Name": "Czech"
+  },
+  {
+    "Name": "Danish"
+  },
+  {
+    "Name": "Dominican"
+  },
+  {
+    "Name": "Ecuadorian"
+  },
+  {
+    "Name": "Egyptian"
+  },
+  {
+    "Name": "Emirati"
+  },
+  {
+    "Name": "Eritrean"
+  },
+  {
+    "Name": "Estonian"
+  },
+  {
+    "Name": "Ethiopian"
+  },
+  {
+    "Name": "Filipino"
+  },
+  {
+    "Name": "Fijian"
+  },
+  {
+    "Name": "Finnish"
+  },
+  {
+    "Name": "French"
+  },
+  {
+    "Name": "Gibraltarian"
+  },
+  {
+    "Name": "Georgian"
+  },
+  {
+    "Name": "German"
+  },
+  {
+    "Name": "Ghanaian"
+  },
+  {
+    "Name": "Greek"
+  },
+  {
+    "Name": "Grenadian"
+  },
+  {
+    "Name": "Guadeloupe"
+  },
+  {
+    "Name": "Guatemalan"
+  },
+  {
+    "Name": "Guianan"
+  },
+  {
+    "Name": "Guyanese"
+  },
+  {
+    "Name": "Haitian"
+  },
+  {
+    "Name": "Hawaiian"
+  },
+  {
+    "Name": "Honduran"
+  },
+  {
+    "Name": "Hungarian"
+  },
+  {
+    "Name": "Icelandic"
+  },
+  {
+    "Name": "Iranian"
+  },
+  {
+    "Name": "Indian"
+  },
+  {
+    "Name": "Indonesian"
+  },
+  {
+    "Name": "Iraqi"
+  },
+  {
+    "Name": "Irish"
+  },
+  {
+    "Name": "Israeli"
+  },
+  {
+    "Name": "Italian"
+  },
+  {
+    "Name": "Ivorian"
+  },
+  {
+    "Name": "Jamaican"
+  },
+  {
+    "Name": "Japanese"
+  },
+  {
+    "Name": "Jordanian"
+  },
+  {
+    "Name": "Kazakh"
+  },
+  {
+    "Name": "Kazakhstani"
+  },
+  {
+    "Name": "Kenyan"
+  },
+  {
+    "Name": "Korean"
+  },
+  {
+    "Name": "Krygyzstani"
+  },
+  {
+    "Name": "Kuwaiti"
+  },
+  {
+    "Name": "Laotian"
+  },
+  {
+    "Name": "Lappish"
+  },
+  {
+    "Name": "Latvian"
+  },
+  {
+    "Name": "Lebanese"
+  },
+  {
+    "Name": "Libyan"
+  },
+  {
+    "Name": "Liechtensteiner"
+  },
+  {
+    "Name": "Lithuanian"
+  },
+  {
+    "Name": "Luxembourgian"
+  },
+  {
+    "Name": "Maasai"
+  },
+  {
+    "Name": "Macedonian"
+  },
+  {
+    "Name": "Malagasy"
+  },
+  {
+    "Name": "Malay"
+  },
+  {
+    "Name": "Malaysian"
+  },
+  {
+    "Name": "Maldivian"
+  },
+  {
+    "Name": "Maltese"
+  },
+  {
+    "Name": "Martinican"
+  },
+  {
+    "Name": "Mauritian"
+  },
+  {
+    "Name": "Mexican"
+  },
+  {
+    "Name": "Moldovan"
+  },
+  {
+    "Name": "Mongolian"
+  },
+  {
+    "Name": "Montenegrin"
+  },
+  {
+    "Name": "Montserrat"
+  },
+  {
+    "Name": "Moroccan"
+  },
+  {
+    "Name": "Namibian"
+  },
+  {
+    "Name": "Nepalese"
+  },
+  {
+    "Name": "New Zealand"
+  },
+  {
+    "Name": "Nicaraguan"
+  },
+  {
+    "Name": "Nigerian"
+  },
+  {
+    "Name": "Norwegian"
+  },
+  {
+    "Name": "Omani"
+  },
+  {
+    "Name": "Pakistani"
+  },
+  {
+    "Name": "Palauan"
+  },
+  {
+    "Name": "Panamanian"
+  },
+  {
+    "Name": "Paraguayan"
+  },
+  {
+    "Name": "Pascuense"
+  },
+  {
+    "Name": "Peruvian"
+  },
+  {
+    "Name": "Polish"
+  },
+  {
+    "Name": "Portugese"
+  },
+  {
+    "Name": "Puerto Rican"
+  },
+  {
+    "Name": "Qatari"
+  },
+  {
+    "Name": "Romanian"
+  },
+  {
+    "Name": "Russian"
+  },
+  {
+    "Name": "Saint Lucian"
+  },
+  {
+    "Name": "Saint Vincent"
+  },
+  {
+    "Name": "Salvadoran"
+  },
+  {
+    "Name": "Samoan"
+  },
+  {
+    "Name": "Saudi Arabian"
+  },
+  {
+    "Name": "Senegalese"
+  },
+  {
+    "Name": "Sierra Leonean"
+  },
+  {
+    "Name": "Singaporean"
+  },
+  {
+    "Name": "Slovak"
+  },
+  {
+    "Name": "Slovenian"
+  },
+  {
+    "Name": "Spanish"
+  },
+  {
+    "Name": "Somali"
+  },
+  {
+    "Name": "South African"
+  },
+  {
+    "Name": "Sri Lankan"
+  },
+  {
+    "Name": "Sudanese"
+  },
+  {
+    "Name": "Surinamese"
+  },
+  {
+    "Name": "Swedish"
+  },
+  {
+    "Name": "Swiss"
+  },
+  {
+    "Name": "Syrian"
+  },
+  {
+    "Name": "Taiwanese"
+  },
+  {
+    "Name": "Tajik"
+  },
+  {
+    "Name": "Tanzanian"
+  },
+  {
+    "Name": "Tasmanian"
+  },
+  {
+    "Name": "Thai"
+  },
+  {
+    "Name": "Tongan"
+  },
+  {
+    "Name": "Trinidad and Tobago"
+  },
+  {
+    "Name": "Tunisian"
+  },
+  {
+    "Name": "Turkish"
+  },
+  {
+    "Name": "Turkmen"
+  },
+  {
+    "Name": "Turks and Caicos"
+  },
+  {
+    "Name": "Ugandan"
+  },
+  {
+    "Name": "Ukrainian"
+  },
+  {
+    "Name": "Uruguayan"
+  },
+  {
+    "Name": "Uzbek"
+  },
+  {
+    "Name": "Venezuelan"
+  },
+  {
+    "Name": "Vietnamese"
+  },
+  {
+    "Name": "Yemeni"
+  },
+  {
+    "Name": "Zimbabwean"
+  }
+]

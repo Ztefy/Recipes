@@ -1,0 +1,205 @@
+[
+  {
+    "IngredientId": 1,
+    "Quantity": 2,
+    "IngrMeasId": 3,
+    "IngPrepId": null,
+    "RecipeId": 1
+  },
+  {
+    "IngredientId": 2,
+    "Quantity": 1,
+    "IngrMeasId": null,
+    "IngPrepId": 1,
+    "RecipeId": 1
+  },
+  {
+    "IngredientId": 3,
+    "Quantity": 450,
+    "IngrMeasId": 6,
+    "IngPrepId": 21,
+    "RecipeId": 1
+  },
+  {
+    "IngredientId": 4,
+    "Quantity": 1,
+    "IngrMeasId": 3,
+    "IngPrepId": null,
+    "RecipeId": 1
+  },
+  {
+    "IngredientId": 5,
+    "Quantity": 150,
+    "IngrMeasId": 11,
+    "IngPrepId": null,
+    "RecipeId": 1
+  },
+  {
+    "IngredientId": 6,
+    "Quantity": 4,
+    "IngrMeasId": null,
+    "IngPrepId": null,
+    "RecipeId": 1
+  },
+  {
+    "IngredientId": 7,
+    "Quantity": 500,
+    "IngrMeasId": 5,
+    "IngPrepId": null,
+    "RecipeId": 1
+  },
+  {
+    "IngredientId": 8,
+    "Quantity": 2,
+    "IngrMeasId": 3,
+    "IngPrepId": null,
+    "RecipeId": 2
+  },
+  {
+    "IngredientId": 9,
+    "Quantity": 1,
+    "IngrMeasId": null,
+    "IngPrepId": 12,
+    "RecipeId": 2
+  },
+  {
+    "IngredientId": 1,
+    "Quantity": 125,
+    "IngrMeasId": 11,
+    "IngPrepId": null,
+    "RecipeId": 2
+  },
+  {
+    "IngredientId": 10,
+    "Quantity": 8,
+    "IngrMeasId": 3,
+    "IngPrepId": null,
+    "RecipeId": 2
+  },
+  {
+    "IngredientId": 11,
+    "Quantity": 2,
+    "IngrMeasId": null,
+    "IngPrepId": 19,
+    "RecipeId": 2
+  },
+  {
+    "IngredientId": 12,
+    "Quantity": 4,
+    "IngrMeasId": 3,
+    "IngPrepId": 5,
+    "RecipeId": 2
+  },
+  {
+    "IngredientId": 13,
+    "Quantity": 400,
+    "IngrMeasId": 6,
+    "IngPrepId": null,
+    "RecipeId": 2
+  },
+  {
+    "IngredientId": 1,
+    "Quantity": 1,
+    "IngrMeasId": 3,
+    "IngPrepId": null,
+    "RecipeId": 3
+  },
+  {
+    "IngredientId": 14,
+    "Quantity": 4,
+    "IngrMeasId": null,
+    "IngPrepId": null,
+    "RecipeId": 3
+  },
+  {
+    "IngredientId": 15,
+    "Quantity": 2,
+    "IngrMeasId": null,
+    "IngPrepId": 6,
+    "RecipeId": 3
+  },
+  {
+    "IngredientId": 11,
+    "Quantity": 2,
+    "IngrMeasId": null,
+    "IngPrepId": 19,
+    "RecipeId": 3
+  },
+  {
+    "IngredientId": 16,
+    "Quantity": 2,
+    "IngrMeasId": 2,
+    "IngPrepId": null,
+    "RecipeId": 3
+  },
+  {
+    "IngredientId": 4,
+    "Quantity": 2,
+    "IngrMeasId": 2,
+    "IngPrepId": null,
+    "RecipeId": 3
+  },
+  {
+    "IngredientId": 5,
+    "Quantity": 250,
+    "IngrMeasId": 11,
+    "IngPrepId": null,
+    "RecipeId": 3
+  },
+  {
+    "IngredientId": 17,
+    "Quantity": 800,
+    "IngrMeasId": 6,
+    "IngPrepId": 5,
+    "RecipeId": 3
+  },
+  {
+    "IngredientId": 18,
+    "Quantity": 1,
+    "IngrMeasId": null,
+    "IngPrepId": null,
+    "RecipeId": 3
+  },
+  {
+    "IngredientId": 23,
+    "Quantity": 3,
+    "IngrMeasId": null,
+    "IngPrepId": 5,
+    "RecipeId": 3
+  },
+  {
+    "IngredientId": 6,
+    "Quantity": 2,
+    "IngrMeasId": null,
+    "IngPrepId": null,
+    "RecipeId": 3
+  },
+  {
+    "IngredientId": 20,
+    "Quantity": 1,
+    "IngrMeasId": 2,
+    "IngPrepId": null,
+    "RecipeId": 3
+  },
+  {
+    "IngredientId": 19,
+    "Quantity": 2,
+    "IngrMeasId": 3,
+    "IngPrepId": null,
+    "RecipeId": 3
+  },
+  {
+    "IngredientId": 21,
+    "Quantity": 600,
+    "IngrMeasId": 6,
+    "IngPrepId": null,
+    "RecipeId": 3
+  },
+  {
+    "IngredientId": 22,
+    "Quantity": null,
+    "IngrMeasId": null,
+    "IngPrepId": 18,
+    "RecipeId": 3
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "Type": "Calories"
+  },
+  {
+    "Type": "Fat"
+  },
+  {
+    "Type": "Saturated Fat"
+  },
+  {
+    "Type": "Carbohydrates"
+  },
+  {
+    "Type": "Sugars"
+  },
+  {
+    "Type": "Fibre"
+  },
+  {
+    "Type": "Protein"
+  },
+  {
+    "Type": "Salt"
+  }
+]
