@@ -6,7 +6,7 @@
     "Rating": 5,
     "SkillId": 2,
     "CourseId": 7,
-    "CategoryId": 20
+    "CategoryId": 18
   },
 
   {
@@ -16,7 +16,7 @@
     "Rating": 5,
     "SkillId": 2,
     "CourseId": 7,
-    "CategoryId": 18
+    "CategoryId": 16
   },
 
   {
@@ -26,6 +26,6 @@
     "Rating": 5,
     "SkillId": 3,
     "CourseId": 7,
-    "CategoryId": 16
+    "CategoryId": 14
   }
 ]

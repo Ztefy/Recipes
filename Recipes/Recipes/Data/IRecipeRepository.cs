@@ -6,7 +6,9 @@ namespace Recipes.Data
     public interface IRecipeRepository
     {
         IEnumerable<Recipe> GetAllRecipes();
-        IEnumerable<Recipe> GetProductsByCategory(string category);
+        IEnumerable<Recipe> GetRecipesByCategory(string category);
+        Recipe GetRecipeById(int id);
+
         bool SaveAll();
     }
 

@@ -11,6 +11,7 @@ namespace Recipes.Data.Entities
     {
         [Key]
         public int Id { get; set; }
+        public int NutritionId { get; set; }
         public Nutrition Type { get; set; }
         public string Quantity { get; set; }
         public int NutrMeasId { get; set; }

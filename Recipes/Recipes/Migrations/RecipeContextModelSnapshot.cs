@@ -11,10 +11,9 @@ using System;
 namespace Recipes.Migrations
 {
     [DbContext(typeof(RecipeContext))]
-    [Migration("20180303015415_Update")]
-    partial class Update
+    partial class RecipeContextModelSnapshot : ModelSnapshot
     {
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -174,11 +173,11 @@ namespace Recipes.Migrations
 
                     b.Property<int?>("IngrMeasId");
 
-                    b.Property<int?>("IngredientId");
+                    b.Property<int>("IngredientId");
 
-                    b.Property<int>("Quantity");
+                    b.Property<int?>("Quantity");
 
-                    b.Property<int?>("RecipeId");
+                    b.Property<int>("RecipeId");
 
                     b.HasKey("Id");
 
@@ -234,19 +233,19 @@ namespace Recipes.Migrations
 
                     b.Property<int>("NutrMeasId");
 
+                    b.Property<int>("NutritionId");
+
                     b.Property<string>("Quantity");
 
                     b.Property<int>("RecipeId");
-
-                    b.Property<int?>("TypeNutritionId");
 
                     b.HasKey("Id");
 
                     b.HasIndex("NutrMeasId");
 
-                    b.HasIndex("RecipeId");
+                    b.HasIndex("NutritionId");
 
-                    b.HasIndex("TypeNutritionId");
+                    b.HasIndex("RecipeId");
 
                     b.ToTable("RecipeNutrition");
                 });
@@ -290,7 +289,7 @@ namespace Recipes.Migrations
 
                     b.HasIndex("TimingTypeId");
 
-                    b.ToTable("RecipeTiming");
+                    b.ToTable("RecipeTimings");
                 });
 
             modelBuilder.Entity("Recipes.Data.Entities.Skill", b =>
@@ -384,11 +383,13 @@ namespace Recipes.Migrations
 
                     b.HasOne("Recipes.Data.Entities.Ingredient", "Ingredient")
                         .WithMany()
-                        .HasForeignKey("IngredientId");
+                        .HasForeignKey("IngredientId")
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("Recipes.Data.Entities.Recipe", "Recipe")
                         .WithMany("Ingredients")
-                        .HasForeignKey("RecipeId");
+                        .HasForeignKey("RecipeId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("Recipes.Data.Entities.RecipeMethod", b =>
@@ -414,14 +415,15 @@ namespace Recipes.Migrations
                         .HasForeignKey("NutrMeasId")
                         .OnDelete(DeleteBehavior.Cascade);
 
+                    b.HasOne("Recipes.Data.Entities.Nutrition", "Type")
+                        .WithMany()
+                        .HasForeignKey("NutritionId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
                     b.HasOne("Recipes.Data.Entities.Recipe", "Recipe")
                         .WithMany("Nutrition")
                         .HasForeignKey("RecipeId")
                         .OnDelete(DeleteBehavior.Cascade);
-
-                    b.HasOne("Recipes.Data.Entities.Nutrition", "Type")
-                        .WithMany()
-                        .HasForeignKey("TypeNutritionId");
                 });
 
             modelBuilder.Entity("Recipes.Data.Entities.RecipeTags", b =>

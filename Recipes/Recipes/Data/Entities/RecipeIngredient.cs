@@ -11,12 +11,14 @@ namespace Recipes.Data.Entities
     {
         [Key]
         public int Id { get; set; }
+        public int IngredientId { get; set;}
         public Ingredient Ingredient { get; set; }
         public int? Quantity { get; set; }
         public int? IngrMeasId { get; set; }
         public IngredientMeasurement Measurement { get; set; }
         public int? IngPrepId { get; set; }
         public IngredientPreparation Preparation { get; set; }
+        public int RecipeId { get; set; }
         public Recipe Recipe { get; set; }
     }
 }

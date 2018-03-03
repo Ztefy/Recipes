@@ -9,9 +9,10 @@
                 <br />Portions: @r.Portions
                 <br />Prep time: 30 mins
                 <br />Cook time: 40 mins
-                <br />Skill: @r.SkillId
+                <br />Skill: @r.Skill.SkillLevel
                 <br />Rating: @r.Rating
-                <p class="card-text"><small class="text-muted">Calories: 500kcal</small></p>
+                <p class="card-text"><small class="text-muted">Calories: @r.Nutrition.Quantity()
+                    500kcal</small></p>
             </div>
         </div>
     }

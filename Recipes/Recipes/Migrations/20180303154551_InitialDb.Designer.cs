@@ -11,7 +11,7 @@ using System;
 namespace Recipes.Migrations
 {
     [DbContext(typeof(RecipeContext))]
-    [Migration("20180303003840_InitialDb")]
+    [Migration("20180303154551_InitialDb")]
     partial class InitialDb
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -170,15 +170,15 @@ namespace Recipes.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<int>("IngPrepId");
+                    b.Property<int?>("IngPrepId");
 
-                    b.Property<int>("IngrMeasId");
+                    b.Property<int?>("IngrMeasId");
 
-                    b.Property<int?>("IngredientId");
+                    b.Property<int>("IngredientId");
 
-                    b.Property<int>("Quantity");
+                    b.Property<int?>("Quantity");
 
-                    b.Property<int?>("RecipeId");
+                    b.Property<int>("RecipeId");
 
                     b.HasKey("Id");
 
@@ -234,19 +234,19 @@ namespace Recipes.Migrations
 
                     b.Property<int>("NutrMeasId");
 
+                    b.Property<int>("NutritionId");
+
                     b.Property<string>("Quantity");
 
                     b.Property<int>("RecipeId");
-
-                    b.Property<int?>("TypeNutritionId");
 
                     b.HasKey("Id");
 
                     b.HasIndex("NutrMeasId");
 
-                    b.HasIndex("RecipeId");
+                    b.HasIndex("NutritionId");
 
-                    b.HasIndex("TypeNutritionId");
+                    b.HasIndex("RecipeId");
 
                     b.ToTable("RecipeNutrition");
                 });
@@ -376,21 +376,21 @@ namespace Recipes.Migrations
                 {
                     b.HasOne("Recipes.Data.Entities.IngredientPreparation", "Preparation")
                         .WithMany()
-                        .HasForeignKey("IngPrepId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("IngPrepId");
 
                     b.HasOne("Recipes.Data.Entities.IngredientMeasurement", "Measurement")
                         .WithMany()
-                        .HasForeignKey("IngrMeasId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("IngrMeasId");
 
                     b.HasOne("Recipes.Data.Entities.Ingredient", "Ingredient")
                         .WithMany()
-                        .HasForeignKey("IngredientId");
+                        .HasForeignKey("IngredientId")
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("Recipes.Data.Entities.Recipe", "Recipe")
                         .WithMany("Ingredients")
-                        .HasForeignKey("RecipeId");
+                        .HasForeignKey("RecipeId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("Recipes.Data.Entities.RecipeMethod", b =>
@@ -416,14 +416,15 @@ namespace Recipes.Migrations
                         .HasForeignKey("NutrMeasId")
                         .OnDelete(DeleteBehavior.Cascade);
 
+                    b.HasOne("Recipes.Data.Entities.Nutrition", "Type")
+                        .WithMany()
+                        .HasForeignKey("NutritionId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
                     b.HasOne("Recipes.Data.Entities.Recipe", "Recipe")
                         .WithMany("Nutrition")
                         .HasForeignKey("RecipeId")
                         .OnDelete(DeleteBehavior.Cascade);
-
-                    b.HasOne("Recipes.Data.Entities.Nutrition", "Type")
-                        .WithMany()
-                        .HasForeignKey("TypeNutritionId");
                 });
 
             modelBuilder.Entity("Recipes.Data.Entities.RecipeTags", b =>

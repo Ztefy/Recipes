@@ -234,11 +234,11 @@ namespace Recipes.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    IngPrepId = table.Column<int>(nullable: false),
-                    IngrMeasId = table.Column<int>(nullable: false),
-                    IngredientId = table.Column<int>(nullable: true),
-                    Quantity = table.Column<int>(nullable: false),
-                    RecipeId = table.Column<int>(nullable: true)
+                    IngPrepId = table.Column<int>(nullable: true),
+                    IngrMeasId = table.Column<int>(nullable: true),
+                    IngredientId = table.Column<int>(nullable: false),
+                    Quantity = table.Column<int>(nullable: true),
+                    RecipeId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -248,25 +248,25 @@ namespace Recipes.Migrations
                         column: x => x.IngPrepId,
                         principalTable: "IngredientPreparation",
                         principalColumn: "IngPrepId",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_RecipeIngredient_IngredientMeasurement_IngrMeasId",
                         column: x => x.IngrMeasId,
                         principalTable: "IngredientMeasurement",
                         principalColumn: "IngrMeasId",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_RecipeIngredient_Ingredient_IngredientId",
                         column: x => x.IngredientId,
                         principalTable: "Ingredient",
                         principalColumn: "IngredientId",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_RecipeIngredient_Recipes_RecipeId",
                         column: x => x.RecipeId,
                         principalTable: "Recipes",
                         principalColumn: "RecipeId",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -317,9 +317,9 @@ namespace Recipes.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     NutrMeasId = table.Column<int>(nullable: false),
+                    NutritionId = table.Column<int>(nullable: false),
                     Quantity = table.Column<string>(nullable: true),
-                    RecipeId = table.Column<int>(nullable: false),
-                    TypeNutritionId = table.Column<int>(nullable: true)
+                    RecipeId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -331,17 +331,17 @@ namespace Recipes.Migrations
                         principalColumn: "NutrMeasId",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
+                        name: "FK_RecipeNutrition_Nutrition_NutritionId",
+                        column: x => x.NutritionId,
+                        principalTable: "Nutrition",
+                        principalColumn: "NutritionId",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
                         name: "FK_RecipeNutrition_Recipes_RecipeId",
                         column: x => x.RecipeId,
                         principalTable: "Recipes",
                         principalColumn: "RecipeId",
                         onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_RecipeNutrition_Nutrition_TypeNutritionId",
-                        column: x => x.TypeNutritionId,
-                        principalTable: "Nutrition",
-                        principalColumn: "NutritionId",
-                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -450,14 +450,14 @@ namespace Recipes.Migrations
                 column: "NutrMeasId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_RecipeNutrition_NutritionId",
+                table: "RecipeNutrition",
+                column: "NutritionId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_RecipeNutrition_RecipeId",
                 table: "RecipeNutrition",
                 column: "RecipeId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_RecipeNutrition_TypeNutritionId",
-                table: "RecipeNutrition",
-                column: "TypeNutritionId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Recipes_CategoryId",
