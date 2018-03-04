@@ -1,23 +1,21 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Recipes.Data;
-using Recipes.Data.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Categories.Controllers
+namespace Recipes.Controllers
 {
     [Route("api/[Controller]")]
-    public class CategoriesController : Controller
+    public class CategoryController : Controller
     {
         private readonly IRecipeRepository _repository;
-        private readonly ILogger<CategoriesController> _logger;
+        private readonly ILogger<CategoryController> _logger;
 
-        public CategoriesController(IRecipeRepository repository,
-            ILogger<CategoriesController> logger)
+        public CategoryController(IRecipeRepository repository, ILogger<CategoryController> logger)
         {
             _repository = repository;
             _logger = logger;
@@ -48,10 +46,9 @@ namespace Categories.Controllers
                 else return NotFound();
             }
             catch (Exception ex)
-            { 
+            {
                 _logger.LogError($"Failed to get category: {ex}");
                 return BadRequest("Failed to get category");
-                throw;
             }
         }
     }

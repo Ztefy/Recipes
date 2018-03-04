@@ -4,23 +4,23 @@ import { HttpClientModule } from '@angular/common/http';
 
 
 import { AppComponent } from './app.component';
-import { Results } from './results/recipeResults.component';
-import { Recipe } from './recipe/recipe.component';
-import { DataService } from './shared/dataService';
+//import { Results } from './results/recipeResults.component';
+//import { Recipe } from './recipe/recipe.component';
+//import { DataService } from './shared/dataService';
 
 import { RouterModule } from '@angular/router';
 
 let routes = [
     //{ path: "", component: Results },
     //{ path: "recipe", component: Recipe }
-    { path: "", component: Recipe }
+    //{ path: "", component: Recipe }
 ];
 
 @NgModule({
   declarations: [
-      AppComponent,
-      Results,
-      Recipe
+      AppComponent
+      //Results,
+      //Recipe
   ],
   imports: [
       BrowserModule,
@@ -31,7 +31,7 @@ let routes = [
       })
   ],
   providers: [
-      DataService
+      //DataService
   ],
   bootstrap: [AppComponent]
 })

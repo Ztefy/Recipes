@@ -10,24 +10,20 @@ var platform_browser_1 = require("@angular/platform-browser");
 var core_1 = require("@angular/core");
 var http_1 = require("@angular/common/http");
 var app_component_1 = require("./app.component");
-var recipeResults_component_1 = require("./results/recipeResults.component");
-var recipe_component_1 = require("./recipe/recipe.component");
-var dataService_1 = require("./shared/dataService");
+//import { Results } from './results/recipeResults.component';
+//import { Recipe } from './recipe/recipe.component';
+//import { DataService } from './shared/dataService';
 var router_1 = require("@angular/router");
-var routes = [
-    //{ path: "", component: Results },
-    //{ path: "recipe", component: Recipe }
-    { path: "", component: recipe_component_1.Recipe }
-];
+var routes = [];
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
             declarations: [
-                app_component_1.AppComponent,
-                recipeResults_component_1.Results,
-                recipe_component_1.Recipe
+                app_component_1.AppComponent
+                //Results,
+                //Recipe
             ],
             imports: [
                 platform_browser_1.BrowserModule,
@@ -37,9 +33,7 @@ var AppModule = /** @class */ (function () {
                     enableTracing: false // for Debugging of the Routes
                 })
             ],
-            providers: [
-                dataService_1.DataService
-            ],
+            providers: [],
             bootstrap: [app_component_1.AppComponent]
         })
     ], AppModule);
