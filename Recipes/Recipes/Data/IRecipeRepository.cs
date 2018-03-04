@@ -9,6 +9,7 @@ namespace Recipes.Data
         IEnumerable<Category> GetCategoryById(int id);
 
         bool SaveAll();
+        void AddEntity(object model);
     }
 
 }

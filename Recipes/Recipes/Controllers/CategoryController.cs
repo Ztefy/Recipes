@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Recipes.Data;
+using Recipes.Data.Entities;
+using Recipes.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -50,6 +52,45 @@ namespace Recipes.Controllers
                 _logger.LogError($"Failed to get category: {ex}");
                 return BadRequest("Failed to get category");
             }
+        }
+
+         [HttpPost]
+        public IActionResult Post ([FromBody]CategoryViewModel model)
+        {
+            // add it to the db
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    var newCategory = new Category()
+                    {
+                        CategoryId = model.CategoryId,
+                        Name = model.CategoryName
+                    };
+
+                    _repository.AddEntity(newCategory);
+                    if (_repository.SaveAll())
+                    {
+                        var vm = new CategoryViewModel()
+                        {
+                            CategoryId = newCategory.CategoryId,
+                            CategoryName = newCategory.Name
+                        };
+
+                        return Created($"/api/category/{vm.CategoryId}", vm);
+                    }
+                }
+                else
+                {
+                    return BadRequest(ModelState);
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Failed to save a new category: {ex}");
+            }
+
+            return BadRequest("Failed to save new category");
         }
     }
 }
