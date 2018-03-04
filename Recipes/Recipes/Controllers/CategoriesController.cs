@@ -8,16 +8,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Recipes.Controllers
+namespace Categories.Controllers
 {
     [Route("api/[Controller]")]
-    public class RecipesController : Controller
+    public class CategoriesController : Controller
     {
         private readonly IRecipeRepository _repository;
-        private readonly ILogger<RecipesController> _logger;
+        private readonly ILogger<CategoriesController> _logger;
 
-        public RecipesController(IRecipeRepository repository,
-            ILogger<RecipesController> logger)
+        public CategoriesController(IRecipeRepository repository,
+            ILogger<CategoriesController> logger)
         {
             _repository = repository;
             _logger = logger;
@@ -28,12 +28,12 @@ namespace Recipes.Controllers
         {
             try
             {
-                return Ok(_repository.GetAllRecipes());
+                return Ok(_repository.GetAllCategories());
             }
             catch (Exception ex)
             {
-                _logger.LogError($"Failed to get recipes: {ex}");
-                return BadRequest("Failed to get recipes");
+                _logger.LogError($"Failed to get categories: {ex}");
+                return BadRequest("Failed to get categories");
             }
         }
 
@@ -42,15 +42,16 @@ namespace Recipes.Controllers
         {
             try
             {
-                var recipe = _repository.GetRecipeById(id);
+                var category = _repository.GetCategoryById(id);
 
-                if (recipe != null) return Ok(recipe);
+                if (category != null) return Ok(category);
                 else return NotFound();
             }
             catch (Exception ex)
-            {
-                _logger.LogError($"Failed to get recipe: {ex}");
-                return BadRequest("Failed to get recipe");
+            { 
+                _logger.LogError($"Failed to get category: {ex}");
+                return BadRequest("Failed to get category");
+                throw;
             }
         }
     }

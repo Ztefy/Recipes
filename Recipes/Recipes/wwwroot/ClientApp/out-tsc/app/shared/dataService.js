@@ -15,6 +15,13 @@ require("rxjs/add/operator/map");
 var DataService = /** @class */ (function () {
     function DataService(http) {
         this.http = http;
+        //public recipe: recipes.Recipe = [];
+        //loadRecipe(id: number): recipes.Recipe {
+        //    return this.http.get('/api/recipe')
+        //        .map((data: any[]) => {
+        //            this.recipe = data;
+        //            return true;
+        //});
         this.recipes = [];
     }
     DataService.prototype.loadRecipes = function () {

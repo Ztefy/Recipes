@@ -36,11 +36,11 @@ namespace Recipes.Controllers
             return View();
         }
 
-        public IActionResult Test()
-        {
-            var results = _repository.GetAllRecipes();
+        //public IActionResult Test()
+        //{
+        //    var results = _repository.GetAllRecipes();
 
-            return View(results);
-        }
+        //    return View(results);
+        //}
     }
 }

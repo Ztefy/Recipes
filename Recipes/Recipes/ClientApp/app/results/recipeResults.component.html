@@ -1,18 +1,14 @@
-﻿<div class="row">
-    <h3>{{ title }}</h3>
-</div>
-<div class="card-deck">
-    {<div class="card" *ngFor="let r of recipes">
-        <img class="card-img-top img-fluid" src="~/img/@(r.RecipeImage).jpg" alt="@r.RecipeName">
+﻿<div class="card-deck">
+    <div *ngFor="let r of recipes" class="card">
+        <img class="card-img-top img-fluid" src="/img/{{ r.RecipeImage }}).jpg" alt="{{ r.RecipeName }}">
         <div class="card-body">
-            <h5 class="card-title">@r.RecipeName</h5>
-            <br />Portions: @r.Portions
+            <h5 class="card-title">{{ r.RecipeName }}</h5>
+            <br />Portions: {{ r.Portions }}
             <br />Prep time: 30 mins
             <br />Cook time: 40 mins
-            <br />Skill: @r.SkillId
-            <br />Rating: @r.Rating
+            <br />Skill: {{ r.Skill.SkillLevel }}
+            <br />Rating: {{ r.Rating }}
             <p class="card-text"><small class="text-muted">Calories: 500kcal</small></p>
         </div>
     </div>
-    }
 </div>

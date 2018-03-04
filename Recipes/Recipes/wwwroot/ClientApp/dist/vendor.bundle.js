@@ -33,8 +33,8 @@ webpackJsonp(["vendor"],{
 /* unused harmony export getLocaleNumberFormat */
 /* unused harmony export getLocaleCurrencyName */
 /* unused harmony export getLocaleCurrencySymbol */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return parseCookieValue; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CommonModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "k", function() { return parseCookieValue; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return CommonModule; });
 /* unused harmony export DeprecatedI18NPipesModule */
 /* unused harmony export NgClass */
 /* unused harmony export NgForOf */
@@ -49,7 +49,7 @@ webpackJsonp(["vendor"],{
 /* unused harmony export NgSwitchDefault */
 /* unused harmony export NgTemplateOutlet */
 /* unused harmony export NgComponentOutlet */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return DOCUMENT; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return DOCUMENT; });
 /* unused harmony export AsyncPipe */
 /* unused harmony export DatePipe */
 /* unused harmony export I18nPluralPipe */
@@ -66,7 +66,7 @@ webpackJsonp(["vendor"],{
 /* unused harmony export DeprecatedCurrencyPipe */
 /* unused harmony export DeprecatedDecimalPipe */
 /* unused harmony export DeprecatedPercentPipe */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return PLATFORM_BROWSER_ID; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return PLATFORM_BROWSER_ID; });
 /* unused harmony export ɵPLATFORM_SERVER_ID */
 /* unused harmony export ɵPLATFORM_WORKER_APP_ID */
 /* unused harmony export ɵPLATFORM_WORKER_UI_ID */
@@ -75,13 +75,13 @@ webpackJsonp(["vendor"],{
 /* unused harmony export isPlatformWorkerApp */
 /* unused harmony export isPlatformWorkerUi */
 /* unused harmony export VERSION */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return PlatformLocation; });
-/* unused harmony export LOCATION_INITIALIZED */
-/* unused harmony export LocationStrategy */
-/* unused harmony export APP_BASE_HREF */
-/* unused harmony export HashLocationStrategy */
-/* unused harmony export PathLocationStrategy */
-/* unused harmony export Location */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return PlatformLocation; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return LOCATION_INITIALIZED; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return LocationStrategy; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return APP_BASE_HREF; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return HashLocationStrategy; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return PathLocationStrategy; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return Location; });
 /* unused harmony export ɵe */
 /* unused harmony export ɵd */
 /* unused harmony export ɵa */
@@ -141,7 +141,7 @@ var PlatformLocation = /** @class */ (function () {
  * \@whatItDoes indicates when a location is initialized
  * \@experimental
  */
-var LOCATION_INITIALIZED = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* InjectionToken */]('Location Initialized');
+var LOCATION_INITIALIZED = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["InjectionToken"]('Location Initialized');
 /**
  * A serializable version of the event from onPopState or onHashChange
  *
@@ -211,7 +211,7 @@ var LocationStrategy = /** @class */ (function () {
  *
  * \@stable
  */
-var APP_BASE_HREF = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* InjectionToken */]('appBaseHref');
+var APP_BASE_HREF = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["InjectionToken"]('appBaseHref');
 
 /**
  * @fileoverview added by tsickle
@@ -256,7 +256,7 @@ var Location = /** @class */ (function () {
         /**
          * \@internal
          */
-        this._subject = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* EventEmitter */]();
+        this._subject = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         this._platformStrategy = platformStrategy;
         var /** @type {?} */ browserBaseHref = this._platformStrategy.getBaseHref();
         this._baseHref = Location.stripTrailingSlash(_stripIndexHtml(browserBaseHref));
@@ -512,7 +512,7 @@ var Location = /** @class */ (function () {
         return url.slice(0, droppedSlashIdx) + url.slice(pathEndIdx);
     };
     Location.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* Injectable */] },
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"] },
     ];
     /** @nocollapse */
     Location.ctorParameters = function () { return [
@@ -680,12 +680,12 @@ var HashLocationStrategy = /** @class */ (function (_super) {
      */
     function () { this._platformLocation.back(); };
     HashLocationStrategy.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* Injectable */] },
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"] },
     ];
     /** @nocollapse */
     HashLocationStrategy.ctorParameters = function () { return [
         { type: PlatformLocation, },
-        { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* Optional */] }, { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* Inject */], args: [APP_BASE_HREF,] },] },
+        { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Optional"] }, { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Inject"], args: [APP_BASE_HREF,] },] },
     ]; };
     return HashLocationStrategy;
 }(LocationStrategy));
@@ -837,12 +837,12 @@ var PathLocationStrategy = /** @class */ (function (_super) {
      */
     function () { this._platformLocation.back(); };
     PathLocationStrategy.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* Injectable */] },
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"] },
     ];
     /** @nocollapse */
     PathLocationStrategy.ctorParameters = function () { return [
         { type: PlatformLocation, },
-        { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* Optional */] }, { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* Inject */], args: [APP_BASE_HREF,] },] },
+        { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Optional"] }, { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Inject"], args: [APP_BASE_HREF,] },] },
     ]; };
     return PathLocationStrategy;
 }(LocationStrategy));
@@ -1623,7 +1623,7 @@ function getCurrencySymbol(code, format) {
 /**
  * @deprecated from v5
  */
-var DEPRECATED_PLURAL_FN = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* InjectionToken */]('UseV4Plurals');
+var DEPRECATED_PLURAL_FN = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["InjectionToken"]('UseV4Plurals');
 /**
  * \@experimental
  * @abstract
@@ -1700,12 +1700,12 @@ var NgLocaleLocalization = /** @class */ (function (_super) {
         }
     };
     NgLocaleLocalization.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* Injectable */] },
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"] },
     ];
     /** @nocollapse */
     NgLocaleLocalization.ctorParameters = function () { return [
-        { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* Inject */], args: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* LOCALE_ID */],] },] },
-        { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* Optional */] }, { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* Inject */], args: [DEPRECATED_PLURAL_FN,] },] },
+        { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Inject"], args: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["LOCALE_ID"],] },] },
+        { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Optional"] }, { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Inject"], args: [DEPRECATED_PLURAL_FN,] },] },
     ]; };
     return NgLocaleLocalization;
 }(NgLocalization));
@@ -2187,7 +2187,7 @@ var NgClass = /** @class */ (function () {
             this._keyValueDiffer = null;
             this._rawClass = typeof v === 'string' ? v.split(/\s+/) : v;
             if (this._rawClass) {
-                if (Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_24" /* ɵisListLikeIterable */])(this._rawClass)) {
+                if (Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵisListLikeIterable"])(this._rawClass)) {
                     this._iterableDiffer = this._iterableDiffers.find(this._rawClass).create();
                 }
                 else {
@@ -2263,7 +2263,7 @@ var NgClass = /** @class */ (function () {
                 _this._toggleClass(record.item, true);
             }
             else {
-                throw new Error("NgClass can only toggle CSS classes expressed as strings, got " + Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_38" /* ɵstringify */])(record.item));
+                throw new Error("NgClass can only toggle CSS classes expressed as strings, got " + Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵstringify"])(record.item));
             }
         });
         changes.forEachRemovedItem(function (record) { return _this._toggleClass(record.item, false); });
@@ -2329,18 +2329,18 @@ var NgClass = /** @class */ (function () {
         }
     };
     NgClass.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["q" /* Directive */], args: [{ selector: '[ngClass]' },] },
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Directive"], args: [{ selector: '[ngClass]' },] },
     ];
     /** @nocollapse */
     NgClass.ctorParameters = function () { return [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* IterableDiffers */], },
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* KeyValueDiffers */], },
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["r" /* ElementRef */], },
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Q" /* Renderer2 */], },
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["IterableDiffers"], },
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["KeyValueDiffers"], },
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"], },
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Renderer2"], },
     ]; };
     NgClass.propDecorators = {
-        "klass": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["z" /* Input */], args: ['class',] },],
-        "ngClass": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["z" /* Input */] },],
+        "klass": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"], args: ['class',] },],
+        "ngClass": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
     };
     return NgClass;
 }());
@@ -2433,7 +2433,7 @@ var NgComponentOutlet = /** @class */ (function () {
                 if (this._moduleRef)
                     this._moduleRef.destroy();
                 if (this.ngComponentOutletNgModuleFactory) {
-                    var /** @type {?} */ parentModule = elInjector.get(__WEBPACK_IMPORTED_MODULE_0__angular_core__["G" /* NgModuleRef */]);
+                    var /** @type {?} */ parentModule = elInjector.get(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModuleRef"]);
                     this._moduleRef = this.ngComponentOutletNgModuleFactory.create(parentModule.injector);
                 }
                 else {
@@ -2441,7 +2441,7 @@ var NgComponentOutlet = /** @class */ (function () {
                 }
             }
             var /** @type {?} */ componentFactoryResolver = this._moduleRef ? this._moduleRef.componentFactoryResolver :
-                elInjector.get(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* ComponentFactoryResolver */]);
+                elInjector.get(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ComponentFactoryResolver"]);
             var /** @type {?} */ componentFactory = componentFactoryResolver.resolveComponentFactory(this.ngComponentOutlet);
             this._componentRef = this._viewContainerRef.createComponent(componentFactory, this._viewContainerRef.length, elInjector, this.ngComponentOutletContent);
         }
@@ -2457,17 +2457,17 @@ var NgComponentOutlet = /** @class */ (function () {
             this._moduleRef.destroy();
     };
     NgComponentOutlet.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["q" /* Directive */], args: [{ selector: '[ngComponentOutlet]' },] },
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Directive"], args: [{ selector: '[ngComponentOutlet]' },] },
     ];
     /** @nocollapse */
     NgComponentOutlet.ctorParameters = function () { return [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["_1" /* ViewContainerRef */], },
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewContainerRef"], },
     ]; };
     NgComponentOutlet.propDecorators = {
-        "ngComponentOutlet": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["z" /* Input */] },],
-        "ngComponentOutletInjector": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["z" /* Input */] },],
-        "ngComponentOutletContent": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["z" /* Input */] },],
-        "ngComponentOutletNgModuleFactory": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["z" /* Input */] },],
+        "ngComponentOutlet": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "ngComponentOutletInjector": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "ngComponentOutletContent": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "ngComponentOutletNgModuleFactory": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
     };
     return NgComponentOutlet;
 }());
@@ -2614,7 +2614,7 @@ var NgForOf = /** @class */ (function () {
          * @return {?}
          */
         function (fn) {
-            if (Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_7" /* isDevMode */])() && fn != null && typeof fn !== 'function') {
+            if (Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["isDevMode"])() && fn != null && typeof fn !== 'function') {
                 // TODO(vicb): use a log service once there is a public one available
                 if (/** @type {?} */ (console) && /** @type {?} */ (console.warn)) {
                     console.warn("trackBy must be a function, but received " + JSON.stringify(fn) + ". " +
@@ -2731,18 +2731,18 @@ var NgForOf = /** @class */ (function () {
         view.context.$implicit = record.item;
     };
     NgForOf.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["q" /* Directive */], args: [{ selector: '[ngFor][ngForOf]' },] },
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Directive"], args: [{ selector: '[ngFor][ngForOf]' },] },
     ];
     /** @nocollapse */
     NgForOf.ctorParameters = function () { return [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["_1" /* ViewContainerRef */], },
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Y" /* TemplateRef */], },
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* IterableDiffers */], },
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewContainerRef"], },
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["TemplateRef"], },
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["IterableDiffers"], },
     ]; };
     NgForOf.propDecorators = {
-        "ngForOf": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["z" /* Input */] },],
-        "ngForTrackBy": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["z" /* Input */] },],
-        "ngForTemplate": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["z" /* Input */] },],
+        "ngForOf": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "ngForTrackBy": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "ngForTemplate": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
     };
     return NgForOf;
 }());
@@ -2938,17 +2938,17 @@ var NgIf = /** @class */ (function () {
         }
     };
     NgIf.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["q" /* Directive */], args: [{ selector: '[ngIf]' },] },
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Directive"], args: [{ selector: '[ngIf]' },] },
     ];
     /** @nocollapse */
     NgIf.ctorParameters = function () { return [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["_1" /* ViewContainerRef */], },
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Y" /* TemplateRef */], },
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewContainerRef"], },
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["TemplateRef"], },
     ]; };
     NgIf.propDecorators = {
-        "ngIf": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["z" /* Input */] },],
-        "ngIfThen": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["z" /* Input */] },],
-        "ngIfElse": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["z" /* Input */] },],
+        "ngIf": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "ngIfThen": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "ngIfElse": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
     };
     return NgIf;
 }());
@@ -3147,12 +3147,12 @@ var NgSwitch = /** @class */ (function () {
         }
     };
     NgSwitch.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["q" /* Directive */], args: [{ selector: '[ngSwitch]' },] },
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Directive"], args: [{ selector: '[ngSwitch]' },] },
     ];
     /** @nocollapse */
     NgSwitch.ctorParameters = function () { return []; };
     NgSwitch.propDecorators = {
-        "ngSwitch": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["z" /* Input */] },],
+        "ngSwitch": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
     };
     return NgSwitch;
 }());
@@ -3194,16 +3194,16 @@ var NgSwitchCase = /** @class */ (function () {
      */
     function () { this._view.enforceState(this.ngSwitch._matchCase(this.ngSwitchCase)); };
     NgSwitchCase.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["q" /* Directive */], args: [{ selector: '[ngSwitchCase]' },] },
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Directive"], args: [{ selector: '[ngSwitchCase]' },] },
     ];
     /** @nocollapse */
     NgSwitchCase.ctorParameters = function () { return [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["_1" /* ViewContainerRef */], },
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Y" /* TemplateRef */], },
-        { type: NgSwitch, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* Host */] },] },
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewContainerRef"], },
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["TemplateRef"], },
+        { type: NgSwitch, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Host"] },] },
     ]; };
     NgSwitchCase.propDecorators = {
-        "ngSwitchCase": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["z" /* Input */] },],
+        "ngSwitchCase": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
     };
     return NgSwitchCase;
 }());
@@ -3235,13 +3235,13 @@ var NgSwitchDefault = /** @class */ (function () {
         ngSwitch._addDefault(new SwitchView(viewContainer, templateRef));
     }
     NgSwitchDefault.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["q" /* Directive */], args: [{ selector: '[ngSwitchDefault]' },] },
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Directive"], args: [{ selector: '[ngSwitchDefault]' },] },
     ];
     /** @nocollapse */
     NgSwitchDefault.ctorParameters = function () { return [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["_1" /* ViewContainerRef */], },
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Y" /* TemplateRef */], },
-        { type: NgSwitch, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* Host */] },] },
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewContainerRef"], },
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["TemplateRef"], },
+        { type: NgSwitch, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Host"] },] },
     ]; };
     return NgSwitchDefault;
 }());
@@ -3353,14 +3353,14 @@ var NgPlural = /** @class */ (function () {
         }
     };
     NgPlural.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["q" /* Directive */], args: [{ selector: '[ngPlural]' },] },
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Directive"], args: [{ selector: '[ngPlural]' },] },
     ];
     /** @nocollapse */
     NgPlural.ctorParameters = function () { return [
         { type: NgLocalization, },
     ]; };
     NgPlural.propDecorators = {
-        "ngPlural": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["z" /* Input */] },],
+        "ngPlural": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
     };
     return NgPlural;
 }());
@@ -3389,14 +3389,14 @@ var NgPluralCase = /** @class */ (function () {
         ngPlural.addCase(isANumber ? "=" + value : value, new SwitchView(viewContainer, template));
     }
     NgPluralCase.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["q" /* Directive */], args: [{ selector: '[ngPluralCase]' },] },
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Directive"], args: [{ selector: '[ngPluralCase]' },] },
     ];
     /** @nocollapse */
     NgPluralCase.ctorParameters = function () { return [
-        { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["g" /* Attribute */], args: ['ngPluralCase',] },] },
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Y" /* TemplateRef */], },
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["_1" /* ViewContainerRef */], },
-        { type: NgPlural, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* Host */] },] },
+        { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Attribute"], args: ['ngPluralCase',] },] },
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["TemplateRef"], },
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewContainerRef"], },
+        { type: NgPlural, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Host"] },] },
     ]; };
     return NgPluralCase;
 }());
@@ -3503,16 +3503,16 @@ var NgStyle = /** @class */ (function () {
         }
     };
     NgStyle.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["q" /* Directive */], args: [{ selector: '[ngStyle]' },] },
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Directive"], args: [{ selector: '[ngStyle]' },] },
     ];
     /** @nocollapse */
     NgStyle.ctorParameters = function () { return [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* KeyValueDiffers */], },
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["r" /* ElementRef */], },
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Q" /* Renderer2 */], },
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["KeyValueDiffers"], },
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"], },
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Renderer2"], },
     ]; };
     NgStyle.propDecorators = {
-        "ngStyle": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["z" /* Input */] },],
+        "ngStyle": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
     };
     return NgStyle;
 }());
@@ -3647,15 +3647,15 @@ var NgTemplateOutlet = /** @class */ (function () {
         }
     };
     NgTemplateOutlet.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["q" /* Directive */], args: [{ selector: '[ngTemplateOutlet]' },] },
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Directive"], args: [{ selector: '[ngTemplateOutlet]' },] },
     ];
     /** @nocollapse */
     NgTemplateOutlet.ctorParameters = function () { return [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["_1" /* ViewContainerRef */], },
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewContainerRef"], },
     ]; };
     NgTemplateOutlet.propDecorators = {
-        "ngTemplateOutletContext": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["z" /* Input */] },],
-        "ngTemplateOutlet": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["z" /* Input */] },],
+        "ngTemplateOutletContext": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "ngTemplateOutlet": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
     };
     return NgTemplateOutlet;
 }());
@@ -4360,7 +4360,7 @@ function convertTimezoneToLocal(date, timezone, reverse) {
  * @return {?}
  */
 function invalidPipeArgumentError(type, value) {
-    return Error("InvalidPipeArgument: '" + value + "' for pipe '" + Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_38" /* ɵstringify */])(type) + "'");
+    return Error("InvalidPipeArgument: '" + value + "' for pipe '" + Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵstringify"])(type) + "'");
 }
 
 /**
@@ -4547,11 +4547,11 @@ var DatePipe = /** @class */ (function () {
         return formatDate(date, format, locale || this.locale, timezone);
     };
     DatePipe.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["N" /* Pipe */], args: [{ name: 'date', pure: true },] },
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Pipe"], args: [{ name: 'date', pure: true },] },
     ];
     /** @nocollapse */
     DatePipe.ctorParameters = function () { return [
-        { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* Inject */], args: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* LOCALE_ID */],] },] },
+        { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Inject"], args: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["LOCALE_ID"],] },] },
     ]; };
     return DatePipe;
 }());
@@ -4997,11 +4997,11 @@ var DeprecatedDatePipe = /** @class */ (function () {
         'shortTime': 'jm'
     };
     DeprecatedDatePipe.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["N" /* Pipe */], args: [{ name: 'date', pure: true },] },
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Pipe"], args: [{ name: 'date', pure: true },] },
     ];
     /** @nocollapse */
     DeprecatedDatePipe.ctorParameters = function () { return [
-        { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* Inject */], args: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* LOCALE_ID */],] },] },
+        { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Inject"], args: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["LOCALE_ID"],] },] },
     ]; };
     return DeprecatedDatePipe;
 }());
@@ -5495,11 +5495,11 @@ var DeprecatedDecimalPipe = /** @class */ (function () {
         return formatNumber(DeprecatedDecimalPipe, this._locale, value, NumberFormatStyle.Decimal, digits);
     };
     DeprecatedDecimalPipe.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["N" /* Pipe */], args: [{ name: 'number' },] },
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Pipe"], args: [{ name: 'number' },] },
     ];
     /** @nocollapse */
     DeprecatedDecimalPipe.ctorParameters = function () { return [
-        { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* Inject */], args: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* LOCALE_ID */],] },] },
+        { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Inject"], args: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["LOCALE_ID"],] },] },
     ]; };
     return DeprecatedDecimalPipe;
 }());
@@ -5541,11 +5541,11 @@ var DeprecatedPercentPipe = /** @class */ (function () {
         return formatNumber(DeprecatedPercentPipe, this._locale, value, NumberFormatStyle.Percent, digits);
     };
     DeprecatedPercentPipe.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["N" /* Pipe */], args: [{ name: 'percent' },] },
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Pipe"], args: [{ name: 'percent' },] },
     ];
     /** @nocollapse */
     DeprecatedPercentPipe.ctorParameters = function () { return [
-        { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* Inject */], args: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* LOCALE_ID */],] },] },
+        { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Inject"], args: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["LOCALE_ID"],] },] },
     ]; };
     return DeprecatedPercentPipe;
 }());
@@ -5597,11 +5597,11 @@ var DeprecatedCurrencyPipe = /** @class */ (function () {
         return formatNumber(DeprecatedCurrencyPipe, this._locale, value, NumberFormatStyle.Currency, digits, currencyCode, symbolDisplay);
     };
     DeprecatedCurrencyPipe.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["N" /* Pipe */], args: [{ name: 'currency' },] },
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Pipe"], args: [{ name: 'currency' },] },
     ];
     /** @nocollapse */
     DeprecatedCurrencyPipe.ctorParameters = function () { return [
-        { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* Inject */], args: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* LOCALE_ID */],] },] },
+        { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Inject"], args: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["LOCALE_ID"],] },] },
     ]; };
     return DeprecatedCurrencyPipe;
 }());
@@ -5778,7 +5778,7 @@ var AsyncPipe = /** @class */ (function () {
             return this._latestReturnedValue;
         }
         this._latestReturnedValue = this._latestValue;
-        return __WEBPACK_IMPORTED_MODULE_0__angular_core__["_3" /* WrappedValue */].wrap(this._latestValue);
+        return __WEBPACK_IMPORTED_MODULE_0__angular_core__["WrappedValue"].wrap(this._latestValue);
     };
     /**
      * @param {?} obj
@@ -5803,10 +5803,10 @@ var AsyncPipe = /** @class */ (function () {
      * @return {?}
      */
     function (obj) {
-        if (Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_26" /* ɵisPromise */])(obj)) {
+        if (Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵisPromise"])(obj)) {
             return _promiseStrategy;
         }
-        if (Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_25" /* ɵisObservable */])(obj)) {
+        if (Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ɵisObservable"])(obj)) {
             return _observableStrategy;
         }
         throw invalidPipeArgumentError(AsyncPipe, obj);
@@ -5841,11 +5841,11 @@ var AsyncPipe = /** @class */ (function () {
         }
     };
     AsyncPipe.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["N" /* Pipe */], args: [{ name: 'async', pure: false },] },
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Pipe"], args: [{ name: 'async', pure: false },] },
     ];
     /** @nocollapse */
     AsyncPipe.ctorParameters = function () { return [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["j" /* ChangeDetectorRef */], },
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ChangeDetectorRef"], },
     ]; };
     return AsyncPipe;
 }());
@@ -5888,7 +5888,7 @@ var LowerCasePipe = /** @class */ (function () {
         return value.toLowerCase();
     };
     LowerCasePipe.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["N" /* Pipe */], args: [{ name: 'lowercase' },] },
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Pipe"], args: [{ name: 'lowercase' },] },
     ];
     /** @nocollapse */
     LowerCasePipe.ctorParameters = function () { return []; };
@@ -5931,7 +5931,7 @@ var TitleCasePipe = /** @class */ (function () {
         return value.split(/\b/g).map(function (word) { return titleCaseWord(word); }).join('');
     };
     TitleCasePipe.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["N" /* Pipe */], args: [{ name: 'titlecase' },] },
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Pipe"], args: [{ name: 'titlecase' },] },
     ];
     /** @nocollapse */
     TitleCasePipe.ctorParameters = function () { return []; };
@@ -5962,7 +5962,7 @@ var UpperCasePipe = /** @class */ (function () {
         return value.toUpperCase();
     };
     UpperCasePipe.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["N" /* Pipe */], args: [{ name: 'uppercase' },] },
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Pipe"], args: [{ name: 'uppercase' },] },
     ];
     /** @nocollapse */
     UpperCasePipe.ctorParameters = function () { return []; };
@@ -6026,7 +6026,7 @@ var I18nPluralPipe = /** @class */ (function () {
         return pluralMap[key].replace(_INTERPOLATION_REGEXP, value.toString());
     };
     I18nPluralPipe.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["N" /* Pipe */], args: [{ name: 'i18nPlural', pure: true },] },
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Pipe"], args: [{ name: 'i18nPlural', pure: true },] },
     ];
     /** @nocollapse */
     I18nPluralPipe.ctorParameters = function () { return [
@@ -6091,7 +6091,7 @@ var I18nSelectPipe = /** @class */ (function () {
         return '';
     };
     I18nSelectPipe.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["N" /* Pipe */], args: [{ name: 'i18nSelect', pure: true },] },
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Pipe"], args: [{ name: 'i18nSelect', pure: true },] },
     ];
     /** @nocollapse */
     I18nSelectPipe.ctorParameters = function () { return []; };
@@ -6135,7 +6135,7 @@ var JsonPipe = /** @class */ (function () {
      */
     function (value) { return JSON.stringify(value, null, 2); };
     JsonPipe.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["N" /* Pipe */], args: [{ name: 'json', pure: false },] },
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Pipe"], args: [{ name: 'json', pure: false },] },
     ];
     /** @nocollapse */
     JsonPipe.ctorParameters = function () { return []; };
@@ -6206,11 +6206,11 @@ var DecimalPipe = /** @class */ (function () {
         return str;
     };
     DecimalPipe.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["N" /* Pipe */], args: [{ name: 'number' },] },
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Pipe"], args: [{ name: 'number' },] },
     ];
     /** @nocollapse */
     DecimalPipe.ctorParameters = function () { return [
-        { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* Inject */], args: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* LOCALE_ID */],] },] },
+        { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Inject"], args: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["LOCALE_ID"],] },] },
     ]; };
     return DecimalPipe;
 }());
@@ -6260,11 +6260,11 @@ var PercentPipe = /** @class */ (function () {
         return str;
     };
     PercentPipe.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["N" /* Pipe */], args: [{ name: 'percent' },] },
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Pipe"], args: [{ name: 'percent' },] },
     ];
     /** @nocollapse */
     PercentPipe.ctorParameters = function () { return [
-        { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* Inject */], args: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* LOCALE_ID */],] },] },
+        { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Inject"], args: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["LOCALE_ID"],] },] },
     ]; };
     return PercentPipe;
 }());
@@ -6337,11 +6337,11 @@ var CurrencyPipe = /** @class */ (function () {
         return str;
     };
     CurrencyPipe.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["N" /* Pipe */], args: [{ name: 'currency' },] },
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Pipe"], args: [{ name: 'currency' },] },
     ];
     /** @nocollapse */
     CurrencyPipe.ctorParameters = function () { return [
-        { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* Inject */], args: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* LOCALE_ID */],] },] },
+        { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Inject"], args: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["LOCALE_ID"],] },] },
     ]; };
     return CurrencyPipe;
 }());
@@ -6441,7 +6441,7 @@ var SlicePipe = /** @class */ (function () {
      */
     function (obj) { return typeof obj === 'string' || Array.isArray(obj); };
     SlicePipe.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["N" /* Pipe */], args: [{ name: 'slice', pure: false },] },
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Pipe"], args: [{ name: 'slice', pure: false },] },
     ];
     /** @nocollapse */
     SlicePipe.ctorParameters = function () { return []; };
@@ -6497,7 +6497,7 @@ var CommonModule = /** @class */ (function () {
     function CommonModule() {
     }
     CommonModule.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* NgModule */], args: [{
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"], args: [{
                     declarations: [COMMON_DIRECTIVES, COMMON_PIPES],
                     exports: [COMMON_DIRECTIVES, COMMON_PIPES],
                     providers: [
@@ -6519,7 +6519,7 @@ var DeprecatedI18NPipesModule = /** @class */ (function () {
     function DeprecatedI18NPipesModule() {
     }
     DeprecatedI18NPipesModule.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* NgModule */], args: [{
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"], args: [{
                     declarations: [COMMON_DEPRECATED_I18N_PIPES],
                     exports: [COMMON_DEPRECATED_I18N_PIPES],
                     providers: [{ provide: DEPRECATED_PLURAL_FN, useValue: ɵ0 }],
@@ -6549,7 +6549,7 @@ var DeprecatedI18NPipesModule = /** @class */ (function () {
  *
  * \@stable
  */
-var DOCUMENT = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* InjectionToken */]('DocumentToken');
+var DOCUMENT = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["InjectionToken"]('DocumentToken');
 
 /**
  * @fileoverview added by tsickle
@@ -6617,7 +6617,7 @@ function isPlatformWorkerUi(platformId) {
 /**
  * \@stable
  */
-var VERSION = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["_0" /* Version */]('5.2.6');
+var VERSION = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["Version"]('5.2.6');
 
 /**
  * @fileoverview added by tsickle
@@ -6665,6 +6665,2800 @@ var VERSION = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["_0" /* Version */
 
 
 //# sourceMappingURL=common.js.map
+
+
+/***/ }),
+
+/***/ "./node_modules/@angular/common/esm5/http.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HttpBackend", function() { return HttpBackend; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HttpHandler", function() { return HttpHandler; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HttpClient", function() { return HttpClient; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HttpHeaders", function() { return HttpHeaders; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HTTP_INTERCEPTORS", function() { return HTTP_INTERCEPTORS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "JsonpClientBackend", function() { return JsonpClientBackend; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "JsonpInterceptor", function() { return JsonpInterceptor; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HttpClientJsonpModule", function() { return HttpClientJsonpModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HttpClientModule", function() { return HttpClientModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HttpClientXsrfModule", function() { return HttpClientXsrfModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵinterceptingHandler", function() { return interceptingHandler; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HttpParams", function() { return HttpParams; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HttpUrlEncodingCodec", function() { return HttpUrlEncodingCodec; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HttpRequest", function() { return HttpRequest; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HttpErrorResponse", function() { return HttpErrorResponse; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HttpEventType", function() { return HttpEventType; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HttpHeaderResponse", function() { return HttpHeaderResponse; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HttpResponse", function() { return HttpResponse; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HttpResponseBase", function() { return HttpResponseBase; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HttpXhrBackend", function() { return HttpXhrBackend; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "XhrFactory", function() { return XhrFactory; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HttpXsrfTokenExtractor", function() { return HttpXsrfTokenExtractor; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵa", function() { return NoopInterceptor; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵb", function() { return JsonpCallbackContext; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵc", function() { return HttpInterceptingHandler; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵd", function() { return jsonpCallbackContext; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵe", function() { return BrowserXhr; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵh", function() { return HttpXsrfCookieExtractor; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵi", function() { return HttpXsrfInterceptor; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵf", function() { return XSRF_COOKIE_NAME; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵg", function() { return XSRF_HEADER_NAME; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_observable_of__ = __webpack_require__("./node_modules/rxjs/_esm5/observable/of.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_operator_concatMap__ = __webpack_require__("./node_modules/rxjs/_esm5/operator/concatMap.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_operator_filter__ = __webpack_require__("./node_modules/rxjs/_esm5/operator/filter.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_operator_map__ = __webpack_require__("./node_modules/rxjs/_esm5/operator/map.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_tslib__ = __webpack_require__("./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_common__ = __webpack_require__("./node_modules/@angular/common/esm5/common.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_Observable__ = __webpack_require__("./node_modules/rxjs/_esm5/Observable.js");
+/**
+ * @license Angular v5.2.6
+ * (c) 2010-2018 Google, Inc. https://angular.io/
+ * License: MIT
+ */
+
+
+
+
+
+
+
+
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+/**
+ * Transforms an `HttpRequest` into a stream of `HttpEvent`s, one of which will likely be a
+ * `HttpResponse`.
+ *
+ * `HttpHandler` is injectable. When injected, the handler instance dispatches requests to the
+ * first interceptor in the chain, which dispatches to the second, etc, eventually reaching the
+ * `HttpBackend`.
+ *
+ * In an `HttpInterceptor`, the `HttpHandler` parameter is the next interceptor in the chain.
+ *
+ * \@stable
+ * @abstract
+ */
+var HttpHandler = /** @class */ (function () {
+    function HttpHandler() {
+    }
+    return HttpHandler;
+}());
+/**
+ * A final `HttpHandler` which will dispatch the request via browser HTTP APIs to a backend.
+ *
+ * Interceptors sit between the `HttpClient` interface and the `HttpBackend`.
+ *
+ * When injected, `HttpBackend` dispatches requests directly to the backend, without going
+ * through the interceptor chain.
+ *
+ * \@stable
+ * @abstract
+ */
+var HttpBackend = /** @class */ (function () {
+    function HttpBackend() {
+    }
+    return HttpBackend;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+/**
+ * @record
+ */
+/**
+ * Immutable set of Http headers, with lazy parsing.
+ * \@stable
+ */
+var HttpHeaders = /** @class */ (function () {
+    function HttpHeaders(headers) {
+        var _this = this;
+        /**
+         * Internal map of lowercased header names to the normalized
+         * form of the name (the form seen first).
+         */
+        this.normalizedNames = new Map();
+        /**
+         * Queued updates to be materialized the next initialization.
+         */
+        this.lazyUpdate = null;
+        if (!headers) {
+            this.headers = new Map();
+        }
+        else if (typeof headers === 'string') {
+            this.lazyInit = function () {
+                _this.headers = new Map();
+                headers.split('\n').forEach(function (line) {
+                    var /** @type {?} */ index = line.indexOf(':');
+                    if (index > 0) {
+                        var /** @type {?} */ name_1 = line.slice(0, index);
+                        var /** @type {?} */ key = name_1.toLowerCase();
+                        var /** @type {?} */ value = line.slice(index + 1).trim();
+                        _this.maybeSetNormalizedName(name_1, key);
+                        if (_this.headers.has(key)) {
+                            /** @type {?} */ ((_this.headers.get(key))).push(value);
+                        }
+                        else {
+                            _this.headers.set(key, [value]);
+                        }
+                    }
+                });
+            };
+        }
+        else {
+            this.lazyInit = function () {
+                _this.headers = new Map();
+                Object.keys(headers).forEach(function (name) {
+                    var /** @type {?} */ values = headers[name];
+                    var /** @type {?} */ key = name.toLowerCase();
+                    if (typeof values === 'string') {
+                        values = [values];
+                    }
+                    if (values.length > 0) {
+                        _this.headers.set(key, values);
+                        _this.maybeSetNormalizedName(name, key);
+                    }
+                });
+            };
+        }
+    }
+    /**
+     * Checks for existence of header by given name.
+     */
+    /**
+     * Checks for existence of header by given name.
+     * @param {?} name
+     * @return {?}
+     */
+    HttpHeaders.prototype.has = /**
+     * Checks for existence of header by given name.
+     * @param {?} name
+     * @return {?}
+     */
+    function (name) {
+        this.init();
+        return this.headers.has(name.toLowerCase());
+    };
+    /**
+     * Returns first header that matches given name.
+     */
+    /**
+     * Returns first header that matches given name.
+     * @param {?} name
+     * @return {?}
+     */
+    HttpHeaders.prototype.get = /**
+     * Returns first header that matches given name.
+     * @param {?} name
+     * @return {?}
+     */
+    function (name) {
+        this.init();
+        var /** @type {?} */ values = this.headers.get(name.toLowerCase());
+        return values && values.length > 0 ? values[0] : null;
+    };
+    /**
+     * Returns the names of the headers
+     */
+    /**
+     * Returns the names of the headers
+     * @return {?}
+     */
+    HttpHeaders.prototype.keys = /**
+     * Returns the names of the headers
+     * @return {?}
+     */
+    function () {
+        this.init();
+        return Array.from(this.normalizedNames.values());
+    };
+    /**
+     * Returns list of header values for a given name.
+     */
+    /**
+     * Returns list of header values for a given name.
+     * @param {?} name
+     * @return {?}
+     */
+    HttpHeaders.prototype.getAll = /**
+     * Returns list of header values for a given name.
+     * @param {?} name
+     * @return {?}
+     */
+    function (name) {
+        this.init();
+        return this.headers.get(name.toLowerCase()) || null;
+    };
+    /**
+     * @param {?} name
+     * @param {?} value
+     * @return {?}
+     */
+    HttpHeaders.prototype.append = /**
+     * @param {?} name
+     * @param {?} value
+     * @return {?}
+     */
+    function (name, value) {
+        return this.clone({ name: name, value: value, op: 'a' });
+    };
+    /**
+     * @param {?} name
+     * @param {?} value
+     * @return {?}
+     */
+    HttpHeaders.prototype.set = /**
+     * @param {?} name
+     * @param {?} value
+     * @return {?}
+     */
+    function (name, value) {
+        return this.clone({ name: name, value: value, op: 's' });
+    };
+    /**
+     * @param {?} name
+     * @param {?=} value
+     * @return {?}
+     */
+    HttpHeaders.prototype.delete = /**
+     * @param {?} name
+     * @param {?=} value
+     * @return {?}
+     */
+    function (name, value) {
+        return this.clone({ name: name, value: value, op: 'd' });
+    };
+    /**
+     * @param {?} name
+     * @param {?} lcName
+     * @return {?}
+     */
+    HttpHeaders.prototype.maybeSetNormalizedName = /**
+     * @param {?} name
+     * @param {?} lcName
+     * @return {?}
+     */
+    function (name, lcName) {
+        if (!this.normalizedNames.has(lcName)) {
+            this.normalizedNames.set(lcName, name);
+        }
+    };
+    /**
+     * @return {?}
+     */
+    HttpHeaders.prototype.init = /**
+     * @return {?}
+     */
+    function () {
+        var _this = this;
+        if (!!this.lazyInit) {
+            if (this.lazyInit instanceof HttpHeaders) {
+                this.copyFrom(this.lazyInit);
+            }
+            else {
+                this.lazyInit();
+            }
+            this.lazyInit = null;
+            if (!!this.lazyUpdate) {
+                this.lazyUpdate.forEach(function (update) { return _this.applyUpdate(update); });
+                this.lazyUpdate = null;
+            }
+        }
+    };
+    /**
+     * @param {?} other
+     * @return {?}
+     */
+    HttpHeaders.prototype.copyFrom = /**
+     * @param {?} other
+     * @return {?}
+     */
+    function (other) {
+        var _this = this;
+        other.init();
+        Array.from(other.headers.keys()).forEach(function (key) {
+            _this.headers.set(key, /** @type {?} */ ((other.headers.get(key))));
+            _this.normalizedNames.set(key, /** @type {?} */ ((other.normalizedNames.get(key))));
+        });
+    };
+    /**
+     * @param {?} update
+     * @return {?}
+     */
+    HttpHeaders.prototype.clone = /**
+     * @param {?} update
+     * @return {?}
+     */
+    function (update) {
+        var /** @type {?} */ clone = new HttpHeaders();
+        clone.lazyInit =
+            (!!this.lazyInit && this.lazyInit instanceof HttpHeaders) ? this.lazyInit : this;
+        clone.lazyUpdate = (this.lazyUpdate || []).concat([update]);
+        return clone;
+    };
+    /**
+     * @param {?} update
+     * @return {?}
+     */
+    HttpHeaders.prototype.applyUpdate = /**
+     * @param {?} update
+     * @return {?}
+     */
+    function (update) {
+        var /** @type {?} */ key = update.name.toLowerCase();
+        switch (update.op) {
+            case 'a':
+            case 's':
+                var /** @type {?} */ value = /** @type {?} */ ((update.value));
+                if (typeof value === 'string') {
+                    value = [value];
+                }
+                if (value.length === 0) {
+                    return;
+                }
+                this.maybeSetNormalizedName(update.name, key);
+                var /** @type {?} */ base = (update.op === 'a' ? this.headers.get(key) : undefined) || [];
+                base.push.apply(base, value);
+                this.headers.set(key, base);
+                break;
+            case 'd':
+                var /** @type {?} */ toDelete_1 = /** @type {?} */ (update.value);
+                if (!toDelete_1) {
+                    this.headers.delete(key);
+                    this.normalizedNames.delete(key);
+                }
+                else {
+                    var /** @type {?} */ existing = this.headers.get(key);
+                    if (!existing) {
+                        return;
+                    }
+                    existing = existing.filter(function (value) { return toDelete_1.indexOf(value) === -1; });
+                    if (existing.length === 0) {
+                        this.headers.delete(key);
+                        this.normalizedNames.delete(key);
+                    }
+                    else {
+                        this.headers.set(key, existing);
+                    }
+                }
+                break;
+        }
+    };
+    /**
+     * @internal
+     */
+    /**
+     * \@internal
+     * @param {?} fn
+     * @return {?}
+     */
+    HttpHeaders.prototype.forEach = /**
+     * \@internal
+     * @param {?} fn
+     * @return {?}
+     */
+    function (fn) {
+        var _this = this;
+        this.init();
+        Array.from(this.normalizedNames.keys())
+            .forEach(function (key) { return fn(/** @type {?} */ ((_this.normalizedNames.get(key))), /** @type {?} */ ((_this.headers.get(key)))); });
+    };
+    return HttpHeaders;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+/**
+ * A codec for encoding and decoding parameters in URLs.
+ *
+ * Used by `HttpParams`.
+ *
+ * \@stable
+ *
+ * @record
+ */
+
+/**
+ * A `HttpParameterCodec` that uses `encodeURIComponent` and `decodeURIComponent` to
+ * serialize and parse URL parameter keys and values.
+ *
+ * \@stable
+ */
+var HttpUrlEncodingCodec = /** @class */ (function () {
+    function HttpUrlEncodingCodec() {
+    }
+    /**
+     * @param {?} k
+     * @return {?}
+     */
+    HttpUrlEncodingCodec.prototype.encodeKey = /**
+     * @param {?} k
+     * @return {?}
+     */
+    function (k) { return standardEncoding(k); };
+    /**
+     * @param {?} v
+     * @return {?}
+     */
+    HttpUrlEncodingCodec.prototype.encodeValue = /**
+     * @param {?} v
+     * @return {?}
+     */
+    function (v) { return standardEncoding(v); };
+    /**
+     * @param {?} k
+     * @return {?}
+     */
+    HttpUrlEncodingCodec.prototype.decodeKey = /**
+     * @param {?} k
+     * @return {?}
+     */
+    function (k) { return decodeURIComponent(k); };
+    /**
+     * @param {?} v
+     * @return {?}
+     */
+    HttpUrlEncodingCodec.prototype.decodeValue = /**
+     * @param {?} v
+     * @return {?}
+     */
+    function (v) { return decodeURIComponent(v); };
+    return HttpUrlEncodingCodec;
+}());
+/**
+ * @param {?} rawParams
+ * @param {?} codec
+ * @return {?}
+ */
+function paramParser(rawParams, codec) {
+    var /** @type {?} */ map$$1 = new Map();
+    if (rawParams.length > 0) {
+        var /** @type {?} */ params = rawParams.split('&');
+        params.forEach(function (param) {
+            var /** @type {?} */ eqIdx = param.indexOf('=');
+            var _a = eqIdx == -1 ?
+                [codec.decodeKey(param), ''] :
+                [codec.decodeKey(param.slice(0, eqIdx)), codec.decodeValue(param.slice(eqIdx + 1))], key = _a[0], val = _a[1];
+            var /** @type {?} */ list = map$$1.get(key) || [];
+            list.push(val);
+            map$$1.set(key, list);
+        });
+    }
+    return map$$1;
+}
+/**
+ * @param {?} v
+ * @return {?}
+ */
+function standardEncoding(v) {
+    return encodeURIComponent(v)
+        .replace(/%40/gi, '@')
+        .replace(/%3A/gi, ':')
+        .replace(/%24/gi, '$')
+        .replace(/%2C/gi, ',')
+        .replace(/%3B/gi, ';')
+        .replace(/%2B/gi, '+')
+        .replace(/%3D/gi, '=')
+        .replace(/%3F/gi, '?')
+        .replace(/%2F/gi, '/');
+}
+/**
+ * Options used to construct an `HttpParams` instance.
+ * @record
+ */
+
+/**
+ * An HTTP request/response body that represents serialized parameters,
+ * per the MIME type `application/x-www-form-urlencoded`.
+ *
+ * This class is immutable - all mutation operations return a new instance.
+ *
+ * \@stable
+ */
+var HttpParams = /** @class */ (function () {
+    function HttpParams(options) {
+        if (options === void 0) { options = /** @type {?} */ ({}); }
+        var _this = this;
+        this.updates = null;
+        this.cloneFrom = null;
+        this.encoder = options.encoder || new HttpUrlEncodingCodec();
+        if (!!options.fromString) {
+            if (!!options.fromObject) {
+                throw new Error("Cannot specify both fromString and fromObject.");
+            }
+            this.map = paramParser(options.fromString, this.encoder);
+        }
+        else if (!!options.fromObject) {
+            this.map = new Map();
+            Object.keys(options.fromObject).forEach(function (key) {
+                var /** @type {?} */ value = (/** @type {?} */ (options.fromObject))[key]; /** @type {?} */
+                ((_this.map)).set(key, Array.isArray(value) ? value : [value]);
+            });
+        }
+        else {
+            this.map = null;
+        }
+    }
+    /**
+     * Check whether the body has one or more values for the given parameter name.
+     */
+    /**
+     * Check whether the body has one or more values for the given parameter name.
+     * @param {?} param
+     * @return {?}
+     */
+    HttpParams.prototype.has = /**
+     * Check whether the body has one or more values for the given parameter name.
+     * @param {?} param
+     * @return {?}
+     */
+    function (param) {
+        this.init();
+        return /** @type {?} */ ((this.map)).has(param);
+    };
+    /**
+     * Get the first value for the given parameter name, or `null` if it's not present.
+     */
+    /**
+     * Get the first value for the given parameter name, or `null` if it's not present.
+     * @param {?} param
+     * @return {?}
+     */
+    HttpParams.prototype.get = /**
+     * Get the first value for the given parameter name, or `null` if it's not present.
+     * @param {?} param
+     * @return {?}
+     */
+    function (param) {
+        this.init();
+        var /** @type {?} */ res = /** @type {?} */ ((this.map)).get(param);
+        return !!res ? res[0] : null;
+    };
+    /**
+     * Get all values for the given parameter name, or `null` if it's not present.
+     */
+    /**
+     * Get all values for the given parameter name, or `null` if it's not present.
+     * @param {?} param
+     * @return {?}
+     */
+    HttpParams.prototype.getAll = /**
+     * Get all values for the given parameter name, or `null` if it's not present.
+     * @param {?} param
+     * @return {?}
+     */
+    function (param) {
+        this.init();
+        return /** @type {?} */ ((this.map)).get(param) || null;
+    };
+    /**
+     * Get all the parameter names for this body.
+     */
+    /**
+     * Get all the parameter names for this body.
+     * @return {?}
+     */
+    HttpParams.prototype.keys = /**
+     * Get all the parameter names for this body.
+     * @return {?}
+     */
+    function () {
+        this.init();
+        return Array.from(/** @type {?} */ ((this.map)).keys());
+    };
+    /**
+     * Construct a new body with an appended value for the given parameter name.
+     */
+    /**
+     * Construct a new body with an appended value for the given parameter name.
+     * @param {?} param
+     * @param {?} value
+     * @return {?}
+     */
+    HttpParams.prototype.append = /**
+     * Construct a new body with an appended value for the given parameter name.
+     * @param {?} param
+     * @param {?} value
+     * @return {?}
+     */
+    function (param, value) { return this.clone({ param: param, value: value, op: 'a' }); };
+    /**
+     * Construct a new body with a new value for the given parameter name.
+     */
+    /**
+     * Construct a new body with a new value for the given parameter name.
+     * @param {?} param
+     * @param {?} value
+     * @return {?}
+     */
+    HttpParams.prototype.set = /**
+     * Construct a new body with a new value for the given parameter name.
+     * @param {?} param
+     * @param {?} value
+     * @return {?}
+     */
+    function (param, value) { return this.clone({ param: param, value: value, op: 's' }); };
+    /**
+     * Construct a new body with either the given value for the given parameter
+     * removed, if a value is given, or all values for the given parameter removed
+     * if not.
+     */
+    /**
+     * Construct a new body with either the given value for the given parameter
+     * removed, if a value is given, or all values for the given parameter removed
+     * if not.
+     * @param {?} param
+     * @param {?=} value
+     * @return {?}
+     */
+    HttpParams.prototype.delete = /**
+     * Construct a new body with either the given value for the given parameter
+     * removed, if a value is given, or all values for the given parameter removed
+     * if not.
+     * @param {?} param
+     * @param {?=} value
+     * @return {?}
+     */
+    function (param, value) { return this.clone({ param: param, value: value, op: 'd' }); };
+    /**
+     * Serialize the body to an encoded string, where key-value pairs (separated by `=`) are
+     * separated by `&`s.
+     */
+    /**
+     * Serialize the body to an encoded string, where key-value pairs (separated by `=`) are
+     * separated by `&`s.
+     * @return {?}
+     */
+    HttpParams.prototype.toString = /**
+     * Serialize the body to an encoded string, where key-value pairs (separated by `=`) are
+     * separated by `&`s.
+     * @return {?}
+     */
+    function () {
+        var _this = this;
+        this.init();
+        return this.keys()
+            .map(function (key) {
+            var /** @type {?} */ eKey = _this.encoder.encodeKey(key);
+            return /** @type {?} */ ((/** @type {?} */ ((_this.map)).get(key))).map(function (value) { return eKey + '=' + _this.encoder.encodeValue(value); }).join('&');
+        })
+            .join('&');
+    };
+    /**
+     * @param {?} update
+     * @return {?}
+     */
+    HttpParams.prototype.clone = /**
+     * @param {?} update
+     * @return {?}
+     */
+    function (update) {
+        var /** @type {?} */ clone = new HttpParams(/** @type {?} */ ({ encoder: this.encoder }));
+        clone.cloneFrom = this.cloneFrom || this;
+        clone.updates = (this.updates || []).concat([update]);
+        return clone;
+    };
+    /**
+     * @return {?}
+     */
+    HttpParams.prototype.init = /**
+     * @return {?}
+     */
+    function () {
+        var _this = this;
+        if (this.map === null) {
+            this.map = new Map();
+        }
+        if (this.cloneFrom !== null) {
+            this.cloneFrom.init();
+            this.cloneFrom.keys().forEach(function (key) { return ((_this.map)).set(key, /** @type {?} */ ((/** @type {?} */ ((/** @type {?} */ ((_this.cloneFrom)).map)).get(key)))); }); /** @type {?} */
+            ((this.updates)).forEach(function (update) {
+                switch (update.op) {
+                    case 'a':
+                    case 's':
+                        var /** @type {?} */ base = (update.op === 'a' ? /** @type {?} */ ((_this.map)).get(update.param) : undefined) || [];
+                        base.push(/** @type {?} */ ((update.value))); /** @type {?} */
+                        ((_this.map)).set(update.param, base);
+                        break;
+                    case 'd':
+                        if (update.value !== undefined) {
+                            var /** @type {?} */ base_1 = /** @type {?} */ ((_this.map)).get(update.param) || [];
+                            var /** @type {?} */ idx = base_1.indexOf(update.value);
+                            if (idx !== -1) {
+                                base_1.splice(idx, 1);
+                            }
+                            if (base_1.length > 0) {
+                                /** @type {?} */ ((_this.map)).set(update.param, base_1);
+                            }
+                            else {
+                                /** @type {?} */ ((_this.map)).delete(update.param);
+                            }
+                        }
+                        else {
+                            /** @type {?} */ ((_this.map)).delete(update.param);
+                            break;
+                        }
+                }
+            });
+            this.cloneFrom = null;
+        }
+    };
+    return HttpParams;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+/**
+ * Determine whether the given HTTP method may include a body.
+ * @param {?} method
+ * @return {?}
+ */
+function mightHaveBody(method) {
+    switch (method) {
+        case 'DELETE':
+        case 'GET':
+        case 'HEAD':
+        case 'OPTIONS':
+        case 'JSONP':
+            return false;
+        default:
+            return true;
+    }
+}
+/**
+ * Safely assert whether the given value is an ArrayBuffer.
+ *
+ * In some execution environments ArrayBuffer is not defined.
+ * @param {?} value
+ * @return {?}
+ */
+function isArrayBuffer(value) {
+    return typeof ArrayBuffer !== 'undefined' && value instanceof ArrayBuffer;
+}
+/**
+ * Safely assert whether the given value is a Blob.
+ *
+ * In some execution environments Blob is not defined.
+ * @param {?} value
+ * @return {?}
+ */
+function isBlob(value) {
+    return typeof Blob !== 'undefined' && value instanceof Blob;
+}
+/**
+ * Safely assert whether the given value is a FormData instance.
+ *
+ * In some execution environments FormData is not defined.
+ * @param {?} value
+ * @return {?}
+ */
+function isFormData(value) {
+    return typeof FormData !== 'undefined' && value instanceof FormData;
+}
+/**
+ * An outgoing HTTP request with an optional typed body.
+ *
+ * `HttpRequest` represents an outgoing request, including URL, method,
+ * headers, body, and other request configuration options. Instances should be
+ * assumed to be immutable. To modify a `HttpRequest`, the `clone`
+ * method should be used.
+ *
+ * \@stable
+ */
+var HttpRequest = /** @class */ (function () {
+    function HttpRequest(method, url, third, fourth) {
+        this.url = url;
+        /**
+         * The request body, or `null` if one isn't set.
+         *
+         * Bodies are not enforced to be immutable, as they can include a reference to any
+         * user-defined data type. However, interceptors should take care to preserve
+         * idempotence by treating them as such.
+         */
+        this.body = null;
+        /**
+         * Whether this request should be made in a way that exposes progress events.
+         *
+         * Progress events are expensive (change detection runs on each event) and so
+         * they should only be requested if the consumer intends to monitor them.
+         */
+        this.reportProgress = false;
+        /**
+         * Whether this request should be sent with outgoing credentials (cookies).
+         */
+        this.withCredentials = false;
+        /**
+         * The expected response type of the server.
+         *
+         * This is used to parse the response appropriately before returning it to
+         * the requestee.
+         */
+        this.responseType = 'json';
+        this.method = method.toUpperCase();
+        // Next, need to figure out which argument holds the HttpRequestInit
+        // options, if any.
+        var /** @type {?} */ options;
+        // Check whether a body argument is expected. The only valid way to omit
+        // the body argument is to use a known no-body method like GET.
+        if (mightHaveBody(this.method) || !!fourth) {
+            // Body is the third argument, options are the fourth.
+            this.body = (third !== undefined) ? /** @type {?} */ (third) : null;
+            options = fourth;
+        }
+        else {
+            // No body required, options are the third argument. The body stays null.
+            options = /** @type {?} */ (third);
+        }
+        // If options have been passed, interpret them.
+        if (options) {
+            // Normalize reportProgress and withCredentials.
+            this.reportProgress = !!options.reportProgress;
+            this.withCredentials = !!options.withCredentials;
+            // Override default response type of 'json' if one is provided.
+            if (!!options.responseType) {
+                this.responseType = options.responseType;
+            }
+            // Override headers if they're provided.
+            if (!!options.headers) {
+                this.headers = options.headers;
+            }
+            if (!!options.params) {
+                this.params = options.params;
+            }
+        }
+        // If no headers have been passed in, construct a new HttpHeaders instance.
+        if (!this.headers) {
+            this.headers = new HttpHeaders();
+        }
+        // If no parameters have been passed in, construct a new HttpUrlEncodedParams instance.
+        if (!this.params) {
+            this.params = new HttpParams();
+            this.urlWithParams = url;
+        }
+        else {
+            // Encode the parameters to a string in preparation for inclusion in the URL.
+            var /** @type {?} */ params = this.params.toString();
+            if (params.length === 0) {
+                // No parameters, the visible URL is just the URL given at creation time.
+                this.urlWithParams = url;
+            }
+            else {
+                // Does the URL already have query parameters? Look for '?'.
+                var /** @type {?} */ qIdx = url.indexOf('?');
+                // There are 3 cases to handle:
+                // 1) No existing parameters -> append '?' followed by params.
+                // 2) '?' exists and is followed by existing query string ->
+                //    append '&' followed by params.
+                // 3) '?' exists at the end of the url -> append params directly.
+                // This basically amounts to determining the character, if any, with
+                // which to join the URL and parameters.
+                var /** @type {?} */ sep = qIdx === -1 ? '?' : (qIdx < url.length - 1 ? '&' : '');
+                this.urlWithParams = url + sep + params;
+            }
+        }
+    }
+    /**
+     * Transform the free-form body into a serialized format suitable for
+     * transmission to the server.
+     */
+    /**
+     * Transform the free-form body into a serialized format suitable for
+     * transmission to the server.
+     * @return {?}
+     */
+    HttpRequest.prototype.serializeBody = /**
+     * Transform the free-form body into a serialized format suitable for
+     * transmission to the server.
+     * @return {?}
+     */
+    function () {
+        // If no body is present, no need to serialize it.
+        if (this.body === null) {
+            return null;
+        }
+        // Check whether the body is already in a serialized form. If so,
+        // it can just be returned directly.
+        if (isArrayBuffer(this.body) || isBlob(this.body) || isFormData(this.body) ||
+            typeof this.body === 'string') {
+            return this.body;
+        }
+        // Check whether the body is an instance of HttpUrlEncodedParams.
+        if (this.body instanceof HttpParams) {
+            return this.body.toString();
+        }
+        // Check whether the body is an object or array, and serialize with JSON if so.
+        if (typeof this.body === 'object' || typeof this.body === 'boolean' ||
+            Array.isArray(this.body)) {
+            return JSON.stringify(this.body);
+        }
+        // Fall back on toString() for everything else.
+        return (/** @type {?} */ (this.body)).toString();
+    };
+    /**
+     * Examine the body and attempt to infer an appropriate MIME type
+     * for it.
+     *
+     * If no such type can be inferred, this method will return `null`.
+     */
+    /**
+     * Examine the body and attempt to infer an appropriate MIME type
+     * for it.
+     *
+     * If no such type can be inferred, this method will return `null`.
+     * @return {?}
+     */
+    HttpRequest.prototype.detectContentTypeHeader = /**
+     * Examine the body and attempt to infer an appropriate MIME type
+     * for it.
+     *
+     * If no such type can be inferred, this method will return `null`.
+     * @return {?}
+     */
+    function () {
+        // An empty body has no content type.
+        if (this.body === null) {
+            return null;
+        }
+        // FormData bodies rely on the browser's content type assignment.
+        if (isFormData(this.body)) {
+            return null;
+        }
+        // Blobs usually have their own content type. If it doesn't, then
+        // no type can be inferred.
+        if (isBlob(this.body)) {
+            return this.body.type || null;
+        }
+        // Array buffers have unknown contents and thus no type can be inferred.
+        if (isArrayBuffer(this.body)) {
+            return null;
+        }
+        // Technically, strings could be a form of JSON data, but it's safe enough
+        // to assume they're plain strings.
+        if (typeof this.body === 'string') {
+            return 'text/plain';
+        }
+        // `HttpUrlEncodedParams` has its own content-type.
+        if (this.body instanceof HttpParams) {
+            return 'application/x-www-form-urlencoded;charset=UTF-8';
+        }
+        // Arrays, objects, and numbers will be encoded as JSON.
+        if (typeof this.body === 'object' || typeof this.body === 'number' ||
+            Array.isArray(this.body)) {
+            return 'application/json';
+        }
+        // No type could be inferred.
+        return null;
+    };
+    /**
+     * @param {?=} update
+     * @return {?}
+     */
+    HttpRequest.prototype.clone = /**
+     * @param {?=} update
+     * @return {?}
+     */
+    function (update) {
+        if (update === void 0) { update = {}; }
+        // For method, url, and responseType, take the current value unless
+        // it is overridden in the update hash.
+        var /** @type {?} */ method = update.method || this.method;
+        var /** @type {?} */ url = update.url || this.url;
+        var /** @type {?} */ responseType = update.responseType || this.responseType;
+        // The body is somewhat special - a `null` value in update.body means
+        // whatever current body is present is being overridden with an empty
+        // body, whereas an `undefined` value in update.body implies no
+        // override.
+        var /** @type {?} */ body = (update.body !== undefined) ? update.body : this.body;
+        // Carefully handle the boolean options to differentiate between
+        // `false` and `undefined` in the update args.
+        var /** @type {?} */ withCredentials = (update.withCredentials !== undefined) ? update.withCredentials : this.withCredentials;
+        var /** @type {?} */ reportProgress = (update.reportProgress !== undefined) ? update.reportProgress : this.reportProgress;
+        // Headers and params may be appended to if `setHeaders` or
+        // `setParams` are used.
+        var /** @type {?} */ headers = update.headers || this.headers;
+        var /** @type {?} */ params = update.params || this.params;
+        // Check whether the caller has asked to add headers.
+        if (update.setHeaders !== undefined) {
+            // Set every requested header.
+            headers =
+                Object.keys(update.setHeaders)
+                    .reduce(function (headers, name) { return headers.set(name, /** @type {?} */ ((update.setHeaders))[name]); }, headers);
+        }
+        // Check whether the caller has asked to set params.
+        if (update.setParams) {
+            // Set every requested param.
+            params = Object.keys(update.setParams)
+                .reduce(function (params, param) { return params.set(param, /** @type {?} */ ((update.setParams))[param]); }, params);
+        }
+        // Finally, construct the new HttpRequest using the pieces from above.
+        return new HttpRequest(method, url, body, {
+            params: params, headers: headers, reportProgress: reportProgress, responseType: responseType, withCredentials: withCredentials,
+        });
+    };
+    return HttpRequest;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+/** @enum {number} */
+var HttpEventType = {
+    /**
+       * The request was sent out over the wire.
+       */
+    Sent: 0,
+    /**
+       * An upload progress event was received.
+       */
+    UploadProgress: 1,
+    /**
+       * The response status code and headers were received.
+       */
+    ResponseHeader: 2,
+    /**
+       * A download progress event was received.
+       */
+    DownloadProgress: 3,
+    /**
+       * The full response including the body was received.
+       */
+    Response: 4,
+    /**
+       * A custom event from an interceptor or a backend.
+       */
+    User: 5,
+};
+HttpEventType[HttpEventType.Sent] = "Sent";
+HttpEventType[HttpEventType.UploadProgress] = "UploadProgress";
+HttpEventType[HttpEventType.ResponseHeader] = "ResponseHeader";
+HttpEventType[HttpEventType.DownloadProgress] = "DownloadProgress";
+HttpEventType[HttpEventType.Response] = "Response";
+HttpEventType[HttpEventType.User] = "User";
+/**
+ * Base interface for progress events.
+ *
+ * \@stable
+ * @record
+ */
+
+/**
+ * A download progress event.
+ *
+ * \@stable
+ * @record
+ */
+
+/**
+ * An upload progress event.
+ *
+ * \@stable
+ * @record
+ */
+
+/**
+ * An event indicating that the request was sent to the server. Useful
+ * when a request may be retried multiple times, to distinguish between
+ * retries on the final event stream.
+ *
+ * \@stable
+ * @record
+ */
+
+/**
+ * A user-defined event.
+ *
+ * Grouping all custom events under this type ensures they will be handled
+ * and forwarded by all implementations of interceptors.
+ *
+ * \@stable
+ * @record
+ */
+
+/**
+ * An error that represents a failed attempt to JSON.parse text coming back
+ * from the server.
+ *
+ * It bundles the Error object with the actual response body that failed to parse.
+ *
+ * \@stable
+ * @record
+ */
+
+/**
+ * Base class for both `HttpResponse` and `HttpHeaderResponse`.
+ *
+ * \@stable
+ * @abstract
+ */
+var HttpResponseBase = /** @class */ (function () {
+    /**
+     * Super-constructor for all responses.
+     *
+     * The single parameter accepted is an initialization hash. Any properties
+     * of the response passed there will override the default values.
+     */
+    function HttpResponseBase(init, defaultStatus, defaultStatusText) {
+        if (defaultStatus === void 0) { defaultStatus = 200; }
+        if (defaultStatusText === void 0) { defaultStatusText = 'OK'; }
+        // If the hash has values passed, use them to initialize the response.
+        // Otherwise use the default values.
+        this.headers = init.headers || new HttpHeaders();
+        this.status = init.status !== undefined ? init.status : defaultStatus;
+        this.statusText = init.statusText || defaultStatusText;
+        this.url = init.url || null;
+        // Cache the ok value to avoid defining a getter.
+        this.ok = this.status >= 200 && this.status < 300;
+    }
+    return HttpResponseBase;
+}());
+/**
+ * A partial HTTP response which only includes the status and header data,
+ * but no response body.
+ *
+ * `HttpHeaderResponse` is a `HttpEvent` available on the response
+ * event stream, only when progress events are requested.
+ *
+ * \@stable
+ */
+var HttpHeaderResponse = /** @class */ (function (_super) {
+    Object(__WEBPACK_IMPORTED_MODULE_5_tslib__["b" /* __extends */])(HttpHeaderResponse, _super);
+    /**
+     * Create a new `HttpHeaderResponse` with the given parameters.
+     */
+    function HttpHeaderResponse(init) {
+        if (init === void 0) { init = {}; }
+        var _this = _super.call(this, init) || this;
+        _this.type = HttpEventType.ResponseHeader;
+        return _this;
+    }
+    /**
+     * Copy this `HttpHeaderResponse`, overriding its contents with the
+     * given parameter hash.
+     */
+    /**
+     * Copy this `HttpHeaderResponse`, overriding its contents with the
+     * given parameter hash.
+     * @param {?=} update
+     * @return {?}
+     */
+    HttpHeaderResponse.prototype.clone = /**
+     * Copy this `HttpHeaderResponse`, overriding its contents with the
+     * given parameter hash.
+     * @param {?=} update
+     * @return {?}
+     */
+    function (update) {
+        if (update === void 0) { update = {}; }
+        // Perform a straightforward initialization of the new HttpHeaderResponse,
+        // overriding the current parameters with new ones if given.
+        return new HttpHeaderResponse({
+            headers: update.headers || this.headers,
+            status: update.status !== undefined ? update.status : this.status,
+            statusText: update.statusText || this.statusText,
+            url: update.url || this.url || undefined,
+        });
+    };
+    return HttpHeaderResponse;
+}(HttpResponseBase));
+/**
+ * A full HTTP response, including a typed response body (which may be `null`
+ * if one was not returned).
+ *
+ * `HttpResponse` is a `HttpEvent` available on the response event
+ * stream.
+ *
+ * \@stable
+ */
+var HttpResponse = /** @class */ (function (_super) {
+    Object(__WEBPACK_IMPORTED_MODULE_5_tslib__["b" /* __extends */])(HttpResponse, _super);
+    /**
+     * Construct a new `HttpResponse`.
+     */
+    function HttpResponse(init) {
+        if (init === void 0) { init = {}; }
+        var _this = _super.call(this, init) || this;
+        _this.type = HttpEventType.Response;
+        _this.body = init.body !== undefined ? init.body : null;
+        return _this;
+    }
+    /**
+     * @param {?=} update
+     * @return {?}
+     */
+    HttpResponse.prototype.clone = /**
+     * @param {?=} update
+     * @return {?}
+     */
+    function (update) {
+        if (update === void 0) { update = {}; }
+        return new HttpResponse({
+            body: (update.body !== undefined) ? update.body : this.body,
+            headers: update.headers || this.headers,
+            status: (update.status !== undefined) ? update.status : this.status,
+            statusText: update.statusText || this.statusText,
+            url: update.url || this.url || undefined,
+        });
+    };
+    return HttpResponse;
+}(HttpResponseBase));
+/**
+ * A response that represents an error or failure, either from a
+ * non-successful HTTP status, an error while executing the request,
+ * or some other failure which occurred during the parsing of the response.
+ *
+ * Any error returned on the `Observable` response stream will be
+ * wrapped in an `HttpErrorResponse` to provide additional context about
+ * the state of the HTTP layer when the error occurred. The error property
+ * will contain either a wrapped Error object or the error response returned
+ * from the server.
+ *
+ * \@stable
+ */
+var HttpErrorResponse = /** @class */ (function (_super) {
+    Object(__WEBPACK_IMPORTED_MODULE_5_tslib__["b" /* __extends */])(HttpErrorResponse, _super);
+    function HttpErrorResponse(init) {
+        var _this = 
+        // Initialize with a default status of 0 / Unknown Error.
+        _super.call(this, init, 0, 'Unknown Error') || this;
+        _this.name = 'HttpErrorResponse';
+        /**
+         * Errors are never okay, even when the status code is in the 2xx success range.
+         */
+        _this.ok = false;
+        // If the response was successful, then this was a parse error. Otherwise, it was
+        // a protocol-level failure of some sort. Either the request failed in transit
+        // or the server returned an unsuccessful status code.
+        if (_this.status >= 200 && _this.status < 300) {
+            _this.message = "Http failure during parsing for " + (init.url || '(unknown url)');
+        }
+        else {
+            _this.message =
+                "Http failure response for " + (init.url || '(unknown url)') + ": " + init.status + " " + init.statusText;
+        }
+        _this.error = init.error || null;
+        return _this;
+    }
+    return HttpErrorResponse;
+}(HttpResponseBase));
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+/**
+ * Construct an instance of `HttpRequestOptions<T>` from a source `HttpMethodOptions` and
+ * the given `body`. Basically, this clones the object and adds the body.
+ * @template T
+ * @param {?} options
+ * @param {?} body
+ * @return {?}
+ */
+function addBody(options, body) {
+    return {
+        body: body,
+        headers: options.headers,
+        observe: options.observe,
+        params: options.params,
+        reportProgress: options.reportProgress,
+        responseType: options.responseType,
+        withCredentials: options.withCredentials,
+    };
+}
+/**
+ * Perform HTTP requests.
+ *
+ * `HttpClient` is available as an injectable class, with methods to perform HTTP requests.
+ * Each request method has multiple signatures, and the return type varies according to which
+ * signature is called (mainly the values of `observe` and `responseType`).
+ *
+ * \@stable
+ */
+var HttpClient = /** @class */ (function () {
+    function HttpClient(handler) {
+        this.handler = handler;
+    }
+    /**
+     * Constructs an `Observable` for a particular HTTP request that, when subscribed,
+     * fires the request through the chain of registered interceptors and on to the
+     * server.
+     *
+     * This method can be called in one of two ways. Either an `HttpRequest`
+     * instance can be passed directly as the only parameter, or a method can be
+     * passed as the first parameter, a string URL as the second, and an
+     * options hash as the third.
+     *
+     * If a `HttpRequest` object is passed directly, an `Observable` of the
+     * raw `HttpEvent` stream will be returned.
+     *
+     * If a request is instead built by providing a URL, the options object
+     * determines the return type of `request()`. In addition to configuring
+     * request parameters such as the outgoing headers and/or the body, the options
+     * hash specifies two key pieces of information about the request: the
+     * `responseType` and what to `observe`.
+     *
+     * The `responseType` value determines how a successful response body will be
+     * parsed. If `responseType` is the default `json`, a type interface for the
+     * resulting object may be passed as a type parameter to `request()`.
+     *
+     * The `observe` value determines the return type of `request()`, based on what
+     * the consumer is interested in observing. A value of `events` will return an
+     * `Observable<HttpEvent>` representing the raw `HttpEvent` stream,
+     * including progress events by default. A value of `response` will return an
+     * `Observable<HttpResponse<T>>` where the `T` parameter of `HttpResponse`
+     * depends on the `responseType` and any optionally provided type parameter.
+     * A value of `body` will return an `Observable<T>` with the same `T` body type.
+     */
+    /**
+     * Constructs an `Observable` for a particular HTTP request that, when subscribed,
+     * fires the request through the chain of registered interceptors and on to the
+     * server.
+     *
+     * This method can be called in one of two ways. Either an `HttpRequest`
+     * instance can be passed directly as the only parameter, or a method can be
+     * passed as the first parameter, a string URL as the second, and an
+     * options hash as the third.
+     *
+     * If a `HttpRequest` object is passed directly, an `Observable` of the
+     * raw `HttpEvent` stream will be returned.
+     *
+     * If a request is instead built by providing a URL, the options object
+     * determines the return type of `request()`. In addition to configuring
+     * request parameters such as the outgoing headers and/or the body, the options
+     * hash specifies two key pieces of information about the request: the
+     * `responseType` and what to `observe`.
+     *
+     * The `responseType` value determines how a successful response body will be
+     * parsed. If `responseType` is the default `json`, a type interface for the
+     * resulting object may be passed as a type parameter to `request()`.
+     *
+     * The `observe` value determines the return type of `request()`, based on what
+     * the consumer is interested in observing. A value of `events` will return an
+     * `Observable<HttpEvent>` representing the raw `HttpEvent` stream,
+     * including progress events by default. A value of `response` will return an
+     * `Observable<HttpResponse<T>>` where the `T` parameter of `HttpResponse`
+     * depends on the `responseType` and any optionally provided type parameter.
+     * A value of `body` will return an `Observable<T>` with the same `T` body type.
+     * @param {?} first
+     * @param {?=} url
+     * @param {?=} options
+     * @return {?}
+     */
+    HttpClient.prototype.request = /**
+     * Constructs an `Observable` for a particular HTTP request that, when subscribed,
+     * fires the request through the chain of registered interceptors and on to the
+     * server.
+     *
+     * This method can be called in one of two ways. Either an `HttpRequest`
+     * instance can be passed directly as the only parameter, or a method can be
+     * passed as the first parameter, a string URL as the second, and an
+     * options hash as the third.
+     *
+     * If a `HttpRequest` object is passed directly, an `Observable` of the
+     * raw `HttpEvent` stream will be returned.
+     *
+     * If a request is instead built by providing a URL, the options object
+     * determines the return type of `request()`. In addition to configuring
+     * request parameters such as the outgoing headers and/or the body, the options
+     * hash specifies two key pieces of information about the request: the
+     * `responseType` and what to `observe`.
+     *
+     * The `responseType` value determines how a successful response body will be
+     * parsed. If `responseType` is the default `json`, a type interface for the
+     * resulting object may be passed as a type parameter to `request()`.
+     *
+     * The `observe` value determines the return type of `request()`, based on what
+     * the consumer is interested in observing. A value of `events` will return an
+     * `Observable<HttpEvent>` representing the raw `HttpEvent` stream,
+     * including progress events by default. A value of `response` will return an
+     * `Observable<HttpResponse<T>>` where the `T` parameter of `HttpResponse`
+     * depends on the `responseType` and any optionally provided type parameter.
+     * A value of `body` will return an `Observable<T>` with the same `T` body type.
+     * @param {?} first
+     * @param {?=} url
+     * @param {?=} options
+     * @return {?}
+     */
+    function (first, url, options) {
+        var _this = this;
+        if (options === void 0) { options = {}; }
+        var /** @type {?} */ req;
+        // Firstly, check whether the primary argument is an instance of `HttpRequest`.
+        if (first instanceof HttpRequest) {
+            // It is. The other arguments must be undefined (per the signatures) and can be
+            // ignored.
+            req = /** @type {?} */ (first);
+        }
+        else {
+            // It's a string, so it represents a URL. Construct a request based on it,
+            // and incorporate the remaining arguments (assuming GET unless a method is
+            // provided.
+            // Figure out the headers.
+            var /** @type {?} */ headers = undefined;
+            if (options.headers instanceof HttpHeaders) {
+                headers = options.headers;
+            }
+            else {
+                headers = new HttpHeaders(options.headers);
+            }
+            // Sort out parameters.
+            var /** @type {?} */ params = undefined;
+            if (!!options.params) {
+                if (options.params instanceof HttpParams) {
+                    params = options.params;
+                }
+                else {
+                    params = new HttpParams(/** @type {?} */ ({ fromObject: options.params }));
+                }
+            }
+            // Construct the request.
+            req = new HttpRequest(first, /** @type {?} */ ((url)), (options.body !== undefined ? options.body : null), {
+                headers: headers,
+                params: params,
+                reportProgress: options.reportProgress,
+                // By default, JSON is assumed to be returned for all calls.
+                responseType: options.responseType || 'json',
+                withCredentials: options.withCredentials,
+            });
+        }
+        // Start with an Observable.of() the initial request, and run the handler (which
+        // includes all interceptors) inside a concatMap(). This way, the handler runs
+        // inside an Observable chain, which causes interceptors to be re-run on every
+        // subscription (this also makes retries re-run the handler, including interceptors).
+        var /** @type {?} */ events$ = __WEBPACK_IMPORTED_MODULE_2_rxjs_operator_concatMap__["a" /* concatMap */].call(Object(__WEBPACK_IMPORTED_MODULE_1_rxjs_observable_of__["a" /* of */])(req), function (req) { return _this.handler.handle(req); });
+        // If coming via the API signature which accepts a previously constructed HttpRequest,
+        // the only option is to get the event stream. Otherwise, return the event stream if
+        // that is what was requested.
+        if (first instanceof HttpRequest || options.observe === 'events') {
+            return events$;
+        }
+        // The requested stream contains either the full response or the body. In either
+        // case, the first step is to filter the event stream to extract a stream of
+        // responses(s).
+        var /** @type {?} */ res$ = __WEBPACK_IMPORTED_MODULE_3_rxjs_operator_filter__["a" /* filter */].call(events$, function (event) { return event instanceof HttpResponse; });
+        // Decide which stream to return.
+        switch (options.observe || 'body') {
+            case 'body':
+                // The requested stream is the body. Map the response stream to the response
+                // body. This could be done more simply, but a misbehaving interceptor might
+                // transform the response body into a different format and ignore the requested
+                // responseType. Guard against this by validating that the response is of the
+                // requested type.
+                switch (req.responseType) {
+                    case 'arraybuffer':
+                        return __WEBPACK_IMPORTED_MODULE_4_rxjs_operator_map__["a" /* map */].call(res$, function (res) {
+                            // Validate that the body is an ArrayBuffer.
+                            if (res.body !== null && !(res.body instanceof ArrayBuffer)) {
+                                throw new Error('Response is not an ArrayBuffer.');
+                            }
+                            return res.body;
+                        });
+                    case 'blob':
+                        return __WEBPACK_IMPORTED_MODULE_4_rxjs_operator_map__["a" /* map */].call(res$, function (res) {
+                            // Validate that the body is a Blob.
+                            if (res.body !== null && !(res.body instanceof Blob)) {
+                                throw new Error('Response is not a Blob.');
+                            }
+                            return res.body;
+                        });
+                    case 'text':
+                        return __WEBPACK_IMPORTED_MODULE_4_rxjs_operator_map__["a" /* map */].call(res$, function (res) {
+                            // Validate that the body is a string.
+                            if (res.body !== null && typeof res.body !== 'string') {
+                                throw new Error('Response is not a string.');
+                            }
+                            return res.body;
+                        });
+                    case 'json':
+                    default:
+                        // No validation needed for JSON responses, as they can be of any type.
+                        return __WEBPACK_IMPORTED_MODULE_4_rxjs_operator_map__["a" /* map */].call(res$, function (res) { return res.body; });
+                }
+            case 'response':
+                // The response stream was requested directly, so return it.
+                return res$;
+            default:
+                // Guard against new future observe types being added.
+                throw new Error("Unreachable: unhandled observe type " + options.observe + "}");
+        }
+    };
+    /**
+     * Constructs an `Observable` which, when subscribed, will cause the configured
+     * DELETE request to be executed on the server. See the individual overloads for
+     * details of `delete()`'s return type based on the provided options.
+     */
+    /**
+     * Constructs an `Observable` which, when subscribed, will cause the configured
+     * DELETE request to be executed on the server. See the individual overloads for
+     * details of `delete()`'s return type based on the provided options.
+     * @param {?} url
+     * @param {?=} options
+     * @return {?}
+     */
+    HttpClient.prototype.delete = /**
+     * Constructs an `Observable` which, when subscribed, will cause the configured
+     * DELETE request to be executed on the server. See the individual overloads for
+     * details of `delete()`'s return type based on the provided options.
+     * @param {?} url
+     * @param {?=} options
+     * @return {?}
+     */
+    function (url, options) {
+        if (options === void 0) { options = {}; }
+        return this.request('DELETE', url, /** @type {?} */ (options));
+    };
+    /**
+     * Constructs an `Observable` which, when subscribed, will cause the configured
+     * GET request to be executed on the server. See the individual overloads for
+     * details of `get()`'s return type based on the provided options.
+     */
+    /**
+     * Constructs an `Observable` which, when subscribed, will cause the configured
+     * GET request to be executed on the server. See the individual overloads for
+     * details of `get()`'s return type based on the provided options.
+     * @param {?} url
+     * @param {?=} options
+     * @return {?}
+     */
+    HttpClient.prototype.get = /**
+     * Constructs an `Observable` which, when subscribed, will cause the configured
+     * GET request to be executed on the server. See the individual overloads for
+     * details of `get()`'s return type based on the provided options.
+     * @param {?} url
+     * @param {?=} options
+     * @return {?}
+     */
+    function (url, options) {
+        if (options === void 0) { options = {}; }
+        return this.request('GET', url, /** @type {?} */ (options));
+    };
+    /**
+     * Constructs an `Observable` which, when subscribed, will cause the configured
+     * HEAD request to be executed on the server. See the individual overloads for
+     * details of `head()`'s return type based on the provided options.
+     */
+    /**
+     * Constructs an `Observable` which, when subscribed, will cause the configured
+     * HEAD request to be executed on the server. See the individual overloads for
+     * details of `head()`'s return type based on the provided options.
+     * @param {?} url
+     * @param {?=} options
+     * @return {?}
+     */
+    HttpClient.prototype.head = /**
+     * Constructs an `Observable` which, when subscribed, will cause the configured
+     * HEAD request to be executed on the server. See the individual overloads for
+     * details of `head()`'s return type based on the provided options.
+     * @param {?} url
+     * @param {?=} options
+     * @return {?}
+     */
+    function (url, options) {
+        if (options === void 0) { options = {}; }
+        return this.request('HEAD', url, /** @type {?} */ (options));
+    };
+    /**
+     * Constructs an `Observable` which, when subscribed, will cause a request
+     * with the special method `JSONP` to be dispatched via the interceptor pipeline.
+     *
+     * A suitable interceptor must be installed (e.g. via the `HttpClientJsonpModule`).
+     * If no such interceptor is reached, then the `JSONP` request will likely be
+     * rejected by the configured backend.
+     */
+    /**
+     * Constructs an `Observable` which, when subscribed, will cause a request
+     * with the special method `JSONP` to be dispatched via the interceptor pipeline.
+     *
+     * A suitable interceptor must be installed (e.g. via the `HttpClientJsonpModule`).
+     * If no such interceptor is reached, then the `JSONP` request will likely be
+     * rejected by the configured backend.
+     * @template T
+     * @param {?} url
+     * @param {?} callbackParam
+     * @return {?}
+     */
+    HttpClient.prototype.jsonp = /**
+     * Constructs an `Observable` which, when subscribed, will cause a request
+     * with the special method `JSONP` to be dispatched via the interceptor pipeline.
+     *
+     * A suitable interceptor must be installed (e.g. via the `HttpClientJsonpModule`).
+     * If no such interceptor is reached, then the `JSONP` request will likely be
+     * rejected by the configured backend.
+     * @template T
+     * @param {?} url
+     * @param {?} callbackParam
+     * @return {?}
+     */
+    function (url, callbackParam) {
+        return this.request('JSONP', url, {
+            params: new HttpParams().append(callbackParam, 'JSONP_CALLBACK'),
+            observe: 'body',
+            responseType: 'json',
+        });
+    };
+    /**
+     * Constructs an `Observable` which, when subscribed, will cause the configured
+     * OPTIONS request to be executed on the server. See the individual overloads for
+     * details of `options()`'s return type based on the provided options.
+     */
+    /**
+     * Constructs an `Observable` which, when subscribed, will cause the configured
+     * OPTIONS request to be executed on the server. See the individual overloads for
+     * details of `options()`'s return type based on the provided options.
+     * @param {?} url
+     * @param {?=} options
+     * @return {?}
+     */
+    HttpClient.prototype.options = /**
+     * Constructs an `Observable` which, when subscribed, will cause the configured
+     * OPTIONS request to be executed on the server. See the individual overloads for
+     * details of `options()`'s return type based on the provided options.
+     * @param {?} url
+     * @param {?=} options
+     * @return {?}
+     */
+    function (url, options) {
+        if (options === void 0) { options = {}; }
+        return this.request('OPTIONS', url, /** @type {?} */ (options));
+    };
+    /**
+     * Constructs an `Observable` which, when subscribed, will cause the configured
+     * PATCH request to be executed on the server. See the individual overloads for
+     * details of `patch()`'s return type based on the provided options.
+     */
+    /**
+     * Constructs an `Observable` which, when subscribed, will cause the configured
+     * PATCH request to be executed on the server. See the individual overloads for
+     * details of `patch()`'s return type based on the provided options.
+     * @param {?} url
+     * @param {?} body
+     * @param {?=} options
+     * @return {?}
+     */
+    HttpClient.prototype.patch = /**
+     * Constructs an `Observable` which, when subscribed, will cause the configured
+     * PATCH request to be executed on the server. See the individual overloads for
+     * details of `patch()`'s return type based on the provided options.
+     * @param {?} url
+     * @param {?} body
+     * @param {?=} options
+     * @return {?}
+     */
+    function (url, body, options) {
+        if (options === void 0) { options = {}; }
+        return this.request('PATCH', url, addBody(options, body));
+    };
+    /**
+     * Constructs an `Observable` which, when subscribed, will cause the configured
+     * POST request to be executed on the server. See the individual overloads for
+     * details of `post()`'s return type based on the provided options.
+     */
+    /**
+     * Constructs an `Observable` which, when subscribed, will cause the configured
+     * POST request to be executed on the server. See the individual overloads for
+     * details of `post()`'s return type based on the provided options.
+     * @param {?} url
+     * @param {?} body
+     * @param {?=} options
+     * @return {?}
+     */
+    HttpClient.prototype.post = /**
+     * Constructs an `Observable` which, when subscribed, will cause the configured
+     * POST request to be executed on the server. See the individual overloads for
+     * details of `post()`'s return type based on the provided options.
+     * @param {?} url
+     * @param {?} body
+     * @param {?=} options
+     * @return {?}
+     */
+    function (url, body, options) {
+        if (options === void 0) { options = {}; }
+        return this.request('POST', url, addBody(options, body));
+    };
+    /**
+     * Constructs an `Observable` which, when subscribed, will cause the configured
+     * POST request to be executed on the server. See the individual overloads for
+     * details of `post()`'s return type based on the provided options.
+     */
+    /**
+     * Constructs an `Observable` which, when subscribed, will cause the configured
+     * POST request to be executed on the server. See the individual overloads for
+     * details of `post()`'s return type based on the provided options.
+     * @param {?} url
+     * @param {?} body
+     * @param {?=} options
+     * @return {?}
+     */
+    HttpClient.prototype.put = /**
+     * Constructs an `Observable` which, when subscribed, will cause the configured
+     * POST request to be executed on the server. See the individual overloads for
+     * details of `post()`'s return type based on the provided options.
+     * @param {?} url
+     * @param {?} body
+     * @param {?=} options
+     * @return {?}
+     */
+    function (url, body, options) {
+        if (options === void 0) { options = {}; }
+        return this.request('PUT', url, addBody(options, body));
+    };
+    HttpClient.decorators = [
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"] },
+    ];
+    /** @nocollapse */
+    HttpClient.ctorParameters = function () { return [
+        { type: HttpHandler, },
+    ]; };
+    return HttpClient;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+/**
+ * Intercepts `HttpRequest` and handles them.
+ *
+ * Most interceptors will transform the outgoing request before passing it to the
+ * next interceptor in the chain, by calling `next.handle(transformedReq)`.
+ *
+ * In rare cases, interceptors may wish to completely handle a request themselves,
+ * and not delegate to the remainder of the chain. This behavior is allowed.
+ *
+ * \@stable
+ * @record
+ */
+
+/**
+ * `HttpHandler` which applies an `HttpInterceptor` to an `HttpRequest`.
+ *
+ * \@stable
+ */
+var HttpInterceptorHandler = /** @class */ (function () {
+    function HttpInterceptorHandler(next, interceptor) {
+        this.next = next;
+        this.interceptor = interceptor;
+    }
+    /**
+     * @param {?} req
+     * @return {?}
+     */
+    HttpInterceptorHandler.prototype.handle = /**
+     * @param {?} req
+     * @return {?}
+     */
+    function (req) {
+        return this.interceptor.intercept(req, this.next);
+    };
+    return HttpInterceptorHandler;
+}());
+/**
+ * A multi-provider token which represents the array of `HttpInterceptor`s that
+ * are registered.
+ *
+ * \@stable
+ */
+var HTTP_INTERCEPTORS = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["InjectionToken"]('HTTP_INTERCEPTORS');
+var NoopInterceptor = /** @class */ (function () {
+    function NoopInterceptor() {
+    }
+    /**
+     * @param {?} req
+     * @param {?} next
+     * @return {?}
+     */
+    NoopInterceptor.prototype.intercept = /**
+     * @param {?} req
+     * @param {?} next
+     * @return {?}
+     */
+    function (req, next) {
+        return next.handle(req);
+    };
+    NoopInterceptor.decorators = [
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"] },
+    ];
+    /** @nocollapse */
+    NoopInterceptor.ctorParameters = function () { return []; };
+    return NoopInterceptor;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+// Every request made through JSONP needs a callback name that's unique across the
+// whole page. Each request is assigned an id and the callback name is constructed
+// from that. The next id to be assigned is tracked in a global variable here that
+// is shared among all applications on the page.
+var nextRequestId = 0;
+// Error text given when a JSONP script is injected, but doesn't invoke the callback
+// passed in its URL.
+var JSONP_ERR_NO_CALLBACK = 'JSONP injected script did not invoke callback.';
+// Error text given when a request is passed to the JsonpClientBackend that doesn't
+// have a request method JSONP.
+var JSONP_ERR_WRONG_METHOD = 'JSONP requests must use JSONP request method.';
+var JSONP_ERR_WRONG_RESPONSE_TYPE = 'JSONP requests must use Json response type.';
+/**
+ * DI token/abstract type representing a map of JSONP callbacks.
+ *
+ * In the browser, this should always be the `window` object.
+ *
+ * \@stable
+ * @abstract
+ */
+var JsonpCallbackContext = /** @class */ (function () {
+    function JsonpCallbackContext() {
+    }
+    return JsonpCallbackContext;
+}());
+/**
+ * `HttpBackend` that only processes `HttpRequest` with the JSONP method,
+ * by performing JSONP style requests.
+ *
+ * \@stable
+ */
+var JsonpClientBackend = /** @class */ (function () {
+    function JsonpClientBackend(callbackMap, document) {
+        this.callbackMap = callbackMap;
+        this.document = document;
+    }
+    /**
+     * Get the name of the next callback method, by incrementing the global `nextRequestId`.
+     * @return {?}
+     */
+    JsonpClientBackend.prototype.nextCallback = /**
+     * Get the name of the next callback method, by incrementing the global `nextRequestId`.
+     * @return {?}
+     */
+    function () { return "ng_jsonp_callback_" + nextRequestId++; };
+    /**
+     * Process a JSONP request and return an event stream of the results.
+     */
+    /**
+     * Process a JSONP request and return an event stream of the results.
+     * @param {?} req
+     * @return {?}
+     */
+    JsonpClientBackend.prototype.handle = /**
+     * Process a JSONP request and return an event stream of the results.
+     * @param {?} req
+     * @return {?}
+     */
+    function (req) {
+        var _this = this;
+        // Firstly, check both the method and response type. If either doesn't match
+        // then the request was improperly routed here and cannot be handled.
+        if (req.method !== 'JSONP') {
+            throw new Error(JSONP_ERR_WRONG_METHOD);
+        }
+        else if (req.responseType !== 'json') {
+            throw new Error(JSONP_ERR_WRONG_RESPONSE_TYPE);
+        }
+        // Everything else happens inside the Observable boundary.
+        return new __WEBPACK_IMPORTED_MODULE_7_rxjs_Observable__["a" /* Observable */](function (observer) {
+            // The first step to make a request is to generate the callback name, and replace the
+            // callback placeholder in the URL with the name. Care has to be taken here to ensure
+            // a trailing &, if matched, gets inserted back into the URL in the correct place.
+            var /** @type {?} */ callback = _this.nextCallback();
+            var /** @type {?} */ url = req.urlWithParams.replace(/=JSONP_CALLBACK(&|$)/, "=" + callback + "$1");
+            // Construct the <script> tag and point it at the URL.
+            var /** @type {?} */ node = _this.document.createElement('script');
+            node.src = url;
+            // A JSONP request requires waiting for multiple callbacks. These variables
+            // are closed over and track state across those callbacks.
+            // The response object, if one has been received, or null otherwise.
+            var /** @type {?} */ body = null;
+            // Whether the response callback has been called.
+            var /** @type {?} */ finished = false;
+            // Whether the request has been cancelled (and thus any other callbacks)
+            // should be ignored.
+            var /** @type {?} */ cancelled = false;
+            // Set the response callback in this.callbackMap (which will be the window
+            // object in the browser. The script being loaded via the <script> tag will
+            // eventually call this callback.
+            // Set the response callback in this.callbackMap (which will be the window
+            // object in the browser. The script being loaded via the <script> tag will
+            // eventually call this callback.
+            _this.callbackMap[callback] = function (data) {
+                // Data has been received from the JSONP script. Firstly, delete this callback.
+                delete _this.callbackMap[callback];
+                // Next, make sure the request wasn't cancelled in the meantime.
+                if (cancelled) {
+                    return;
+                }
+                // Set state to indicate data was received.
+                body = data;
+                finished = true;
+            };
+            // cleanup() is a utility closure that removes the <script> from the page and
+            // the response callback from the window. This logic is used in both the
+            // success, error, and cancellation paths, so it's extracted out for convenience.
+            var /** @type {?} */ cleanup = function () {
+                // Remove the <script> tag if it's still on the page.
+                if (node.parentNode) {
+                    node.parentNode.removeChild(node);
+                }
+                // Remove the response callback from the callbackMap (window object in the
+                // browser).
+                delete _this.callbackMap[callback];
+            };
+            // onLoad() is the success callback which runs after the response callback
+            // if the JSONP script loads successfully. The event itself is unimportant.
+            // If something went wrong, onLoad() may run without the response callback
+            // having been invoked.
+            var /** @type {?} */ onLoad = function (event) {
+                // Do nothing if the request has been cancelled.
+                if (cancelled) {
+                    return;
+                }
+                // Cleanup the page.
+                cleanup();
+                // Check whether the response callback has run.
+                if (!finished) {
+                    // It hasn't, something went wrong with the request. Return an error via
+                    // the Observable error path. All JSONP errors have status 0.
+                    observer.error(new HttpErrorResponse({
+                        url: url,
+                        status: 0,
+                        statusText: 'JSONP Error',
+                        error: new Error(JSONP_ERR_NO_CALLBACK),
+                    }));
+                    return;
+                }
+                // Success. body either contains the response body or null if none was
+                // returned.
+                observer.next(new HttpResponse({
+                    body: body,
+                    status: 200,
+                    statusText: 'OK', url: url,
+                }));
+                // Complete the stream, the response is over.
+                observer.complete();
+            };
+            // onError() is the error callback, which runs if the script returned generates
+            // a Javascript error. It emits the error via the Observable error channel as
+            // a HttpErrorResponse.
+            var /** @type {?} */ onError = function (error) {
+                // If the request was already cancelled, no need to emit anything.
+                if (cancelled) {
+                    return;
+                }
+                cleanup();
+                // Wrap the error in a HttpErrorResponse.
+                observer.error(new HttpErrorResponse({
+                    error: error,
+                    status: 0,
+                    statusText: 'JSONP Error', url: url,
+                }));
+            };
+            // Subscribe to both the success (load) and error events on the <script> tag,
+            // and add it to the page.
+            node.addEventListener('load', onLoad);
+            node.addEventListener('error', onError);
+            _this.document.body.appendChild(node);
+            // The request has now been successfully sent.
+            observer.next({ type: HttpEventType.Sent });
+            // Cancellation handler.
+            return function () {
+                // Track the cancellation so event listeners won't do anything even if already scheduled.
+                cancelled = true;
+                // Remove the event listeners so they won't run if the events later fire.
+                node.removeEventListener('load', onLoad);
+                node.removeEventListener('error', onError);
+                // And finally, clean up the page.
+                cleanup();
+            };
+        });
+    };
+    JsonpClientBackend.decorators = [
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"] },
+    ];
+    /** @nocollapse */
+    JsonpClientBackend.ctorParameters = function () { return [
+        { type: JsonpCallbackContext, },
+        { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Inject"], args: [__WEBPACK_IMPORTED_MODULE_6__angular_common__["c" /* DOCUMENT */],] },] },
+    ]; };
+    return JsonpClientBackend;
+}());
+/**
+ * An `HttpInterceptor` which identifies requests with the method JSONP and
+ * shifts them to the `JsonpClientBackend`.
+ *
+ * \@stable
+ */
+var JsonpInterceptor = /** @class */ (function () {
+    function JsonpInterceptor(jsonp) {
+        this.jsonp = jsonp;
+    }
+    /**
+     * @param {?} req
+     * @param {?} next
+     * @return {?}
+     */
+    JsonpInterceptor.prototype.intercept = /**
+     * @param {?} req
+     * @param {?} next
+     * @return {?}
+     */
+    function (req, next) {
+        if (req.method === 'JSONP') {
+            return this.jsonp.handle(/** @type {?} */ (req));
+        }
+        // Fall through for normal HTTP requests.
+        return next.handle(req);
+    };
+    JsonpInterceptor.decorators = [
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"] },
+    ];
+    /** @nocollapse */
+    JsonpInterceptor.ctorParameters = function () { return [
+        { type: JsonpClientBackend, },
+    ]; };
+    return JsonpInterceptor;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+var XSSI_PREFIX = /^\)\]\}',?\n/;
+/**
+ * Determine an appropriate URL for the response, by checking either
+ * XMLHttpRequest.responseURL or the X-Request-URL header.
+ * @param {?} xhr
+ * @return {?}
+ */
+function getResponseUrl(xhr) {
+    if ('responseURL' in xhr && xhr.responseURL) {
+        return xhr.responseURL;
+    }
+    if (/^X-Request-URL:/m.test(xhr.getAllResponseHeaders())) {
+        return xhr.getResponseHeader('X-Request-URL');
+    }
+    return null;
+}
+/**
+ * A wrapper around the `XMLHttpRequest` constructor.
+ *
+ * \@stable
+ * @abstract
+ */
+var XhrFactory = /** @class */ (function () {
+    function XhrFactory() {
+    }
+    return XhrFactory;
+}());
+/**
+ * A factory for \@{link HttpXhrBackend} that uses the `XMLHttpRequest` browser API.
+ *
+ * \@stable
+ */
+var BrowserXhr = /** @class */ (function () {
+    function BrowserXhr() {
+    }
+    /**
+     * @return {?}
+     */
+    BrowserXhr.prototype.build = /**
+     * @return {?}
+     */
+    function () { return /** @type {?} */ ((new XMLHttpRequest())); };
+    BrowserXhr.decorators = [
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"] },
+    ];
+    /** @nocollapse */
+    BrowserXhr.ctorParameters = function () { return []; };
+    return BrowserXhr;
+}());
+/**
+ * An `HttpBackend` which uses the XMLHttpRequest API to send
+ * requests to a backend server.
+ *
+ * \@stable
+ */
+var HttpXhrBackend = /** @class */ (function () {
+    function HttpXhrBackend(xhrFactory) {
+        this.xhrFactory = xhrFactory;
+    }
+    /**
+     * Process a request and return a stream of response events.
+     */
+    /**
+     * Process a request and return a stream of response events.
+     * @param {?} req
+     * @return {?}
+     */
+    HttpXhrBackend.prototype.handle = /**
+     * Process a request and return a stream of response events.
+     * @param {?} req
+     * @return {?}
+     */
+    function (req) {
+        var _this = this;
+        // Quick check to give a better error message when a user attempts to use
+        // HttpClient.jsonp() without installing the JsonpClientModule
+        if (req.method === 'JSONP') {
+            throw new Error("Attempted to construct Jsonp request without JsonpClientModule installed.");
+        }
+        // Everything happens on Observable subscription.
+        return new __WEBPACK_IMPORTED_MODULE_7_rxjs_Observable__["a" /* Observable */](function (observer) {
+            // Start by setting up the XHR object with request method, URL, and withCredentials flag.
+            var /** @type {?} */ xhr = _this.xhrFactory.build();
+            xhr.open(req.method, req.urlWithParams);
+            if (!!req.withCredentials) {
+                xhr.withCredentials = true;
+            }
+            // Add all the requested headers.
+            req.headers.forEach(function (name, values) { return xhr.setRequestHeader(name, values.join(',')); });
+            // Add an Accept header if one isn't present already.
+            if (!req.headers.has('Accept')) {
+                xhr.setRequestHeader('Accept', 'application/json, text/plain, */*');
+            }
+            // Auto-detect the Content-Type header if one isn't present already.
+            if (!req.headers.has('Content-Type')) {
+                var /** @type {?} */ detectedType = req.detectContentTypeHeader();
+                // Sometimes Content-Type detection fails.
+                if (detectedType !== null) {
+                    xhr.setRequestHeader('Content-Type', detectedType);
+                }
+            }
+            // Set the responseType if one was requested.
+            if (req.responseType) {
+                var /** @type {?} */ responseType = req.responseType.toLowerCase();
+                // JSON responses need to be processed as text. This is because if the server
+                // returns an XSSI-prefixed JSON response, the browser will fail to parse it,
+                // xhr.response will be null, and xhr.responseText cannot be accessed to
+                // retrieve the prefixed JSON data in order to strip the prefix. Thus, all JSON
+                // is parsed by first requesting text and then applying JSON.parse.
+                xhr.responseType = /** @type {?} */ (((responseType !== 'json') ? responseType : 'text'));
+            }
+            // Serialize the request body if one is present. If not, this will be set to null.
+            var /** @type {?} */ reqBody = req.serializeBody();
+            // If progress events are enabled, response headers will be delivered
+            // in two events - the HttpHeaderResponse event and the full HttpResponse
+            // event. However, since response headers don't change in between these
+            // two events, it doesn't make sense to parse them twice. So headerResponse
+            // caches the data extracted from the response whenever it's first parsed,
+            // to ensure parsing isn't duplicated.
+            var /** @type {?} */ headerResponse = null;
+            // partialFromXhr extracts the HttpHeaderResponse from the current XMLHttpRequest
+            // state, and memoizes it into headerResponse.
+            var /** @type {?} */ partialFromXhr = function () {
+                if (headerResponse !== null) {
+                    return headerResponse;
+                }
+                // Read status and normalize an IE9 bug (http://bugs.jquery.com/ticket/1450).
+                var /** @type {?} */ status = xhr.status === 1223 ? 204 : xhr.status;
+                var /** @type {?} */ statusText = xhr.statusText || 'OK';
+                // Parse headers from XMLHttpRequest - this step is lazy.
+                var /** @type {?} */ headers = new HttpHeaders(xhr.getAllResponseHeaders());
+                // Read the response URL from the XMLHttpResponse instance and fall back on the
+                // request URL.
+                var /** @type {?} */ url = getResponseUrl(xhr) || req.url;
+                // Construct the HttpHeaderResponse and memoize it.
+                headerResponse = new HttpHeaderResponse({ headers: headers, status: status, statusText: statusText, url: url });
+                return headerResponse;
+            };
+            // Next, a few closures are defined for the various events which XMLHttpRequest can
+            // emit. This allows them to be unregistered as event listeners later.
+            // First up is the load event, which represents a response being fully available.
+            var /** @type {?} */ onLoad = function () {
+                // Read response state from the memoized partial data.
+                var _a = partialFromXhr(), headers = _a.headers, status = _a.status, statusText = _a.statusText, url = _a.url;
+                // The body will be read out if present.
+                var /** @type {?} */ body = null;
+                if (status !== 204) {
+                    // Use XMLHttpRequest.response if set, responseText otherwise.
+                    body = (typeof xhr.response === 'undefined') ? xhr.responseText : xhr.response;
+                }
+                // Normalize another potential bug (this one comes from CORS).
+                if (status === 0) {
+                    status = !!body ? 200 : 0;
+                }
+                // ok determines whether the response will be transmitted on the event or
+                // error channel. Unsuccessful status codes (not 2xx) will always be errors,
+                // but a successful status code can still result in an error if the user
+                // asked for JSON data and the body cannot be parsed as such.
+                var /** @type {?} */ ok = status >= 200 && status < 300;
+                // Check whether the body needs to be parsed as JSON (in many cases the browser
+                // will have done that already).
+                if (req.responseType === 'json' && typeof body === 'string') {
+                    // Save the original body, before attempting XSSI prefix stripping.
+                    var /** @type {?} */ originalBody = body;
+                    body = body.replace(XSSI_PREFIX, '');
+                    try {
+                        // Attempt the parse. If it fails, a parse error should be delivered to the user.
+                        body = body !== '' ? JSON.parse(body) : null;
+                    }
+                    catch (/** @type {?} */ error) {
+                        // Since the JSON.parse failed, it's reasonable to assume this might not have been a
+                        // JSON response. Restore the original body (including any XSSI prefix) to deliver
+                        // a better error response.
+                        body = originalBody;
+                        // If this was an error request to begin with, leave it as a string, it probably
+                        // just isn't JSON. Otherwise, deliver the parsing error to the user.
+                        if (ok) {
+                            // Even though the response status was 2xx, this is still an error.
+                            ok = false;
+                            // The parse error contains the text of the body that failed to parse.
+                            body = /** @type {?} */ ({ error: error, text: body });
+                        }
+                    }
+                }
+                if (ok) {
+                    // A successful response is delivered on the event stream.
+                    observer.next(new HttpResponse({
+                        body: body,
+                        headers: headers,
+                        status: status,
+                        statusText: statusText,
+                        url: url || undefined,
+                    }));
+                    // The full body has been received and delivered, no further events
+                    // are possible. This request is complete.
+                    observer.complete();
+                }
+                else {
+                    // An unsuccessful request is delivered on the error channel.
+                    observer.error(new HttpErrorResponse({
+                        // The error in this case is the response body (error from the server).
+                        error: body,
+                        headers: headers,
+                        status: status,
+                        statusText: statusText,
+                        url: url || undefined,
+                    }));
+                }
+            };
+            // The onError callback is called when something goes wrong at the network level.
+            // Connection timeout, DNS error, offline, etc. These are actual errors, and are
+            // transmitted on the error channel.
+            var /** @type {?} */ onError = function (error) {
+                var /** @type {?} */ res = new HttpErrorResponse({
+                    error: error,
+                    status: xhr.status || 0,
+                    statusText: xhr.statusText || 'Unknown Error',
+                });
+                observer.error(res);
+            };
+            // The sentHeaders flag tracks whether the HttpResponseHeaders event
+            // has been sent on the stream. This is necessary to track if progress
+            // is enabled since the event will be sent on only the first download
+            // progerss event.
+            var /** @type {?} */ sentHeaders = false;
+            // The download progress event handler, which is only registered if
+            // progress events are enabled.
+            var /** @type {?} */ onDownProgress = function (event) {
+                // Send the HttpResponseHeaders event if it hasn't been sent already.
+                if (!sentHeaders) {
+                    observer.next(partialFromXhr());
+                    sentHeaders = true;
+                }
+                // Start building the download progress event to deliver on the response
+                // event stream.
+                var /** @type {?} */ progressEvent = {
+                    type: HttpEventType.DownloadProgress,
+                    loaded: event.loaded,
+                };
+                // Set the total number of bytes in the event if it's available.
+                if (event.lengthComputable) {
+                    progressEvent.total = event.total;
+                }
+                // If the request was for text content and a partial response is
+                // available on XMLHttpRequest, include it in the progress event
+                // to allow for streaming reads.
+                if (req.responseType === 'text' && !!xhr.responseText) {
+                    progressEvent.partialText = xhr.responseText;
+                }
+                // Finally, fire the event.
+                observer.next(progressEvent);
+            };
+            // The upload progress event handler, which is only registered if
+            // progress events are enabled.
+            var /** @type {?} */ onUpProgress = function (event) {
+                // Upload progress events are simpler. Begin building the progress
+                // event.
+                var /** @type {?} */ progress = {
+                    type: HttpEventType.UploadProgress,
+                    loaded: event.loaded,
+                };
+                // If the total number of bytes being uploaded is available, include
+                // it.
+                if (event.lengthComputable) {
+                    progress.total = event.total;
+                }
+                // Send the event.
+                observer.next(progress);
+            };
+            // By default, register for load and error events.
+            xhr.addEventListener('load', onLoad);
+            xhr.addEventListener('error', onError);
+            // Progress events are only enabled if requested.
+            if (req.reportProgress) {
+                // Download progress is always enabled if requested.
+                xhr.addEventListener('progress', onDownProgress);
+                // Upload progress depends on whether there is a body to upload.
+                if (reqBody !== null && xhr.upload) {
+                    xhr.upload.addEventListener('progress', onUpProgress);
+                }
+            }
+            // Fire the request, and notify the event stream that it was fired.
+            xhr.send(reqBody);
+            observer.next({ type: HttpEventType.Sent });
+            // This is the return from the Observable function, which is the
+            // request cancellation handler.
+            return function () {
+                // On a cancellation, remove all registered event listeners.
+                xhr.removeEventListener('error', onError);
+                xhr.removeEventListener('load', onLoad);
+                if (req.reportProgress) {
+                    xhr.removeEventListener('progress', onDownProgress);
+                    if (reqBody !== null && xhr.upload) {
+                        xhr.upload.removeEventListener('progress', onUpProgress);
+                    }
+                }
+                // Finally, abort the in-flight request.
+                xhr.abort();
+            };
+        });
+    };
+    HttpXhrBackend.decorators = [
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"] },
+    ];
+    /** @nocollapse */
+    HttpXhrBackend.ctorParameters = function () { return [
+        { type: XhrFactory, },
+    ]; };
+    return HttpXhrBackend;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+var XSRF_COOKIE_NAME = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["InjectionToken"]('XSRF_COOKIE_NAME');
+var XSRF_HEADER_NAME = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["InjectionToken"]('XSRF_HEADER_NAME');
+/**
+ * Retrieves the current XSRF token to use with the next outgoing request.
+ *
+ * \@stable
+ * @abstract
+ */
+var HttpXsrfTokenExtractor = /** @class */ (function () {
+    function HttpXsrfTokenExtractor() {
+    }
+    return HttpXsrfTokenExtractor;
+}());
+/**
+ * `HttpXsrfTokenExtractor` which retrieves the token from a cookie.
+ */
+var HttpXsrfCookieExtractor = /** @class */ (function () {
+    function HttpXsrfCookieExtractor(doc, platform, cookieName) {
+        this.doc = doc;
+        this.platform = platform;
+        this.cookieName = cookieName;
+        this.lastCookieString = '';
+        this.lastToken = null;
+        /**
+         * \@internal for testing
+         */
+        this.parseCount = 0;
+    }
+    /**
+     * @return {?}
+     */
+    HttpXsrfCookieExtractor.prototype.getToken = /**
+     * @return {?}
+     */
+    function () {
+        if (this.platform === 'server') {
+            return null;
+        }
+        var /** @type {?} */ cookieString = this.doc.cookie || '';
+        if (cookieString !== this.lastCookieString) {
+            this.parseCount++;
+            this.lastToken = Object(__WEBPACK_IMPORTED_MODULE_6__angular_common__["k" /* ɵparseCookieValue */])(cookieString, this.cookieName);
+            this.lastCookieString = cookieString;
+        }
+        return this.lastToken;
+    };
+    HttpXsrfCookieExtractor.decorators = [
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"] },
+    ];
+    /** @nocollapse */
+    HttpXsrfCookieExtractor.ctorParameters = function () { return [
+        { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Inject"], args: [__WEBPACK_IMPORTED_MODULE_6__angular_common__["c" /* DOCUMENT */],] },] },
+        { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Inject"], args: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["PLATFORM_ID"],] },] },
+        { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Inject"], args: [XSRF_COOKIE_NAME,] },] },
+    ]; };
+    return HttpXsrfCookieExtractor;
+}());
+/**
+ * `HttpInterceptor` which adds an XSRF token to eligible outgoing requests.
+ */
+var HttpXsrfInterceptor = /** @class */ (function () {
+    function HttpXsrfInterceptor(tokenService, headerName) {
+        this.tokenService = tokenService;
+        this.headerName = headerName;
+    }
+    /**
+     * @param {?} req
+     * @param {?} next
+     * @return {?}
+     */
+    HttpXsrfInterceptor.prototype.intercept = /**
+     * @param {?} req
+     * @param {?} next
+     * @return {?}
+     */
+    function (req, next) {
+        var /** @type {?} */ lcUrl = req.url.toLowerCase();
+        // Skip both non-mutating requests and absolute URLs.
+        // Non-mutating requests don't require a token, and absolute URLs require special handling
+        // anyway as the cookie set
+        // on our origin is not the same as the token expected by another origin.
+        if (req.method === 'GET' || req.method === 'HEAD' || lcUrl.startsWith('http://') ||
+            lcUrl.startsWith('https://')) {
+            return next.handle(req);
+        }
+        var /** @type {?} */ token = this.tokenService.getToken();
+        // Be careful not to overwrite an existing header of the same name.
+        if (token !== null && !req.headers.has(this.headerName)) {
+            req = req.clone({ headers: req.headers.set(this.headerName, token) });
+        }
+        return next.handle(req);
+    };
+    HttpXsrfInterceptor.decorators = [
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"] },
+    ];
+    /** @nocollapse */
+    HttpXsrfInterceptor.ctorParameters = function () { return [
+        { type: HttpXsrfTokenExtractor, },
+        { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Inject"], args: [XSRF_HEADER_NAME,] },] },
+    ]; };
+    return HttpXsrfInterceptor;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+/**
+ * An `HttpHandler` that applies a bunch of `HttpInterceptor`s
+ * to a request before passing it to the given `HttpBackend`.
+ *
+ * The interceptors are loaded lazily from the injector, to allow
+ * interceptors to themselves inject classes depending indirectly
+ * on `HttpInterceptingHandler` itself.
+ */
+var HttpInterceptingHandler = /** @class */ (function () {
+    function HttpInterceptingHandler(backend, injector) {
+        this.backend = backend;
+        this.injector = injector;
+        this.chain = null;
+    }
+    /**
+     * @param {?} req
+     * @return {?}
+     */
+    HttpInterceptingHandler.prototype.handle = /**
+     * @param {?} req
+     * @return {?}
+     */
+    function (req) {
+        if (this.chain === null) {
+            var /** @type {?} */ interceptors = this.injector.get(HTTP_INTERCEPTORS, []);
+            this.chain = interceptors.reduceRight(function (next, interceptor) { return new HttpInterceptorHandler(next, interceptor); }, this.backend);
+        }
+        return this.chain.handle(req);
+    };
+    HttpInterceptingHandler.decorators = [
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"] },
+    ];
+    /** @nocollapse */
+    HttpInterceptingHandler.ctorParameters = function () { return [
+        { type: HttpBackend, },
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Injector"], },
+    ]; };
+    return HttpInterceptingHandler;
+}());
+/**
+ * Constructs an `HttpHandler` that applies a bunch of `HttpInterceptor`s
+ * to a request before passing it to the given `HttpBackend`.
+ *
+ * Meant to be used as a factory function within `HttpClientModule`.
+ *
+ * \@stable
+ * @param {?} backend
+ * @param {?=} interceptors
+ * @return {?}
+ */
+function interceptingHandler(backend, interceptors) {
+    if (interceptors === void 0) { interceptors = []; }
+    if (!interceptors) {
+        return backend;
+    }
+    return interceptors.reduceRight(function (next, interceptor) { return new HttpInterceptorHandler(next, interceptor); }, backend);
+}
+/**
+ * Factory function that determines where to store JSONP callbacks.
+ *
+ * Ordinarily JSONP callbacks are stored on the `window` object, but this may not exist
+ * in test environments. In that case, callbacks are stored on an anonymous object instead.
+ *
+ * \@stable
+ * @return {?}
+ */
+function jsonpCallbackContext() {
+    if (typeof window === 'object') {
+        return window;
+    }
+    return {};
+}
+/**
+ * `NgModule` which adds XSRF protection support to outgoing requests.
+ *
+ * Provided the server supports a cookie-based XSRF protection system, this
+ * module can be used directly to configure XSRF protection with the correct
+ * cookie and header names.
+ *
+ * If no such names are provided, the default is to use `X-XSRF-TOKEN` for
+ * the header name and `XSRF-TOKEN` for the cookie name.
+ *
+ * \@stable
+ */
+var HttpClientXsrfModule = /** @class */ (function () {
+    function HttpClientXsrfModule() {
+    }
+    /**
+     * Disable the default XSRF protection.
+     */
+    /**
+     * Disable the default XSRF protection.
+     * @return {?}
+     */
+    HttpClientXsrfModule.disable = /**
+     * Disable the default XSRF protection.
+     * @return {?}
+     */
+    function () {
+        return {
+            ngModule: HttpClientXsrfModule,
+            providers: [
+                { provide: HttpXsrfInterceptor, useClass: NoopInterceptor },
+            ],
+        };
+    };
+    /**
+     * Configure XSRF protection to use the given cookie name or header name,
+     * or the default names (as described above) if not provided.
+     */
+    /**
+     * Configure XSRF protection to use the given cookie name or header name,
+     * or the default names (as described above) if not provided.
+     * @param {?=} options
+     * @return {?}
+     */
+    HttpClientXsrfModule.withOptions = /**
+     * Configure XSRF protection to use the given cookie name or header name,
+     * or the default names (as described above) if not provided.
+     * @param {?=} options
+     * @return {?}
+     */
+    function (options) {
+        if (options === void 0) { options = {}; }
+        return {
+            ngModule: HttpClientXsrfModule,
+            providers: [
+                options.cookieName ? { provide: XSRF_COOKIE_NAME, useValue: options.cookieName } : [],
+                options.headerName ? { provide: XSRF_HEADER_NAME, useValue: options.headerName } : [],
+            ],
+        };
+    };
+    HttpClientXsrfModule.decorators = [
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"], args: [{
+                    providers: [
+                        HttpXsrfInterceptor,
+                        { provide: HTTP_INTERCEPTORS, useExisting: HttpXsrfInterceptor, multi: true },
+                        { provide: HttpXsrfTokenExtractor, useClass: HttpXsrfCookieExtractor },
+                        { provide: XSRF_COOKIE_NAME, useValue: 'XSRF-TOKEN' },
+                        { provide: XSRF_HEADER_NAME, useValue: 'X-XSRF-TOKEN' },
+                    ],
+                },] },
+    ];
+    /** @nocollapse */
+    HttpClientXsrfModule.ctorParameters = function () { return []; };
+    return HttpClientXsrfModule;
+}());
+/**
+ * `NgModule` which provides the `HttpClient` and associated services.
+ *
+ * Interceptors can be added to the chain behind `HttpClient` by binding them
+ * to the multiprovider for `HTTP_INTERCEPTORS`.
+ *
+ * \@stable
+ */
+var HttpClientModule = /** @class */ (function () {
+    function HttpClientModule() {
+    }
+    HttpClientModule.decorators = [
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"], args: [{
+                    imports: [
+                        HttpClientXsrfModule.withOptions({
+                            cookieName: 'XSRF-TOKEN',
+                            headerName: 'X-XSRF-TOKEN',
+                        }),
+                    ],
+                    providers: [
+                        HttpClient,
+                        { provide: HttpHandler, useClass: HttpInterceptingHandler },
+                        HttpXhrBackend,
+                        { provide: HttpBackend, useExisting: HttpXhrBackend },
+                        BrowserXhr,
+                        { provide: XhrFactory, useExisting: BrowserXhr },
+                    ],
+                },] },
+    ];
+    /** @nocollapse */
+    HttpClientModule.ctorParameters = function () { return []; };
+    return HttpClientModule;
+}());
+/**
+ * `NgModule` which enables JSONP support in `HttpClient`.
+ *
+ * Without this module, Jsonp requests will reach the backend
+ * with method JSONP, where they'll be rejected.
+ *
+ * \@stable
+ */
+var HttpClientJsonpModule = /** @class */ (function () {
+    function HttpClientJsonpModule() {
+    }
+    HttpClientJsonpModule.decorators = [
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"], args: [{
+                    providers: [
+                        JsonpClientBackend,
+                        { provide: JsonpCallbackContext, useFactory: jsonpCallbackContext },
+                        { provide: HTTP_INTERCEPTORS, useClass: JsonpInterceptor, multi: true },
+                    ],
+                },] },
+    ];
+    /** @nocollapse */
+    HttpClientJsonpModule.ctorParameters = function () { return []; };
+    return HttpClientJsonpModule;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * Generated bundle index. Do not edit.
+ */
+
+
+//# sourceMappingURL=http.js.map
 
 
 /***/ }),
@@ -42157,215 +44951,216 @@ var Extractor = /** @class */ (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(global) {/* unused harmony export createPlatform */
-/* unused harmony export assertPlatform */
-/* unused harmony export destroyPlatform */
-/* unused harmony export getPlatform */
-/* unused harmony export PlatformRef */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return ApplicationRef; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_5", function() { return enableProdMode; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_7", function() { return isDevMode; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_4", function() { return createPlatformFactory; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "H", function() { return NgProbeToken; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return APP_ID; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "K", function() { return PACKAGE_ROOT_URL; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "M", function() { return PLATFORM_INITIALIZER; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "L", function() { return PLATFORM_ID; });
-/* unused harmony export APP_BOOTSTRAP_LISTENER */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return APP_INITIALIZER; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return ApplicationInitStatus; });
-/* unused harmony export DebugElement */
-/* unused harmony export DebugNode */
-/* unused harmony export asNativeElements */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_6", function() { return getDebugNode; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Z", function() { return Testability; });
-/* unused harmony export TestabilityRegistry */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_9", function() { return setTestabilityGetter; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "W", function() { return TRANSLATIONS; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "X", function() { return TRANSLATIONS_FORMAT; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "C", function() { return LOCALE_ID; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "D", function() { return MissingTranslationStrategy; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return ApplicationModule; });
-/* unused harmony export wtfCreateScope */
-/* unused harmony export wtfLeave */
-/* unused harmony export wtfStartTimeRange */
-/* unused harmony export wtfEndTimeRange */
-/* unused harmony export Type */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "t", function() { return EventEmitter; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "s", function() { return ErrorHandler; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "T", function() { return Sanitizer; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "U", function() { return SecurityContext; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ANALYZE_FOR_ENTRY_COMPONENTS; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return Attribute; });
-/* unused harmony export ContentChild */
-/* unused harmony export ContentChildren */
-/* unused harmony export Query */
-/* unused harmony export ViewChild */
-/* unused harmony export ViewChildren */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "m", function() { return Component; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "q", function() { return Directive; });
-/* unused harmony export HostBinding */
-/* unused harmony export HostListener */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "z", function() { return Input; });
-/* unused harmony export Output */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "N", function() { return Pipe; });
-/* unused harmony export CUSTOM_ELEMENTS_SCHEMA */
-/* unused harmony export NO_ERRORS_SCHEMA */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "E", function() { return NgModule; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_2", function() { return ViewEncapsulation; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_0", function() { return Version; });
-/* unused harmony export VERSION */
-/* unused harmony export forwardRef */
-/* unused harmony export resolveForwardRef */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "y", function() { return Injector; });
-/* unused harmony export ReflectiveInjector */
-/* unused harmony export ResolvedReflectiveFactory */
-/* unused harmony export ReflectiveKey */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "x", function() { return InjectionToken; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "v", function() { return Inject; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "J", function() { return Optional; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "w", function() { return Injectable; });
-/* unused harmony export Self */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "V", function() { return SkipSelf; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "u", function() { return Host; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "I", function() { return NgZone; });
-/* unused harmony export RenderComponentType */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "P", function() { return Renderer; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Q", function() { return Renderer2; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "R", function() { return RendererFactory2; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "S", function() { return RendererStyleFlags2; });
-/* unused harmony export RootRenderer */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return COMPILER_OPTIONS; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "k", function() { return Compiler; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "l", function() { return CompilerFactory; });
-/* unused harmony export ModuleWithComponentFactories */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "n", function() { return ComponentFactory; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "p", function() { return ComponentRef; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "o", function() { return ComponentFactoryResolver; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "r", function() { return ElementRef; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "F", function() { return NgModuleFactory; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "G", function() { return NgModuleRef; });
-/* unused harmony export NgModuleFactoryLoader */
-/* unused harmony export getModuleFactory */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "O", function() { return QueryList; });
-/* unused harmony export SystemJsNgModuleLoader */
-/* unused harmony export SystemJsNgModuleLoaderConfig */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Y", function() { return TemplateRef; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_1", function() { return ViewContainerRef; });
-/* unused harmony export EmbeddedViewRef */
-/* unused harmony export ViewRef */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return ChangeDetectionStrategy; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return ChangeDetectorRef; });
-/* unused harmony export DefaultIterableDiffer */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "A", function() { return IterableDiffers; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "B", function() { return KeyValueDiffers; });
-/* unused harmony export SimpleChange */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_3", function() { return WrappedValue; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_8", function() { return platformCore; });
-/* unused harmony export ɵALLOW_MULTIPLE_PLATFORMS */
-/* unused harmony export ɵAPP_ID_RANDOM_PROVIDER */
-/* unused harmony export ɵdevModeEqual */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_24", function() { return isListLikeIterable; });
-/* unused harmony export ɵChangeDetectorStatus */
-/* unused harmony export ɵisDefaultChangeDetectionStrategy */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_11", function() { return Console; });
-/* unused harmony export ɵComponentFactory */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_10", function() { return CodegenComponentFactoryResolver; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_14", function() { return ReflectionCapabilities; });
-/* unused harmony export ɵRenderDebugInfo */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_21", function() { return _global; });
-/* unused harmony export ɵlooseIdentical */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_38", function() { return stringify; });
-/* unused harmony export ɵmakeDecorator */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_25", function() { return isObservable; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_26", function() { return isPromise; });
-/* unused harmony export ɵclearOverrides */
-/* unused harmony export ɵoverrideComponentView */
-/* unused harmony export ɵoverrideProvider */
-/* unused harmony export ɵNOT_FOUND_CHECK_ONLY_ELEMENT_INJECTOR */
-/* unused harmony export ɵdefineComponent */
-/* unused harmony export ɵdetectChanges */
-/* unused harmony export ɵrenderComponent */
-/* unused harmony export ɵC */
-/* unused harmony export ɵD */
-/* unused harmony export ɵE */
-/* unused harmony export ɵT */
-/* unused harmony export ɵV */
-/* unused harmony export ɵb */
-/* unused harmony export ɵb1 */
-/* unused harmony export ɵc */
-/* unused harmony export ɵcR */
-/* unused harmony export ɵcr */
-/* unused harmony export ɵe */
-/* unused harmony export ɵp */
-/* unused harmony export ɵs */
-/* unused harmony export ɵt */
-/* unused harmony export ɵv */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_37", function() { return registerModuleFactory; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_12", function() { return EMPTY_ARRAY; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_13", function() { return EMPTY_MAP; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_15", function() { return anchorDef; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_16", function() { return createComponentFactory; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_17", function() { return createNgModuleFactory; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_18", function() { return createRendererType2; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_19", function() { return directiveDef; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_20", function() { return elementDef; });
-/* unused harmony export ɵelementEventFullName */
-/* unused harmony export ɵgetComponentViewDefinitionFactory */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_22", function() { return inlineInterpolate; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_23", function() { return interpolate; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_27", function() { return moduleDef; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_28", function() { return moduleProvideDef; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_29", function() { return ngContentDef; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_30", function() { return nodeValue; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_32", function() { return pipeDef; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_35", function() { return providerDef; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_31", function() { return pureArrayDef; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_33", function() { return pureObjectDef; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_34", function() { return purePipeDef; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_36", function() { return queryDef; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_39", function() { return textDef; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_40", function() { return unwrapValue; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_41", function() { return viewDef; });
-/* unused harmony export AUTO_STYLE */
-/* unused harmony export trigger */
-/* unused harmony export animate */
-/* unused harmony export group */
-/* unused harmony export sequence */
-/* unused harmony export style */
-/* unused harmony export state */
-/* unused harmony export keyframes */
-/* unused harmony export transition */
-/* unused harmony export ɵbf */
-/* unused harmony export ɵbg */
-/* unused harmony export ɵbk */
-/* unused harmony export ɵbh */
-/* unused harmony export ɵbj */
-/* unused harmony export ɵbi */
-/* unused harmony export ɵbl */
-/* unused harmony export ɵbe */
-/* unused harmony export ɵn */
-/* unused harmony export ɵo */
-/* unused harmony export ɵq */
-/* unused harmony export ɵi */
-/* unused harmony export ɵj */
-/* unused harmony export ɵk */
-/* unused harmony export ɵl */
-/* unused harmony export ɵm */
-/* unused harmony export ɵf */
-/* unused harmony export ɵg */
-/* unused harmony export ɵh */
-/* unused harmony export ɵr */
-/* unused harmony export ɵw */
-/* unused harmony export ɵu */
-/* unused harmony export ɵz */
-/* unused harmony export ɵx */
-/* unused harmony export ɵy */
-/* unused harmony export ɵbc */
-/* unused harmony export ɵa */
-/* unused harmony export ɵd */
-/* unused harmony export ɵba */
-/* unused harmony export ɵbb */
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* WEBPACK VAR INJECTION */(function(global) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createPlatform", function() { return createPlatform; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "assertPlatform", function() { return assertPlatform; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "destroyPlatform", function() { return destroyPlatform; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getPlatform", function() { return getPlatform; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PlatformRef", function() { return PlatformRef; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ApplicationRef", function() { return ApplicationRef; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "enableProdMode", function() { return enableProdMode; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isDevMode", function() { return isDevMode; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createPlatformFactory", function() { return createPlatformFactory; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NgProbeToken", function() { return NgProbeToken; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "APP_ID", function() { return APP_ID; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PACKAGE_ROOT_URL", function() { return PACKAGE_ROOT_URL; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PLATFORM_INITIALIZER", function() { return PLATFORM_INITIALIZER; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PLATFORM_ID", function() { return PLATFORM_ID; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "APP_BOOTSTRAP_LISTENER", function() { return APP_BOOTSTRAP_LISTENER; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "APP_INITIALIZER", function() { return APP_INITIALIZER; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ApplicationInitStatus", function() { return ApplicationInitStatus; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DebugElement", function() { return DebugElement; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DebugNode", function() { return DebugNode; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "asNativeElements", function() { return asNativeElements; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getDebugNode", function() { return getDebugNode; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Testability", function() { return Testability; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TestabilityRegistry", function() { return TestabilityRegistry; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setTestabilityGetter", function() { return setTestabilityGetter; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TRANSLATIONS", function() { return TRANSLATIONS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TRANSLATIONS_FORMAT", function() { return TRANSLATIONS_FORMAT; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LOCALE_ID", function() { return LOCALE_ID; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MissingTranslationStrategy", function() { return MissingTranslationStrategy; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ApplicationModule", function() { return ApplicationModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "wtfCreateScope", function() { return wtfCreateScope; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "wtfLeave", function() { return wtfLeave; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "wtfStartTimeRange", function() { return wtfStartTimeRange; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "wtfEndTimeRange", function() { return wtfEndTimeRange; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Type", function() { return Type; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EventEmitter", function() { return EventEmitter; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ErrorHandler", function() { return ErrorHandler; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Sanitizer", function() { return Sanitizer; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SecurityContext", function() { return SecurityContext; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ANALYZE_FOR_ENTRY_COMPONENTS", function() { return ANALYZE_FOR_ENTRY_COMPONENTS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Attribute", function() { return Attribute; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ContentChild", function() { return ContentChild; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ContentChildren", function() { return ContentChildren; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Query", function() { return Query; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ViewChild", function() { return ViewChild; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ViewChildren", function() { return ViewChildren; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Component", function() { return Component; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Directive", function() { return Directive; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HostBinding", function() { return HostBinding; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HostListener", function() { return HostListener; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Input", function() { return Input; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Output", function() { return Output; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Pipe", function() { return Pipe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CUSTOM_ELEMENTS_SCHEMA", function() { return CUSTOM_ELEMENTS_SCHEMA; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NO_ERRORS_SCHEMA", function() { return NO_ERRORS_SCHEMA; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NgModule", function() { return NgModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ViewEncapsulation", function() { return ViewEncapsulation; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Version", function() { return Version; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VERSION", function() { return VERSION; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "forwardRef", function() { return forwardRef; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "resolveForwardRef", function() { return resolveForwardRef; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Injector", function() { return Injector; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ReflectiveInjector", function() { return ReflectiveInjector; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ResolvedReflectiveFactory", function() { return ResolvedReflectiveFactory; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ReflectiveKey", function() { return ReflectiveKey; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "InjectionToken", function() { return InjectionToken; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Inject", function() { return Inject; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Optional", function() { return Optional; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Injectable", function() { return Injectable; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Self", function() { return Self; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SkipSelf", function() { return SkipSelf; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Host", function() { return Host; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NgZone", function() { return NgZone; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RenderComponentType", function() { return RenderComponentType; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Renderer", function() { return Renderer; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Renderer2", function() { return Renderer2; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RendererFactory2", function() { return RendererFactory2; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RendererStyleFlags2", function() { return RendererStyleFlags2; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RootRenderer", function() { return RootRenderer; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "COMPILER_OPTIONS", function() { return COMPILER_OPTIONS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Compiler", function() { return Compiler; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CompilerFactory", function() { return CompilerFactory; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ModuleWithComponentFactories", function() { return ModuleWithComponentFactories; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ComponentFactory", function() { return ComponentFactory; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ComponentRef", function() { return ComponentRef; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ComponentFactoryResolver", function() { return ComponentFactoryResolver; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ElementRef", function() { return ElementRef; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NgModuleFactory", function() { return NgModuleFactory; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NgModuleRef", function() { return NgModuleRef; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NgModuleFactoryLoader", function() { return NgModuleFactoryLoader; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getModuleFactory", function() { return getModuleFactory; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "QueryList", function() { return QueryList; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SystemJsNgModuleLoader", function() { return SystemJsNgModuleLoader; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SystemJsNgModuleLoaderConfig", function() { return SystemJsNgModuleLoaderConfig; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TemplateRef", function() { return TemplateRef; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ViewContainerRef", function() { return ViewContainerRef; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EmbeddedViewRef", function() { return EmbeddedViewRef; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ViewRef", function() { return ViewRef; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ChangeDetectionStrategy", function() { return ChangeDetectionStrategy; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ChangeDetectorRef", function() { return ChangeDetectorRef; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DefaultIterableDiffer", function() { return DefaultIterableDiffer; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IterableDiffers", function() { return IterableDiffers; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "KeyValueDiffers", function() { return KeyValueDiffers; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SimpleChange", function() { return SimpleChange; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "WrappedValue", function() { return WrappedValue; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "platformCore", function() { return platformCore; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵALLOW_MULTIPLE_PLATFORMS", function() { return ALLOW_MULTIPLE_PLATFORMS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵAPP_ID_RANDOM_PROVIDER", function() { return APP_ID_RANDOM_PROVIDER; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵdevModeEqual", function() { return devModeEqual; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵisListLikeIterable", function() { return isListLikeIterable; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵChangeDetectorStatus", function() { return ChangeDetectorStatus; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵisDefaultChangeDetectionStrategy", function() { return isDefaultChangeDetectionStrategy; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵConsole", function() { return Console; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵComponentFactory", function() { return ComponentFactory; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵCodegenComponentFactoryResolver", function() { return CodegenComponentFactoryResolver; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵReflectionCapabilities", function() { return ReflectionCapabilities; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵRenderDebugInfo", function() { return RenderDebugInfo; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵglobal", function() { return _global; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵlooseIdentical", function() { return looseIdentical; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵstringify", function() { return stringify; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵmakeDecorator", function() { return makeDecorator; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵisObservable", function() { return isObservable; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵisPromise", function() { return isPromise; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵclearOverrides", function() { return clearOverrides; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵoverrideComponentView", function() { return overrideComponentView; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵoverrideProvider", function() { return overrideProvider; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵNOT_FOUND_CHECK_ONLY_ELEMENT_INJECTOR", function() { return NOT_FOUND_CHECK_ONLY_ELEMENT_INJECTOR; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵdefineComponent", function() { return defineComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵdetectChanges", function() { return detectChanges; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵrenderComponent", function() { return renderComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵC", function() { return containerStart; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵD", function() { return directive; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵE", function() { return elementStart; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵT", function() { return text; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵV", function() { return viewStart; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵb", function() { return bind; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵb1", function() { return bind1; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵc", function() { return containerEnd; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵcR", function() { return containerRefreshStart; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵcr", function() { return containerRefreshEnd; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵe", function() { return elementEnd; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵp", function() { return elementProperty; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵs", function() { return elementStyle; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵt", function() { return textBinding; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵv", function() { return viewEnd; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵregisterModuleFactory", function() { return registerModuleFactory; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵEMPTY_ARRAY", function() { return EMPTY_ARRAY; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵEMPTY_MAP", function() { return EMPTY_MAP; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵand", function() { return anchorDef; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵccf", function() { return createComponentFactory; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵcmf", function() { return createNgModuleFactory; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵcrt", function() { return createRendererType2; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵdid", function() { return directiveDef; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵeld", function() { return elementDef; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵelementEventFullName", function() { return elementEventFullName; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵgetComponentViewDefinitionFactory", function() { return getComponentViewDefinitionFactory; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵinlineInterpolate", function() { return inlineInterpolate; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵinterpolate", function() { return interpolate; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵmod", function() { return moduleDef; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵmpd", function() { return moduleProvideDef; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵncd", function() { return ngContentDef; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵnov", function() { return nodeValue; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵpid", function() { return pipeDef; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵprd", function() { return providerDef; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵpad", function() { return pureArrayDef; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵpod", function() { return pureObjectDef; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵppd", function() { return purePipeDef; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵqud", function() { return queryDef; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵted", function() { return textDef; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵunv", function() { return unwrapValue; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵvid", function() { return viewDef; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AUTO_STYLE", function() { return AUTO_STYLE; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "trigger", function() { return trigger$$1; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "animate", function() { return animate$$1; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "group", function() { return group$$1; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sequence", function() { return sequence$$1; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "style", function() { return style$$1; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "state", function() { return state$$1; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "keyframes", function() { return keyframes$$1; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "transition", function() { return transition$$1; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵbf", function() { return animate$1; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵbg", function() { return group$1; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵbk", function() { return keyframes$1; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵbh", function() { return sequence$1; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵbj", function() { return state$1; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵbi", function() { return style$1; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵbl", function() { return transition$1; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵbe", function() { return trigger$1; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵn", function() { return _iterableDiffersFactory; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵo", function() { return _keyValueDiffersFactory; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵq", function() { return _localeFactory; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵi", function() { return _appIdRandomProviderFactory; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵj", function() { return defaultIterableDiffers; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵk", function() { return defaultKeyValueDiffers; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵl", function() { return DefaultIterableDifferFactory; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵm", function() { return DefaultKeyValueDifferFactory; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵf", function() { return ReflectiveInjector_; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵg", function() { return ReflectiveDependency; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵh", function() { return resolveReflectiveProviders; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵr", function() { return wtfEnabled; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵw", function() { return createScope; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵu", function() { return detectWTF; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵz", function() { return endTimeRange; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵx", function() { return leave; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵy", function() { return startTimeRange; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵbc", function() { return stringify$1; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵa", function() { return makeParamDecorator; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵd", function() { return makePropDecorator; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵba", function() { return _def; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵbb", function() { return DebugContext; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__("./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__ = __webpack_require__("./node_modules/rxjs/_esm5/Observable.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_observable_merge__ = __webpack_require__("./node_modules/rxjs/_esm5/observable/merge.js");
@@ -61672,15 +64467,16 @@ function transition$$1(stateChangeExpr, steps) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* unused harmony export VERSION */
-/* unused harmony export JitCompilerFactory */
-/* unused harmony export RESOURCE_CACHE_PROVIDER */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return platformBrowserDynamic; });
-/* unused harmony export ɵCompilerImpl */
-/* unused harmony export ɵplatformCoreDynamic */
-/* unused harmony export ɵINTERNAL_BROWSER_DYNAMIC_PLATFORM_PROVIDERS */
-/* unused harmony export ɵResourceLoaderImpl */
-/* unused harmony export ɵa */
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VERSION", function() { return VERSION; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "JitCompilerFactory", function() { return JitCompilerFactory; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RESOURCE_CACHE_PROVIDER", function() { return RESOURCE_CACHE_PROVIDER; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "platformBrowserDynamic", function() { return platformBrowserDynamic; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵCompilerImpl", function() { return CompilerImpl; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵplatformCoreDynamic", function() { return platformCoreDynamic; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵINTERNAL_BROWSER_DYNAMIC_PLATFORM_PROVIDERS", function() { return INTERNAL_BROWSER_DYNAMIC_PLATFORM_PROVIDERS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵResourceLoaderImpl", function() { return ResourceLoaderImpl; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵa", function() { return CachedResourceLoader; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_compiler__ = __webpack_require__("./node_modules/@angular/compiler/esm5/compiler.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common__ = __webpack_require__("./node_modules/@angular/common/esm5/common.js");
@@ -61713,7 +64509,7 @@ var builtinExternalReferences = createBuiltinExternalReferencesMap();
 var JitReflector = /** @class */ (function () {
     function JitReflector() {
         this.builtinExternalReferences = new Map();
-        this.reflectionCapabilities = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["_14" /* ɵReflectionCapabilities */]();
+        this.reflectionCapabilities = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵReflectionCapabilities"]();
     }
     /**
      * @param {?} type
@@ -61732,10 +64528,10 @@ var JitReflector = /** @class */ (function () {
             return scheme ? moduleId : "package:" + moduleId + MODULE_SUFFIX;
         }
         else if (moduleId !== null && moduleId !== void 0) {
-            throw Object(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["A" /* syntaxError */])("moduleId should be a string in \"" + Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["_38" /* ɵstringify */])(type) + "\". See https://goo.gl/wIDDiL for more information.\n" +
+            throw Object(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["A" /* syntaxError */])("moduleId should be a string in \"" + Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵstringify"])(type) + "\". See https://goo.gl/wIDDiL for more information.\n" +
                 "If you're using Webpack you should inline the template and the styles, see https://goo.gl/X2J8zc.");
         }
-        return "./" + Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["_38" /* ɵstringify */])(type);
+        return "./" + Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵstringify"])(type);
     };
     /**
      * @param {?} typeOrFunc
@@ -61810,49 +64606,49 @@ var JitReflector = /** @class */ (function () {
  */
 function createBuiltinExternalReferencesMap() {
     var /** @type {?} */ map = new Map();
-    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].ANALYZE_FOR_ENTRY_COMPONENTS, __WEBPACK_IMPORTED_MODULE_1__angular_core__["a" /* ANALYZE_FOR_ENTRY_COMPONENTS */]);
-    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].ElementRef, __WEBPACK_IMPORTED_MODULE_1__angular_core__["r" /* ElementRef */]);
-    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].NgModuleRef, __WEBPACK_IMPORTED_MODULE_1__angular_core__["G" /* NgModuleRef */]);
-    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].ViewContainerRef, __WEBPACK_IMPORTED_MODULE_1__angular_core__["_1" /* ViewContainerRef */]);
-    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].ChangeDetectorRef, __WEBPACK_IMPORTED_MODULE_1__angular_core__["j" /* ChangeDetectorRef */]);
-    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].QueryList, __WEBPACK_IMPORTED_MODULE_1__angular_core__["O" /* QueryList */]);
-    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].TemplateRef, __WEBPACK_IMPORTED_MODULE_1__angular_core__["Y" /* TemplateRef */]);
-    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].CodegenComponentFactoryResolver, __WEBPACK_IMPORTED_MODULE_1__angular_core__["_10" /* ɵCodegenComponentFactoryResolver */]);
-    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].ComponentFactoryResolver, __WEBPACK_IMPORTED_MODULE_1__angular_core__["o" /* ComponentFactoryResolver */]);
-    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].ComponentFactory, __WEBPACK_IMPORTED_MODULE_1__angular_core__["n" /* ComponentFactory */]);
-    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].ComponentRef, __WEBPACK_IMPORTED_MODULE_1__angular_core__["p" /* ComponentRef */]);
-    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].NgModuleFactory, __WEBPACK_IMPORTED_MODULE_1__angular_core__["F" /* NgModuleFactory */]);
-    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].createModuleFactory, __WEBPACK_IMPORTED_MODULE_1__angular_core__["_17" /* ɵcmf */]);
-    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].moduleDef, __WEBPACK_IMPORTED_MODULE_1__angular_core__["_27" /* ɵmod */]);
-    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].moduleProviderDef, __WEBPACK_IMPORTED_MODULE_1__angular_core__["_28" /* ɵmpd */]);
-    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].RegisterModuleFactoryFn, __WEBPACK_IMPORTED_MODULE_1__angular_core__["_37" /* ɵregisterModuleFactory */]);
-    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].Injector, __WEBPACK_IMPORTED_MODULE_1__angular_core__["y" /* Injector */]);
-    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].ViewEncapsulation, __WEBPACK_IMPORTED_MODULE_1__angular_core__["_2" /* ViewEncapsulation */]);
-    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].ChangeDetectionStrategy, __WEBPACK_IMPORTED_MODULE_1__angular_core__["i" /* ChangeDetectionStrategy */]);
-    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].SecurityContext, __WEBPACK_IMPORTED_MODULE_1__angular_core__["U" /* SecurityContext */]);
-    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].LOCALE_ID, __WEBPACK_IMPORTED_MODULE_1__angular_core__["C" /* LOCALE_ID */]);
-    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].TRANSLATIONS_FORMAT, __WEBPACK_IMPORTED_MODULE_1__angular_core__["X" /* TRANSLATIONS_FORMAT */]);
-    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].inlineInterpolate, __WEBPACK_IMPORTED_MODULE_1__angular_core__["_22" /* ɵinlineInterpolate */]);
-    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].interpolate, __WEBPACK_IMPORTED_MODULE_1__angular_core__["_23" /* ɵinterpolate */]);
-    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].EMPTY_ARRAY, __WEBPACK_IMPORTED_MODULE_1__angular_core__["_12" /* ɵEMPTY_ARRAY */]);
-    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].EMPTY_MAP, __WEBPACK_IMPORTED_MODULE_1__angular_core__["_13" /* ɵEMPTY_MAP */]);
-    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].Renderer, __WEBPACK_IMPORTED_MODULE_1__angular_core__["P" /* Renderer */]);
-    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].viewDef, __WEBPACK_IMPORTED_MODULE_1__angular_core__["_41" /* ɵvid */]);
-    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].elementDef, __WEBPACK_IMPORTED_MODULE_1__angular_core__["_20" /* ɵeld */]);
-    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].anchorDef, __WEBPACK_IMPORTED_MODULE_1__angular_core__["_15" /* ɵand */]);
-    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].textDef, __WEBPACK_IMPORTED_MODULE_1__angular_core__["_39" /* ɵted */]);
-    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].directiveDef, __WEBPACK_IMPORTED_MODULE_1__angular_core__["_19" /* ɵdid */]);
-    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].providerDef, __WEBPACK_IMPORTED_MODULE_1__angular_core__["_35" /* ɵprd */]);
-    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].queryDef, __WEBPACK_IMPORTED_MODULE_1__angular_core__["_36" /* ɵqud */]);
-    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].pureArrayDef, __WEBPACK_IMPORTED_MODULE_1__angular_core__["_31" /* ɵpad */]);
-    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].pureObjectDef, __WEBPACK_IMPORTED_MODULE_1__angular_core__["_33" /* ɵpod */]);
-    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].purePipeDef, __WEBPACK_IMPORTED_MODULE_1__angular_core__["_34" /* ɵppd */]);
-    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].pipeDef, __WEBPACK_IMPORTED_MODULE_1__angular_core__["_32" /* ɵpid */]);
-    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].nodeValue, __WEBPACK_IMPORTED_MODULE_1__angular_core__["_30" /* ɵnov */]);
-    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].ngContentDef, __WEBPACK_IMPORTED_MODULE_1__angular_core__["_29" /* ɵncd */]);
-    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].unwrapValue, __WEBPACK_IMPORTED_MODULE_1__angular_core__["_40" /* ɵunv */]);
-    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].createRendererType2, __WEBPACK_IMPORTED_MODULE_1__angular_core__["_18" /* ɵcrt */]);
-    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].createComponentFactory, __WEBPACK_IMPORTED_MODULE_1__angular_core__["_16" /* ɵccf */]);
+    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].ANALYZE_FOR_ENTRY_COMPONENTS, __WEBPACK_IMPORTED_MODULE_1__angular_core__["ANALYZE_FOR_ENTRY_COMPONENTS"]);
+    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].ElementRef, __WEBPACK_IMPORTED_MODULE_1__angular_core__["ElementRef"]);
+    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].NgModuleRef, __WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModuleRef"]);
+    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].ViewContainerRef, __WEBPACK_IMPORTED_MODULE_1__angular_core__["ViewContainerRef"]);
+    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].ChangeDetectorRef, __WEBPACK_IMPORTED_MODULE_1__angular_core__["ChangeDetectorRef"]);
+    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].QueryList, __WEBPACK_IMPORTED_MODULE_1__angular_core__["QueryList"]);
+    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].TemplateRef, __WEBPACK_IMPORTED_MODULE_1__angular_core__["TemplateRef"]);
+    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].CodegenComponentFactoryResolver, __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵCodegenComponentFactoryResolver"]);
+    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].ComponentFactoryResolver, __WEBPACK_IMPORTED_MODULE_1__angular_core__["ComponentFactoryResolver"]);
+    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].ComponentFactory, __WEBPACK_IMPORTED_MODULE_1__angular_core__["ComponentFactory"]);
+    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].ComponentRef, __WEBPACK_IMPORTED_MODULE_1__angular_core__["ComponentRef"]);
+    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].NgModuleFactory, __WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModuleFactory"]);
+    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].createModuleFactory, __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵcmf"]);
+    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].moduleDef, __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵmod"]);
+    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].moduleProviderDef, __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵmpd"]);
+    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].RegisterModuleFactoryFn, __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵregisterModuleFactory"]);
+    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].Injector, __WEBPACK_IMPORTED_MODULE_1__angular_core__["Injector"]);
+    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].ViewEncapsulation, __WEBPACK_IMPORTED_MODULE_1__angular_core__["ViewEncapsulation"]);
+    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].ChangeDetectionStrategy, __WEBPACK_IMPORTED_MODULE_1__angular_core__["ChangeDetectionStrategy"]);
+    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].SecurityContext, __WEBPACK_IMPORTED_MODULE_1__angular_core__["SecurityContext"]);
+    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].LOCALE_ID, __WEBPACK_IMPORTED_MODULE_1__angular_core__["LOCALE_ID"]);
+    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].TRANSLATIONS_FORMAT, __WEBPACK_IMPORTED_MODULE_1__angular_core__["TRANSLATIONS_FORMAT"]);
+    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].inlineInterpolate, __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵinlineInterpolate"]);
+    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].interpolate, __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵinterpolate"]);
+    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].EMPTY_ARRAY, __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵEMPTY_ARRAY"]);
+    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].EMPTY_MAP, __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵEMPTY_MAP"]);
+    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].Renderer, __WEBPACK_IMPORTED_MODULE_1__angular_core__["Renderer"]);
+    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].viewDef, __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵvid"]);
+    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].elementDef, __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵeld"]);
+    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].anchorDef, __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵand"]);
+    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].textDef, __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵted"]);
+    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].directiveDef, __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵdid"]);
+    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].providerDef, __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵprd"]);
+    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].queryDef, __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵqud"]);
+    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].pureArrayDef, __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵpad"]);
+    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].pureObjectDef, __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵpod"]);
+    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].purePipeDef, __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵppd"]);
+    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].pipeDef, __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵpid"]);
+    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].nodeValue, __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵnov"]);
+    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].ngContentDef, __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵncd"]);
+    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].unwrapValue, __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵunv"]);
+    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].createRendererType2, __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵcrt"]);
+    map.set(__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["j" /* Identifiers */].createComponentFactory, __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵccf"]);
     return map;
 }
 
@@ -61867,12 +64663,12 @@ function createBuiltinExternalReferencesMap() {
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-var ERROR_COLLECTOR_TOKEN = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["x" /* InjectionToken */]('ErrorCollector');
+var ERROR_COLLECTOR_TOKEN = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["InjectionToken"]('ErrorCollector');
 /**
  * A default provider for {\@link PACKAGE_ROOT_URL} that maps to '/'.
  */
 var DEFAULT_PACKAGE_URL_PROVIDER = {
-    provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["K" /* PACKAGE_ROOT_URL */],
+    provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["PACKAGE_ROOT_URL"],
     useValue: '/'
 };
 var _NO_RESOURCE_LOADER = {
@@ -61884,7 +64680,7 @@ var _NO_RESOURCE_LOADER = {
         throw new Error("No ResourceLoader implementation has been provided. Can't read the url \"" + url + "\"");
     }
 };
-var baseHtmlParser = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["x" /* InjectionToken */]('HtmlParser');
+var baseHtmlParser = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["InjectionToken"]('HtmlParser');
 var CompilerImpl = /** @class */ (function () {
     function CompilerImpl(injector, _metadataResolver, templateParser, styleCompiler, viewCompiler, ngModuleCompiler, summaryResolver, compileReflector, compilerConfig, console) {
         this._metadataResolver = _metadataResolver;
@@ -61898,7 +64694,7 @@ var CompilerImpl = /** @class */ (function () {
      * @return {?}
      */
     function () {
-        return [this._metadataResolver.getProviderMetadata(new __WEBPACK_IMPORTED_MODULE_0__angular_compiler__["r" /* ProviderMeta */](__WEBPACK_IMPORTED_MODULE_1__angular_core__["k" /* Compiler */], { useValue: this }))];
+        return [this._metadataResolver.getProviderMetadata(new __WEBPACK_IMPORTED_MODULE_0__angular_compiler__["r" /* ProviderMeta */](__WEBPACK_IMPORTED_MODULE_1__angular_core__["Compiler"], { useValue: this }))];
     };
     /**
      * @template T
@@ -62020,7 +64816,7 @@ var COMPILER_PROVIDERS = /** @type {?} */ ([
     { provide: __WEBPACK_IMPORTED_MODULE_0__angular_compiler__["s" /* ResourceLoader */], useValue: _NO_RESOURCE_LOADER },
     { provide: __WEBPACK_IMPORTED_MODULE_0__angular_compiler__["l" /* JitSummaryResolver */], deps: [] },
     { provide: __WEBPACK_IMPORTED_MODULE_0__angular_compiler__["v" /* SummaryResolver */], useExisting: __WEBPACK_IMPORTED_MODULE_0__angular_compiler__["l" /* JitSummaryResolver */] },
-    { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["_11" /* ɵConsole */], deps: [] },
+    { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵConsole"], deps: [] },
     { provide: __WEBPACK_IMPORTED_MODULE_0__angular_compiler__["m" /* Lexer */], deps: [] },
     { provide: __WEBPACK_IMPORTED_MODULE_0__angular_compiler__["p" /* Parser */], deps: [__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["m" /* Lexer */]] },
     {
@@ -62032,15 +64828,15 @@ var COMPILER_PROVIDERS = /** @type {?} */ ([
         provide: __WEBPACK_IMPORTED_MODULE_0__angular_compiler__["i" /* I18NHtmlParser */],
         useFactory: function (parser, translations, format, config, console) {
             translations = translations || '';
-            var /** @type {?} */ missingTranslation = translations ? /** @type {?} */ ((config.missingTranslation)) : __WEBPACK_IMPORTED_MODULE_1__angular_core__["D" /* MissingTranslationStrategy */].Ignore;
+            var /** @type {?} */ missingTranslation = translations ? /** @type {?} */ ((config.missingTranslation)) : __WEBPACK_IMPORTED_MODULE_1__angular_core__["MissingTranslationStrategy"].Ignore;
             return new __WEBPACK_IMPORTED_MODULE_0__angular_compiler__["i" /* I18NHtmlParser */](parser, translations, format, missingTranslation, console);
         },
         deps: [
             baseHtmlParser,
-            [new __WEBPACK_IMPORTED_MODULE_1__angular_core__["J" /* Optional */](), new __WEBPACK_IMPORTED_MODULE_1__angular_core__["v" /* Inject */](__WEBPACK_IMPORTED_MODULE_1__angular_core__["W" /* TRANSLATIONS */])],
-            [new __WEBPACK_IMPORTED_MODULE_1__angular_core__["J" /* Optional */](), new __WEBPACK_IMPORTED_MODULE_1__angular_core__["v" /* Inject */](__WEBPACK_IMPORTED_MODULE_1__angular_core__["X" /* TRANSLATIONS_FORMAT */])],
+            [new __WEBPACK_IMPORTED_MODULE_1__angular_core__["Optional"](), new __WEBPACK_IMPORTED_MODULE_1__angular_core__["Inject"](__WEBPACK_IMPORTED_MODULE_1__angular_core__["TRANSLATIONS"])],
+            [new __WEBPACK_IMPORTED_MODULE_1__angular_core__["Optional"](), new __WEBPACK_IMPORTED_MODULE_1__angular_core__["Inject"](__WEBPACK_IMPORTED_MODULE_1__angular_core__["TRANSLATIONS_FORMAT"])],
             [__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["c" /* CompilerConfig */]],
-            [__WEBPACK_IMPORTED_MODULE_1__angular_core__["_11" /* ɵConsole */]],
+            [__WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵConsole"]],
         ]
     },
     {
@@ -62050,30 +64846,30 @@ var COMPILER_PROVIDERS = /** @type {?} */ ([
     {
         provide: __WEBPACK_IMPORTED_MODULE_0__angular_compiler__["w" /* TemplateParser */], deps: [__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["c" /* CompilerConfig */], __WEBPACK_IMPORTED_MODULE_0__angular_compiler__["b" /* CompileReflector */],
             __WEBPACK_IMPORTED_MODULE_0__angular_compiler__["p" /* Parser */], __WEBPACK_IMPORTED_MODULE_0__angular_compiler__["g" /* ElementSchemaRegistry */],
-            __WEBPACK_IMPORTED_MODULE_0__angular_compiler__["i" /* I18NHtmlParser */], __WEBPACK_IMPORTED_MODULE_1__angular_core__["_11" /* ɵConsole */]]
+            __WEBPACK_IMPORTED_MODULE_0__angular_compiler__["i" /* I18NHtmlParser */], __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵConsole"]]
     },
     { provide: __WEBPACK_IMPORTED_MODULE_0__angular_compiler__["d" /* DirectiveNormalizer */], deps: [__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["s" /* ResourceLoader */], __WEBPACK_IMPORTED_MODULE_0__angular_compiler__["x" /* UrlResolver */], __WEBPACK_IMPORTED_MODULE_0__angular_compiler__["h" /* HtmlParser */], __WEBPACK_IMPORTED_MODULE_0__angular_compiler__["c" /* CompilerConfig */]] },
     { provide: __WEBPACK_IMPORTED_MODULE_0__angular_compiler__["a" /* CompileMetadataResolver */], deps: [__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["c" /* CompilerConfig */], __WEBPACK_IMPORTED_MODULE_0__angular_compiler__["h" /* HtmlParser */], __WEBPACK_IMPORTED_MODULE_0__angular_compiler__["o" /* NgModuleResolver */],
             __WEBPACK_IMPORTED_MODULE_0__angular_compiler__["e" /* DirectiveResolver */], __WEBPACK_IMPORTED_MODULE_0__angular_compiler__["q" /* PipeResolver */],
             __WEBPACK_IMPORTED_MODULE_0__angular_compiler__["v" /* SummaryResolver */],
             __WEBPACK_IMPORTED_MODULE_0__angular_compiler__["g" /* ElementSchemaRegistry */],
-            __WEBPACK_IMPORTED_MODULE_0__angular_compiler__["d" /* DirectiveNormalizer */], __WEBPACK_IMPORTED_MODULE_1__angular_core__["_11" /* ɵConsole */],
-            [__WEBPACK_IMPORTED_MODULE_1__angular_core__["J" /* Optional */], __WEBPACK_IMPORTED_MODULE_0__angular_compiler__["t" /* StaticSymbolCache */]],
+            __WEBPACK_IMPORTED_MODULE_0__angular_compiler__["d" /* DirectiveNormalizer */], __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵConsole"],
+            [__WEBPACK_IMPORTED_MODULE_1__angular_core__["Optional"], __WEBPACK_IMPORTED_MODULE_0__angular_compiler__["t" /* StaticSymbolCache */]],
             __WEBPACK_IMPORTED_MODULE_0__angular_compiler__["b" /* CompileReflector */],
-            [__WEBPACK_IMPORTED_MODULE_1__angular_core__["J" /* Optional */], ERROR_COLLECTOR_TOKEN]] },
+            [__WEBPACK_IMPORTED_MODULE_1__angular_core__["Optional"], ERROR_COLLECTOR_TOKEN]] },
     DEFAULT_PACKAGE_URL_PROVIDER,
     { provide: __WEBPACK_IMPORTED_MODULE_0__angular_compiler__["u" /* StyleCompiler */], deps: [__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["x" /* UrlResolver */]] },
     { provide: __WEBPACK_IMPORTED_MODULE_0__angular_compiler__["y" /* ViewCompiler */], deps: [__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["b" /* CompileReflector */]] },
     { provide: __WEBPACK_IMPORTED_MODULE_0__angular_compiler__["n" /* NgModuleCompiler */], deps: [__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["b" /* CompileReflector */]] },
     { provide: __WEBPACK_IMPORTED_MODULE_0__angular_compiler__["c" /* CompilerConfig */], useValue: new __WEBPACK_IMPORTED_MODULE_0__angular_compiler__["c" /* CompilerConfig */]() },
-    { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["k" /* Compiler */], useClass: CompilerImpl, deps: [__WEBPACK_IMPORTED_MODULE_1__angular_core__["y" /* Injector */], __WEBPACK_IMPORTED_MODULE_0__angular_compiler__["a" /* CompileMetadataResolver */],
+    { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Compiler"], useClass: CompilerImpl, deps: [__WEBPACK_IMPORTED_MODULE_1__angular_core__["Injector"], __WEBPACK_IMPORTED_MODULE_0__angular_compiler__["a" /* CompileMetadataResolver */],
             __WEBPACK_IMPORTED_MODULE_0__angular_compiler__["w" /* TemplateParser */], __WEBPACK_IMPORTED_MODULE_0__angular_compiler__["u" /* StyleCompiler */],
             __WEBPACK_IMPORTED_MODULE_0__angular_compiler__["y" /* ViewCompiler */], __WEBPACK_IMPORTED_MODULE_0__angular_compiler__["n" /* NgModuleCompiler */],
             __WEBPACK_IMPORTED_MODULE_0__angular_compiler__["v" /* SummaryResolver */], __WEBPACK_IMPORTED_MODULE_0__angular_compiler__["b" /* CompileReflector */], __WEBPACK_IMPORTED_MODULE_0__angular_compiler__["c" /* CompilerConfig */],
-            __WEBPACK_IMPORTED_MODULE_1__angular_core__["_11" /* ɵConsole */]] },
+            __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵConsole"]] },
     { provide: __WEBPACK_IMPORTED_MODULE_0__angular_compiler__["f" /* DomElementSchemaRegistry */], deps: [] },
     { provide: __WEBPACK_IMPORTED_MODULE_0__angular_compiler__["g" /* ElementSchemaRegistry */], useExisting: __WEBPACK_IMPORTED_MODULE_0__angular_compiler__["f" /* DomElementSchemaRegistry */] },
-    { provide: __WEBPACK_IMPORTED_MODULE_0__angular_compiler__["x" /* UrlResolver */], deps: [__WEBPACK_IMPORTED_MODULE_1__angular_core__["K" /* PACKAGE_ROOT_URL */]] },
+    { provide: __WEBPACK_IMPORTED_MODULE_0__angular_compiler__["x" /* UrlResolver */], deps: [__WEBPACK_IMPORTED_MODULE_1__angular_core__["PACKAGE_ROOT_URL"]] },
     { provide: __WEBPACK_IMPORTED_MODULE_0__angular_compiler__["e" /* DirectiveResolver */], deps: [__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["b" /* CompileReflector */]] },
     { provide: __WEBPACK_IMPORTED_MODULE_0__angular_compiler__["q" /* PipeResolver */], deps: [__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["b" /* CompileReflector */]] },
     { provide: __WEBPACK_IMPORTED_MODULE_0__angular_compiler__["o" /* NgModuleResolver */], deps: [__WEBPACK_IMPORTED_MODULE_0__angular_compiler__["b" /* CompileReflector */]] },
@@ -62086,8 +64882,8 @@ var JitCompilerFactory = /** @class */ (function () {
     function JitCompilerFactory(defaultOptions) {
         var /** @type {?} */ compilerOptions = {
             useJit: true,
-            defaultEncapsulation: __WEBPACK_IMPORTED_MODULE_1__angular_core__["_2" /* ViewEncapsulation */].Emulated,
-            missingTranslation: __WEBPACK_IMPORTED_MODULE_1__angular_core__["D" /* MissingTranslationStrategy */].Warning,
+            defaultEncapsulation: __WEBPACK_IMPORTED_MODULE_1__angular_core__["ViewEncapsulation"].Emulated,
+            missingTranslation: __WEBPACK_IMPORTED_MODULE_1__angular_core__["MissingTranslationStrategy"].Warning,
             enableLegacyTemplate: false,
         };
         this._defaultOptions = [compilerOptions].concat(defaultOptions);
@@ -62103,7 +64899,7 @@ var JitCompilerFactory = /** @class */ (function () {
     function (options) {
         if (options === void 0) { options = []; }
         var /** @type {?} */ opts = _mergeOptions(this._defaultOptions.concat(options));
-        var /** @type {?} */ injector = __WEBPACK_IMPORTED_MODULE_1__angular_core__["y" /* Injector */].create([
+        var /** @type {?} */ injector = __WEBPACK_IMPORTED_MODULE_1__angular_core__["Injector"].create([
             COMPILER_PROVIDERS, {
                 provide: __WEBPACK_IMPORTED_MODULE_0__angular_compiler__["c" /* CompilerConfig */],
                 useFactory: function () {
@@ -62111,7 +64907,7 @@ var JitCompilerFactory = /** @class */ (function () {
                         // let explicit values from the compiler options overwrite options
                         // from the app providers
                         useJit: opts.useJit,
-                        jitDevMode: Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["_7" /* isDevMode */])(),
+                        jitDevMode: Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["isDevMode"])(),
                         // let explicit values from the compiler options overwrite options
                         // from the app providers
                         defaultEncapsulation: opts.defaultEncapsulation,
@@ -62124,7 +64920,7 @@ var JitCompilerFactory = /** @class */ (function () {
             },
             /** @type {?} */ ((opts.providers))
         ]);
-        return injector.get(__WEBPACK_IMPORTED_MODULE_1__angular_core__["k" /* Compiler */]);
+        return injector.get(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Compiler"]);
     };
     return JitCompilerFactory;
 }());
@@ -62181,9 +64977,9 @@ function _mergeArrays(parts) {
  *
  * \@experimental
  */
-var platformCoreDynamic = Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["_4" /* createPlatformFactory */])(__WEBPACK_IMPORTED_MODULE_1__angular_core__["_8" /* platformCore */], 'coreDynamic', [
-    { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["h" /* COMPILER_OPTIONS */], useValue: {}, multi: true },
-    { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["l" /* CompilerFactory */], useClass: JitCompilerFactory, deps: [__WEBPACK_IMPORTED_MODULE_1__angular_core__["h" /* COMPILER_OPTIONS */]] },
+var platformCoreDynamic = Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["createPlatformFactory"])(__WEBPACK_IMPORTED_MODULE_1__angular_core__["platformCore"], 'coreDynamic', [
+    { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["COMPILER_OPTIONS"], useValue: {}, multi: true },
+    { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["CompilerFactory"], useClass: JitCompilerFactory, deps: [__WEBPACK_IMPORTED_MODULE_1__angular_core__["COMPILER_OPTIONS"]] },
 ]);
 
 /**
@@ -62238,7 +65034,7 @@ var ResourceLoaderImpl = /** @class */ (function (_super) {
         return promise;
     };
     ResourceLoaderImpl.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["w" /* Injectable */] },
+        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Injectable"] },
     ];
     /** @nocollapse */
     ResourceLoaderImpl.ctorParameters = function () { return []; };
@@ -62257,13 +65053,13 @@ var ResourceLoaderImpl = /** @class */ (function (_super) {
  * found in the LICENSE file at https://angular.io/license
  */
 var INTERNAL_BROWSER_DYNAMIC_PLATFORM_PROVIDERS = [
-    __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser__["b" /* ɵINTERNAL_BROWSER_PLATFORM_PROVIDERS */],
+    __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser__["ɵINTERNAL_BROWSER_PLATFORM_PROVIDERS"],
     {
-        provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["h" /* COMPILER_OPTIONS */],
+        provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["COMPILER_OPTIONS"],
         useValue: { providers: [{ provide: __WEBPACK_IMPORTED_MODULE_0__angular_compiler__["s" /* ResourceLoader */], useClass: ResourceLoaderImpl, deps: [] }] },
         multi: true
     },
-    { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["L" /* PLATFORM_ID */], useValue: __WEBPACK_IMPORTED_MODULE_2__angular_common__["d" /* ɵPLATFORM_BROWSER_ID */] },
+    { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["PLATFORM_ID"], useValue: __WEBPACK_IMPORTED_MODULE_2__angular_common__["j" /* ɵPLATFORM_BROWSER_ID */] },
 ];
 
 /**
@@ -62288,7 +65084,7 @@ var CachedResourceLoader = /** @class */ (function (_super) {
     Object(__WEBPACK_IMPORTED_MODULE_4_tslib__["b" /* __extends */])(CachedResourceLoader, _super);
     function CachedResourceLoader() {
         var _this = _super.call(this) || this;
-        _this._cache = (/** @type {?} */ (__WEBPACK_IMPORTED_MODULE_1__angular_core__["_21" /* ɵglobal */])).$templateCache;
+        _this._cache = (/** @type {?} */ (__WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵglobal"])).$templateCache;
         if (_this._cache == null) {
             throw new Error('CachedResourceLoader: Template cache was not found in $templateCache.');
         }
@@ -62339,7 +65135,7 @@ var CachedResourceLoader = /** @class */ (function (_super) {
 /**
  * \@stable
  */
-var VERSION = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["_0" /* Version */]('5.2.6');
+var VERSION = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["Version"]('5.2.6');
 
 /**
  * @fileoverview added by tsickle
@@ -62359,7 +65155,7 @@ var RESOURCE_CACHE_PROVIDER = [{ provide: __WEBPACK_IMPORTED_MODULE_0__angular_c
 /**
  * \@stable
  */
-var platformBrowserDynamic = Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["_4" /* createPlatformFactory */])(platformCoreDynamic, 'browserDynamic', INTERNAL_BROWSER_DYNAMIC_PLATFORM_PROVIDERS);
+var platformBrowserDynamic = Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["createPlatformFactory"])(platformCoreDynamic, 'browserDynamic', INTERNAL_BROWSER_DYNAMIC_PLATFORM_PROVIDERS);
 
 /**
  * @fileoverview added by tsickle
@@ -62398,54 +65194,55 @@ var platformBrowserDynamic = Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__[
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BrowserModule; });
-/* unused harmony export platformBrowser */
-/* unused harmony export Meta */
-/* unused harmony export Title */
-/* unused harmony export disableDebugTools */
-/* unused harmony export enableDebugTools */
-/* unused harmony export BrowserTransferStateModule */
-/* unused harmony export TransferState */
-/* unused harmony export makeStateKey */
-/* unused harmony export By */
-/* unused harmony export DOCUMENT */
-/* unused harmony export EVENT_MANAGER_PLUGINS */
-/* unused harmony export EventManager */
-/* unused harmony export HAMMER_GESTURE_CONFIG */
-/* unused harmony export HammerGestureConfig */
-/* unused harmony export DomSanitizer */
-/* unused harmony export VERSION */
-/* unused harmony export ɵBROWSER_SANITIZATION_PROVIDERS */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return INTERNAL_BROWSER_PLATFORM_PROVIDERS; });
-/* unused harmony export ɵinitDomAdapter */
-/* unused harmony export ɵBrowserDomAdapter */
-/* unused harmony export ɵBrowserPlatformLocation */
-/* unused harmony export ɵTRANSITION_ID */
-/* unused harmony export ɵBrowserGetTestability */
-/* unused harmony export ɵescapeHtml */
-/* unused harmony export ɵELEMENT_PROBE_PROVIDERS */
-/* unused harmony export ɵDomAdapter */
-/* unused harmony export ɵgetDOM */
-/* unused harmony export ɵsetRootDomAdapter */
-/* unused harmony export ɵDomRendererFactory2 */
-/* unused harmony export ɵNAMESPACE_URIS */
-/* unused harmony export ɵflattenStyles */
-/* unused harmony export ɵshimContentAttribute */
-/* unused harmony export ɵshimHostAttribute */
-/* unused harmony export ɵDomEventsPlugin */
-/* unused harmony export ɵHammerGesturesPlugin */
-/* unused harmony export ɵKeyEventsPlugin */
-/* unused harmony export ɵDomSharedStylesHost */
-/* unused harmony export ɵSharedStylesHost */
-/* unused harmony export ɵb */
-/* unused harmony export ɵa */
-/* unused harmony export ɵi */
-/* unused harmony export ɵg */
-/* unused harmony export ɵf */
-/* unused harmony export ɵc */
-/* unused harmony export ɵh */
-/* unused harmony export ɵd */
-/* unused harmony export ɵe */
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BrowserModule", function() { return BrowserModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "platformBrowser", function() { return platformBrowser; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Meta", function() { return Meta; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Title", function() { return Title; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "disableDebugTools", function() { return disableDebugTools; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "enableDebugTools", function() { return enableDebugTools; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BrowserTransferStateModule", function() { return BrowserTransferStateModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TransferState", function() { return TransferState; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "makeStateKey", function() { return makeStateKey; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "By", function() { return By; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DOCUMENT", function() { return DOCUMENT$1; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EVENT_MANAGER_PLUGINS", function() { return EVENT_MANAGER_PLUGINS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EventManager", function() { return EventManager; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HAMMER_GESTURE_CONFIG", function() { return HAMMER_GESTURE_CONFIG; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HammerGestureConfig", function() { return HammerGestureConfig; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DomSanitizer", function() { return DomSanitizer; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VERSION", function() { return VERSION; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵBROWSER_SANITIZATION_PROVIDERS", function() { return BROWSER_SANITIZATION_PROVIDERS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵINTERNAL_BROWSER_PLATFORM_PROVIDERS", function() { return INTERNAL_BROWSER_PLATFORM_PROVIDERS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵinitDomAdapter", function() { return initDomAdapter; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵBrowserDomAdapter", function() { return BrowserDomAdapter; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵBrowserPlatformLocation", function() { return BrowserPlatformLocation; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵTRANSITION_ID", function() { return TRANSITION_ID; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵBrowserGetTestability", function() { return BrowserGetTestability; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵescapeHtml", function() { return escapeHtml; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵELEMENT_PROBE_PROVIDERS", function() { return ELEMENT_PROBE_PROVIDERS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵDomAdapter", function() { return DomAdapter; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵgetDOM", function() { return getDOM; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵsetRootDomAdapter", function() { return setRootDomAdapter; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵDomRendererFactory2", function() { return DomRendererFactory2; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵNAMESPACE_URIS", function() { return NAMESPACE_URIS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵflattenStyles", function() { return flattenStyles; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵshimContentAttribute", function() { return shimContentAttribute; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵshimHostAttribute", function() { return shimHostAttribute; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵDomEventsPlugin", function() { return DomEventsPlugin; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵHammerGesturesPlugin", function() { return HammerGesturesPlugin; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵKeyEventsPlugin", function() { return KeyEventsPlugin; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵDomSharedStylesHost", function() { return DomSharedStylesHost; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵSharedStylesHost", function() { return SharedStylesHost; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵb", function() { return _document; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵa", function() { return errorHandler; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵi", function() { return GenericBrowserDomAdapter; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵg", function() { return SERVER_TRANSITION_PROVIDERS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵf", function() { return appInitializerFactory; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵc", function() { return initTransferState; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵh", function() { return _createNgProbe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵd", function() { return EventManagerPlugin; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵe", function() { return DomSanitizerImpl; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common__ = __webpack_require__("./node_modules/@angular/common/esm5/common.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_tslib__ = __webpack_require__("./node_modules/tslib/tslib.es6.js");
@@ -62703,8 +65500,8 @@ var _chromeNumKeyPadMap = {
     '\x90': 'NumLock'
 };
 var nodeContains;
-if (__WEBPACK_IMPORTED_MODULE_1__angular_core__["_21" /* ɵglobal */]['Node']) {
-    nodeContains = __WEBPACK_IMPORTED_MODULE_1__angular_core__["_21" /* ɵglobal */]['Node'].prototype.contains || function (node) {
+if (__WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵglobal"]['Node']) {
+    nodeContains = __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵglobal"]['Node'].prototype.contains || function (node) {
         return !!(this.compareDocumentPosition(node) & 16);
     };
 }
@@ -64003,7 +66800,7 @@ var BrowserDomAdapter = /** @class */ (function (_super) {
      * @param {?} name
      * @return {?}
      */
-    function (name) { return Object(__WEBPACK_IMPORTED_MODULE_0__angular_common__["e" /* ɵparseCookieValue */])(document.cookie, name); };
+    function (name) { return Object(__WEBPACK_IMPORTED_MODULE_0__angular_common__["k" /* ɵparseCookieValue */])(document.cookie, name); };
     /**
      * @param {?} name
      * @param {?} value
@@ -64068,7 +66865,7 @@ function relativePath(url) {
  *
  * @deprecated import from `\@angular/common` instead.
  */
-var DOCUMENT$1 = __WEBPACK_IMPORTED_MODULE_0__angular_common__["b" /* DOCUMENT */];
+var DOCUMENT$1 = __WEBPACK_IMPORTED_MODULE_0__angular_common__["c" /* DOCUMENT */];
 
 /**
  * @fileoverview added by tsickle
@@ -64239,14 +67036,14 @@ var BrowserPlatformLocation = /** @class */ (function (_super) {
      */
     function () { this._history.back(); };
     BrowserPlatformLocation.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["w" /* Injectable */] },
+        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Injectable"] },
     ];
     /** @nocollapse */
     BrowserPlatformLocation.ctorParameters = function () { return [
-        { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["v" /* Inject */], args: [DOCUMENT$1,] },] },
+        { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Inject"], args: [DOCUMENT$1,] },] },
     ]; };
     return BrowserPlatformLocation;
-}(__WEBPACK_IMPORTED_MODULE_0__angular_common__["c" /* PlatformLocation */]));
+}(__WEBPACK_IMPORTED_MODULE_0__angular_common__["i" /* PlatformLocation */]));
 
 /**
  * @fileoverview added by tsickle
@@ -64445,11 +67242,11 @@ var Meta = /** @class */ (function () {
         return Object.keys(tag).every(function (key) { return _this._dom.getAttribute(elem, key) === tag[key]; });
     };
     Meta.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["w" /* Injectable */] },
+        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Injectable"] },
     ];
     /** @nocollapse */
     Meta.ctorParameters = function () { return [
-        { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["v" /* Inject */], args: [DOCUMENT$1,] },] },
+        { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Inject"], args: [DOCUMENT$1,] },] },
     ]; };
     return Meta;
 }());
@@ -64469,7 +67266,7 @@ var Meta = /** @class */ (function () {
  * An id that identifies a particular application being bootstrapped, that should
  * match across the client/server boundary.
  */
-var TRANSITION_ID = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["x" /* InjectionToken */]('TRANSITION_ID');
+var TRANSITION_ID = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["InjectionToken"]('TRANSITION_ID');
 /**
  * @param {?} transitionId
  * @param {?} document
@@ -64480,7 +67277,7 @@ function appInitializerFactory(transitionId, document, injector) {
     return function () {
         // Wait for all application initializers to be completed before removing the styles set by
         // the server.
-        injector.get(__WEBPACK_IMPORTED_MODULE_1__angular_core__["d" /* ApplicationInitStatus */]).donePromise.then(function () {
+        injector.get(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ApplicationInitStatus"]).donePromise.then(function () {
             var /** @type {?} */ dom = getDOM();
             var /** @type {?} */ styles = Array.prototype.slice.apply(dom.querySelectorAll(document, "style[ng-transition]"));
             styles.filter(function (el) { return dom.getAttribute(el, 'ng-transition') === transitionId; })
@@ -64490,9 +67287,9 @@ function appInitializerFactory(transitionId, document, injector) {
 }
 var SERVER_TRANSITION_PROVIDERS = [
     {
-        provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["c" /* APP_INITIALIZER */],
+        provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["APP_INITIALIZER"],
         useFactory: appInitializerFactory,
-        deps: [TRANSITION_ID, DOCUMENT$1, __WEBPACK_IMPORTED_MODULE_1__angular_core__["y" /* Injector */]],
+        deps: [TRANSITION_ID, DOCUMENT$1, __WEBPACK_IMPORTED_MODULE_1__angular_core__["Injector"]],
         multi: true
     },
 ];
@@ -64517,7 +67314,7 @@ var BrowserGetTestability = /** @class */ (function () {
     BrowserGetTestability.init = /**
      * @return {?}
      */
-    function () { Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["_9" /* setTestabilityGetter */])(new BrowserGetTestability()); };
+    function () { Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["setTestabilityGetter"])(new BrowserGetTestability()); };
     /**
      * @param {?} registry
      * @return {?}
@@ -64527,7 +67324,7 @@ var BrowserGetTestability = /** @class */ (function () {
      * @return {?}
      */
     function (registry) {
-        __WEBPACK_IMPORTED_MODULE_1__angular_core__["_21" /* ɵglobal */]['getAngularTestability'] = function (elem, findInAncestors) {
+        __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵglobal"]['getAngularTestability'] = function (elem, findInAncestors) {
             if (findInAncestors === void 0) { findInAncestors = true; }
             var /** @type {?} */ testability = registry.findTestabilityInTree(elem, findInAncestors);
             if (testability == null) {
@@ -64535,10 +67332,10 @@ var BrowserGetTestability = /** @class */ (function () {
             }
             return testability;
         };
-        __WEBPACK_IMPORTED_MODULE_1__angular_core__["_21" /* ɵglobal */]['getAllAngularTestabilities'] = function () { return registry.getAllTestabilities(); };
-        __WEBPACK_IMPORTED_MODULE_1__angular_core__["_21" /* ɵglobal */]['getAllAngularRootElements'] = function () { return registry.getAllRootElements(); };
+        __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵglobal"]['getAllAngularTestabilities'] = function () { return registry.getAllTestabilities(); };
+        __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵglobal"]['getAllAngularRootElements'] = function () { return registry.getAllRootElements(); };
         var /** @type {?} */ whenAllStable = function (callback /** TODO #9100 */) {
-            var /** @type {?} */ testabilities = __WEBPACK_IMPORTED_MODULE_1__angular_core__["_21" /* ɵglobal */]['getAllAngularTestabilities']();
+            var /** @type {?} */ testabilities = __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵglobal"]['getAllAngularTestabilities']();
             var /** @type {?} */ count = testabilities.length;
             var /** @type {?} */ didWork = false;
             var /** @type {?} */ decrement = function (didWork_ /** TODO #9100 */) {
@@ -64552,10 +67349,10 @@ var BrowserGetTestability = /** @class */ (function () {
                 testability.whenStable(decrement);
             });
         };
-        if (!__WEBPACK_IMPORTED_MODULE_1__angular_core__["_21" /* ɵglobal */]['frameworkStabilizers']) {
-            __WEBPACK_IMPORTED_MODULE_1__angular_core__["_21" /* ɵglobal */]['frameworkStabilizers'] = [];
+        if (!__WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵglobal"]['frameworkStabilizers']) {
+            __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵglobal"]['frameworkStabilizers'] = [];
         }
-        __WEBPACK_IMPORTED_MODULE_1__angular_core__["_21" /* ɵglobal */]['frameworkStabilizers'].push(whenAllStable);
+        __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵglobal"]['frameworkStabilizers'].push(whenAllStable);
     };
     /**
      * @param {?} registry
@@ -64641,11 +67438,11 @@ var Title = /** @class */ (function () {
      */
     function (newTitle) { getDOM().setTitle(this._doc, newTitle); };
     Title.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["w" /* Injectable */] },
+        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Injectable"] },
     ];
     /** @nocollapse */
     Title.ctorParameters = function () { return [
-        { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["v" /* Inject */], args: [DOCUMENT$1,] },] },
+        { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Inject"], args: [DOCUMENT$1,] },] },
     ]; };
     return Title;
 }());
@@ -64685,7 +67482,7 @@ function exportNgVar(name, value) {
         // - closure declares globals itself for minified names, which sometimes clobber our `ng` global
         // - we can't declare a closure extern as the namespace `ng` is already used within Google
         //   for typings for angularJS (via `goog.provide('ng....')`).
-        var /** @type {?} */ ng = __WEBPACK_IMPORTED_MODULE_1__angular_core__["_21" /* ɵglobal */]['ng'] = (/** @type {?} */ (__WEBPACK_IMPORTED_MODULE_1__angular_core__["_21" /* ɵglobal */]['ng'])) || {};
+        var /** @type {?} */ ng = __WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵglobal"]['ng'] = (/** @type {?} */ (__WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵglobal"]['ng'])) || {};
         ng[name] = value;
     }
 }
@@ -64702,8 +67499,8 @@ function exportNgVar(name, value) {
  * found in the LICENSE file at https://angular.io/license
  */
 var CORE_TOKENS = {
-    'ApplicationRef': __WEBPACK_IMPORTED_MODULE_1__angular_core__["f" /* ApplicationRef */],
-    'NgZone': __WEBPACK_IMPORTED_MODULE_1__angular_core__["I" /* NgZone */],
+    'ApplicationRef': __WEBPACK_IMPORTED_MODULE_1__angular_core__["ApplicationRef"],
+    'NgZone': __WEBPACK_IMPORTED_MODULE_1__angular_core__["NgZone"],
 };
 var INSPECT_GLOBAL_NAME = 'probe';
 var CORE_TOKENS_GLOBAL_NAME = 'coreTokens';
@@ -64715,7 +67512,7 @@ var CORE_TOKENS_GLOBAL_NAME = 'coreTokens';
  * @return {?}
  */
 function inspectNativeElement(element) {
-    return Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["_6" /* getDebugNode */])(element);
+    return Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["getDebugNode"])(element);
 }
 /**
  * @param {?} coreTokens
@@ -64738,10 +67535,10 @@ function _ngProbeTokensToMap(tokens) {
  */
 var ELEMENT_PROBE_PROVIDERS = [
     {
-        provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["c" /* APP_INITIALIZER */],
+        provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["APP_INITIALIZER"],
         useFactory: _createNgProbe,
         deps: [
-            [__WEBPACK_IMPORTED_MODULE_1__angular_core__["H" /* NgProbeToken */], new __WEBPACK_IMPORTED_MODULE_1__angular_core__["J" /* Optional */]()],
+            [__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgProbeToken"], new __WEBPACK_IMPORTED_MODULE_1__angular_core__["Optional"]()],
         ],
         multi: true,
     },
@@ -64761,7 +67558,7 @@ var ELEMENT_PROBE_PROVIDERS = [
 /**
  * \@stable
  */
-var EVENT_MANAGER_PLUGINS = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["x" /* InjectionToken */]('EventManagerPlugins');
+var EVENT_MANAGER_PLUGINS = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["InjectionToken"]('EventManagerPlugins');
 /**
  * \@stable
  */
@@ -64839,12 +67636,12 @@ var EventManager = /** @class */ (function () {
         throw new Error("No event manager plugin found for event " + eventName);
     };
     EventManager.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["w" /* Injectable */] },
+        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Injectable"] },
     ];
     /** @nocollapse */
     EventManager.ctorParameters = function () { return [
-        { type: Array, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["v" /* Inject */], args: [EVENT_MANAGER_PLUGINS,] },] },
-        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["I" /* NgZone */], },
+        { type: Array, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Inject"], args: [EVENT_MANAGER_PLUGINS,] },] },
+        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["NgZone"], },
     ]; };
     return EventManager;
 }());
@@ -64931,7 +67728,7 @@ var SharedStylesHost = /** @class */ (function () {
      */
     function () { return Array.from(this._stylesSet); };
     SharedStylesHost.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["w" /* Injectable */] },
+        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Injectable"] },
     ];
     /** @nocollapse */
     SharedStylesHost.ctorParameters = function () { return []; };
@@ -65006,11 +67803,11 @@ var DomSharedStylesHost = /** @class */ (function (_super) {
      */
     function () { this._styleNodes.forEach(function (styleNode) { return getDOM().remove(styleNode); }); };
     DomSharedStylesHost.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["w" /* Injectable */] },
+        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Injectable"] },
     ];
     /** @nocollapse */
     DomSharedStylesHost.ctorParameters = function () { return [
-        { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["v" /* Inject */], args: [DOCUMENT$1,] },] },
+        { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Inject"], args: [DOCUMENT$1,] },] },
     ]; };
     return DomSharedStylesHost;
 }(SharedStylesHost));
@@ -65106,7 +67903,7 @@ var DomRendererFactory2 = /** @class */ (function () {
             return this.defaultRenderer;
         }
         switch (type.encapsulation) {
-            case __WEBPACK_IMPORTED_MODULE_1__angular_core__["_2" /* ViewEncapsulation */].Emulated: {
+            case __WEBPACK_IMPORTED_MODULE_1__angular_core__["ViewEncapsulation"].Emulated: {
                 var /** @type {?} */ renderer = this.rendererByCompId.get(type.id);
                 if (!renderer) {
                     renderer =
@@ -65116,7 +67913,7 @@ var DomRendererFactory2 = /** @class */ (function () {
                 (/** @type {?} */ (renderer)).applyToHost(element);
                 return renderer;
             }
-            case __WEBPACK_IMPORTED_MODULE_1__angular_core__["_2" /* ViewEncapsulation */].Native:
+            case __WEBPACK_IMPORTED_MODULE_1__angular_core__["ViewEncapsulation"].Native:
                 return new ShadowDomRenderer(this.eventManager, this.sharedStylesHost, element, type);
             default: {
                 if (!this.rendererByCompId.has(type.id)) {
@@ -65143,7 +67940,7 @@ var DomRendererFactory2 = /** @class */ (function () {
      */
     function () { };
     DomRendererFactory2.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["w" /* Injectable */] },
+        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Injectable"] },
     ];
     /** @nocollapse */
     DomRendererFactory2.ctorParameters = function () { return [
@@ -65368,8 +68165,8 @@ var DefaultDomRenderer2 = /** @class */ (function () {
      * @return {?}
      */
     function (el, style, value, flags) {
-        if (flags & __WEBPACK_IMPORTED_MODULE_1__angular_core__["S" /* RendererStyleFlags2 */].DashCase) {
-            el.style.setProperty(style, value, !!(flags & __WEBPACK_IMPORTED_MODULE_1__angular_core__["S" /* RendererStyleFlags2 */].Important) ? 'important' : '');
+        if (flags & __WEBPACK_IMPORTED_MODULE_1__angular_core__["RendererStyleFlags2"].DashCase) {
+            el.style.setProperty(style, value, !!(flags & __WEBPACK_IMPORTED_MODULE_1__angular_core__["RendererStyleFlags2"].Important) ? 'important' : '');
         }
         else {
             el.style[style] = value;
@@ -65388,7 +68185,7 @@ var DefaultDomRenderer2 = /** @class */ (function () {
      * @return {?}
      */
     function (el, style, flags) {
-        if (flags & __WEBPACK_IMPORTED_MODULE_1__angular_core__["S" /* RendererStyleFlags2 */].DashCase) {
+        if (flags & __WEBPACK_IMPORTED_MODULE_1__angular_core__["RendererStyleFlags2"].DashCase) {
             el.style.removeProperty(style);
         }
         else {
@@ -65745,7 +68542,7 @@ var DomEventsPlugin = /** @class */ (function (_super) {
         var /** @type {?} */ callback = /** @type {?} */ (handler);
         // if zonejs is loaded and current zone is not ngZone
         // we keep Zone.current on target for later restoration.
-        if (zoneJsLoaded && (!__WEBPACK_IMPORTED_MODULE_1__angular_core__["I" /* NgZone */].isInAngularZone() || isBlackListedEvent(eventName))) {
+        if (zoneJsLoaded && (!__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgZone"].isInAngularZone() || isBlackListedEvent(eventName))) {
             var /** @type {?} */ symbolName = symbolNames[eventName];
             if (!symbolName) {
                 symbolName = symbolNames[eventName] = __symbol__(ANGULAR + eventName + FALSE);
@@ -65829,12 +68626,12 @@ var DomEventsPlugin = /** @class */ (function (_super) {
         }
     };
     DomEventsPlugin.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["w" /* Injectable */] },
+        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Injectable"] },
     ];
     /** @nocollapse */
     DomEventsPlugin.ctorParameters = function () { return [
-        { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["v" /* Inject */], args: [DOCUMENT$1,] },] },
-        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["I" /* NgZone */], },
+        { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Inject"], args: [DOCUMENT$1,] },] },
+        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["NgZone"], },
     ]; };
     return DomEventsPlugin;
 }(EventManagerPlugin));
@@ -65893,7 +68690,7 @@ var EVENT_NAMES = {
  *
  * \@experimental
  */
-var HAMMER_GESTURE_CONFIG = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["x" /* InjectionToken */]('HammerGestureConfig');
+var HAMMER_GESTURE_CONFIG = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["InjectionToken"]('HammerGestureConfig');
 /**
  * @record
  */
@@ -65924,7 +68721,7 @@ var HammerGestureConfig = /** @class */ (function () {
         return mc;
     };
     HammerGestureConfig.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["w" /* Injectable */] },
+        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Injectable"] },
     ];
     /** @nocollapse */
     HammerGestureConfig.ctorParameters = function () { return []; };
@@ -65990,12 +68787,12 @@ var HammerGesturesPlugin = /** @class */ (function (_super) {
      */
     function (eventName) { return this._config.events.indexOf(eventName) > -1; };
     HammerGesturesPlugin.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["w" /* Injectable */] },
+        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Injectable"] },
     ];
     /** @nocollapse */
     HammerGesturesPlugin.ctorParameters = function () { return [
-        { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["v" /* Inject */], args: [DOCUMENT$1,] },] },
-        { type: HammerGestureConfig, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["v" /* Inject */], args: [HAMMER_GESTURE_CONFIG,] },] },
+        { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Inject"], args: [DOCUMENT$1,] },] },
+        { type: HammerGestureConfig, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Inject"], args: [HAMMER_GESTURE_CONFIG,] },] },
     ]; };
     return HammerGesturesPlugin;
 }(EventManagerPlugin));
@@ -66160,11 +68957,11 @@ var KeyEventsPlugin = /** @class */ (function (_super) {
         }
     };
     KeyEventsPlugin.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["w" /* Injectable */] },
+        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Injectable"] },
     ];
     /** @nocollapse */
     KeyEventsPlugin.ctorParameters = function () { return [
-        { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["v" /* Inject */], args: [DOCUMENT$1,] },] },
+        { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Inject"], args: [DOCUMENT$1,] },] },
     ]; };
     return KeyEventsPlugin;
 }(EventManagerPlugin));
@@ -66420,7 +69217,7 @@ function sanitizeUrl(url) {
     url = String(url);
     if (url.match(SAFE_URL_PATTERN) || url.match(DATA_URL_PATTERN))
         return url;
-    if (Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["_7" /* isDevMode */])()) {
+    if (Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["isDevMode"])()) {
         getDOM().log("WARNING: sanitizing unsafe URL value " + url + " (see http://g.co/ng/security#xss)");
     }
     return 'unsafe:' + url;
@@ -66697,7 +69494,7 @@ function sanitizeHtml(defaultDoc, unsafeHtmlInput) {
         } while (unsafeHtml !== parsedHtml);
         var /** @type {?} */ sanitizer = new SanitizingHtmlSerializer();
         var /** @type {?} */ safeHtml = sanitizer.sanitizeChildren(DOM.getTemplateContent(inertBodyElement) || inertBodyElement);
-        if (Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["_7" /* isDevMode */])() && sanitizer.sanitizedSomething) {
+        if (Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["isDevMode"])() && sanitizer.sanitizedSomething) {
             DOM.log('WARNING: sanitizing HTML stripped some content (see http://g.co/ng/security#xss).');
         }
         return safeHtml;
@@ -66808,7 +69605,7 @@ function sanitizeStyle(value) {
         value.match(SAFE_STYLE_VALUE) && hasBalancedQuotes(value)) {
         return value; // Safe style values.
     }
-    if (Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["_7" /* isDevMode */])()) {
+    if (Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["isDevMode"])()) {
         getDOM().log("WARNING: sanitizing unsafe style value " + value + " (see http://g.co/ng/security#xss).");
     }
     return 'unsafe';
@@ -66925,31 +69722,31 @@ var DomSanitizerImpl = /** @class */ (function (_super) {
         if (value == null)
             return null;
         switch (ctx) {
-            case __WEBPACK_IMPORTED_MODULE_1__angular_core__["U" /* SecurityContext */].NONE:
+            case __WEBPACK_IMPORTED_MODULE_1__angular_core__["SecurityContext"].NONE:
                 return /** @type {?} */ (value);
-            case __WEBPACK_IMPORTED_MODULE_1__angular_core__["U" /* SecurityContext */].HTML:
+            case __WEBPACK_IMPORTED_MODULE_1__angular_core__["SecurityContext"].HTML:
                 if (value instanceof SafeHtmlImpl)
                     return value.changingThisBreaksApplicationSecurity;
                 this.checkNotSafeValue(value, 'HTML');
                 return sanitizeHtml(this._doc, String(value));
-            case __WEBPACK_IMPORTED_MODULE_1__angular_core__["U" /* SecurityContext */].STYLE:
+            case __WEBPACK_IMPORTED_MODULE_1__angular_core__["SecurityContext"].STYLE:
                 if (value instanceof SafeStyleImpl)
                     return value.changingThisBreaksApplicationSecurity;
                 this.checkNotSafeValue(value, 'Style');
                 return sanitizeStyle(/** @type {?} */ (value));
-            case __WEBPACK_IMPORTED_MODULE_1__angular_core__["U" /* SecurityContext */].SCRIPT:
+            case __WEBPACK_IMPORTED_MODULE_1__angular_core__["SecurityContext"].SCRIPT:
                 if (value instanceof SafeScriptImpl)
                     return value.changingThisBreaksApplicationSecurity;
                 this.checkNotSafeValue(value, 'Script');
                 throw new Error('unsafe value used in a script context');
-            case __WEBPACK_IMPORTED_MODULE_1__angular_core__["U" /* SecurityContext */].URL:
+            case __WEBPACK_IMPORTED_MODULE_1__angular_core__["SecurityContext"].URL:
                 if (value instanceof SafeResourceUrlImpl || value instanceof SafeUrlImpl) {
                     // Allow resource URLs in URL contexts, they are strictly more trusted.
                     return value.changingThisBreaksApplicationSecurity;
                 }
                 this.checkNotSafeValue(value, 'URL');
                 return sanitizeUrl(String(value));
-            case __WEBPACK_IMPORTED_MODULE_1__angular_core__["U" /* SecurityContext */].RESOURCE_URL:
+            case __WEBPACK_IMPORTED_MODULE_1__angular_core__["SecurityContext"].RESOURCE_URL:
                 if (value instanceof SafeResourceUrlImpl) {
                     return value.changingThisBreaksApplicationSecurity;
                 }
@@ -67023,11 +69820,11 @@ var DomSanitizerImpl = /** @class */ (function (_super) {
         return new SafeResourceUrlImpl(value);
     };
     DomSanitizerImpl.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["w" /* Injectable */] },
+        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Injectable"] },
     ];
     /** @nocollapse */
     DomSanitizerImpl.ctorParameters = function () { return [
-        { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["v" /* Inject */], args: [DOCUMENT$1,] },] },
+        { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Inject"], args: [DOCUMENT$1,] },] },
     ]; };
     return DomSanitizerImpl;
 }(DomSanitizer));
@@ -67134,9 +69931,9 @@ var SafeResourceUrlImpl = /** @class */ (function (_super) {
  * found in the LICENSE file at https://angular.io/license
  */
 var INTERNAL_BROWSER_PLATFORM_PROVIDERS = [
-    { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["L" /* PLATFORM_ID */], useValue: __WEBPACK_IMPORTED_MODULE_0__angular_common__["d" /* ɵPLATFORM_BROWSER_ID */] },
-    { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["M" /* PLATFORM_INITIALIZER */], useValue: initDomAdapter, multi: true },
-    { provide: __WEBPACK_IMPORTED_MODULE_0__angular_common__["c" /* PlatformLocation */], useClass: BrowserPlatformLocation, deps: [DOCUMENT$1] },
+    { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["PLATFORM_ID"], useValue: __WEBPACK_IMPORTED_MODULE_0__angular_common__["j" /* ɵPLATFORM_BROWSER_ID */] },
+    { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["PLATFORM_INITIALIZER"], useValue: initDomAdapter, multi: true },
+    { provide: __WEBPACK_IMPORTED_MODULE_0__angular_common__["i" /* PlatformLocation */], useClass: BrowserPlatformLocation, deps: [DOCUMENT$1] },
     { provide: DOCUMENT$1, useFactory: _document, deps: [] },
 ];
 /**
@@ -67146,13 +69943,13 @@ var INTERNAL_BROWSER_PLATFORM_PROVIDERS = [
  * \@experimental
  */
 var BROWSER_SANITIZATION_PROVIDERS = [
-    { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["T" /* Sanitizer */], useExisting: DomSanitizer },
+    { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Sanitizer"], useExisting: DomSanitizer },
     { provide: DomSanitizer, useClass: DomSanitizerImpl, deps: [DOCUMENT$1] },
 ];
 /**
  * \@stable
  */
-var platformBrowser = Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["_4" /* createPlatformFactory */])(__WEBPACK_IMPORTED_MODULE_1__angular_core__["_8" /* platformCore */], 'browser', INTERNAL_BROWSER_PLATFORM_PROVIDERS);
+var platformBrowser = Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["createPlatformFactory"])(__WEBPACK_IMPORTED_MODULE_1__angular_core__["platformCore"], 'browser', INTERNAL_BROWSER_PLATFORM_PROVIDERS);
 /**
  * @return {?}
  */
@@ -67164,7 +69961,7 @@ function initDomAdapter() {
  * @return {?}
  */
 function errorHandler() {
-    return new __WEBPACK_IMPORTED_MODULE_1__angular_core__["s" /* ErrorHandler */]();
+    return new __WEBPACK_IMPORTED_MODULE_1__angular_core__["ErrorHandler"]();
 }
 /**
  * @return {?}
@@ -67212,37 +70009,37 @@ var BrowserModule = /** @class */ (function () {
         return {
             ngModule: BrowserModule,
             providers: [
-                { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["b" /* APP_ID */], useValue: params.appId },
-                { provide: TRANSITION_ID, useExisting: __WEBPACK_IMPORTED_MODULE_1__angular_core__["b" /* APP_ID */] },
+                { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["APP_ID"], useValue: params.appId },
+                { provide: TRANSITION_ID, useExisting: __WEBPACK_IMPORTED_MODULE_1__angular_core__["APP_ID"] },
                 SERVER_TRANSITION_PROVIDERS,
             ],
         };
     };
     BrowserModule.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* NgModule */], args: [{
+        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"], args: [{
                     providers: [
                         BROWSER_SANITIZATION_PROVIDERS,
-                        { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["s" /* ErrorHandler */], useFactory: errorHandler, deps: [] },
+                        { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["ErrorHandler"], useFactory: errorHandler, deps: [] },
                         { provide: EVENT_MANAGER_PLUGINS, useClass: DomEventsPlugin, multi: true },
                         { provide: EVENT_MANAGER_PLUGINS, useClass: KeyEventsPlugin, multi: true },
                         { provide: EVENT_MANAGER_PLUGINS, useClass: HammerGesturesPlugin, multi: true },
                         { provide: HAMMER_GESTURE_CONFIG, useClass: HammerGestureConfig },
                         DomRendererFactory2,
-                        { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["R" /* RendererFactory2 */], useExisting: DomRendererFactory2 },
+                        { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["RendererFactory2"], useExisting: DomRendererFactory2 },
                         { provide: SharedStylesHost, useExisting: DomSharedStylesHost },
                         DomSharedStylesHost,
-                        __WEBPACK_IMPORTED_MODULE_1__angular_core__["Z" /* Testability */],
+                        __WEBPACK_IMPORTED_MODULE_1__angular_core__["Testability"],
                         EventManager,
                         ELEMENT_PROBE_PROVIDERS,
                         Meta,
                         Title,
                     ],
-                    exports: [__WEBPACK_IMPORTED_MODULE_0__angular_common__["a" /* CommonModule */], __WEBPACK_IMPORTED_MODULE_1__angular_core__["e" /* ApplicationModule */]]
+                    exports: [__WEBPACK_IMPORTED_MODULE_0__angular_common__["b" /* CommonModule */], __WEBPACK_IMPORTED_MODULE_1__angular_core__["ApplicationModule"]]
                 },] },
     ];
     /** @nocollapse */
     BrowserModule.ctorParameters = function () { return [
-        { type: BrowserModule, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["J" /* Optional */] }, { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["V" /* SkipSelf */] },] },
+        { type: BrowserModule, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Optional"] }, { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["SkipSelf"] },] },
     ]; };
     return BrowserModule;
 }());
@@ -67284,7 +70081,7 @@ var ChangeDetectionPerfRecord = /** @class */ (function () {
  */
 var AngularProfiler = /** @class */ (function () {
     function AngularProfiler(ref) {
-        this.appRef = ref.injector.get(__WEBPACK_IMPORTED_MODULE_1__angular_core__["f" /* ApplicationRef */]);
+        this.appRef = ref.injector.get(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ApplicationRef"]);
     }
     // tslint:disable:no-console
     /**
@@ -67620,7 +70417,7 @@ var TransferState = /** @class */ (function () {
         return JSON.stringify(this.store);
     };
     TransferState.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["w" /* Injectable */] },
+        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Injectable"] },
     ];
     /** @nocollapse */
     TransferState.ctorParameters = function () { return []; };
@@ -67656,8 +70453,8 @@ var BrowserTransferStateModule = /** @class */ (function () {
     function BrowserTransferStateModule() {
     }
     BrowserTransferStateModule.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* NgModule */], args: [{
-                    providers: [{ provide: TransferState, useFactory: initTransferState, deps: [DOCUMENT$1, __WEBPACK_IMPORTED_MODULE_1__angular_core__["b" /* APP_ID */]] }],
+        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"], args: [{
+                    providers: [{ provide: TransferState, useFactory: initTransferState, deps: [DOCUMENT$1, __WEBPACK_IMPORTED_MODULE_1__angular_core__["APP_ID"]] }],
                 },] },
     ];
     /** @nocollapse */
@@ -67797,7 +70594,7 @@ var By = /** @class */ (function () {
 /**
  * \@stable
  */
-var VERSION = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["_0" /* Version */]('5.2.6');
+var VERSION = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["Version"]('5.2.6');
 
 /**
  * @fileoverview added by tsickle
@@ -67840,6 +70637,7652 @@ var VERSION = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["_0" /* Version */
 
 
 //# sourceMappingURL=platform-browser.js.map
+
+
+/***/ }),
+
+/***/ "./node_modules/@angular/router/esm5/router.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RouterLink", function() { return RouterLink; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RouterLinkWithHref", function() { return RouterLinkWithHref; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RouterLinkActive", function() { return RouterLinkActive; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RouterOutlet", function() { return RouterOutlet; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ActivationEnd", function() { return ActivationEnd; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ActivationStart", function() { return ActivationStart; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ChildActivationEnd", function() { return ChildActivationEnd; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ChildActivationStart", function() { return ChildActivationStart; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GuardsCheckEnd", function() { return GuardsCheckEnd; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GuardsCheckStart", function() { return GuardsCheckStart; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NavigationCancel", function() { return NavigationCancel; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NavigationEnd", function() { return NavigationEnd; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NavigationError", function() { return NavigationError; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NavigationStart", function() { return NavigationStart; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ResolveEnd", function() { return ResolveEnd; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ResolveStart", function() { return ResolveStart; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RouteConfigLoadEnd", function() { return RouteConfigLoadEnd; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RouteConfigLoadStart", function() { return RouteConfigLoadStart; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RouterEvent", function() { return RouterEvent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RoutesRecognized", function() { return RoutesRecognized; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RouteReuseStrategy", function() { return RouteReuseStrategy; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Router", function() { return Router; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ROUTES", function() { return ROUTES; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ROUTER_CONFIGURATION", function() { return ROUTER_CONFIGURATION; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ROUTER_INITIALIZER", function() { return ROUTER_INITIALIZER; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RouterModule", function() { return RouterModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "provideRoutes", function() { return provideRoutes; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ChildrenOutletContexts", function() { return ChildrenOutletContexts; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "OutletContext", function() { return OutletContext; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NoPreloading", function() { return NoPreloading; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PreloadAllModules", function() { return PreloadAllModules; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PreloadingStrategy", function() { return PreloadingStrategy; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RouterPreloader", function() { return RouterPreloader; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ActivatedRoute", function() { return ActivatedRoute; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ActivatedRouteSnapshot", function() { return ActivatedRouteSnapshot; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RouterState", function() { return RouterState; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RouterStateSnapshot", function() { return RouterStateSnapshot; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PRIMARY_OUTLET", function() { return PRIMARY_OUTLET; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "convertToParamMap", function() { return convertToParamMap; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UrlHandlingStrategy", function() { return UrlHandlingStrategy; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DefaultUrlSerializer", function() { return DefaultUrlSerializer; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UrlSegment", function() { return UrlSegment; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UrlSegmentGroup", function() { return UrlSegmentGroup; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UrlSerializer", function() { return UrlSerializer; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UrlTree", function() { return UrlTree; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VERSION", function() { return VERSION; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵROUTER_PROVIDERS", function() { return ROUTER_PROVIDERS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵflatten", function() { return flatten; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵa", function() { return ROUTER_FORROOT_GUARD; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵg", function() { return RouterInitializer; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵh", function() { return getAppInitializer; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵi", function() { return getBootstrapListener; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵd", function() { return provideForRootGuard; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵc", function() { return provideLocationStrategy; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵj", function() { return provideRouterInitializer; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵf", function() { return rootRoute; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵb", function() { return routerNgProbeToken; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵe", function() { return setupRouter; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵk", function() { return Tree; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵl", function() { return TreeNode; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common__ = __webpack_require__("./node_modules/@angular/common/esm5/common.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_tslib__ = __webpack_require__("./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_BehaviorSubject__ = __webpack_require__("./node_modules/rxjs/_esm5/BehaviorSubject.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Subject__ = __webpack_require__("./node_modules/rxjs/_esm5/Subject.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_observable_of__ = __webpack_require__("./node_modules/rxjs/_esm5/observable/of.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_operator_concatMap__ = __webpack_require__("./node_modules/rxjs/_esm5/operator/concatMap.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_operator_map__ = __webpack_require__("./node_modules/rxjs/_esm5/operator/map.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_rxjs_operator_mergeMap__ = __webpack_require__("./node_modules/rxjs/_esm5/operator/mergeMap.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_rxjs_Observable__ = __webpack_require__("./node_modules/rxjs/_esm5/Observable.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_rxjs_observable_from__ = __webpack_require__("./node_modules/rxjs/_esm5/observable/from.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_rxjs_operator_catch__ = __webpack_require__("./node_modules/rxjs/_esm5/operator/catch.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_rxjs_operator_concatAll__ = __webpack_require__("./node_modules/rxjs/_esm5/operator/concatAll.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_rxjs_operator_first__ = __webpack_require__("./node_modules/rxjs/_esm5/operator/first.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_rxjs_util_EmptyError__ = __webpack_require__("./node_modules/rxjs/_esm5/util/EmptyError.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_rxjs_observable_fromPromise__ = __webpack_require__("./node_modules/rxjs/_esm5/observable/fromPromise.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16_rxjs_operator_every__ = __webpack_require__("./node_modules/rxjs/_esm5/operator/every.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17_rxjs_operator_last__ = __webpack_require__("./node_modules/rxjs/_esm5/operator/last.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18_rxjs_operator_mergeAll__ = __webpack_require__("./node_modules/rxjs/_esm5/operator/mergeAll.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19_rxjs_operator_reduce__ = __webpack_require__("./node_modules/rxjs/_esm5/operator/reduce.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__angular_platform_browser__ = __webpack_require__("./node_modules/@angular/platform-browser/esm5/platform-browser.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21_rxjs_operator_filter__ = __webpack_require__("./node_modules/rxjs/_esm5/operator/filter.js");
+/**
+ * @license Angular v5.2.6
+ * (c) 2010-2018 Google, Inc. https://angular.io/
+ * License: MIT
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+/**
+ * \@whatItDoes Base for events the Router goes through, as opposed to events tied to a specific
+ * Route. `RouterEvent`s will only be fired one time for any given navigation.
+ *
+ * Example:
+ *
+ * ```
+ * class MyService {
+ *   constructor(public router: Router, logger: Logger) {
+ *     router.events.filter(e => e instanceof RouterEvent).subscribe(e => {
+ *       logger.log(e.id, e.url);
+ *     });
+ *   }
+ * }
+ * ```
+ *
+ * \@experimental
+ */
+var RouterEvent = /** @class */ (function () {
+    function RouterEvent(id, url) {
+        this.id = id;
+        this.url = url;
+    }
+    return RouterEvent;
+}());
+/**
+ * \@whatItDoes Represents an event triggered when a navigation starts.
+ *
+ * \@stable
+ */
+var NavigationStart = /** @class */ (function (_super) {
+    Object(__WEBPACK_IMPORTED_MODULE_2_tslib__["b" /* __extends */])(NavigationStart, _super);
+    function NavigationStart() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    /** @docsNotRequired */
+    /**
+     * \@docsNotRequired
+     * @return {?}
+     */
+    NavigationStart.prototype.toString = /**
+     * \@docsNotRequired
+     * @return {?}
+     */
+    function () { return "NavigationStart(id: " + this.id + ", url: '" + this.url + "')"; };
+    return NavigationStart;
+}(RouterEvent));
+/**
+ * \@whatItDoes Represents an event triggered when a navigation ends successfully.
+ *
+ * \@stable
+ */
+var NavigationEnd = /** @class */ (function (_super) {
+    Object(__WEBPACK_IMPORTED_MODULE_2_tslib__["b" /* __extends */])(NavigationEnd, _super);
+    function NavigationEnd(/** @docsNotRequired */
+        /** @docsNotRequired */
+        id, /** @docsNotRequired */
+        /** @docsNotRequired */
+        url, urlAfterRedirects) {
+        var _this = _super.call(this, id, url) || this;
+        _this.urlAfterRedirects = urlAfterRedirects;
+        return _this;
+    }
+    /** @docsNotRequired */
+    /**
+     * \@docsNotRequired
+     * @return {?}
+     */
+    NavigationEnd.prototype.toString = /**
+     * \@docsNotRequired
+     * @return {?}
+     */
+    function () {
+        return "NavigationEnd(id: " + this.id + ", url: '" + this.url + "', urlAfterRedirects: '" + this.urlAfterRedirects + "')";
+    };
+    return NavigationEnd;
+}(RouterEvent));
+/**
+ * \@whatItDoes Represents an event triggered when a navigation is canceled.
+ *
+ * \@stable
+ */
+var NavigationCancel = /** @class */ (function (_super) {
+    Object(__WEBPACK_IMPORTED_MODULE_2_tslib__["b" /* __extends */])(NavigationCancel, _super);
+    function NavigationCancel(/** @docsNotRequired */
+        /** @docsNotRequired */
+        id, /** @docsNotRequired */
+        /** @docsNotRequired */
+        url, reason) {
+        var _this = _super.call(this, id, url) || this;
+        _this.reason = reason;
+        return _this;
+    }
+    /** @docsNotRequired */
+    /**
+     * \@docsNotRequired
+     * @return {?}
+     */
+    NavigationCancel.prototype.toString = /**
+     * \@docsNotRequired
+     * @return {?}
+     */
+    function () { return "NavigationCancel(id: " + this.id + ", url: '" + this.url + "')"; };
+    return NavigationCancel;
+}(RouterEvent));
+/**
+ * \@whatItDoes Represents an event triggered when a navigation fails due to an unexpected error.
+ *
+ * \@stable
+ */
+var NavigationError = /** @class */ (function (_super) {
+    Object(__WEBPACK_IMPORTED_MODULE_2_tslib__["b" /* __extends */])(NavigationError, _super);
+    function NavigationError(/** @docsNotRequired */
+        /** @docsNotRequired */
+        id, /** @docsNotRequired */
+        /** @docsNotRequired */
+        url, error) {
+        var _this = _super.call(this, id, url) || this;
+        _this.error = error;
+        return _this;
+    }
+    /** @docsNotRequired */
+    /**
+     * \@docsNotRequired
+     * @return {?}
+     */
+    NavigationError.prototype.toString = /**
+     * \@docsNotRequired
+     * @return {?}
+     */
+    function () {
+        return "NavigationError(id: " + this.id + ", url: '" + this.url + "', error: " + this.error + ")";
+    };
+    return NavigationError;
+}(RouterEvent));
+/**
+ * \@whatItDoes Represents an event triggered when routes are recognized.
+ *
+ * \@stable
+ */
+var RoutesRecognized = /** @class */ (function (_super) {
+    Object(__WEBPACK_IMPORTED_MODULE_2_tslib__["b" /* __extends */])(RoutesRecognized, _super);
+    function RoutesRecognized(/** @docsNotRequired */
+        /** @docsNotRequired */
+        id, /** @docsNotRequired */
+        /** @docsNotRequired */
+        url, urlAfterRedirects, state) {
+        var _this = _super.call(this, id, url) || this;
+        _this.urlAfterRedirects = urlAfterRedirects;
+        _this.state = state;
+        return _this;
+    }
+    /** @docsNotRequired */
+    /**
+     * \@docsNotRequired
+     * @return {?}
+     */
+    RoutesRecognized.prototype.toString = /**
+     * \@docsNotRequired
+     * @return {?}
+     */
+    function () {
+        return "RoutesRecognized(id: " + this.id + ", url: '" + this.url + "', urlAfterRedirects: '" + this.urlAfterRedirects + "', state: " + this.state + ")";
+    };
+    return RoutesRecognized;
+}(RouterEvent));
+/**
+ * \@whatItDoes Represents the start of the Guard phase of routing.
+ *
+ * \@experimental
+ */
+var GuardsCheckStart = /** @class */ (function (_super) {
+    Object(__WEBPACK_IMPORTED_MODULE_2_tslib__["b" /* __extends */])(GuardsCheckStart, _super);
+    function GuardsCheckStart(/** @docsNotRequired */
+        /** @docsNotRequired */
+        id, /** @docsNotRequired */
+        /** @docsNotRequired */
+        url, urlAfterRedirects, state) {
+        var _this = _super.call(this, id, url) || this;
+        _this.urlAfterRedirects = urlAfterRedirects;
+        _this.state = state;
+        return _this;
+    }
+    /**
+     * @return {?}
+     */
+    GuardsCheckStart.prototype.toString = /**
+     * @return {?}
+     */
+    function () {
+        return "GuardsCheckStart(id: " + this.id + ", url: '" + this.url + "', urlAfterRedirects: '" + this.urlAfterRedirects + "', state: " + this.state + ")";
+    };
+    return GuardsCheckStart;
+}(RouterEvent));
+/**
+ * \@whatItDoes Represents the end of the Guard phase of routing.
+ *
+ * \@experimental
+ */
+var GuardsCheckEnd = /** @class */ (function (_super) {
+    Object(__WEBPACK_IMPORTED_MODULE_2_tslib__["b" /* __extends */])(GuardsCheckEnd, _super);
+    function GuardsCheckEnd(/** @docsNotRequired */
+        /** @docsNotRequired */
+        id, /** @docsNotRequired */
+        /** @docsNotRequired */
+        url, urlAfterRedirects, state, shouldActivate) {
+        var _this = _super.call(this, id, url) || this;
+        _this.urlAfterRedirects = urlAfterRedirects;
+        _this.state = state;
+        _this.shouldActivate = shouldActivate;
+        return _this;
+    }
+    /**
+     * @return {?}
+     */
+    GuardsCheckEnd.prototype.toString = /**
+     * @return {?}
+     */
+    function () {
+        return "GuardsCheckEnd(id: " + this.id + ", url: '" + this.url + "', urlAfterRedirects: '" + this.urlAfterRedirects + "', state: " + this.state + ", shouldActivate: " + this.shouldActivate + ")";
+    };
+    return GuardsCheckEnd;
+}(RouterEvent));
+/**
+ * \@whatItDoes Represents the start of the Resolve phase of routing. The timing of this
+ * event may change, thus it's experimental. In the current iteration it will run
+ * in the "resolve" phase whether there's things to resolve or not. In the future this
+ * behavior may change to only run when there are things to be resolved.
+ *
+ * \@experimental
+ */
+var ResolveStart = /** @class */ (function (_super) {
+    Object(__WEBPACK_IMPORTED_MODULE_2_tslib__["b" /* __extends */])(ResolveStart, _super);
+    function ResolveStart(/** @docsNotRequired */
+        /** @docsNotRequired */
+        id, /** @docsNotRequired */
+        /** @docsNotRequired */
+        url, urlAfterRedirects, state) {
+        var _this = _super.call(this, id, url) || this;
+        _this.urlAfterRedirects = urlAfterRedirects;
+        _this.state = state;
+        return _this;
+    }
+    /**
+     * @return {?}
+     */
+    ResolveStart.prototype.toString = /**
+     * @return {?}
+     */
+    function () {
+        return "ResolveStart(id: " + this.id + ", url: '" + this.url + "', urlAfterRedirects: '" + this.urlAfterRedirects + "', state: " + this.state + ")";
+    };
+    return ResolveStart;
+}(RouterEvent));
+/**
+ * \@whatItDoes Represents the end of the Resolve phase of routing. See note on
+ * {\@link ResolveStart} for use of this experimental API.
+ *
+ * \@experimental
+ */
+var ResolveEnd = /** @class */ (function (_super) {
+    Object(__WEBPACK_IMPORTED_MODULE_2_tslib__["b" /* __extends */])(ResolveEnd, _super);
+    function ResolveEnd(/** @docsNotRequired */
+        /** @docsNotRequired */
+        id, /** @docsNotRequired */
+        /** @docsNotRequired */
+        url, urlAfterRedirects, state) {
+        var _this = _super.call(this, id, url) || this;
+        _this.urlAfterRedirects = urlAfterRedirects;
+        _this.state = state;
+        return _this;
+    }
+    /**
+     * @return {?}
+     */
+    ResolveEnd.prototype.toString = /**
+     * @return {?}
+     */
+    function () {
+        return "ResolveEnd(id: " + this.id + ", url: '" + this.url + "', urlAfterRedirects: '" + this.urlAfterRedirects + "', state: " + this.state + ")";
+    };
+    return ResolveEnd;
+}(RouterEvent));
+/**
+ * \@whatItDoes Represents an event triggered before lazy loading a route config.
+ *
+ * \@experimental
+ */
+var RouteConfigLoadStart = /** @class */ (function () {
+    function RouteConfigLoadStart(route) {
+        this.route = route;
+    }
+    /**
+     * @return {?}
+     */
+    RouteConfigLoadStart.prototype.toString = /**
+     * @return {?}
+     */
+    function () { return "RouteConfigLoadStart(path: " + this.route.path + ")"; };
+    return RouteConfigLoadStart;
+}());
+/**
+ * \@whatItDoes Represents an event triggered when a route has been lazy loaded.
+ *
+ * \@experimental
+ */
+var RouteConfigLoadEnd = /** @class */ (function () {
+    function RouteConfigLoadEnd(route) {
+        this.route = route;
+    }
+    /**
+     * @return {?}
+     */
+    RouteConfigLoadEnd.prototype.toString = /**
+     * @return {?}
+     */
+    function () { return "RouteConfigLoadEnd(path: " + this.route.path + ")"; };
+    return RouteConfigLoadEnd;
+}());
+/**
+ * \@whatItDoes Represents the start of end of the Resolve phase of routing. See note on
+ * {\@link ChildActivationEnd} for use of this experimental API.
+ *
+ * \@experimental
+ */
+var ChildActivationStart = /** @class */ (function () {
+    function ChildActivationStart(snapshot) {
+        this.snapshot = snapshot;
+    }
+    /**
+     * @return {?}
+     */
+    ChildActivationStart.prototype.toString = /**
+     * @return {?}
+     */
+    function () {
+        var /** @type {?} */ path = this.snapshot.routeConfig && this.snapshot.routeConfig.path || '';
+        return "ChildActivationStart(path: '" + path + "')";
+    };
+    return ChildActivationStart;
+}());
+/**
+ * \@whatItDoes Represents the start of end of the Resolve phase of routing. See note on
+ * {\@link ChildActivationStart} for use of this experimental API.
+ *
+ * \@experimental
+ */
+var ChildActivationEnd = /** @class */ (function () {
+    function ChildActivationEnd(snapshot) {
+        this.snapshot = snapshot;
+    }
+    /**
+     * @return {?}
+     */
+    ChildActivationEnd.prototype.toString = /**
+     * @return {?}
+     */
+    function () {
+        var /** @type {?} */ path = this.snapshot.routeConfig && this.snapshot.routeConfig.path || '';
+        return "ChildActivationEnd(path: '" + path + "')";
+    };
+    return ChildActivationEnd;
+}());
+/**
+ * \@whatItDoes Represents the start of end of the Resolve phase of routing. See note on
+ * {\@link ActivationEnd} for use of this experimental API.
+ *
+ * \@experimental
+ */
+var ActivationStart = /** @class */ (function () {
+    function ActivationStart(snapshot) {
+        this.snapshot = snapshot;
+    }
+    /**
+     * @return {?}
+     */
+    ActivationStart.prototype.toString = /**
+     * @return {?}
+     */
+    function () {
+        var /** @type {?} */ path = this.snapshot.routeConfig && this.snapshot.routeConfig.path || '';
+        return "ActivationStart(path: '" + path + "')";
+    };
+    return ActivationStart;
+}());
+/**
+ * \@whatItDoes Represents the start of end of the Resolve phase of routing. See note on
+ * {\@link ActivationStart} for use of this experimental API.
+ *
+ * \@experimental
+ */
+var ActivationEnd = /** @class */ (function () {
+    function ActivationEnd(snapshot) {
+        this.snapshot = snapshot;
+    }
+    /**
+     * @return {?}
+     */
+    ActivationEnd.prototype.toString = /**
+     * @return {?}
+     */
+    function () {
+        var /** @type {?} */ path = this.snapshot.routeConfig && this.snapshot.routeConfig.path || '';
+        return "ActivationEnd(path: '" + path + "')";
+    };
+    return ActivationEnd;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+/**
+ * \@whatItDoes Name of the primary outlet.
+ *
+ * \@stable
+ */
+var PRIMARY_OUTLET = 'primary';
+/**
+ * Matrix and Query parameters.
+ *
+ * `ParamMap` makes it easier to work with parameters as they could have either a single value or
+ * multiple value. Because this should be known by the user, calling `get` or `getAll` returns the
+ * correct type (either `string` or `string[]`).
+ *
+ * The API is inspired by the URLSearchParams interface.
+ * see https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams
+ *
+ * \@stable
+ * @record
+ */
+
+var ParamsAsMap = /** @class */ (function () {
+    function ParamsAsMap(params) {
+        this.params = params || {};
+    }
+    /**
+     * @param {?} name
+     * @return {?}
+     */
+    ParamsAsMap.prototype.has = /**
+     * @param {?} name
+     * @return {?}
+     */
+    function (name) { return this.params.hasOwnProperty(name); };
+    /**
+     * @param {?} name
+     * @return {?}
+     */
+    ParamsAsMap.prototype.get = /**
+     * @param {?} name
+     * @return {?}
+     */
+    function (name) {
+        if (this.has(name)) {
+            var /** @type {?} */ v = this.params[name];
+            return Array.isArray(v) ? v[0] : v;
+        }
+        return null;
+    };
+    /**
+     * @param {?} name
+     * @return {?}
+     */
+    ParamsAsMap.prototype.getAll = /**
+     * @param {?} name
+     * @return {?}
+     */
+    function (name) {
+        if (this.has(name)) {
+            var /** @type {?} */ v = this.params[name];
+            return Array.isArray(v) ? v : [v];
+        }
+        return [];
+    };
+    Object.defineProperty(ParamsAsMap.prototype, "keys", {
+        get: /**
+         * @return {?}
+         */
+        function () { return Object.keys(this.params); },
+        enumerable: true,
+        configurable: true
+    });
+    return ParamsAsMap;
+}());
+/**
+ * Convert a {\@link Params} instance to a {\@link ParamMap}.
+ *
+ * \@stable
+ * @param {?} params
+ * @return {?}
+ */
+function convertToParamMap(params) {
+    return new ParamsAsMap(params);
+}
+var NAVIGATION_CANCELING_ERROR = 'ngNavigationCancelingError';
+/**
+ * @param {?} message
+ * @return {?}
+ */
+function navigationCancelingError(message) {
+    var /** @type {?} */ error = Error('NavigationCancelingError: ' + message);
+    (/** @type {?} */ (error))[NAVIGATION_CANCELING_ERROR] = true;
+    return error;
+}
+/**
+ * @param {?} error
+ * @return {?}
+ */
+function isNavigationCancelingError(error) {
+    return error && (/** @type {?} */ (error))[NAVIGATION_CANCELING_ERROR];
+}
+/**
+ * @param {?} segments
+ * @param {?} segmentGroup
+ * @param {?} route
+ * @return {?}
+ */
+function defaultUrlMatcher(segments, segmentGroup, route) {
+    var /** @type {?} */ parts = /** @type {?} */ ((route.path)).split('/');
+    if (parts.length > segments.length) {
+        // The actual URL is shorter than the config, no match
+        return null;
+    }
+    if (route.pathMatch === 'full' &&
+        (segmentGroup.hasChildren() || parts.length < segments.length)) {
+        // The config is longer than the actual URL but we are looking for a full match, return null
+        return null;
+    }
+    var /** @type {?} */ posParams = {};
+    // Check each config part against the actual URL
+    for (var /** @type {?} */ index = 0; index < parts.length; index++) {
+        var /** @type {?} */ part = parts[index];
+        var /** @type {?} */ segment = segments[index];
+        var /** @type {?} */ isParameter = part.startsWith(':');
+        if (isParameter) {
+            posParams[part.substring(1)] = segment;
+        }
+        else if (part !== segment.path) {
+            // The actual URL part does not match the config, no match
+            return null;
+        }
+    }
+    return { consumed: segments.slice(0, parts.length), posParams: posParams };
+}
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+/**
+ * See {\@link Routes} for more details.
+ * \@stable
+ * @record
+ */
+
+var LoadedRouterConfig = /** @class */ (function () {
+    function LoadedRouterConfig(routes, module) {
+        this.routes = routes;
+        this.module = module;
+    }
+    return LoadedRouterConfig;
+}());
+/**
+ * @param {?} config
+ * @param {?=} parentPath
+ * @return {?}
+ */
+function validateConfig(config, parentPath) {
+    if (parentPath === void 0) { parentPath = ''; }
+    // forEach doesn't iterate undefined values
+    for (var /** @type {?} */ i = 0; i < config.length; i++) {
+        var /** @type {?} */ route = config[i];
+        var /** @type {?} */ fullPath = getFullPath(parentPath, route);
+        validateNode(route, fullPath);
+    }
+}
+/**
+ * @param {?} route
+ * @param {?} fullPath
+ * @return {?}
+ */
+function validateNode(route, fullPath) {
+    if (!route) {
+        throw new Error("\n      Invalid configuration of route '" + fullPath + "': Encountered undefined route.\n      The reason might be an extra comma.\n\n      Example:\n      const routes: Routes = [\n        { path: '', redirectTo: '/dashboard', pathMatch: 'full' },\n        { path: 'dashboard',  component: DashboardComponent },, << two commas\n        { path: 'detail/:id', component: HeroDetailComponent }\n      ];\n    ");
+    }
+    if (Array.isArray(route)) {
+        throw new Error("Invalid configuration of route '" + fullPath + "': Array cannot be specified");
+    }
+    if (!route.component && (route.outlet && route.outlet !== PRIMARY_OUTLET)) {
+        throw new Error("Invalid configuration of route '" + fullPath + "': a componentless route cannot have a named outlet set");
+    }
+    if (route.redirectTo && route.children) {
+        throw new Error("Invalid configuration of route '" + fullPath + "': redirectTo and children cannot be used together");
+    }
+    if (route.redirectTo && route.loadChildren) {
+        throw new Error("Invalid configuration of route '" + fullPath + "': redirectTo and loadChildren cannot be used together");
+    }
+    if (route.children && route.loadChildren) {
+        throw new Error("Invalid configuration of route '" + fullPath + "': children and loadChildren cannot be used together");
+    }
+    if (route.redirectTo && route.component) {
+        throw new Error("Invalid configuration of route '" + fullPath + "': redirectTo and component cannot be used together");
+    }
+    if (route.path && route.matcher) {
+        throw new Error("Invalid configuration of route '" + fullPath + "': path and matcher cannot be used together");
+    }
+    if (route.redirectTo === void 0 && !route.component && !route.children && !route.loadChildren) {
+        throw new Error("Invalid configuration of route '" + fullPath + "'. One of the following must be provided: component, redirectTo, children or loadChildren");
+    }
+    if (route.path === void 0 && route.matcher === void 0) {
+        throw new Error("Invalid configuration of route '" + fullPath + "': routes must have either a path or a matcher specified");
+    }
+    if (typeof route.path === 'string' && route.path.charAt(0) === '/') {
+        throw new Error("Invalid configuration of route '" + fullPath + "': path cannot start with a slash");
+    }
+    if (route.path === '' && route.redirectTo !== void 0 && route.pathMatch === void 0) {
+        var /** @type {?} */ exp = "The default value of 'pathMatch' is 'prefix', but often the intent is to use 'full'.";
+        throw new Error("Invalid configuration of route '{path: \"" + fullPath + "\", redirectTo: \"" + route.redirectTo + "\"}': please provide 'pathMatch'. " + exp);
+    }
+    if (route.pathMatch !== void 0 && route.pathMatch !== 'full' && route.pathMatch !== 'prefix') {
+        throw new Error("Invalid configuration of route '" + fullPath + "': pathMatch can only be set to 'prefix' or 'full'");
+    }
+    if (route.children) {
+        validateConfig(route.children, fullPath);
+    }
+}
+/**
+ * @param {?} parentPath
+ * @param {?} currentRoute
+ * @return {?}
+ */
+function getFullPath(parentPath, currentRoute) {
+    if (!currentRoute) {
+        return parentPath;
+    }
+    if (!parentPath && !currentRoute.path) {
+        return '';
+    }
+    else if (parentPath && !currentRoute.path) {
+        return parentPath + "/";
+    }
+    else if (!parentPath && currentRoute.path) {
+        return currentRoute.path;
+    }
+    else {
+        return parentPath + "/" + currentRoute.path;
+    }
+}
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+/**
+ * @param {?} a
+ * @param {?} b
+ * @return {?}
+ */
+function shallowEqualArrays(a, b) {
+    if (a.length !== b.length)
+        return false;
+    for (var /** @type {?} */ i = 0; i < a.length; ++i) {
+        if (!shallowEqual(a[i], b[i]))
+            return false;
+    }
+    return true;
+}
+/**
+ * @param {?} a
+ * @param {?} b
+ * @return {?}
+ */
+function shallowEqual(a, b) {
+    var /** @type {?} */ k1 = Object.keys(a);
+    var /** @type {?} */ k2 = Object.keys(b);
+    if (k1.length != k2.length) {
+        return false;
+    }
+    var /** @type {?} */ key;
+    for (var /** @type {?} */ i = 0; i < k1.length; i++) {
+        key = k1[i];
+        if (a[key] !== b[key]) {
+            return false;
+        }
+    }
+    return true;
+}
+/**
+ * Flattens single-level nested arrays.
+ * @template T
+ * @param {?} arr
+ * @return {?}
+ */
+function flatten(arr) {
+    return Array.prototype.concat.apply([], arr);
+}
+/**
+ * Return the last element of an array.
+ * @template T
+ * @param {?} a
+ * @return {?}
+ */
+function last$1(a) {
+    return a.length > 0 ? a[a.length - 1] : null;
+}
+/**
+ * Verifys all booleans in an array are `true`.
+ * @param {?} bools
+ * @return {?}
+ */
+
+/**
+ * @template K, V
+ * @param {?} map
+ * @param {?} callback
+ * @return {?}
+ */
+function forEach(map$$1, callback) {
+    for (var /** @type {?} */ prop in map$$1) {
+        if (map$$1.hasOwnProperty(prop)) {
+            callback(map$$1[prop], prop);
+        }
+    }
+}
+/**
+ * @template A, B
+ * @param {?} obj
+ * @param {?} fn
+ * @return {?}
+ */
+function waitForMap(obj, fn) {
+    if (Object.keys(obj).length === 0) {
+        return Object(__WEBPACK_IMPORTED_MODULE_5_rxjs_observable_of__["a" /* of */])({});
+    }
+    var /** @type {?} */ waitHead = [];
+    var /** @type {?} */ waitTail = [];
+    var /** @type {?} */ res = {};
+    forEach(obj, function (a, k) {
+        var /** @type {?} */ mapped = __WEBPACK_IMPORTED_MODULE_7_rxjs_operator_map__["a" /* map */].call(fn(k, a), function (r) { return res[k] = r; });
+        if (k === PRIMARY_OUTLET) {
+            waitHead.push(mapped);
+        }
+        else {
+            waitTail.push(mapped);
+        }
+    });
+    var /** @type {?} */ concat$ = __WEBPACK_IMPORTED_MODULE_12_rxjs_operator_concatAll__["a" /* concatAll */].call(__WEBPACK_IMPORTED_MODULE_5_rxjs_observable_of__["a" /* of */].apply(void 0, waitHead.concat(waitTail)));
+    var /** @type {?} */ last$ = __WEBPACK_IMPORTED_MODULE_17_rxjs_operator_last__["a" /* last */].call(concat$);
+    return __WEBPACK_IMPORTED_MODULE_7_rxjs_operator_map__["a" /* map */].call(last$, function () { return res; });
+}
+/**
+ * ANDs Observables by merging all input observables, reducing to an Observable verifying all
+ * input Observables return `true`.
+ * @param {?} observables
+ * @return {?}
+ */
+function andObservables(observables) {
+    var /** @type {?} */ merged$ = __WEBPACK_IMPORTED_MODULE_18_rxjs_operator_mergeAll__["a" /* mergeAll */].call(observables);
+    return __WEBPACK_IMPORTED_MODULE_16_rxjs_operator_every__["a" /* every */].call(merged$, function (result) { return result === true; });
+}
+/**
+ * @template T
+ * @param {?} value
+ * @return {?}
+ */
+function wrapIntoObservable(value) {
+    if (Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵisObservable"])(value)) {
+        return value;
+    }
+    if (Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ɵisPromise"])(value)) {
+        // Use `Promise.resolve()` to wrap promise-like instances.
+        // Required ie when a Resolver returns a AngularJS `$q` promise to correctly trigger the
+        // change detection.
+        return Object(__WEBPACK_IMPORTED_MODULE_15_rxjs_observable_fromPromise__["a" /* fromPromise */])(Promise.resolve(value));
+    }
+    return Object(__WEBPACK_IMPORTED_MODULE_5_rxjs_observable_of__["a" /* of */])(/** @type {?} */ (value));
+}
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+/**
+ * @return {?}
+ */
+function createEmptyUrlTree() {
+    return new UrlTree(new UrlSegmentGroup([], {}), {}, null);
+}
+/**
+ * @param {?} container
+ * @param {?} containee
+ * @param {?} exact
+ * @return {?}
+ */
+function containsTree(container, containee, exact) {
+    if (exact) {
+        return equalQueryParams(container.queryParams, containee.queryParams) &&
+            equalSegmentGroups(container.root, containee.root);
+    }
+    return containsQueryParams(container.queryParams, containee.queryParams) &&
+        containsSegmentGroup(container.root, containee.root);
+}
+/**
+ * @param {?} container
+ * @param {?} containee
+ * @return {?}
+ */
+function equalQueryParams(container, containee) {
+    return shallowEqual(container, containee);
+}
+/**
+ * @param {?} container
+ * @param {?} containee
+ * @return {?}
+ */
+function equalSegmentGroups(container, containee) {
+    if (!equalPath(container.segments, containee.segments))
+        return false;
+    if (container.numberOfChildren !== containee.numberOfChildren)
+        return false;
+    for (var /** @type {?} */ c in containee.children) {
+        if (!container.children[c])
+            return false;
+        if (!equalSegmentGroups(container.children[c], containee.children[c]))
+            return false;
+    }
+    return true;
+}
+/**
+ * @param {?} container
+ * @param {?} containee
+ * @return {?}
+ */
+function containsQueryParams(container, containee) {
+    return Object.keys(containee).length <= Object.keys(container).length &&
+        Object.keys(containee).every(function (key) { return containee[key] === container[key]; });
+}
+/**
+ * @param {?} container
+ * @param {?} containee
+ * @return {?}
+ */
+function containsSegmentGroup(container, containee) {
+    return containsSegmentGroupHelper(container, containee, containee.segments);
+}
+/**
+ * @param {?} container
+ * @param {?} containee
+ * @param {?} containeePaths
+ * @return {?}
+ */
+function containsSegmentGroupHelper(container, containee, containeePaths) {
+    if (container.segments.length > containeePaths.length) {
+        var /** @type {?} */ current = container.segments.slice(0, containeePaths.length);
+        if (!equalPath(current, containeePaths))
+            return false;
+        if (containee.hasChildren())
+            return false;
+        return true;
+    }
+    else if (container.segments.length === containeePaths.length) {
+        if (!equalPath(container.segments, containeePaths))
+            return false;
+        for (var /** @type {?} */ c in containee.children) {
+            if (!container.children[c])
+                return false;
+            if (!containsSegmentGroup(container.children[c], containee.children[c]))
+                return false;
+        }
+        return true;
+    }
+    else {
+        var /** @type {?} */ current = containeePaths.slice(0, container.segments.length);
+        var /** @type {?} */ next = containeePaths.slice(container.segments.length);
+        if (!equalPath(container.segments, current))
+            return false;
+        if (!container.children[PRIMARY_OUTLET])
+            return false;
+        return containsSegmentGroupHelper(container.children[PRIMARY_OUTLET], containee, next);
+    }
+}
+/**
+ * \@whatItDoes Represents the parsed URL.
+ *
+ * \@howToUse
+ *
+ * ```
+ * \@Component({templateUrl:'template.html'})
+ * class MyComponent {
+ *   constructor(router: Router) {
+ *     const tree: UrlTree =
+ *       router.parseUrl('/team/33/(user/victor//support:help)?debug=true#fragment');
+ *     const f = tree.fragment; // return 'fragment'
+ *     const q = tree.queryParams; // returns {debug: 'true'}
+ *     const g: UrlSegmentGroup = tree.root.children[PRIMARY_OUTLET];
+ *     const s: UrlSegment[] = g.segments; // returns 2 segments 'team' and '33'
+ *     g.children[PRIMARY_OUTLET].segments; // returns 2 segments 'user' and 'victor'
+ *     g.children['support'].segments; // return 1 segment 'help'
+ *   }
+ * }
+ * ```
+ *
+ * \@description
+ *
+ * Since a router state is a tree, and the URL is nothing but a serialized state, the URL is a
+ * serialized tree.
+ * UrlTree is a data structure that provides a lot of affordances in dealing with URLs
+ *
+ * \@stable
+ */
+var UrlTree = /** @class */ (function () {
+    /** @internal */
+    function UrlTree(root, queryParams, fragment) {
+        this.root = root;
+        this.queryParams = queryParams;
+        this.fragment = fragment;
+    }
+    Object.defineProperty(UrlTree.prototype, "queryParamMap", {
+        get: /**
+         * @return {?}
+         */
+        function () {
+            if (!this._queryParamMap) {
+                this._queryParamMap = convertToParamMap(this.queryParams);
+            }
+            return this._queryParamMap;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /** @docsNotRequired */
+    /**
+     * \@docsNotRequired
+     * @return {?}
+     */
+    UrlTree.prototype.toString = /**
+     * \@docsNotRequired
+     * @return {?}
+     */
+    function () { return DEFAULT_SERIALIZER.serialize(this); };
+    return UrlTree;
+}());
+/**
+ * \@whatItDoes Represents the parsed URL segment group.
+ *
+ * See {\@link UrlTree} for more information.
+ *
+ * \@stable
+ */
+var UrlSegmentGroup = /** @class */ (function () {
+    function UrlSegmentGroup(segments, children) {
+        var _this = this;
+        this.segments = segments;
+        this.children = children;
+        /**
+         * The parent node in the url tree
+         */
+        this.parent = null;
+        forEach(children, function (v, k) { return v.parent = _this; });
+    }
+    /** Whether the segment has child segments */
+    /**
+     * Whether the segment has child segments
+     * @return {?}
+     */
+    UrlSegmentGroup.prototype.hasChildren = /**
+     * Whether the segment has child segments
+     * @return {?}
+     */
+    function () { return this.numberOfChildren > 0; };
+    Object.defineProperty(UrlSegmentGroup.prototype, "numberOfChildren", {
+        /** Number of child segments */
+        get: /**
+         * Number of child segments
+         * @return {?}
+         */
+        function () { return Object.keys(this.children).length; },
+        enumerable: true,
+        configurable: true
+    });
+    /** @docsNotRequired */
+    /**
+     * \@docsNotRequired
+     * @return {?}
+     */
+    UrlSegmentGroup.prototype.toString = /**
+     * \@docsNotRequired
+     * @return {?}
+     */
+    function () { return serializePaths(this); };
+    return UrlSegmentGroup;
+}());
+/**
+ * \@whatItDoes Represents a single URL segment.
+ *
+ * \@howToUse
+ *
+ * ```
+ * \@Component({templateUrl:'template.html'})
+ * class MyComponent {
+ *   constructor(router: Router) {
+ *     const tree: UrlTree = router.parseUrl('/team;id=33');
+ *     const g: UrlSegmentGroup = tree.root.children[PRIMARY_OUTLET];
+ *     const s: UrlSegment[] = g.segments;
+ *     s[0].path; // returns 'team'
+ *     s[0].parameters; // returns {id: 33}
+ *   }
+ * }
+ * ```
+ *
+ * \@description
+ *
+ * A UrlSegment is a part of a URL between the two slashes. It contains a path and the matrix
+ * parameters associated with the segment.
+ *
+ * \@stable
+ */
+var UrlSegment = /** @class */ (function () {
+    function UrlSegment(path, parameters) {
+        this.path = path;
+        this.parameters = parameters;
+    }
+    Object.defineProperty(UrlSegment.prototype, "parameterMap", {
+        get: /**
+         * @return {?}
+         */
+        function () {
+            if (!this._parameterMap) {
+                this._parameterMap = convertToParamMap(this.parameters);
+            }
+            return this._parameterMap;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /** @docsNotRequired */
+    /**
+     * \@docsNotRequired
+     * @return {?}
+     */
+    UrlSegment.prototype.toString = /**
+     * \@docsNotRequired
+     * @return {?}
+     */
+    function () { return serializePath(this); };
+    return UrlSegment;
+}());
+/**
+ * @param {?} as
+ * @param {?} bs
+ * @return {?}
+ */
+function equalSegments(as, bs) {
+    return equalPath(as, bs) && as.every(function (a, i) { return shallowEqual(a.parameters, bs[i].parameters); });
+}
+/**
+ * @param {?} as
+ * @param {?} bs
+ * @return {?}
+ */
+function equalPath(as, bs) {
+    if (as.length !== bs.length)
+        return false;
+    return as.every(function (a, i) { return a.path === bs[i].path; });
+}
+/**
+ * @template T
+ * @param {?} segment
+ * @param {?} fn
+ * @return {?}
+ */
+function mapChildrenIntoArray(segment, fn) {
+    var /** @type {?} */ res = [];
+    forEach(segment.children, function (child, childOutlet) {
+        if (childOutlet === PRIMARY_OUTLET) {
+            res = res.concat(fn(child, childOutlet));
+        }
+    });
+    forEach(segment.children, function (child, childOutlet) {
+        if (childOutlet !== PRIMARY_OUTLET) {
+            res = res.concat(fn(child, childOutlet));
+        }
+    });
+    return res;
+}
+/**
+ * \@whatItDoes Serializes and deserializes a URL string into a URL tree.
+ *
+ * \@description The url serialization strategy is customizable. You can
+ * make all URLs case insensitive by providing a custom UrlSerializer.
+ *
+ * See {\@link DefaultUrlSerializer} for an example of a URL serializer.
+ *
+ * \@stable
+ * @abstract
+ */
+var UrlSerializer = /** @class */ (function () {
+    function UrlSerializer() {
+    }
+    return UrlSerializer;
+}());
+/**
+ * \@whatItDoes A default implementation of the {\@link UrlSerializer}.
+ *
+ * \@description
+ *
+ * Example URLs:
+ *
+ * ```
+ * /inbox/33(popup:compose)
+ * /inbox/33;open=true/messages/44
+ * ```
+ *
+ * DefaultUrlSerializer uses parentheses to serialize secondary segments (e.g., popup:compose), the
+ * colon syntax to specify the outlet, and the ';parameter=value' syntax (e.g., open=true) to
+ * specify route specific parameters.
+ *
+ * \@stable
+ */
+var DefaultUrlSerializer = /** @class */ (function () {
+    function DefaultUrlSerializer() {
+    }
+    /** Parses a url into a {@link UrlTree} */
+    /**
+     * Parses a url into a {\@link UrlTree}
+     * @param {?} url
+     * @return {?}
+     */
+    DefaultUrlSerializer.prototype.parse = /**
+     * Parses a url into a {\@link UrlTree}
+     * @param {?} url
+     * @return {?}
+     */
+    function (url) {
+        var /** @type {?} */ p = new UrlParser(url);
+        return new UrlTree(p.parseRootSegment(), p.parseQueryParams(), p.parseFragment());
+    };
+    /** Converts a {@link UrlTree} into a url */
+    /**
+     * Converts a {\@link UrlTree} into a url
+     * @param {?} tree
+     * @return {?}
+     */
+    DefaultUrlSerializer.prototype.serialize = /**
+     * Converts a {\@link UrlTree} into a url
+     * @param {?} tree
+     * @return {?}
+     */
+    function (tree) {
+        var /** @type {?} */ segment = "/" + serializeSegment(tree.root, true);
+        var /** @type {?} */ query = serializeQueryParams(tree.queryParams);
+        var /** @type {?} */ fragment = typeof tree.fragment === "string" ? "#" + encodeURI((/** @type {?} */ ((tree.fragment)))) : '';
+        return "" + segment + query + fragment;
+    };
+    return DefaultUrlSerializer;
+}());
+var DEFAULT_SERIALIZER = new DefaultUrlSerializer();
+/**
+ * @param {?} segment
+ * @return {?}
+ */
+function serializePaths(segment) {
+    return segment.segments.map(function (p) { return serializePath(p); }).join('/');
+}
+/**
+ * @param {?} segment
+ * @param {?} root
+ * @return {?}
+ */
+function serializeSegment(segment, root) {
+    if (!segment.hasChildren()) {
+        return serializePaths(segment);
+    }
+    if (root) {
+        var /** @type {?} */ primary = segment.children[PRIMARY_OUTLET] ?
+            serializeSegment(segment.children[PRIMARY_OUTLET], false) :
+            '';
+        var /** @type {?} */ children_1 = [];
+        forEach(segment.children, function (v, k) {
+            if (k !== PRIMARY_OUTLET) {
+                children_1.push(k + ":" + serializeSegment(v, false));
+            }
+        });
+        return children_1.length > 0 ? primary + "(" + children_1.join('//') + ")" : primary;
+    }
+    else {
+        var /** @type {?} */ children = mapChildrenIntoArray(segment, function (v, k) {
+            if (k === PRIMARY_OUTLET) {
+                return [serializeSegment(segment.children[PRIMARY_OUTLET], false)];
+            }
+            return [k + ":" + serializeSegment(v, false)];
+        });
+        return serializePaths(segment) + "/(" + children.join('//') + ")";
+    }
+}
+/**
+ * This method is intended for encoding *key* or *value* parts of query component. We need a custom
+ * method because encodeURIComponent is too aggressive and encodes stuff that doesn't have to be
+ * encoded per http://tools.ietf.org/html/rfc3986:
+ *    query         = *( pchar / "/" / "?" )
+ *    pchar         = unreserved / pct-encoded / sub-delims / ":" / "\@"
+ *    unreserved    = ALPHA / DIGIT / "-" / "." / "_" / "~"
+ *    pct-encoded   = "%" HEXDIG HEXDIG
+ *    sub-delims    = "!" / "$" / "&" / "'" / "(" / ")"
+ *                     / "*" / "+" / "," / ";" / "="
+ * @param {?} s
+ * @return {?}
+ */
+function encode(s) {
+    return encodeURIComponent(s)
+        .replace(/%40/g, '@')
+        .replace(/%3A/gi, ':')
+        .replace(/%24/g, '$')
+        .replace(/%2C/gi, ',')
+        .replace(/%3B/gi, ';');
+}
+/**
+ * @param {?} s
+ * @return {?}
+ */
+function decode(s) {
+    return decodeURIComponent(s);
+}
+/**
+ * @param {?} path
+ * @return {?}
+ */
+function serializePath(path) {
+    return "" + encode(path.path) + serializeParams(path.parameters);
+}
+/**
+ * @param {?} params
+ * @return {?}
+ */
+function serializeParams(params) {
+    return Object.keys(params).map(function (key) { return ";" + encode(key) + "=" + encode(params[key]); }).join('');
+}
+/**
+ * @param {?} params
+ * @return {?}
+ */
+function serializeQueryParams(params) {
+    var /** @type {?} */ strParams = Object.keys(params).map(function (name) {
+        var /** @type {?} */ value = params[name];
+        return Array.isArray(value) ? value.map(function (v) { return encode(name) + "=" + encode(v); }).join('&') :
+            encode(name) + "=" + encode(value);
+    });
+    return strParams.length ? "?" + strParams.join("&") : '';
+}
+var SEGMENT_RE = /^[^\/()?;=&#]+/;
+/**
+ * @param {?} str
+ * @return {?}
+ */
+function matchSegments(str) {
+    var /** @type {?} */ match = str.match(SEGMENT_RE);
+    return match ? match[0] : '';
+}
+var QUERY_PARAM_RE = /^[^=?&#]+/;
+/**
+ * @param {?} str
+ * @return {?}
+ */
+function matchQueryParams(str) {
+    var /** @type {?} */ match = str.match(QUERY_PARAM_RE);
+    return match ? match[0] : '';
+}
+var QUERY_PARAM_VALUE_RE = /^[^?&#]+/;
+/**
+ * @param {?} str
+ * @return {?}
+ */
+function matchUrlQueryParamValue(str) {
+    var /** @type {?} */ match = str.match(QUERY_PARAM_VALUE_RE);
+    return match ? match[0] : '';
+}
+var UrlParser = /** @class */ (function () {
+    function UrlParser(url) {
+        this.url = url;
+        this.remaining = url;
+    }
+    /**
+     * @return {?}
+     */
+    UrlParser.prototype.parseRootSegment = /**
+     * @return {?}
+     */
+    function () {
+        this.consumeOptional('/');
+        if (this.remaining === '' || this.peekStartsWith('?') || this.peekStartsWith('#')) {
+            return new UrlSegmentGroup([], {});
+        }
+        // The root segment group never has segments
+        return new UrlSegmentGroup([], this.parseChildren());
+    };
+    /**
+     * @return {?}
+     */
+    UrlParser.prototype.parseQueryParams = /**
+     * @return {?}
+     */
+    function () {
+        var /** @type {?} */ params = {};
+        if (this.consumeOptional('?')) {
+            do {
+                this.parseQueryParam(params);
+            } while (this.consumeOptional('&'));
+        }
+        return params;
+    };
+    /**
+     * @return {?}
+     */
+    UrlParser.prototype.parseFragment = /**
+     * @return {?}
+     */
+    function () {
+        return this.consumeOptional('#') ? decodeURI(this.remaining) : null;
+    };
+    /**
+     * @return {?}
+     */
+    UrlParser.prototype.parseChildren = /**
+     * @return {?}
+     */
+    function () {
+        if (this.remaining === '') {
+            return {};
+        }
+        this.consumeOptional('/');
+        var /** @type {?} */ segments = [];
+        if (!this.peekStartsWith('(')) {
+            segments.push(this.parseSegment());
+        }
+        while (this.peekStartsWith('/') && !this.peekStartsWith('//') && !this.peekStartsWith('/(')) {
+            this.capture('/');
+            segments.push(this.parseSegment());
+        }
+        var /** @type {?} */ children = {};
+        if (this.peekStartsWith('/(')) {
+            this.capture('/');
+            children = this.parseParens(true);
+        }
+        var /** @type {?} */ res = {};
+        if (this.peekStartsWith('(')) {
+            res = this.parseParens(false);
+        }
+        if (segments.length > 0 || Object.keys(children).length > 0) {
+            res[PRIMARY_OUTLET] = new UrlSegmentGroup(segments, children);
+        }
+        return res;
+    };
+    /**
+     * @return {?}
+     */
+    UrlParser.prototype.parseSegment = /**
+     * @return {?}
+     */
+    function () {
+        var /** @type {?} */ path = matchSegments(this.remaining);
+        if (path === '' && this.peekStartsWith(';')) {
+            throw new Error("Empty path url segment cannot have parameters: '" + this.remaining + "'.");
+        }
+        this.capture(path);
+        return new UrlSegment(decode(path), this.parseMatrixParams());
+    };
+    /**
+     * @return {?}
+     */
+    UrlParser.prototype.parseMatrixParams = /**
+     * @return {?}
+     */
+    function () {
+        var /** @type {?} */ params = {};
+        while (this.consumeOptional(';')) {
+            this.parseParam(params);
+        }
+        return params;
+    };
+    /**
+     * @param {?} params
+     * @return {?}
+     */
+    UrlParser.prototype.parseParam = /**
+     * @param {?} params
+     * @return {?}
+     */
+    function (params) {
+        var /** @type {?} */ key = matchSegments(this.remaining);
+        if (!key) {
+            return;
+        }
+        this.capture(key);
+        var /** @type {?} */ value = '';
+        if (this.consumeOptional('=')) {
+            var /** @type {?} */ valueMatch = matchSegments(this.remaining);
+            if (valueMatch) {
+                value = valueMatch;
+                this.capture(value);
+            }
+        }
+        params[decode(key)] = decode(value);
+    };
+    /**
+     * @param {?} params
+     * @return {?}
+     */
+    UrlParser.prototype.parseQueryParam = /**
+     * @param {?} params
+     * @return {?}
+     */
+    function (params) {
+        var /** @type {?} */ key = matchQueryParams(this.remaining);
+        if (!key) {
+            return;
+        }
+        this.capture(key);
+        var /** @type {?} */ value = '';
+        if (this.consumeOptional('=')) {
+            var /** @type {?} */ valueMatch = matchUrlQueryParamValue(this.remaining);
+            if (valueMatch) {
+                value = valueMatch;
+                this.capture(value);
+            }
+        }
+        var /** @type {?} */ decodedKey = decode(key);
+        var /** @type {?} */ decodedVal = decode(value);
+        if (params.hasOwnProperty(decodedKey)) {
+            // Append to existing values
+            var /** @type {?} */ currentVal = params[decodedKey];
+            if (!Array.isArray(currentVal)) {
+                currentVal = [currentVal];
+                params[decodedKey] = currentVal;
+            }
+            currentVal.push(decodedVal);
+        }
+        else {
+            // Create a new value
+            params[decodedKey] = decodedVal;
+        }
+    };
+    /**
+     * @param {?} allowPrimary
+     * @return {?}
+     */
+    UrlParser.prototype.parseParens = /**
+     * @param {?} allowPrimary
+     * @return {?}
+     */
+    function (allowPrimary) {
+        var /** @type {?} */ segments = {};
+        this.capture('(');
+        while (!this.consumeOptional(')') && this.remaining.length > 0) {
+            var /** @type {?} */ path = matchSegments(this.remaining);
+            var /** @type {?} */ next = this.remaining[path.length];
+            // if is is not one of these characters, then the segment was unescaped
+            // or the group was not closed
+            if (next !== '/' && next !== ')' && next !== ';') {
+                throw new Error("Cannot parse url '" + this.url + "'");
+            }
+            var /** @type {?} */ outletName = /** @type {?} */ ((undefined));
+            if (path.indexOf(':') > -1) {
+                outletName = path.substr(0, path.indexOf(':'));
+                this.capture(outletName);
+                this.capture(':');
+            }
+            else if (allowPrimary) {
+                outletName = PRIMARY_OUTLET;
+            }
+            var /** @type {?} */ children = this.parseChildren();
+            segments[outletName] = Object.keys(children).length === 1 ? children[PRIMARY_OUTLET] :
+                new UrlSegmentGroup([], children);
+            this.consumeOptional('//');
+        }
+        return segments;
+    };
+    /**
+     * @param {?} str
+     * @return {?}
+     */
+    UrlParser.prototype.peekStartsWith = /**
+     * @param {?} str
+     * @return {?}
+     */
+    function (str) { return this.remaining.startsWith(str); };
+    /**
+     * @param {?} str
+     * @return {?}
+     */
+    UrlParser.prototype.consumeOptional = /**
+     * @param {?} str
+     * @return {?}
+     */
+    function (str) {
+        if (this.peekStartsWith(str)) {
+            this.remaining = this.remaining.substring(str.length);
+            return true;
+        }
+        return false;
+    };
+    /**
+     * @param {?} str
+     * @return {?}
+     */
+    UrlParser.prototype.capture = /**
+     * @param {?} str
+     * @return {?}
+     */
+    function (str) {
+        if (!this.consumeOptional(str)) {
+            throw new Error("Expected \"" + str + "\".");
+        }
+    };
+    return UrlParser;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+var NoMatch = /** @class */ (function () {
+    function NoMatch(segmentGroup) {
+        this.segmentGroup = segmentGroup || null;
+    }
+    return NoMatch;
+}());
+var AbsoluteRedirect = /** @class */ (function () {
+    function AbsoluteRedirect(urlTree) {
+        this.urlTree = urlTree;
+    }
+    return AbsoluteRedirect;
+}());
+/**
+ * @param {?} segmentGroup
+ * @return {?}
+ */
+function noMatch(segmentGroup) {
+    return new __WEBPACK_IMPORTED_MODULE_9_rxjs_Observable__["a" /* Observable */](function (obs) { return obs.error(new NoMatch(segmentGroup)); });
+}
+/**
+ * @param {?} newTree
+ * @return {?}
+ */
+function absoluteRedirect(newTree) {
+    return new __WEBPACK_IMPORTED_MODULE_9_rxjs_Observable__["a" /* Observable */](function (obs) { return obs.error(new AbsoluteRedirect(newTree)); });
+}
+/**
+ * @param {?} redirectTo
+ * @return {?}
+ */
+function namedOutletsRedirect(redirectTo) {
+    return new __WEBPACK_IMPORTED_MODULE_9_rxjs_Observable__["a" /* Observable */](function (obs) {
+        return obs.error(new Error("Only absolute redirects can have named outlets. redirectTo: '" + redirectTo + "'"));
+    });
+}
+/**
+ * @param {?} route
+ * @return {?}
+ */
+function canLoadFails(route) {
+    return new __WEBPACK_IMPORTED_MODULE_9_rxjs_Observable__["a" /* Observable */](function (obs) {
+        return obs.error(navigationCancelingError("Cannot load children because the guard of the route \"path: '" + route.path + "'\" returned false"));
+    });
+}
+/**
+ * Returns the `UrlTree` with the redirection applied.
+ *
+ * Lazy modules are loaded along the way.
+ * @param {?} moduleInjector
+ * @param {?} configLoader
+ * @param {?} urlSerializer
+ * @param {?} urlTree
+ * @param {?} config
+ * @return {?}
+ */
+function applyRedirects(moduleInjector, configLoader, urlSerializer, urlTree, config) {
+    return new ApplyRedirects(moduleInjector, configLoader, urlSerializer, urlTree, config).apply();
+}
+var ApplyRedirects = /** @class */ (function () {
+    function ApplyRedirects(moduleInjector, configLoader, urlSerializer, urlTree, config) {
+        this.configLoader = configLoader;
+        this.urlSerializer = urlSerializer;
+        this.urlTree = urlTree;
+        this.config = config;
+        this.allowRedirects = true;
+        this.ngModule = moduleInjector.get(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModuleRef"]);
+    }
+    /**
+     * @return {?}
+     */
+    ApplyRedirects.prototype.apply = /**
+     * @return {?}
+     */
+    function () {
+        var _this = this;
+        var /** @type {?} */ expanded$ = this.expandSegmentGroup(this.ngModule, this.config, this.urlTree.root, PRIMARY_OUTLET);
+        var /** @type {?} */ urlTrees$ = __WEBPACK_IMPORTED_MODULE_7_rxjs_operator_map__["a" /* map */].call(expanded$, function (rootSegmentGroup) {
+            return _this.createUrlTree(rootSegmentGroup, _this.urlTree.queryParams, /** @type {?} */ ((_this.urlTree.fragment)));
+        });
+        return __WEBPACK_IMPORTED_MODULE_11_rxjs_operator_catch__["a" /* _catch */].call(urlTrees$, function (e) {
+            if (e instanceof AbsoluteRedirect) {
+                // after an absolute redirect we do not apply any more redirects!
+                // after an absolute redirect we do not apply any more redirects!
+                _this.allowRedirects = false;
+                // we need to run matching, so we can fetch all lazy-loaded modules
+                return _this.match(e.urlTree);
+            }
+            if (e instanceof NoMatch) {
+                throw _this.noMatchError(e);
+            }
+            throw e;
+        });
+    };
+    /**
+     * @param {?} tree
+     * @return {?}
+     */
+    ApplyRedirects.prototype.match = /**
+     * @param {?} tree
+     * @return {?}
+     */
+    function (tree) {
+        var _this = this;
+        var /** @type {?} */ expanded$ = this.expandSegmentGroup(this.ngModule, this.config, tree.root, PRIMARY_OUTLET);
+        var /** @type {?} */ mapped$ = __WEBPACK_IMPORTED_MODULE_7_rxjs_operator_map__["a" /* map */].call(expanded$, function (rootSegmentGroup) {
+            return _this.createUrlTree(rootSegmentGroup, tree.queryParams, /** @type {?} */ ((tree.fragment)));
+        });
+        return __WEBPACK_IMPORTED_MODULE_11_rxjs_operator_catch__["a" /* _catch */].call(mapped$, function (e) {
+            if (e instanceof NoMatch) {
+                throw _this.noMatchError(e);
+            }
+            throw e;
+        });
+    };
+    /**
+     * @param {?} e
+     * @return {?}
+     */
+    ApplyRedirects.prototype.noMatchError = /**
+     * @param {?} e
+     * @return {?}
+     */
+    function (e) {
+        return new Error("Cannot match any routes. URL Segment: '" + e.segmentGroup + "'");
+    };
+    /**
+     * @param {?} rootCandidate
+     * @param {?} queryParams
+     * @param {?} fragment
+     * @return {?}
+     */
+    ApplyRedirects.prototype.createUrlTree = /**
+     * @param {?} rootCandidate
+     * @param {?} queryParams
+     * @param {?} fragment
+     * @return {?}
+     */
+    function (rootCandidate, queryParams, fragment) {
+        var /** @type {?} */ root = rootCandidate.segments.length > 0 ?
+            new UrlSegmentGroup([], (_a = {}, _a[PRIMARY_OUTLET] = rootCandidate, _a)) :
+            rootCandidate;
+        return new UrlTree(root, queryParams, fragment);
+        var _a;
+    };
+    /**
+     * @param {?} ngModule
+     * @param {?} routes
+     * @param {?} segmentGroup
+     * @param {?} outlet
+     * @return {?}
+     */
+    ApplyRedirects.prototype.expandSegmentGroup = /**
+     * @param {?} ngModule
+     * @param {?} routes
+     * @param {?} segmentGroup
+     * @param {?} outlet
+     * @return {?}
+     */
+    function (ngModule, routes, segmentGroup, outlet) {
+        if (segmentGroup.segments.length === 0 && segmentGroup.hasChildren()) {
+            return __WEBPACK_IMPORTED_MODULE_7_rxjs_operator_map__["a" /* map */].call(this.expandChildren(ngModule, routes, segmentGroup), function (children) { return new UrlSegmentGroup([], children); });
+        }
+        return this.expandSegment(ngModule, segmentGroup, routes, segmentGroup.segments, outlet, true);
+    };
+    /**
+     * @param {?} ngModule
+     * @param {?} routes
+     * @param {?} segmentGroup
+     * @return {?}
+     */
+    ApplyRedirects.prototype.expandChildren = /**
+     * @param {?} ngModule
+     * @param {?} routes
+     * @param {?} segmentGroup
+     * @return {?}
+     */
+    function (ngModule, routes, segmentGroup) {
+        var _this = this;
+        return waitForMap(segmentGroup.children, function (childOutlet, child) { return _this.expandSegmentGroup(ngModule, routes, child, childOutlet); });
+    };
+    /**
+     * @param {?} ngModule
+     * @param {?} segmentGroup
+     * @param {?} routes
+     * @param {?} segments
+     * @param {?} outlet
+     * @param {?} allowRedirects
+     * @return {?}
+     */
+    ApplyRedirects.prototype.expandSegment = /**
+     * @param {?} ngModule
+     * @param {?} segmentGroup
+     * @param {?} routes
+     * @param {?} segments
+     * @param {?} outlet
+     * @param {?} allowRedirects
+     * @return {?}
+     */
+    function (ngModule, segmentGroup, routes, segments, outlet, allowRedirects) {
+        var _this = this;
+        var /** @type {?} */ routes$ = __WEBPACK_IMPORTED_MODULE_5_rxjs_observable_of__["a" /* of */].apply(void 0, routes);
+        var /** @type {?} */ processedRoutes$ = __WEBPACK_IMPORTED_MODULE_7_rxjs_operator_map__["a" /* map */].call(routes$, function (r) {
+            var /** @type {?} */ expanded$ = _this.expandSegmentAgainstRoute(ngModule, segmentGroup, routes, r, segments, outlet, allowRedirects);
+            return __WEBPACK_IMPORTED_MODULE_11_rxjs_operator_catch__["a" /* _catch */].call(expanded$, function (e) {
+                if (e instanceof NoMatch) {
+                    return Object(__WEBPACK_IMPORTED_MODULE_5_rxjs_observable_of__["a" /* of */])(null);
+                }
+                throw e;
+            });
+        });
+        var /** @type {?} */ concattedProcessedRoutes$ = __WEBPACK_IMPORTED_MODULE_12_rxjs_operator_concatAll__["a" /* concatAll */].call(processedRoutes$);
+        var /** @type {?} */ first$ = __WEBPACK_IMPORTED_MODULE_13_rxjs_operator_first__["a" /* first */].call(concattedProcessedRoutes$, function (s) { return !!s; });
+        return __WEBPACK_IMPORTED_MODULE_11_rxjs_operator_catch__["a" /* _catch */].call(first$, function (e, _) {
+            if (e instanceof __WEBPACK_IMPORTED_MODULE_14_rxjs_util_EmptyError__["a" /* EmptyError */] || e.name === 'EmptyError') {
+                if (_this.noLeftoversInUrl(segmentGroup, segments, outlet)) {
+                    return Object(__WEBPACK_IMPORTED_MODULE_5_rxjs_observable_of__["a" /* of */])(new UrlSegmentGroup([], {}));
+                }
+                throw new NoMatch(segmentGroup);
+            }
+            throw e;
+        });
+    };
+    /**
+     * @param {?} segmentGroup
+     * @param {?} segments
+     * @param {?} outlet
+     * @return {?}
+     */
+    ApplyRedirects.prototype.noLeftoversInUrl = /**
+     * @param {?} segmentGroup
+     * @param {?} segments
+     * @param {?} outlet
+     * @return {?}
+     */
+    function (segmentGroup, segments, outlet) {
+        return segments.length === 0 && !segmentGroup.children[outlet];
+    };
+    /**
+     * @param {?} ngModule
+     * @param {?} segmentGroup
+     * @param {?} routes
+     * @param {?} route
+     * @param {?} paths
+     * @param {?} outlet
+     * @param {?} allowRedirects
+     * @return {?}
+     */
+    ApplyRedirects.prototype.expandSegmentAgainstRoute = /**
+     * @param {?} ngModule
+     * @param {?} segmentGroup
+     * @param {?} routes
+     * @param {?} route
+     * @param {?} paths
+     * @param {?} outlet
+     * @param {?} allowRedirects
+     * @return {?}
+     */
+    function (ngModule, segmentGroup, routes, route, paths, outlet, allowRedirects) {
+        if (getOutlet(route) !== outlet) {
+            return noMatch(segmentGroup);
+        }
+        if (route.redirectTo === undefined) {
+            return this.matchSegmentAgainstRoute(ngModule, segmentGroup, route, paths);
+        }
+        if (allowRedirects && this.allowRedirects) {
+            return this.expandSegmentAgainstRouteUsingRedirect(ngModule, segmentGroup, routes, route, paths, outlet);
+        }
+        return noMatch(segmentGroup);
+    };
+    /**
+     * @param {?} ngModule
+     * @param {?} segmentGroup
+     * @param {?} routes
+     * @param {?} route
+     * @param {?} segments
+     * @param {?} outlet
+     * @return {?}
+     */
+    ApplyRedirects.prototype.expandSegmentAgainstRouteUsingRedirect = /**
+     * @param {?} ngModule
+     * @param {?} segmentGroup
+     * @param {?} routes
+     * @param {?} route
+     * @param {?} segments
+     * @param {?} outlet
+     * @return {?}
+     */
+    function (ngModule, segmentGroup, routes, route, segments, outlet) {
+        if (route.path === '**') {
+            return this.expandWildCardWithParamsAgainstRouteUsingRedirect(ngModule, routes, route, outlet);
+        }
+        return this.expandRegularSegmentAgainstRouteUsingRedirect(ngModule, segmentGroup, routes, route, segments, outlet);
+    };
+    /**
+     * @param {?} ngModule
+     * @param {?} routes
+     * @param {?} route
+     * @param {?} outlet
+     * @return {?}
+     */
+    ApplyRedirects.prototype.expandWildCardWithParamsAgainstRouteUsingRedirect = /**
+     * @param {?} ngModule
+     * @param {?} routes
+     * @param {?} route
+     * @param {?} outlet
+     * @return {?}
+     */
+    function (ngModule, routes, route, outlet) {
+        var _this = this;
+        var /** @type {?} */ newTree = this.applyRedirectCommands([], /** @type {?} */ ((route.redirectTo)), {});
+        if (/** @type {?} */ ((route.redirectTo)).startsWith('/')) {
+            return absoluteRedirect(newTree);
+        }
+        return __WEBPACK_IMPORTED_MODULE_8_rxjs_operator_mergeMap__["a" /* mergeMap */].call(this.lineralizeSegments(route, newTree), function (newSegments) {
+            var /** @type {?} */ group = new UrlSegmentGroup(newSegments, {});
+            return _this.expandSegment(ngModule, group, routes, newSegments, outlet, false);
+        });
+    };
+    /**
+     * @param {?} ngModule
+     * @param {?} segmentGroup
+     * @param {?} routes
+     * @param {?} route
+     * @param {?} segments
+     * @param {?} outlet
+     * @return {?}
+     */
+    ApplyRedirects.prototype.expandRegularSegmentAgainstRouteUsingRedirect = /**
+     * @param {?} ngModule
+     * @param {?} segmentGroup
+     * @param {?} routes
+     * @param {?} route
+     * @param {?} segments
+     * @param {?} outlet
+     * @return {?}
+     */
+    function (ngModule, segmentGroup, routes, route, segments, outlet) {
+        var _this = this;
+        var _a = match(segmentGroup, route, segments), matched = _a.matched, consumedSegments = _a.consumedSegments, lastChild = _a.lastChild, positionalParamSegments = _a.positionalParamSegments;
+        if (!matched)
+            return noMatch(segmentGroup);
+        var /** @type {?} */ newTree = this.applyRedirectCommands(consumedSegments, /** @type {?} */ ((route.redirectTo)), /** @type {?} */ (positionalParamSegments));
+        if (/** @type {?} */ ((route.redirectTo)).startsWith('/')) {
+            return absoluteRedirect(newTree);
+        }
+        return __WEBPACK_IMPORTED_MODULE_8_rxjs_operator_mergeMap__["a" /* mergeMap */].call(this.lineralizeSegments(route, newTree), function (newSegments) {
+            return _this.expandSegment(ngModule, segmentGroup, routes, newSegments.concat(segments.slice(lastChild)), outlet, false);
+        });
+    };
+    /**
+     * @param {?} ngModule
+     * @param {?} rawSegmentGroup
+     * @param {?} route
+     * @param {?} segments
+     * @return {?}
+     */
+    ApplyRedirects.prototype.matchSegmentAgainstRoute = /**
+     * @param {?} ngModule
+     * @param {?} rawSegmentGroup
+     * @param {?} route
+     * @param {?} segments
+     * @return {?}
+     */
+    function (ngModule, rawSegmentGroup, route, segments) {
+        var _this = this;
+        if (route.path === '**') {
+            if (route.loadChildren) {
+                return __WEBPACK_IMPORTED_MODULE_7_rxjs_operator_map__["a" /* map */].call(this.configLoader.load(ngModule.injector, route), function (cfg) {
+                    route._loadedConfig = cfg;
+                    return new UrlSegmentGroup(segments, {});
+                });
+            }
+            return Object(__WEBPACK_IMPORTED_MODULE_5_rxjs_observable_of__["a" /* of */])(new UrlSegmentGroup(segments, {}));
+        }
+        var _a = match(rawSegmentGroup, route, segments), matched = _a.matched, consumedSegments = _a.consumedSegments, lastChild = _a.lastChild;
+        if (!matched)
+            return noMatch(rawSegmentGroup);
+        var /** @type {?} */ rawSlicedSegments = segments.slice(lastChild);
+        var /** @type {?} */ childConfig$ = this.getChildConfig(ngModule, route);
+        return __WEBPACK_IMPORTED_MODULE_8_rxjs_operator_mergeMap__["a" /* mergeMap */].call(childConfig$, function (routerConfig) {
+            var /** @type {?} */ childModule = routerConfig.module;
+            var /** @type {?} */ childConfig = routerConfig.routes;
+            var _a = split(rawSegmentGroup, consumedSegments, rawSlicedSegments, childConfig), segmentGroup = _a.segmentGroup, slicedSegments = _a.slicedSegments;
+            if (slicedSegments.length === 0 && segmentGroup.hasChildren()) {
+                var /** @type {?} */ expanded$_1 = _this.expandChildren(childModule, childConfig, segmentGroup);
+                return __WEBPACK_IMPORTED_MODULE_7_rxjs_operator_map__["a" /* map */].call(expanded$_1, function (children) { return new UrlSegmentGroup(consumedSegments, children); });
+            }
+            if (childConfig.length === 0 && slicedSegments.length === 0) {
+                return Object(__WEBPACK_IMPORTED_MODULE_5_rxjs_observable_of__["a" /* of */])(new UrlSegmentGroup(consumedSegments, {}));
+            }
+            var /** @type {?} */ expanded$ = _this.expandSegment(childModule, segmentGroup, childConfig, slicedSegments, PRIMARY_OUTLET, true);
+            return __WEBPACK_IMPORTED_MODULE_7_rxjs_operator_map__["a" /* map */].call(expanded$, function (cs) {
+                return new UrlSegmentGroup(consumedSegments.concat(cs.segments), cs.children);
+            });
+        });
+    };
+    /**
+     * @param {?} ngModule
+     * @param {?} route
+     * @return {?}
+     */
+    ApplyRedirects.prototype.getChildConfig = /**
+     * @param {?} ngModule
+     * @param {?} route
+     * @return {?}
+     */
+    function (ngModule, route) {
+        var _this = this;
+        if (route.children) {
+            // The children belong to the same module
+            return Object(__WEBPACK_IMPORTED_MODULE_5_rxjs_observable_of__["a" /* of */])(new LoadedRouterConfig(route.children, ngModule));
+        }
+        if (route.loadChildren) {
+            // lazy children belong to the loaded module
+            if (route._loadedConfig !== undefined) {
+                return Object(__WEBPACK_IMPORTED_MODULE_5_rxjs_observable_of__["a" /* of */])(route._loadedConfig);
+            }
+            return __WEBPACK_IMPORTED_MODULE_8_rxjs_operator_mergeMap__["a" /* mergeMap */].call(runCanLoadGuard(ngModule.injector, route), function (shouldLoad) {
+                if (shouldLoad) {
+                    return __WEBPACK_IMPORTED_MODULE_7_rxjs_operator_map__["a" /* map */].call(_this.configLoader.load(ngModule.injector, route), function (cfg) {
+                        route._loadedConfig = cfg;
+                        return cfg;
+                    });
+                }
+                return canLoadFails(route);
+            });
+        }
+        return Object(__WEBPACK_IMPORTED_MODULE_5_rxjs_observable_of__["a" /* of */])(new LoadedRouterConfig([], ngModule));
+    };
+    /**
+     * @param {?} route
+     * @param {?} urlTree
+     * @return {?}
+     */
+    ApplyRedirects.prototype.lineralizeSegments = /**
+     * @param {?} route
+     * @param {?} urlTree
+     * @return {?}
+     */
+    function (route, urlTree) {
+        var /** @type {?} */ res = [];
+        var /** @type {?} */ c = urlTree.root;
+        while (true) {
+            res = res.concat(c.segments);
+            if (c.numberOfChildren === 0) {
+                return Object(__WEBPACK_IMPORTED_MODULE_5_rxjs_observable_of__["a" /* of */])(res);
+            }
+            if (c.numberOfChildren > 1 || !c.children[PRIMARY_OUTLET]) {
+                return namedOutletsRedirect(/** @type {?} */ ((route.redirectTo)));
+            }
+            c = c.children[PRIMARY_OUTLET];
+        }
+    };
+    /**
+     * @param {?} segments
+     * @param {?} redirectTo
+     * @param {?} posParams
+     * @return {?}
+     */
+    ApplyRedirects.prototype.applyRedirectCommands = /**
+     * @param {?} segments
+     * @param {?} redirectTo
+     * @param {?} posParams
+     * @return {?}
+     */
+    function (segments, redirectTo, posParams) {
+        return this.applyRedirectCreatreUrlTree(redirectTo, this.urlSerializer.parse(redirectTo), segments, posParams);
+    };
+    /**
+     * @param {?} redirectTo
+     * @param {?} urlTree
+     * @param {?} segments
+     * @param {?} posParams
+     * @return {?}
+     */
+    ApplyRedirects.prototype.applyRedirectCreatreUrlTree = /**
+     * @param {?} redirectTo
+     * @param {?} urlTree
+     * @param {?} segments
+     * @param {?} posParams
+     * @return {?}
+     */
+    function (redirectTo, urlTree, segments, posParams) {
+        var /** @type {?} */ newRoot = this.createSegmentGroup(redirectTo, urlTree.root, segments, posParams);
+        return new UrlTree(newRoot, this.createQueryParams(urlTree.queryParams, this.urlTree.queryParams), urlTree.fragment);
+    };
+    /**
+     * @param {?} redirectToParams
+     * @param {?} actualParams
+     * @return {?}
+     */
+    ApplyRedirects.prototype.createQueryParams = /**
+     * @param {?} redirectToParams
+     * @param {?} actualParams
+     * @return {?}
+     */
+    function (redirectToParams, actualParams) {
+        var /** @type {?} */ res = {};
+        forEach(redirectToParams, function (v, k) {
+            var /** @type {?} */ copySourceValue = typeof v === 'string' && v.startsWith(':');
+            if (copySourceValue) {
+                var /** @type {?} */ sourceName = v.substring(1);
+                res[k] = actualParams[sourceName];
+            }
+            else {
+                res[k] = v;
+            }
+        });
+        return res;
+    };
+    /**
+     * @param {?} redirectTo
+     * @param {?} group
+     * @param {?} segments
+     * @param {?} posParams
+     * @return {?}
+     */
+    ApplyRedirects.prototype.createSegmentGroup = /**
+     * @param {?} redirectTo
+     * @param {?} group
+     * @param {?} segments
+     * @param {?} posParams
+     * @return {?}
+     */
+    function (redirectTo, group, segments, posParams) {
+        var _this = this;
+        var /** @type {?} */ updatedSegments = this.createSegments(redirectTo, group.segments, segments, posParams);
+        var /** @type {?} */ children = {};
+        forEach(group.children, function (child, name) {
+            children[name] = _this.createSegmentGroup(redirectTo, child, segments, posParams);
+        });
+        return new UrlSegmentGroup(updatedSegments, children);
+    };
+    /**
+     * @param {?} redirectTo
+     * @param {?} redirectToSegments
+     * @param {?} actualSegments
+     * @param {?} posParams
+     * @return {?}
+     */
+    ApplyRedirects.prototype.createSegments = /**
+     * @param {?} redirectTo
+     * @param {?} redirectToSegments
+     * @param {?} actualSegments
+     * @param {?} posParams
+     * @return {?}
+     */
+    function (redirectTo, redirectToSegments, actualSegments, posParams) {
+        var _this = this;
+        return redirectToSegments.map(function (s) {
+            return s.path.startsWith(':') ? _this.findPosParam(redirectTo, s, posParams) :
+                _this.findOrReturn(s, actualSegments);
+        });
+    };
+    /**
+     * @param {?} redirectTo
+     * @param {?} redirectToUrlSegment
+     * @param {?} posParams
+     * @return {?}
+     */
+    ApplyRedirects.prototype.findPosParam = /**
+     * @param {?} redirectTo
+     * @param {?} redirectToUrlSegment
+     * @param {?} posParams
+     * @return {?}
+     */
+    function (redirectTo, redirectToUrlSegment, posParams) {
+        var /** @type {?} */ pos = posParams[redirectToUrlSegment.path.substring(1)];
+        if (!pos)
+            throw new Error("Cannot redirect to '" + redirectTo + "'. Cannot find '" + redirectToUrlSegment.path + "'.");
+        return pos;
+    };
+    /**
+     * @param {?} redirectToUrlSegment
+     * @param {?} actualSegments
+     * @return {?}
+     */
+    ApplyRedirects.prototype.findOrReturn = /**
+     * @param {?} redirectToUrlSegment
+     * @param {?} actualSegments
+     * @return {?}
+     */
+    function (redirectToUrlSegment, actualSegments) {
+        var /** @type {?} */ idx = 0;
+        for (var _i = 0, actualSegments_1 = actualSegments; _i < actualSegments_1.length; _i++) {
+            var s = actualSegments_1[_i];
+            if (s.path === redirectToUrlSegment.path) {
+                actualSegments.splice(idx);
+                return s;
+            }
+            idx++;
+        }
+        return redirectToUrlSegment;
+    };
+    return ApplyRedirects;
+}());
+/**
+ * @param {?} moduleInjector
+ * @param {?} route
+ * @return {?}
+ */
+function runCanLoadGuard(moduleInjector, route) {
+    var /** @type {?} */ canLoad = route.canLoad;
+    if (!canLoad || canLoad.length === 0)
+        return Object(__WEBPACK_IMPORTED_MODULE_5_rxjs_observable_of__["a" /* of */])(true);
+    var /** @type {?} */ obs = __WEBPACK_IMPORTED_MODULE_7_rxjs_operator_map__["a" /* map */].call(Object(__WEBPACK_IMPORTED_MODULE_10_rxjs_observable_from__["a" /* from */])(canLoad), function (injectionToken) {
+        var /** @type {?} */ guard = moduleInjector.get(injectionToken);
+        return wrapIntoObservable(guard.canLoad ? guard.canLoad(route) : guard(route));
+    });
+    return andObservables(obs);
+}
+/**
+ * @param {?} segmentGroup
+ * @param {?} route
+ * @param {?} segments
+ * @return {?}
+ */
+function match(segmentGroup, route, segments) {
+    if (route.path === '') {
+        if ((route.pathMatch === 'full') && (segmentGroup.hasChildren() || segments.length > 0)) {
+            return { matched: false, consumedSegments: [], lastChild: 0, positionalParamSegments: {} };
+        }
+        return { matched: true, consumedSegments: [], lastChild: 0, positionalParamSegments: {} };
+    }
+    var /** @type {?} */ matcher = route.matcher || defaultUrlMatcher;
+    var /** @type {?} */ res = matcher(segments, segmentGroup, route);
+    if (!res) {
+        return {
+            matched: false,
+            consumedSegments: /** @type {?} */ ([]),
+            lastChild: 0,
+            positionalParamSegments: {},
+        };
+    }
+    return {
+        matched: true,
+        consumedSegments: /** @type {?} */ ((res.consumed)),
+        lastChild: /** @type {?} */ ((res.consumed.length)),
+        positionalParamSegments: /** @type {?} */ ((res.posParams)),
+    };
+}
+/**
+ * @param {?} segmentGroup
+ * @param {?} consumedSegments
+ * @param {?} slicedSegments
+ * @param {?} config
+ * @return {?}
+ */
+function split(segmentGroup, consumedSegments, slicedSegments, config) {
+    if (slicedSegments.length > 0 &&
+        containsEmptyPathRedirectsWithNamedOutlets(segmentGroup, slicedSegments, config)) {
+        var /** @type {?} */ s = new UrlSegmentGroup(consumedSegments, createChildrenForEmptySegments(config, new UrlSegmentGroup(slicedSegments, segmentGroup.children)));
+        return { segmentGroup: mergeTrivialChildren(s), slicedSegments: [] };
+    }
+    if (slicedSegments.length === 0 &&
+        containsEmptyPathRedirects(segmentGroup, slicedSegments, config)) {
+        var /** @type {?} */ s = new UrlSegmentGroup(segmentGroup.segments, addEmptySegmentsToChildrenIfNeeded(segmentGroup, slicedSegments, config, segmentGroup.children));
+        return { segmentGroup: mergeTrivialChildren(s), slicedSegments: slicedSegments };
+    }
+    return { segmentGroup: segmentGroup, slicedSegments: slicedSegments };
+}
+/**
+ * @param {?} s
+ * @return {?}
+ */
+function mergeTrivialChildren(s) {
+    if (s.numberOfChildren === 1 && s.children[PRIMARY_OUTLET]) {
+        var /** @type {?} */ c = s.children[PRIMARY_OUTLET];
+        return new UrlSegmentGroup(s.segments.concat(c.segments), c.children);
+    }
+    return s;
+}
+/**
+ * @param {?} segmentGroup
+ * @param {?} slicedSegments
+ * @param {?} routes
+ * @param {?} children
+ * @return {?}
+ */
+function addEmptySegmentsToChildrenIfNeeded(segmentGroup, slicedSegments, routes, children) {
+    var /** @type {?} */ res = {};
+    for (var _i = 0, routes_1 = routes; _i < routes_1.length; _i++) {
+        var r = routes_1[_i];
+        if (isEmptyPathRedirect(segmentGroup, slicedSegments, r) && !children[getOutlet(r)]) {
+            res[getOutlet(r)] = new UrlSegmentGroup([], {});
+        }
+    }
+    return Object(__WEBPACK_IMPORTED_MODULE_2_tslib__["a" /* __assign */])({}, children, res);
+}
+/**
+ * @param {?} routes
+ * @param {?} primarySegmentGroup
+ * @return {?}
+ */
+function createChildrenForEmptySegments(routes, primarySegmentGroup) {
+    var /** @type {?} */ res = {};
+    res[PRIMARY_OUTLET] = primarySegmentGroup;
+    for (var _i = 0, routes_2 = routes; _i < routes_2.length; _i++) {
+        var r = routes_2[_i];
+        if (r.path === '' && getOutlet(r) !== PRIMARY_OUTLET) {
+            res[getOutlet(r)] = new UrlSegmentGroup([], {});
+        }
+    }
+    return res;
+}
+/**
+ * @param {?} segmentGroup
+ * @param {?} segments
+ * @param {?} routes
+ * @return {?}
+ */
+function containsEmptyPathRedirectsWithNamedOutlets(segmentGroup, segments, routes) {
+    return routes.some(function (r) { return isEmptyPathRedirect(segmentGroup, segments, r) && getOutlet(r) !== PRIMARY_OUTLET; });
+}
+/**
+ * @param {?} segmentGroup
+ * @param {?} segments
+ * @param {?} routes
+ * @return {?}
+ */
+function containsEmptyPathRedirects(segmentGroup, segments, routes) {
+    return routes.some(function (r) { return isEmptyPathRedirect(segmentGroup, segments, r); });
+}
+/**
+ * @param {?} segmentGroup
+ * @param {?} segments
+ * @param {?} r
+ * @return {?}
+ */
+function isEmptyPathRedirect(segmentGroup, segments, r) {
+    if ((segmentGroup.hasChildren() || segments.length > 0) && r.pathMatch === 'full') {
+        return false;
+    }
+    return r.path === '' && r.redirectTo !== undefined;
+}
+/**
+ * @param {?} route
+ * @return {?}
+ */
+function getOutlet(route) {
+    return route.outlet || PRIMARY_OUTLET;
+}
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+var Tree = /** @class */ (function () {
+    function Tree(root) {
+        this._root = root;
+    }
+    Object.defineProperty(Tree.prototype, "root", {
+        get: /**
+         * @return {?}
+         */
+        function () { return this._root.value; },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * @internal
+     */
+    /**
+     * \@internal
+     * @param {?} t
+     * @return {?}
+     */
+    Tree.prototype.parent = /**
+     * \@internal
+     * @param {?} t
+     * @return {?}
+     */
+    function (t) {
+        var /** @type {?} */ p = this.pathFromRoot(t);
+        return p.length > 1 ? p[p.length - 2] : null;
+    };
+    /**
+     * @internal
+     */
+    /**
+     * \@internal
+     * @param {?} t
+     * @return {?}
+     */
+    Tree.prototype.children = /**
+     * \@internal
+     * @param {?} t
+     * @return {?}
+     */
+    function (t) {
+        var /** @type {?} */ n = findNode(t, this._root);
+        return n ? n.children.map(function (t) { return t.value; }) : [];
+    };
+    /**
+     * @internal
+     */
+    /**
+     * \@internal
+     * @param {?} t
+     * @return {?}
+     */
+    Tree.prototype.firstChild = /**
+     * \@internal
+     * @param {?} t
+     * @return {?}
+     */
+    function (t) {
+        var /** @type {?} */ n = findNode(t, this._root);
+        return n && n.children.length > 0 ? n.children[0].value : null;
+    };
+    /**
+     * @internal
+     */
+    /**
+     * \@internal
+     * @param {?} t
+     * @return {?}
+     */
+    Tree.prototype.siblings = /**
+     * \@internal
+     * @param {?} t
+     * @return {?}
+     */
+    function (t) {
+        var /** @type {?} */ p = findPath(t, this._root);
+        if (p.length < 2)
+            return [];
+        var /** @type {?} */ c = p[p.length - 2].children.map(function (c) { return c.value; });
+        return c.filter(function (cc) { return cc !== t; });
+    };
+    /**
+     * @internal
+     */
+    /**
+     * \@internal
+     * @param {?} t
+     * @return {?}
+     */
+    Tree.prototype.pathFromRoot = /**
+     * \@internal
+     * @param {?} t
+     * @return {?}
+     */
+    function (t) { return findPath(t, this._root).map(function (s) { return s.value; }); };
+    return Tree;
+}());
+/**
+ * @template T
+ * @param {?} value
+ * @param {?} node
+ * @return {?}
+ */
+function findNode(value, node) {
+    if (value === node.value)
+        return node;
+    for (var _i = 0, _a = node.children; _i < _a.length; _i++) {
+        var child = _a[_i];
+        var /** @type {?} */ node_1 = findNode(value, child);
+        if (node_1)
+            return node_1;
+    }
+    return null;
+}
+/**
+ * @template T
+ * @param {?} value
+ * @param {?} node
+ * @return {?}
+ */
+function findPath(value, node) {
+    if (value === node.value)
+        return [node];
+    for (var _i = 0, _a = node.children; _i < _a.length; _i++) {
+        var child = _a[_i];
+        var /** @type {?} */ path = findPath(value, child);
+        if (path.length) {
+            path.unshift(node);
+            return path;
+        }
+    }
+    return [];
+}
+var TreeNode = /** @class */ (function () {
+    function TreeNode(value, children) {
+        this.value = value;
+        this.children = children;
+    }
+    /**
+     * @return {?}
+     */
+    TreeNode.prototype.toString = /**
+     * @return {?}
+     */
+    function () { return "TreeNode(" + this.value + ")"; };
+    return TreeNode;
+}());
+/**
+ * @template T
+ * @param {?} node
+ * @return {?}
+ */
+function nodeChildrenAsMap(node) {
+    var /** @type {?} */ map$$1 = {};
+    if (node) {
+        node.children.forEach(function (child) { return map$$1[child.value.outlet] = child; });
+    }
+    return map$$1;
+}
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+/**
+ * \@whatItDoes Represents the state of the router.
+ *
+ * \@howToUse
+ *
+ * ```
+ * \@Component({templateUrl:'template.html'})
+ * class MyComponent {
+ *   constructor(router: Router) {
+ *     const state: RouterState = router.routerState;
+ *     const root: ActivatedRoute = state.root;
+ *     const child = root.firstChild;
+ *     const id: Observable<string> = child.params.map(p => p.id);
+ *     //...
+ *   }
+ * }
+ * ```
+ *
+ * \@description
+ * RouterState is a tree of activated routes. Every node in this tree knows about the "consumed" URL
+ * segments, the extracted parameters, and the resolved data.
+ *
+ * See {\@link ActivatedRoute} for more information.
+ *
+ * \@stable
+ */
+var RouterState = /** @class */ (function (_super) {
+    Object(__WEBPACK_IMPORTED_MODULE_2_tslib__["b" /* __extends */])(RouterState, _super);
+    /** @internal */
+    function RouterState(root, snapshot) {
+        var _this = _super.call(this, root) || this;
+        _this.snapshot = snapshot;
+        setRouterState(/** @type {?} */ (_this), root);
+        return _this;
+    }
+    /**
+     * @return {?}
+     */
+    RouterState.prototype.toString = /**
+     * @return {?}
+     */
+    function () { return this.snapshot.toString(); };
+    return RouterState;
+}(Tree));
+/**
+ * @param {?} urlTree
+ * @param {?} rootComponent
+ * @return {?}
+ */
+function createEmptyState(urlTree, rootComponent) {
+    var /** @type {?} */ snapshot = createEmptyStateSnapshot(urlTree, rootComponent);
+    var /** @type {?} */ emptyUrl = new __WEBPACK_IMPORTED_MODULE_3_rxjs_BehaviorSubject__["a" /* BehaviorSubject */]([new UrlSegment('', {})]);
+    var /** @type {?} */ emptyParams = new __WEBPACK_IMPORTED_MODULE_3_rxjs_BehaviorSubject__["a" /* BehaviorSubject */]({});
+    var /** @type {?} */ emptyData = new __WEBPACK_IMPORTED_MODULE_3_rxjs_BehaviorSubject__["a" /* BehaviorSubject */]({});
+    var /** @type {?} */ emptyQueryParams = new __WEBPACK_IMPORTED_MODULE_3_rxjs_BehaviorSubject__["a" /* BehaviorSubject */]({});
+    var /** @type {?} */ fragment = new __WEBPACK_IMPORTED_MODULE_3_rxjs_BehaviorSubject__["a" /* BehaviorSubject */]('');
+    var /** @type {?} */ activated = new ActivatedRoute(emptyUrl, emptyParams, emptyQueryParams, fragment, emptyData, PRIMARY_OUTLET, rootComponent, snapshot.root);
+    activated.snapshot = snapshot.root;
+    return new RouterState(new TreeNode(activated, []), snapshot);
+}
+/**
+ * @param {?} urlTree
+ * @param {?} rootComponent
+ * @return {?}
+ */
+function createEmptyStateSnapshot(urlTree, rootComponent) {
+    var /** @type {?} */ emptyParams = {};
+    var /** @type {?} */ emptyData = {};
+    var /** @type {?} */ emptyQueryParams = {};
+    var /** @type {?} */ fragment = '';
+    var /** @type {?} */ activated = new ActivatedRouteSnapshot([], emptyParams, emptyQueryParams, fragment, emptyData, PRIMARY_OUTLET, rootComponent, null, urlTree.root, -1, {});
+    return new RouterStateSnapshot('', new TreeNode(activated, []));
+}
+/**
+ * \@whatItDoes Contains the information about a route associated with a component loaded in an
+ * outlet.
+ * An `ActivatedRoute` can also be used to traverse the router state tree.
+ *
+ * \@howToUse
+ *
+ * ```
+ * \@Component({...})
+ * class MyComponent {
+ *   constructor(route: ActivatedRoute) {
+ *     const id: Observable<string> = route.params.map(p => p.id);
+ *     const url: Observable<string> = route.url.map(segments => segments.join(''));
+ *     // route.data includes both `data` and `resolve`
+ *     const user = route.data.map(d => d.user);
+ *   }
+ * }
+ * ```
+ *
+ * \@stable
+ */
+var ActivatedRoute = /** @class */ (function () {
+    /** @internal */
+    function ActivatedRoute(url, params, queryParams, fragment, data, outlet, component, futureSnapshot) {
+        this.url = url;
+        this.params = params;
+        this.queryParams = queryParams;
+        this.fragment = fragment;
+        this.data = data;
+        this.outlet = outlet;
+        this.component = component;
+        this._futureSnapshot = futureSnapshot;
+    }
+    Object.defineProperty(ActivatedRoute.prototype, "routeConfig", {
+        /** The configuration used to match this route */
+        get: /**
+         * The configuration used to match this route
+         * @return {?}
+         */
+        function () { return this._futureSnapshot.routeConfig; },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(ActivatedRoute.prototype, "root", {
+        /** The root of the router state */
+        get: /**
+         * The root of the router state
+         * @return {?}
+         */
+        function () { return this._routerState.root; },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(ActivatedRoute.prototype, "parent", {
+        /** The parent of this route in the router state tree */
+        get: /**
+         * The parent of this route in the router state tree
+         * @return {?}
+         */
+        function () { return this._routerState.parent(this); },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(ActivatedRoute.prototype, "firstChild", {
+        /** The first child of this route in the router state tree */
+        get: /**
+         * The first child of this route in the router state tree
+         * @return {?}
+         */
+        function () { return this._routerState.firstChild(this); },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(ActivatedRoute.prototype, "children", {
+        /** The children of this route in the router state tree */
+        get: /**
+         * The children of this route in the router state tree
+         * @return {?}
+         */
+        function () { return this._routerState.children(this); },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(ActivatedRoute.prototype, "pathFromRoot", {
+        /** The path from the root of the router state tree to this route */
+        get: /**
+         * The path from the root of the router state tree to this route
+         * @return {?}
+         */
+        function () { return this._routerState.pathFromRoot(this); },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(ActivatedRoute.prototype, "paramMap", {
+        get: /**
+         * @return {?}
+         */
+        function () {
+            if (!this._paramMap) {
+                this._paramMap = __WEBPACK_IMPORTED_MODULE_7_rxjs_operator_map__["a" /* map */].call(this.params, function (p) { return convertToParamMap(p); });
+            }
+            return this._paramMap;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(ActivatedRoute.prototype, "queryParamMap", {
+        get: /**
+         * @return {?}
+         */
+        function () {
+            if (!this._queryParamMap) {
+                this._queryParamMap =
+                    __WEBPACK_IMPORTED_MODULE_7_rxjs_operator_map__["a" /* map */].call(this.queryParams, function (p) { return convertToParamMap(p); });
+            }
+            return this._queryParamMap;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * @return {?}
+     */
+    ActivatedRoute.prototype.toString = /**
+     * @return {?}
+     */
+    function () {
+        return this.snapshot ? this.snapshot.toString() : "Future(" + this._futureSnapshot + ")";
+    };
+    return ActivatedRoute;
+}());
+/**
+ * Returns the inherited params, data, and resolve for a given route.
+ * By default, this only inherits values up to the nearest path-less or component-less route.
+ * \@internal
+ * @param {?} route
+ * @param {?=} paramsInheritanceStrategy
+ * @return {?}
+ */
+function inheritedParamsDataResolve(route, paramsInheritanceStrategy) {
+    if (paramsInheritanceStrategy === void 0) { paramsInheritanceStrategy = 'emptyOnly'; }
+    var /** @type {?} */ pathFromRoot = route.pathFromRoot;
+    var /** @type {?} */ inheritingStartingFrom = 0;
+    if (paramsInheritanceStrategy !== 'always') {
+        inheritingStartingFrom = pathFromRoot.length - 1;
+        while (inheritingStartingFrom >= 1) {
+            var /** @type {?} */ current = pathFromRoot[inheritingStartingFrom];
+            var /** @type {?} */ parent_1 = pathFromRoot[inheritingStartingFrom - 1];
+            // current route is an empty path => inherits its parent's params and data
+            if (current.routeConfig && current.routeConfig.path === '') {
+                inheritingStartingFrom--;
+                // parent is componentless => current route should inherit its params and data
+            }
+            else if (!parent_1.component) {
+                inheritingStartingFrom--;
+            }
+            else {
+                break;
+            }
+        }
+    }
+    return flattenInherited(pathFromRoot.slice(inheritingStartingFrom));
+}
+/**
+ * \@internal
+ * @param {?} pathFromRoot
+ * @return {?}
+ */
+function flattenInherited(pathFromRoot) {
+    return pathFromRoot.reduce(function (res, curr) {
+        var /** @type {?} */ params = Object(__WEBPACK_IMPORTED_MODULE_2_tslib__["a" /* __assign */])({}, res.params, curr.params);
+        var /** @type {?} */ data = Object(__WEBPACK_IMPORTED_MODULE_2_tslib__["a" /* __assign */])({}, res.data, curr.data);
+        var /** @type {?} */ resolve = Object(__WEBPACK_IMPORTED_MODULE_2_tslib__["a" /* __assign */])({}, res.resolve, curr._resolvedData);
+        return { params: params, data: data, resolve: resolve };
+    }, /** @type {?} */ ({ params: {}, data: {}, resolve: {} }));
+}
+/**
+ * \@whatItDoes Contains the information about a route associated with a component loaded in an
+ * outlet
+ * at a particular moment in time. ActivatedRouteSnapshot can also be used to traverse the router
+ * state tree.
+ *
+ * \@howToUse
+ *
+ * ```
+ * \@Component({templateUrl:'./my-component.html'})
+ * class MyComponent {
+ *   constructor(route: ActivatedRoute) {
+ *     const id: string = route.snapshot.params.id;
+ *     const url: string = route.snapshot.url.join('');
+ *     const user = route.snapshot.data.user;
+ *   }
+ * }
+ * ```
+ *
+ * \@stable
+ */
+var ActivatedRouteSnapshot = /** @class */ (function () {
+    /** @internal */
+    function ActivatedRouteSnapshot(url, params, queryParams, fragment, data, outlet, component, routeConfig, urlSegment, lastPathIndex, resolve) {
+        this.url = url;
+        this.params = params;
+        this.queryParams = queryParams;
+        this.fragment = fragment;
+        this.data = data;
+        this.outlet = outlet;
+        this.component = component;
+        this.routeConfig = routeConfig;
+        this._urlSegment = urlSegment;
+        this._lastPathIndex = lastPathIndex;
+        this._resolve = resolve;
+    }
+    Object.defineProperty(ActivatedRouteSnapshot.prototype, "root", {
+        /** The root of the router state */
+        get: /**
+         * The root of the router state
+         * @return {?}
+         */
+        function () { return this._routerState.root; },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(ActivatedRouteSnapshot.prototype, "parent", {
+        /** The parent of this route in the router state tree */
+        get: /**
+         * The parent of this route in the router state tree
+         * @return {?}
+         */
+        function () { return this._routerState.parent(this); },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(ActivatedRouteSnapshot.prototype, "firstChild", {
+        /** The first child of this route in the router state tree */
+        get: /**
+         * The first child of this route in the router state tree
+         * @return {?}
+         */
+        function () { return this._routerState.firstChild(this); },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(ActivatedRouteSnapshot.prototype, "children", {
+        /** The children of this route in the router state tree */
+        get: /**
+         * The children of this route in the router state tree
+         * @return {?}
+         */
+        function () { return this._routerState.children(this); },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(ActivatedRouteSnapshot.prototype, "pathFromRoot", {
+        /** The path from the root of the router state tree to this route */
+        get: /**
+         * The path from the root of the router state tree to this route
+         * @return {?}
+         */
+        function () { return this._routerState.pathFromRoot(this); },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(ActivatedRouteSnapshot.prototype, "paramMap", {
+        get: /**
+         * @return {?}
+         */
+        function () {
+            if (!this._paramMap) {
+                this._paramMap = convertToParamMap(this.params);
+            }
+            return this._paramMap;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(ActivatedRouteSnapshot.prototype, "queryParamMap", {
+        get: /**
+         * @return {?}
+         */
+        function () {
+            if (!this._queryParamMap) {
+                this._queryParamMap = convertToParamMap(this.queryParams);
+            }
+            return this._queryParamMap;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * @return {?}
+     */
+    ActivatedRouteSnapshot.prototype.toString = /**
+     * @return {?}
+     */
+    function () {
+        var /** @type {?} */ url = this.url.map(function (segment) { return segment.toString(); }).join('/');
+        var /** @type {?} */ matched = this.routeConfig ? this.routeConfig.path : '';
+        return "Route(url:'" + url + "', path:'" + matched + "')";
+    };
+    return ActivatedRouteSnapshot;
+}());
+/**
+ * \@whatItDoes Represents the state of the router at a moment in time.
+ *
+ * \@howToUse
+ *
+ * ```
+ * \@Component({templateUrl:'template.html'})
+ * class MyComponent {
+ *   constructor(router: Router) {
+ *     const state: RouterState = router.routerState;
+ *     const snapshot: RouterStateSnapshot = state.snapshot;
+ *     const root: ActivatedRouteSnapshot = snapshot.root;
+ *     const child = root.firstChild;
+ *     const id: Observable<string> = child.params.map(p => p.id);
+ *     //...
+ *   }
+ * }
+ * ```
+ *
+ * \@description
+ * RouterStateSnapshot is a tree of activated route snapshots. Every node in this tree knows about
+ * the "consumed" URL segments, the extracted parameters, and the resolved data.
+ *
+ * \@stable
+ */
+var RouterStateSnapshot = /** @class */ (function (_super) {
+    Object(__WEBPACK_IMPORTED_MODULE_2_tslib__["b" /* __extends */])(RouterStateSnapshot, _super);
+    /** @internal */
+    function RouterStateSnapshot(url, root) {
+        var _this = _super.call(this, root) || this;
+        _this.url = url;
+        setRouterState(/** @type {?} */ (_this), root);
+        return _this;
+    }
+    /**
+     * @return {?}
+     */
+    RouterStateSnapshot.prototype.toString = /**
+     * @return {?}
+     */
+    function () { return serializeNode(this._root); };
+    return RouterStateSnapshot;
+}(Tree));
+/**
+ * @template U, T
+ * @param {?} state
+ * @param {?} node
+ * @return {?}
+ */
+function setRouterState(state, node) {
+    node.value._routerState = state;
+    node.children.forEach(function (c) { return setRouterState(state, c); });
+}
+/**
+ * @param {?} node
+ * @return {?}
+ */
+function serializeNode(node) {
+    var /** @type {?} */ c = node.children.length > 0 ? " { " + node.children.map(serializeNode).join(', ') + " } " : '';
+    return "" + node.value + c;
+}
+/**
+ * The expectation is that the activate route is created with the right set of parameters.
+ * So we push new values into the observables only when they are not the initial values.
+ * And we detect that by checking if the snapshot field is set.
+ * @param {?} route
+ * @return {?}
+ */
+function advanceActivatedRoute(route) {
+    if (route.snapshot) {
+        var /** @type {?} */ currentSnapshot = route.snapshot;
+        var /** @type {?} */ nextSnapshot = route._futureSnapshot;
+        route.snapshot = nextSnapshot;
+        if (!shallowEqual(currentSnapshot.queryParams, nextSnapshot.queryParams)) {
+            (/** @type {?} */ (route.queryParams)).next(nextSnapshot.queryParams);
+        }
+        if (currentSnapshot.fragment !== nextSnapshot.fragment) {
+            (/** @type {?} */ (route.fragment)).next(nextSnapshot.fragment);
+        }
+        if (!shallowEqual(currentSnapshot.params, nextSnapshot.params)) {
+            (/** @type {?} */ (route.params)).next(nextSnapshot.params);
+        }
+        if (!shallowEqualArrays(currentSnapshot.url, nextSnapshot.url)) {
+            (/** @type {?} */ (route.url)).next(nextSnapshot.url);
+        }
+        if (!shallowEqual(currentSnapshot.data, nextSnapshot.data)) {
+            (/** @type {?} */ (route.data)).next(nextSnapshot.data);
+        }
+    }
+    else {
+        route.snapshot = route._futureSnapshot;
+        // this is for resolved data
+        (/** @type {?} */ (route.data)).next(route._futureSnapshot.data);
+    }
+}
+/**
+ * @param {?} a
+ * @param {?} b
+ * @return {?}
+ */
+function equalParamsAndUrlSegments(a, b) {
+    var /** @type {?} */ equalUrlParams = shallowEqual(a.params, b.params) && equalSegments(a.url, b.url);
+    var /** @type {?} */ parentsMismatch = !a.parent !== !b.parent;
+    return equalUrlParams && !parentsMismatch &&
+        (!a.parent || equalParamsAndUrlSegments(a.parent, /** @type {?} */ ((b.parent))));
+}
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+/**
+ * @param {?} routeReuseStrategy
+ * @param {?} curr
+ * @param {?} prevState
+ * @return {?}
+ */
+function createRouterState(routeReuseStrategy, curr, prevState) {
+    var /** @type {?} */ root = createNode(routeReuseStrategy, curr._root, prevState ? prevState._root : undefined);
+    return new RouterState(root, curr);
+}
+/**
+ * @param {?} routeReuseStrategy
+ * @param {?} curr
+ * @param {?=} prevState
+ * @return {?}
+ */
+function createNode(routeReuseStrategy, curr, prevState) {
+    // reuse an activated route that is currently displayed on the screen
+    if (prevState && routeReuseStrategy.shouldReuseRoute(curr.value, prevState.value.snapshot)) {
+        var /** @type {?} */ value = prevState.value;
+        value._futureSnapshot = curr.value;
+        var /** @type {?} */ children = createOrReuseChildren(routeReuseStrategy, curr, prevState);
+        return new TreeNode(value, children);
+        // retrieve an activated route that is used to be displayed, but is not currently displayed
+    }
+    else if (routeReuseStrategy.retrieve(curr.value)) {
+        var /** @type {?} */ tree = (/** @type {?} */ (routeReuseStrategy.retrieve(curr.value))).route;
+        setFutureSnapshotsOfActivatedRoutes(curr, tree);
+        return tree;
+    }
+    else {
+        var /** @type {?} */ value = createActivatedRoute(curr.value);
+        var /** @type {?} */ children = curr.children.map(function (c) { return createNode(routeReuseStrategy, c); });
+        return new TreeNode(value, children);
+    }
+}
+/**
+ * @param {?} curr
+ * @param {?} result
+ * @return {?}
+ */
+function setFutureSnapshotsOfActivatedRoutes(curr, result) {
+    if (curr.value.routeConfig !== result.value.routeConfig) {
+        throw new Error('Cannot reattach ActivatedRouteSnapshot created from a different route');
+    }
+    if (curr.children.length !== result.children.length) {
+        throw new Error('Cannot reattach ActivatedRouteSnapshot with a different number of children');
+    }
+    result.value._futureSnapshot = curr.value;
+    for (var /** @type {?} */ i = 0; i < curr.children.length; ++i) {
+        setFutureSnapshotsOfActivatedRoutes(curr.children[i], result.children[i]);
+    }
+}
+/**
+ * @param {?} routeReuseStrategy
+ * @param {?} curr
+ * @param {?} prevState
+ * @return {?}
+ */
+function createOrReuseChildren(routeReuseStrategy, curr, prevState) {
+    return curr.children.map(function (child) {
+        for (var _i = 0, _a = prevState.children; _i < _a.length; _i++) {
+            var p = _a[_i];
+            if (routeReuseStrategy.shouldReuseRoute(p.value.snapshot, child.value)) {
+                return createNode(routeReuseStrategy, child, p);
+            }
+        }
+        return createNode(routeReuseStrategy, child);
+    });
+}
+/**
+ * @param {?} c
+ * @return {?}
+ */
+function createActivatedRoute(c) {
+    return new ActivatedRoute(new __WEBPACK_IMPORTED_MODULE_3_rxjs_BehaviorSubject__["a" /* BehaviorSubject */](c.url), new __WEBPACK_IMPORTED_MODULE_3_rxjs_BehaviorSubject__["a" /* BehaviorSubject */](c.params), new __WEBPACK_IMPORTED_MODULE_3_rxjs_BehaviorSubject__["a" /* BehaviorSubject */](c.queryParams), new __WEBPACK_IMPORTED_MODULE_3_rxjs_BehaviorSubject__["a" /* BehaviorSubject */](c.fragment), new __WEBPACK_IMPORTED_MODULE_3_rxjs_BehaviorSubject__["a" /* BehaviorSubject */](c.data), c.outlet, c.component, c);
+}
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+/**
+ * @param {?} route
+ * @param {?} urlTree
+ * @param {?} commands
+ * @param {?} queryParams
+ * @param {?} fragment
+ * @return {?}
+ */
+function createUrlTree(route, urlTree, commands, queryParams, fragment) {
+    if (commands.length === 0) {
+        return tree(urlTree.root, urlTree.root, urlTree, queryParams, fragment);
+    }
+    var /** @type {?} */ nav = computeNavigation(commands);
+    if (nav.toRoot()) {
+        return tree(urlTree.root, new UrlSegmentGroup([], {}), urlTree, queryParams, fragment);
+    }
+    var /** @type {?} */ startingPosition = findStartingPosition(nav, urlTree, route);
+    var /** @type {?} */ segmentGroup = startingPosition.processChildren ?
+        updateSegmentGroupChildren(startingPosition.segmentGroup, startingPosition.index, nav.commands) :
+        updateSegmentGroup(startingPosition.segmentGroup, startingPosition.index, nav.commands);
+    return tree(startingPosition.segmentGroup, segmentGroup, urlTree, queryParams, fragment);
+}
+/**
+ * @param {?} command
+ * @return {?}
+ */
+function isMatrixParams(command) {
+    return typeof command === 'object' && command != null && !command.outlets && !command.segmentPath;
+}
+/**
+ * @param {?} oldSegmentGroup
+ * @param {?} newSegmentGroup
+ * @param {?} urlTree
+ * @param {?} queryParams
+ * @param {?} fragment
+ * @return {?}
+ */
+function tree(oldSegmentGroup, newSegmentGroup, urlTree, queryParams, fragment) {
+    var /** @type {?} */ qp = {};
+    if (queryParams) {
+        forEach(queryParams, function (value, name) {
+            qp[name] = Array.isArray(value) ? value.map(function (v) { return "" + v; }) : "" + value;
+        });
+    }
+    if (urlTree.root === oldSegmentGroup) {
+        return new UrlTree(newSegmentGroup, qp, fragment);
+    }
+    return new UrlTree(replaceSegment(urlTree.root, oldSegmentGroup, newSegmentGroup), qp, fragment);
+}
+/**
+ * @param {?} current
+ * @param {?} oldSegment
+ * @param {?} newSegment
+ * @return {?}
+ */
+function replaceSegment(current, oldSegment, newSegment) {
+    var /** @type {?} */ children = {};
+    forEach(current.children, function (c, outletName) {
+        if (c === oldSegment) {
+            children[outletName] = newSegment;
+        }
+        else {
+            children[outletName] = replaceSegment(c, oldSegment, newSegment);
+        }
+    });
+    return new UrlSegmentGroup(current.segments, children);
+}
+var Navigation = /** @class */ (function () {
+    function Navigation(isAbsolute, numberOfDoubleDots, commands) {
+        this.isAbsolute = isAbsolute;
+        this.numberOfDoubleDots = numberOfDoubleDots;
+        this.commands = commands;
+        if (isAbsolute && commands.length > 0 && isMatrixParams(commands[0])) {
+            throw new Error('Root segment cannot have matrix parameters');
+        }
+        var /** @type {?} */ cmdWithOutlet = commands.find(function (c) { return typeof c === 'object' && c != null && c.outlets; });
+        if (cmdWithOutlet && cmdWithOutlet !== last$1(commands)) {
+            throw new Error('{outlets:{}} has to be the last command');
+        }
+    }
+    /**
+     * @return {?}
+     */
+    Navigation.prototype.toRoot = /**
+     * @return {?}
+     */
+    function () {
+        return this.isAbsolute && this.commands.length === 1 && this.commands[0] == '/';
+    };
+    return Navigation;
+}());
+/**
+ * Transforms commands to a normalized `Navigation`
+ * @param {?} commands
+ * @return {?}
+ */
+function computeNavigation(commands) {
+    if ((typeof commands[0] === 'string') && commands.length === 1 && commands[0] === '/') {
+        return new Navigation(true, 0, commands);
+    }
+    var /** @type {?} */ numberOfDoubleDots = 0;
+    var /** @type {?} */ isAbsolute = false;
+    var /** @type {?} */ res = commands.reduce(function (res, cmd, cmdIdx) {
+        if (typeof cmd === 'object' && cmd != null) {
+            if (cmd.outlets) {
+                var /** @type {?} */ outlets_1 = {};
+                forEach(cmd.outlets, function (commands, name) {
+                    outlets_1[name] = typeof commands === 'string' ? commands.split('/') : commands;
+                });
+                return res.concat([{ outlets: outlets_1 }]);
+            }
+            if (cmd.segmentPath) {
+                return res.concat([cmd.segmentPath]);
+            }
+        }
+        if (!(typeof cmd === 'string')) {
+            return res.concat([cmd]);
+        }
+        if (cmdIdx === 0) {
+            cmd.split('/').forEach(function (urlPart, partIndex) {
+                if (partIndex == 0 && urlPart === '.') {
+                    // skip './a'
+                }
+                else if (partIndex == 0 && urlPart === '') {
+                    //  '/a'
+                    isAbsolute = true;
+                }
+                else if (urlPart === '..') {
+                    //  '../a'
+                    numberOfDoubleDots++;
+                }
+                else if (urlPart != '') {
+                    res.push(urlPart);
+                }
+            });
+            return res;
+        }
+        return res.concat([cmd]);
+    }, []);
+    return new Navigation(isAbsolute, numberOfDoubleDots, res);
+}
+var Position = /** @class */ (function () {
+    function Position(segmentGroup, processChildren, index) {
+        this.segmentGroup = segmentGroup;
+        this.processChildren = processChildren;
+        this.index = index;
+    }
+    return Position;
+}());
+/**
+ * @param {?} nav
+ * @param {?} tree
+ * @param {?} route
+ * @return {?}
+ */
+function findStartingPosition(nav, tree, route) {
+    if (nav.isAbsolute) {
+        return new Position(tree.root, true, 0);
+    }
+    if (route.snapshot._lastPathIndex === -1) {
+        return new Position(route.snapshot._urlSegment, true, 0);
+    }
+    var /** @type {?} */ modifier = isMatrixParams(nav.commands[0]) ? 0 : 1;
+    var /** @type {?} */ index = route.snapshot._lastPathIndex + modifier;
+    return createPositionApplyingDoubleDots(route.snapshot._urlSegment, index, nav.numberOfDoubleDots);
+}
+/**
+ * @param {?} group
+ * @param {?} index
+ * @param {?} numberOfDoubleDots
+ * @return {?}
+ */
+function createPositionApplyingDoubleDots(group, index, numberOfDoubleDots) {
+    var /** @type {?} */ g = group;
+    var /** @type {?} */ ci = index;
+    var /** @type {?} */ dd = numberOfDoubleDots;
+    while (dd > ci) {
+        dd -= ci;
+        g = /** @type {?} */ ((g.parent));
+        if (!g) {
+            throw new Error('Invalid number of \'../\'');
+        }
+        ci = g.segments.length;
+    }
+    return new Position(g, false, ci - dd);
+}
+/**
+ * @param {?} command
+ * @return {?}
+ */
+function getPath(command) {
+    if (typeof command === 'object' && command != null && command.outlets) {
+        return command.outlets[PRIMARY_OUTLET];
+    }
+    return "" + command;
+}
+/**
+ * @param {?} commands
+ * @return {?}
+ */
+function getOutlets(commands) {
+    if (!(typeof commands[0] === 'object'))
+        return _a = {}, _a[PRIMARY_OUTLET] = commands, _a;
+    if (commands[0].outlets === undefined)
+        return _b = {}, _b[PRIMARY_OUTLET] = commands, _b;
+    return commands[0].outlets;
+    var _a, _b;
+}
+/**
+ * @param {?} segmentGroup
+ * @param {?} startIndex
+ * @param {?} commands
+ * @return {?}
+ */
+function updateSegmentGroup(segmentGroup, startIndex, commands) {
+    if (!segmentGroup) {
+        segmentGroup = new UrlSegmentGroup([], {});
+    }
+    if (segmentGroup.segments.length === 0 && segmentGroup.hasChildren()) {
+        return updateSegmentGroupChildren(segmentGroup, startIndex, commands);
+    }
+    var /** @type {?} */ m = prefixedWith(segmentGroup, startIndex, commands);
+    var /** @type {?} */ slicedCommands = commands.slice(m.commandIndex);
+    if (m.match && m.pathIndex < segmentGroup.segments.length) {
+        var /** @type {?} */ g = new UrlSegmentGroup(segmentGroup.segments.slice(0, m.pathIndex), {});
+        g.children[PRIMARY_OUTLET] =
+            new UrlSegmentGroup(segmentGroup.segments.slice(m.pathIndex), segmentGroup.children);
+        return updateSegmentGroupChildren(g, 0, slicedCommands);
+    }
+    else if (m.match && slicedCommands.length === 0) {
+        return new UrlSegmentGroup(segmentGroup.segments, {});
+    }
+    else if (m.match && !segmentGroup.hasChildren()) {
+        return createNewSegmentGroup(segmentGroup, startIndex, commands);
+    }
+    else if (m.match) {
+        return updateSegmentGroupChildren(segmentGroup, 0, slicedCommands);
+    }
+    else {
+        return createNewSegmentGroup(segmentGroup, startIndex, commands);
+    }
+}
+/**
+ * @param {?} segmentGroup
+ * @param {?} startIndex
+ * @param {?} commands
+ * @return {?}
+ */
+function updateSegmentGroupChildren(segmentGroup, startIndex, commands) {
+    if (commands.length === 0) {
+        return new UrlSegmentGroup(segmentGroup.segments, {});
+    }
+    else {
+        var /** @type {?} */ outlets_2 = getOutlets(commands);
+        var /** @type {?} */ children_1 = {};
+        forEach(outlets_2, function (commands, outlet) {
+            if (commands !== null) {
+                children_1[outlet] = updateSegmentGroup(segmentGroup.children[outlet], startIndex, commands);
+            }
+        });
+        forEach(segmentGroup.children, function (child, childOutlet) {
+            if (outlets_2[childOutlet] === undefined) {
+                children_1[childOutlet] = child;
+            }
+        });
+        return new UrlSegmentGroup(segmentGroup.segments, children_1);
+    }
+}
+/**
+ * @param {?} segmentGroup
+ * @param {?} startIndex
+ * @param {?} commands
+ * @return {?}
+ */
+function prefixedWith(segmentGroup, startIndex, commands) {
+    var /** @type {?} */ currentCommandIndex = 0;
+    var /** @type {?} */ currentPathIndex = startIndex;
+    var /** @type {?} */ noMatch = { match: false, pathIndex: 0, commandIndex: 0 };
+    while (currentPathIndex < segmentGroup.segments.length) {
+        if (currentCommandIndex >= commands.length)
+            return noMatch;
+        var /** @type {?} */ path = segmentGroup.segments[currentPathIndex];
+        var /** @type {?} */ curr = getPath(commands[currentCommandIndex]);
+        var /** @type {?} */ next = currentCommandIndex < commands.length - 1 ? commands[currentCommandIndex + 1] : null;
+        if (currentPathIndex > 0 && curr === undefined)
+            break;
+        if (curr && next && (typeof next === 'object') && next.outlets === undefined) {
+            if (!compare(curr, next, path))
+                return noMatch;
+            currentCommandIndex += 2;
+        }
+        else {
+            if (!compare(curr, {}, path))
+                return noMatch;
+            currentCommandIndex++;
+        }
+        currentPathIndex++;
+    }
+    return { match: true, pathIndex: currentPathIndex, commandIndex: currentCommandIndex };
+}
+/**
+ * @param {?} segmentGroup
+ * @param {?} startIndex
+ * @param {?} commands
+ * @return {?}
+ */
+function createNewSegmentGroup(segmentGroup, startIndex, commands) {
+    var /** @type {?} */ paths = segmentGroup.segments.slice(0, startIndex);
+    var /** @type {?} */ i = 0;
+    while (i < commands.length) {
+        if (typeof commands[i] === 'object' && commands[i].outlets !== undefined) {
+            var /** @type {?} */ children = createNewSegmentChildren(commands[i].outlets);
+            return new UrlSegmentGroup(paths, children);
+        }
+        // if we start with an object literal, we need to reuse the path part from the segment
+        if (i === 0 && isMatrixParams(commands[0])) {
+            var /** @type {?} */ p = segmentGroup.segments[startIndex];
+            paths.push(new UrlSegment(p.path, commands[0]));
+            i++;
+            continue;
+        }
+        var /** @type {?} */ curr = getPath(commands[i]);
+        var /** @type {?} */ next = (i < commands.length - 1) ? commands[i + 1] : null;
+        if (curr && next && isMatrixParams(next)) {
+            paths.push(new UrlSegment(curr, stringify(next)));
+            i += 2;
+        }
+        else {
+            paths.push(new UrlSegment(curr, {}));
+            i++;
+        }
+    }
+    return new UrlSegmentGroup(paths, {});
+}
+/**
+ * @param {?} outlets
+ * @return {?}
+ */
+function createNewSegmentChildren(outlets) {
+    var /** @type {?} */ children = {};
+    forEach(outlets, function (commands, outlet) {
+        if (commands !== null) {
+            children[outlet] = createNewSegmentGroup(new UrlSegmentGroup([], {}), 0, commands);
+        }
+    });
+    return children;
+}
+/**
+ * @param {?} params
+ * @return {?}
+ */
+function stringify(params) {
+    var /** @type {?} */ res = {};
+    forEach(params, function (v, k) { return res[k] = "" + v; });
+    return res;
+}
+/**
+ * @param {?} path
+ * @param {?} params
+ * @param {?} segment
+ * @return {?}
+ */
+function compare(path, params, segment) {
+    return path == segment.path && shallowEqual(params, segment.parameters);
+}
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+var CanActivate = /** @class */ (function () {
+    function CanActivate(path) {
+        this.path = path;
+        this.route = this.path[this.path.length - 1];
+    }
+    return CanActivate;
+}());
+var CanDeactivate = /** @class */ (function () {
+    function CanDeactivate(component, route) {
+        this.component = component;
+        this.route = route;
+    }
+    return CanDeactivate;
+}());
+/**
+ * This class bundles the actions involved in preactivation of a route.
+ */
+var PreActivation = /** @class */ (function () {
+    function PreActivation(future, curr, moduleInjector, forwardEvent) {
+        this.future = future;
+        this.curr = curr;
+        this.moduleInjector = moduleInjector;
+        this.forwardEvent = forwardEvent;
+        this.canActivateChecks = [];
+        this.canDeactivateChecks = [];
+    }
+    /**
+     * @param {?} parentContexts
+     * @return {?}
+     */
+    PreActivation.prototype.initialize = /**
+     * @param {?} parentContexts
+     * @return {?}
+     */
+    function (parentContexts) {
+        var /** @type {?} */ futureRoot = this.future._root;
+        var /** @type {?} */ currRoot = this.curr ? this.curr._root : null;
+        this.setupChildRouteGuards(futureRoot, currRoot, parentContexts, [futureRoot.value]);
+    };
+    /**
+     * @return {?}
+     */
+    PreActivation.prototype.checkGuards = /**
+     * @return {?}
+     */
+    function () {
+        var _this = this;
+        if (!this.isDeactivating() && !this.isActivating()) {
+            return Object(__WEBPACK_IMPORTED_MODULE_5_rxjs_observable_of__["a" /* of */])(true);
+        }
+        var /** @type {?} */ canDeactivate$ = this.runCanDeactivateChecks();
+        return __WEBPACK_IMPORTED_MODULE_8_rxjs_operator_mergeMap__["a" /* mergeMap */].call(canDeactivate$, function (canDeactivate) { return canDeactivate ? _this.runCanActivateChecks() : Object(__WEBPACK_IMPORTED_MODULE_5_rxjs_observable_of__["a" /* of */])(false); });
+    };
+    /**
+     * @param {?} paramsInheritanceStrategy
+     * @return {?}
+     */
+    PreActivation.prototype.resolveData = /**
+     * @param {?} paramsInheritanceStrategy
+     * @return {?}
+     */
+    function (paramsInheritanceStrategy) {
+        var _this = this;
+        if (!this.isActivating())
+            return Object(__WEBPACK_IMPORTED_MODULE_5_rxjs_observable_of__["a" /* of */])(null);
+        var /** @type {?} */ checks$ = Object(__WEBPACK_IMPORTED_MODULE_10_rxjs_observable_from__["a" /* from */])(this.canActivateChecks);
+        var /** @type {?} */ runningChecks$ = __WEBPACK_IMPORTED_MODULE_6_rxjs_operator_concatMap__["a" /* concatMap */].call(checks$, function (check) { return _this.runResolve(check.route, paramsInheritanceStrategy); });
+        return __WEBPACK_IMPORTED_MODULE_19_rxjs_operator_reduce__["a" /* reduce */].call(runningChecks$, function (_, __) { return _; });
+    };
+    /**
+     * @return {?}
+     */
+    PreActivation.prototype.isDeactivating = /**
+     * @return {?}
+     */
+    function () { return this.canDeactivateChecks.length !== 0; };
+    /**
+     * @return {?}
+     */
+    PreActivation.prototype.isActivating = /**
+     * @return {?}
+     */
+    function () { return this.canActivateChecks.length !== 0; };
+    /**
+     * Iterates over child routes and calls recursive `setupRouteGuards` to get `this` instance in
+     * proper state to run `checkGuards()` method.
+     * @param {?} futureNode
+     * @param {?} currNode
+     * @param {?} contexts
+     * @param {?} futurePath
+     * @return {?}
+     */
+    PreActivation.prototype.setupChildRouteGuards = /**
+     * Iterates over child routes and calls recursive `setupRouteGuards` to get `this` instance in
+     * proper state to run `checkGuards()` method.
+     * @param {?} futureNode
+     * @param {?} currNode
+     * @param {?} contexts
+     * @param {?} futurePath
+     * @return {?}
+     */
+    function (futureNode, currNode, contexts, futurePath) {
+        var _this = this;
+        var /** @type {?} */ prevChildren = nodeChildrenAsMap(currNode);
+        // Process the children of the future route
+        futureNode.children.forEach(function (c) {
+            _this.setupRouteGuards(c, prevChildren[c.value.outlet], contexts, futurePath.concat([c.value]));
+            delete prevChildren[c.value.outlet];
+        });
+        // Process any children left from the current route (not active for the future route)
+        forEach(prevChildren, function (v, k) {
+            return _this.deactivateRouteAndItsChildren(v, /** @type {?} */ ((contexts)).getContext(k));
+        });
+    };
+    /**
+     * Iterates over child routes and calls recursive `setupRouteGuards` to get `this` instance in
+     * proper state to run `checkGuards()` method.
+     * @param {?} futureNode
+     * @param {?} currNode
+     * @param {?} parentContexts
+     * @param {?} futurePath
+     * @return {?}
+     */
+    PreActivation.prototype.setupRouteGuards = /**
+     * Iterates over child routes and calls recursive `setupRouteGuards` to get `this` instance in
+     * proper state to run `checkGuards()` method.
+     * @param {?} futureNode
+     * @param {?} currNode
+     * @param {?} parentContexts
+     * @param {?} futurePath
+     * @return {?}
+     */
+    function (futureNode, currNode, parentContexts, futurePath) {
+        var /** @type {?} */ future = futureNode.value;
+        var /** @type {?} */ curr = currNode ? currNode.value : null;
+        var /** @type {?} */ context = parentContexts ? parentContexts.getContext(futureNode.value.outlet) : null;
+        // reusing the node
+        if (curr && future.routeConfig === curr.routeConfig) {
+            var /** @type {?} */ shouldRunGuardsAndResolvers = this.shouldRunGuardsAndResolvers(curr, future, /** @type {?} */ ((future.routeConfig)).runGuardsAndResolvers);
+            if (shouldRunGuardsAndResolvers) {
+                this.canActivateChecks.push(new CanActivate(futurePath));
+            }
+            else {
+                // we need to set the data
+                future.data = curr.data;
+                future._resolvedData = curr._resolvedData;
+            }
+            // If we have a component, we need to go through an outlet.
+            if (future.component) {
+                this.setupChildRouteGuards(futureNode, currNode, context ? context.children : null, futurePath);
+                // if we have a componentless route, we recurse but keep the same outlet map.
+            }
+            else {
+                this.setupChildRouteGuards(futureNode, currNode, parentContexts, futurePath);
+            }
+            if (shouldRunGuardsAndResolvers) {
+                var /** @type {?} */ outlet = /** @type {?} */ ((/** @type {?} */ ((context)).outlet));
+                this.canDeactivateChecks.push(new CanDeactivate(outlet.component, curr));
+            }
+        }
+        else {
+            if (curr) {
+                this.deactivateRouteAndItsChildren(currNode, context);
+            }
+            this.canActivateChecks.push(new CanActivate(futurePath));
+            // If we have a component, we need to go through an outlet.
+            if (future.component) {
+                this.setupChildRouteGuards(futureNode, null, context ? context.children : null, futurePath);
+                // if we have a componentless route, we recurse but keep the same outlet map.
+            }
+            else {
+                this.setupChildRouteGuards(futureNode, null, parentContexts, futurePath);
+            }
+        }
+    };
+    /**
+     * @param {?} curr
+     * @param {?} future
+     * @param {?} mode
+     * @return {?}
+     */
+    PreActivation.prototype.shouldRunGuardsAndResolvers = /**
+     * @param {?} curr
+     * @param {?} future
+     * @param {?} mode
+     * @return {?}
+     */
+    function (curr, future, mode) {
+        switch (mode) {
+            case 'always':
+                return true;
+            case 'paramsOrQueryParamsChange':
+                return !equalParamsAndUrlSegments(curr, future) ||
+                    !shallowEqual(curr.queryParams, future.queryParams);
+            case 'paramsChange':
+            default:
+                return !equalParamsAndUrlSegments(curr, future);
+        }
+    };
+    /**
+     * @param {?} route
+     * @param {?} context
+     * @return {?}
+     */
+    PreActivation.prototype.deactivateRouteAndItsChildren = /**
+     * @param {?} route
+     * @param {?} context
+     * @return {?}
+     */
+    function (route, context) {
+        var _this = this;
+        var /** @type {?} */ children = nodeChildrenAsMap(route);
+        var /** @type {?} */ r = route.value;
+        forEach(children, function (node, childName) {
+            if (!r.component) {
+                _this.deactivateRouteAndItsChildren(node, context);
+            }
+            else if (context) {
+                _this.deactivateRouteAndItsChildren(node, context.children.getContext(childName));
+            }
+            else {
+                _this.deactivateRouteAndItsChildren(node, null);
+            }
+        });
+        if (!r.component) {
+            this.canDeactivateChecks.push(new CanDeactivate(null, r));
+        }
+        else if (context && context.outlet && context.outlet.isActivated) {
+            this.canDeactivateChecks.push(new CanDeactivate(context.outlet.component, r));
+        }
+        else {
+            this.canDeactivateChecks.push(new CanDeactivate(null, r));
+        }
+    };
+    /**
+     * @return {?}
+     */
+    PreActivation.prototype.runCanDeactivateChecks = /**
+     * @return {?}
+     */
+    function () {
+        var _this = this;
+        var /** @type {?} */ checks$ = Object(__WEBPACK_IMPORTED_MODULE_10_rxjs_observable_from__["a" /* from */])(this.canDeactivateChecks);
+        var /** @type {?} */ runningChecks$ = __WEBPACK_IMPORTED_MODULE_8_rxjs_operator_mergeMap__["a" /* mergeMap */].call(checks$, function (check) { return _this.runCanDeactivate(check.component, check.route); });
+        return __WEBPACK_IMPORTED_MODULE_16_rxjs_operator_every__["a" /* every */].call(runningChecks$, function (result) { return result === true; });
+    };
+    /**
+     * @return {?}
+     */
+    PreActivation.prototype.runCanActivateChecks = /**
+     * @return {?}
+     */
+    function () {
+        var _this = this;
+        var /** @type {?} */ checks$ = Object(__WEBPACK_IMPORTED_MODULE_10_rxjs_observable_from__["a" /* from */])(this.canActivateChecks);
+        var /** @type {?} */ runningChecks$ = __WEBPACK_IMPORTED_MODULE_6_rxjs_operator_concatMap__["a" /* concatMap */].call(checks$, function (check) {
+            return andObservables(Object(__WEBPACK_IMPORTED_MODULE_10_rxjs_observable_from__["a" /* from */])([
+                _this.fireChildActivationStart(check.route.parent), _this.fireActivationStart(check.route),
+                _this.runCanActivateChild(check.path), _this.runCanActivate(check.route)
+            ]));
+        });
+        return __WEBPACK_IMPORTED_MODULE_16_rxjs_operator_every__["a" /* every */].call(runningChecks$, function (result) { return result === true; });
+        // this.fireChildActivationStart(check.path),
+    };
+    /**
+     * This should fire off `ActivationStart` events for each route being activated at this
+     * level.
+     * In other words, if you're activating `a` and `b` below, `path` will contain the
+     * `ActivatedRouteSnapshot`s for both and we will fire `ActivationStart` for both. Always
+     * return
+     * `true` so checks continue to run.
+     * @param {?} snapshot
+     * @return {?}
+     */
+    PreActivation.prototype.fireActivationStart = /**
+     * This should fire off `ActivationStart` events for each route being activated at this
+     * level.
+     * In other words, if you're activating `a` and `b` below, `path` will contain the
+     * `ActivatedRouteSnapshot`s for both and we will fire `ActivationStart` for both. Always
+     * return
+     * `true` so checks continue to run.
+     * @param {?} snapshot
+     * @return {?}
+     */
+    function (snapshot) {
+        if (snapshot !== null && this.forwardEvent) {
+            this.forwardEvent(new ActivationStart(snapshot));
+        }
+        return Object(__WEBPACK_IMPORTED_MODULE_5_rxjs_observable_of__["a" /* of */])(true);
+    };
+    /**
+     * This should fire off `ChildActivationStart` events for each route being activated at this
+     * level.
+     * In other words, if you're activating `a` and `b` below, `path` will contain the
+     * `ActivatedRouteSnapshot`s for both and we will fire `ChildActivationStart` for both. Always
+     * return
+     * `true` so checks continue to run.
+     * @param {?} snapshot
+     * @return {?}
+     */
+    PreActivation.prototype.fireChildActivationStart = /**
+     * This should fire off `ChildActivationStart` events for each route being activated at this
+     * level.
+     * In other words, if you're activating `a` and `b` below, `path` will contain the
+     * `ActivatedRouteSnapshot`s for both and we will fire `ChildActivationStart` for both. Always
+     * return
+     * `true` so checks continue to run.
+     * @param {?} snapshot
+     * @return {?}
+     */
+    function (snapshot) {
+        if (snapshot !== null && this.forwardEvent) {
+            this.forwardEvent(new ChildActivationStart(snapshot));
+        }
+        return Object(__WEBPACK_IMPORTED_MODULE_5_rxjs_observable_of__["a" /* of */])(true);
+    };
+    /**
+     * @param {?} future
+     * @return {?}
+     */
+    PreActivation.prototype.runCanActivate = /**
+     * @param {?} future
+     * @return {?}
+     */
+    function (future) {
+        var _this = this;
+        var /** @type {?} */ canActivate = future.routeConfig ? future.routeConfig.canActivate : null;
+        if (!canActivate || canActivate.length === 0)
+            return Object(__WEBPACK_IMPORTED_MODULE_5_rxjs_observable_of__["a" /* of */])(true);
+        var /** @type {?} */ obs = __WEBPACK_IMPORTED_MODULE_7_rxjs_operator_map__["a" /* map */].call(Object(__WEBPACK_IMPORTED_MODULE_10_rxjs_observable_from__["a" /* from */])(canActivate), function (c) {
+            var /** @type {?} */ guard = _this.getToken(c, future);
+            var /** @type {?} */ observable;
+            if (guard.canActivate) {
+                observable = wrapIntoObservable(guard.canActivate(future, _this.future));
+            }
+            else {
+                observable = wrapIntoObservable(guard(future, _this.future));
+            }
+            return __WEBPACK_IMPORTED_MODULE_13_rxjs_operator_first__["a" /* first */].call(observable);
+        });
+        return andObservables(obs);
+    };
+    /**
+     * @param {?} path
+     * @return {?}
+     */
+    PreActivation.prototype.runCanActivateChild = /**
+     * @param {?} path
+     * @return {?}
+     */
+    function (path) {
+        var _this = this;
+        var /** @type {?} */ future = path[path.length - 1];
+        var /** @type {?} */ canActivateChildGuards = path.slice(0, path.length - 1)
+            .reverse()
+            .map(function (p) { return _this.extractCanActivateChild(p); })
+            .filter(function (_) { return _ !== null; });
+        return andObservables(__WEBPACK_IMPORTED_MODULE_7_rxjs_operator_map__["a" /* map */].call(Object(__WEBPACK_IMPORTED_MODULE_10_rxjs_observable_from__["a" /* from */])(canActivateChildGuards), function (d) {
+            var /** @type {?} */ obs = __WEBPACK_IMPORTED_MODULE_7_rxjs_operator_map__["a" /* map */].call(Object(__WEBPACK_IMPORTED_MODULE_10_rxjs_observable_from__["a" /* from */])(d.guards), function (c) {
+                var /** @type {?} */ guard = _this.getToken(c, d.node);
+                var /** @type {?} */ observable;
+                if (guard.canActivateChild) {
+                    observable = wrapIntoObservable(guard.canActivateChild(future, _this.future));
+                }
+                else {
+                    observable = wrapIntoObservable(guard(future, _this.future));
+                }
+                return __WEBPACK_IMPORTED_MODULE_13_rxjs_operator_first__["a" /* first */].call(observable);
+            });
+            return andObservables(obs);
+        }));
+    };
+    /**
+     * @param {?} p
+     * @return {?}
+     */
+    PreActivation.prototype.extractCanActivateChild = /**
+     * @param {?} p
+     * @return {?}
+     */
+    function (p) {
+        var /** @type {?} */ canActivateChild = p.routeConfig ? p.routeConfig.canActivateChild : null;
+        if (!canActivateChild || canActivateChild.length === 0)
+            return null;
+        return { node: p, guards: canActivateChild };
+    };
+    /**
+     * @param {?} component
+     * @param {?} curr
+     * @return {?}
+     */
+    PreActivation.prototype.runCanDeactivate = /**
+     * @param {?} component
+     * @param {?} curr
+     * @return {?}
+     */
+    function (component, curr) {
+        var _this = this;
+        var /** @type {?} */ canDeactivate = curr && curr.routeConfig ? curr.routeConfig.canDeactivate : null;
+        if (!canDeactivate || canDeactivate.length === 0)
+            return Object(__WEBPACK_IMPORTED_MODULE_5_rxjs_observable_of__["a" /* of */])(true);
+        var /** @type {?} */ canDeactivate$ = __WEBPACK_IMPORTED_MODULE_8_rxjs_operator_mergeMap__["a" /* mergeMap */].call(Object(__WEBPACK_IMPORTED_MODULE_10_rxjs_observable_from__["a" /* from */])(canDeactivate), function (c) {
+            var /** @type {?} */ guard = _this.getToken(c, curr);
+            var /** @type {?} */ observable;
+            if (guard.canDeactivate) {
+                observable =
+                    wrapIntoObservable(guard.canDeactivate(component, curr, _this.curr, _this.future));
+            }
+            else {
+                observable = wrapIntoObservable(guard(component, curr, _this.curr, _this.future));
+            }
+            return __WEBPACK_IMPORTED_MODULE_13_rxjs_operator_first__["a" /* first */].call(observable);
+        });
+        return __WEBPACK_IMPORTED_MODULE_16_rxjs_operator_every__["a" /* every */].call(canDeactivate$, function (result) { return result === true; });
+    };
+    /**
+     * @param {?} future
+     * @param {?} paramsInheritanceStrategy
+     * @return {?}
+     */
+    PreActivation.prototype.runResolve = /**
+     * @param {?} future
+     * @param {?} paramsInheritanceStrategy
+     * @return {?}
+     */
+    function (future, paramsInheritanceStrategy) {
+        var /** @type {?} */ resolve = future._resolve;
+        return __WEBPACK_IMPORTED_MODULE_7_rxjs_operator_map__["a" /* map */].call(this.resolveNode(resolve, future), function (resolvedData) {
+            future._resolvedData = resolvedData;
+            future.data = Object(__WEBPACK_IMPORTED_MODULE_2_tslib__["a" /* __assign */])({}, future.data, inheritedParamsDataResolve(future, paramsInheritanceStrategy).resolve);
+            return null;
+        });
+    };
+    /**
+     * @param {?} resolve
+     * @param {?} future
+     * @return {?}
+     */
+    PreActivation.prototype.resolveNode = /**
+     * @param {?} resolve
+     * @param {?} future
+     * @return {?}
+     */
+    function (resolve, future) {
+        var _this = this;
+        var /** @type {?} */ keys = Object.keys(resolve);
+        if (keys.length === 0) {
+            return Object(__WEBPACK_IMPORTED_MODULE_5_rxjs_observable_of__["a" /* of */])({});
+        }
+        if (keys.length === 1) {
+            var /** @type {?} */ key_1 = keys[0];
+            return __WEBPACK_IMPORTED_MODULE_7_rxjs_operator_map__["a" /* map */].call(this.getResolver(resolve[key_1], future), function (value) {
+                return _a = {}, _a[key_1] = value, _a;
+                var _a;
+            });
+        }
+        var /** @type {?} */ data = {};
+        var /** @type {?} */ runningResolvers$ = __WEBPACK_IMPORTED_MODULE_8_rxjs_operator_mergeMap__["a" /* mergeMap */].call(Object(__WEBPACK_IMPORTED_MODULE_10_rxjs_observable_from__["a" /* from */])(keys), function (key) {
+            return __WEBPACK_IMPORTED_MODULE_7_rxjs_operator_map__["a" /* map */].call(_this.getResolver(resolve[key], future), function (value) {
+                data[key] = value;
+                return value;
+            });
+        });
+        return __WEBPACK_IMPORTED_MODULE_7_rxjs_operator_map__["a" /* map */].call(__WEBPACK_IMPORTED_MODULE_17_rxjs_operator_last__["a" /* last */].call(runningResolvers$), function () { return data; });
+    };
+    /**
+     * @param {?} injectionToken
+     * @param {?} future
+     * @return {?}
+     */
+    PreActivation.prototype.getResolver = /**
+     * @param {?} injectionToken
+     * @param {?} future
+     * @return {?}
+     */
+    function (injectionToken, future) {
+        var /** @type {?} */ resolver = this.getToken(injectionToken, future);
+        return resolver.resolve ? wrapIntoObservable(resolver.resolve(future, this.future)) :
+            wrapIntoObservable(resolver(future, this.future));
+    };
+    /**
+     * @param {?} token
+     * @param {?} snapshot
+     * @return {?}
+     */
+    PreActivation.prototype.getToken = /**
+     * @param {?} token
+     * @param {?} snapshot
+     * @return {?}
+     */
+    function (token, snapshot) {
+        var /** @type {?} */ config = closestLoadedConfig(snapshot);
+        var /** @type {?} */ injector = config ? config.module.injector : this.moduleInjector;
+        return injector.get(token);
+    };
+    return PreActivation;
+}());
+/**
+ * @param {?} snapshot
+ * @return {?}
+ */
+function closestLoadedConfig(snapshot) {
+    if (!snapshot)
+        return null;
+    for (var /** @type {?} */ s = snapshot.parent; s; s = s.parent) {
+        var /** @type {?} */ route = s.routeConfig;
+        if (route && route._loadedConfig)
+            return route._loadedConfig;
+    }
+    return null;
+}
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+var NoMatch$1 = /** @class */ (function () {
+    function NoMatch() {
+    }
+    return NoMatch;
+}());
+/**
+ * @param {?} rootComponentType
+ * @param {?} config
+ * @param {?} urlTree
+ * @param {?} url
+ * @param {?=} paramsInheritanceStrategy
+ * @return {?}
+ */
+function recognize(rootComponentType, config, urlTree, url, paramsInheritanceStrategy) {
+    if (paramsInheritanceStrategy === void 0) { paramsInheritanceStrategy = 'emptyOnly'; }
+    return new Recognizer(rootComponentType, config, urlTree, url, paramsInheritanceStrategy)
+        .recognize();
+}
+var Recognizer = /** @class */ (function () {
+    function Recognizer(rootComponentType, config, urlTree, url, paramsInheritanceStrategy) {
+        this.rootComponentType = rootComponentType;
+        this.config = config;
+        this.urlTree = urlTree;
+        this.url = url;
+        this.paramsInheritanceStrategy = paramsInheritanceStrategy;
+    }
+    /**
+     * @return {?}
+     */
+    Recognizer.prototype.recognize = /**
+     * @return {?}
+     */
+    function () {
+        try {
+            var /** @type {?} */ rootSegmentGroup = split$1(this.urlTree.root, [], [], this.config).segmentGroup;
+            var /** @type {?} */ children = this.processSegmentGroup(this.config, rootSegmentGroup, PRIMARY_OUTLET);
+            var /** @type {?} */ root = new ActivatedRouteSnapshot([], Object.freeze({}), Object.freeze(this.urlTree.queryParams), /** @type {?} */ ((this.urlTree.fragment)), {}, PRIMARY_OUTLET, this.rootComponentType, null, this.urlTree.root, -1, {});
+            var /** @type {?} */ rootNode = new TreeNode(root, children);
+            var /** @type {?} */ routeState = new RouterStateSnapshot(this.url, rootNode);
+            this.inheritParamsAndData(routeState._root);
+            return Object(__WEBPACK_IMPORTED_MODULE_5_rxjs_observable_of__["a" /* of */])(routeState);
+        }
+        catch (/** @type {?} */ e) {
+            return new __WEBPACK_IMPORTED_MODULE_9_rxjs_Observable__["a" /* Observable */](function (obs) { return obs.error(e); });
+        }
+    };
+    /**
+     * @param {?} routeNode
+     * @return {?}
+     */
+    Recognizer.prototype.inheritParamsAndData = /**
+     * @param {?} routeNode
+     * @return {?}
+     */
+    function (routeNode) {
+        var _this = this;
+        var /** @type {?} */ route = routeNode.value;
+        var /** @type {?} */ i = inheritedParamsDataResolve(route, this.paramsInheritanceStrategy);
+        route.params = Object.freeze(i.params);
+        route.data = Object.freeze(i.data);
+        routeNode.children.forEach(function (n) { return _this.inheritParamsAndData(n); });
+    };
+    /**
+     * @param {?} config
+     * @param {?} segmentGroup
+     * @param {?} outlet
+     * @return {?}
+     */
+    Recognizer.prototype.processSegmentGroup = /**
+     * @param {?} config
+     * @param {?} segmentGroup
+     * @param {?} outlet
+     * @return {?}
+     */
+    function (config, segmentGroup, outlet) {
+        if (segmentGroup.segments.length === 0 && segmentGroup.hasChildren()) {
+            return this.processChildren(config, segmentGroup);
+        }
+        return this.processSegment(config, segmentGroup, segmentGroup.segments, outlet);
+    };
+    /**
+     * @param {?} config
+     * @param {?} segmentGroup
+     * @return {?}
+     */
+    Recognizer.prototype.processChildren = /**
+     * @param {?} config
+     * @param {?} segmentGroup
+     * @return {?}
+     */
+    function (config, segmentGroup) {
+        var _this = this;
+        var /** @type {?} */ children = mapChildrenIntoArray(segmentGroup, function (child, childOutlet) { return _this.processSegmentGroup(config, child, childOutlet); });
+        checkOutletNameUniqueness(children);
+        sortActivatedRouteSnapshots(children);
+        return children;
+    };
+    /**
+     * @param {?} config
+     * @param {?} segmentGroup
+     * @param {?} segments
+     * @param {?} outlet
+     * @return {?}
+     */
+    Recognizer.prototype.processSegment = /**
+     * @param {?} config
+     * @param {?} segmentGroup
+     * @param {?} segments
+     * @param {?} outlet
+     * @return {?}
+     */
+    function (config, segmentGroup, segments, outlet) {
+        for (var _i = 0, config_1 = config; _i < config_1.length; _i++) {
+            var r = config_1[_i];
+            try {
+                return this.processSegmentAgainstRoute(r, segmentGroup, segments, outlet);
+            }
+            catch (/** @type {?} */ e) {
+                if (!(e instanceof NoMatch$1))
+                    throw e;
+            }
+        }
+        if (this.noLeftoversInUrl(segmentGroup, segments, outlet)) {
+            return [];
+        }
+        throw new NoMatch$1();
+    };
+    /**
+     * @param {?} segmentGroup
+     * @param {?} segments
+     * @param {?} outlet
+     * @return {?}
+     */
+    Recognizer.prototype.noLeftoversInUrl = /**
+     * @param {?} segmentGroup
+     * @param {?} segments
+     * @param {?} outlet
+     * @return {?}
+     */
+    function (segmentGroup, segments, outlet) {
+        return segments.length === 0 && !segmentGroup.children[outlet];
+    };
+    /**
+     * @param {?} route
+     * @param {?} rawSegment
+     * @param {?} segments
+     * @param {?} outlet
+     * @return {?}
+     */
+    Recognizer.prototype.processSegmentAgainstRoute = /**
+     * @param {?} route
+     * @param {?} rawSegment
+     * @param {?} segments
+     * @param {?} outlet
+     * @return {?}
+     */
+    function (route, rawSegment, segments, outlet) {
+        if (route.redirectTo)
+            throw new NoMatch$1();
+        if ((route.outlet || PRIMARY_OUTLET) !== outlet)
+            throw new NoMatch$1();
+        var /** @type {?} */ snapshot;
+        var /** @type {?} */ consumedSegments = [];
+        var /** @type {?} */ rawSlicedSegments = [];
+        if (route.path === '**') {
+            var /** @type {?} */ params = segments.length > 0 ? /** @type {?} */ ((last$1(segments))).parameters : {};
+            snapshot = new ActivatedRouteSnapshot(segments, params, Object.freeze(this.urlTree.queryParams), /** @type {?} */ ((this.urlTree.fragment)), getData(route), outlet, /** @type {?} */ ((route.component)), route, getSourceSegmentGroup(rawSegment), getPathIndexShift(rawSegment) + segments.length, getResolve(route));
+        }
+        else {
+            var /** @type {?} */ result = match$1(rawSegment, route, segments);
+            consumedSegments = result.consumedSegments;
+            rawSlicedSegments = segments.slice(result.lastChild);
+            snapshot = new ActivatedRouteSnapshot(consumedSegments, result.parameters, Object.freeze(this.urlTree.queryParams), /** @type {?} */ ((this.urlTree.fragment)), getData(route), outlet, /** @type {?} */ ((route.component)), route, getSourceSegmentGroup(rawSegment), getPathIndexShift(rawSegment) + consumedSegments.length, getResolve(route));
+        }
+        var /** @type {?} */ childConfig = getChildConfig(route);
+        var _a = split$1(rawSegment, consumedSegments, rawSlicedSegments, childConfig), segmentGroup = _a.segmentGroup, slicedSegments = _a.slicedSegments;
+        if (slicedSegments.length === 0 && segmentGroup.hasChildren()) {
+            var /** @type {?} */ children_1 = this.processChildren(childConfig, segmentGroup);
+            return [new TreeNode(snapshot, children_1)];
+        }
+        if (childConfig.length === 0 && slicedSegments.length === 0) {
+            return [new TreeNode(snapshot, [])];
+        }
+        var /** @type {?} */ children = this.processSegment(childConfig, segmentGroup, slicedSegments, PRIMARY_OUTLET);
+        return [new TreeNode(snapshot, children)];
+    };
+    return Recognizer;
+}());
+/**
+ * @param {?} nodes
+ * @return {?}
+ */
+function sortActivatedRouteSnapshots(nodes) {
+    nodes.sort(function (a, b) {
+        if (a.value.outlet === PRIMARY_OUTLET)
+            return -1;
+        if (b.value.outlet === PRIMARY_OUTLET)
+            return 1;
+        return a.value.outlet.localeCompare(b.value.outlet);
+    });
+}
+/**
+ * @param {?} route
+ * @return {?}
+ */
+function getChildConfig(route) {
+    if (route.children) {
+        return route.children;
+    }
+    if (route.loadChildren) {
+        return /** @type {?} */ ((route._loadedConfig)).routes;
+    }
+    return [];
+}
+/**
+ * @param {?} segmentGroup
+ * @param {?} route
+ * @param {?} segments
+ * @return {?}
+ */
+function match$1(segmentGroup, route, segments) {
+    if (route.path === '') {
+        if (route.pathMatch === 'full' && (segmentGroup.hasChildren() || segments.length > 0)) {
+            throw new NoMatch$1();
+        }
+        return { consumedSegments: [], lastChild: 0, parameters: {} };
+    }
+    var /** @type {?} */ matcher = route.matcher || defaultUrlMatcher;
+    var /** @type {?} */ res = matcher(segments, segmentGroup, route);
+    if (!res)
+        throw new NoMatch$1();
+    var /** @type {?} */ posParams = {};
+    forEach(/** @type {?} */ ((res.posParams)), function (v, k) { posParams[k] = v.path; });
+    var /** @type {?} */ parameters = res.consumed.length > 0 ? Object(__WEBPACK_IMPORTED_MODULE_2_tslib__["a" /* __assign */])({}, posParams, res.consumed[res.consumed.length - 1].parameters) :
+        posParams;
+    return { consumedSegments: res.consumed, lastChild: res.consumed.length, parameters: parameters };
+}
+/**
+ * @param {?} nodes
+ * @return {?}
+ */
+function checkOutletNameUniqueness(nodes) {
+    var /** @type {?} */ names = {};
+    nodes.forEach(function (n) {
+        var /** @type {?} */ routeWithSameOutletName = names[n.value.outlet];
+        if (routeWithSameOutletName) {
+            var /** @type {?} */ p = routeWithSameOutletName.url.map(function (s) { return s.toString(); }).join('/');
+            var /** @type {?} */ c = n.value.url.map(function (s) { return s.toString(); }).join('/');
+            throw new Error("Two segments cannot have the same outlet name: '" + p + "' and '" + c + "'.");
+        }
+        names[n.value.outlet] = n.value;
+    });
+}
+/**
+ * @param {?} segmentGroup
+ * @return {?}
+ */
+function getSourceSegmentGroup(segmentGroup) {
+    var /** @type {?} */ s = segmentGroup;
+    while (s._sourceSegment) {
+        s = s._sourceSegment;
+    }
+    return s;
+}
+/**
+ * @param {?} segmentGroup
+ * @return {?}
+ */
+function getPathIndexShift(segmentGroup) {
+    var /** @type {?} */ s = segmentGroup;
+    var /** @type {?} */ res = (s._segmentIndexShift ? s._segmentIndexShift : 0);
+    while (s._sourceSegment) {
+        s = s._sourceSegment;
+        res += (s._segmentIndexShift ? s._segmentIndexShift : 0);
+    }
+    return res - 1;
+}
+/**
+ * @param {?} segmentGroup
+ * @param {?} consumedSegments
+ * @param {?} slicedSegments
+ * @param {?} config
+ * @return {?}
+ */
+function split$1(segmentGroup, consumedSegments, slicedSegments, config) {
+    if (slicedSegments.length > 0 &&
+        containsEmptyPathMatchesWithNamedOutlets(segmentGroup, slicedSegments, config)) {
+        var /** @type {?} */ s_1 = new UrlSegmentGroup(consumedSegments, createChildrenForEmptyPaths(segmentGroup, consumedSegments, config, new UrlSegmentGroup(slicedSegments, segmentGroup.children)));
+        s_1._sourceSegment = segmentGroup;
+        s_1._segmentIndexShift = consumedSegments.length;
+        return { segmentGroup: s_1, slicedSegments: [] };
+    }
+    if (slicedSegments.length === 0 &&
+        containsEmptyPathMatches(segmentGroup, slicedSegments, config)) {
+        var /** @type {?} */ s_2 = new UrlSegmentGroup(segmentGroup.segments, addEmptyPathsToChildrenIfNeeded(segmentGroup, slicedSegments, config, segmentGroup.children));
+        s_2._sourceSegment = segmentGroup;
+        s_2._segmentIndexShift = consumedSegments.length;
+        return { segmentGroup: s_2, slicedSegments: slicedSegments };
+    }
+    var /** @type {?} */ s = new UrlSegmentGroup(segmentGroup.segments, segmentGroup.children);
+    s._sourceSegment = segmentGroup;
+    s._segmentIndexShift = consumedSegments.length;
+    return { segmentGroup: s, slicedSegments: slicedSegments };
+}
+/**
+ * @param {?} segmentGroup
+ * @param {?} slicedSegments
+ * @param {?} routes
+ * @param {?} children
+ * @return {?}
+ */
+function addEmptyPathsToChildrenIfNeeded(segmentGroup, slicedSegments, routes, children) {
+    var /** @type {?} */ res = {};
+    for (var _i = 0, routes_1 = routes; _i < routes_1.length; _i++) {
+        var r = routes_1[_i];
+        if (emptyPathMatch(segmentGroup, slicedSegments, r) && !children[getOutlet$1(r)]) {
+            var /** @type {?} */ s = new UrlSegmentGroup([], {});
+            s._sourceSegment = segmentGroup;
+            s._segmentIndexShift = segmentGroup.segments.length;
+            res[getOutlet$1(r)] = s;
+        }
+    }
+    return Object(__WEBPACK_IMPORTED_MODULE_2_tslib__["a" /* __assign */])({}, children, res);
+}
+/**
+ * @param {?} segmentGroup
+ * @param {?} consumedSegments
+ * @param {?} routes
+ * @param {?} primarySegment
+ * @return {?}
+ */
+function createChildrenForEmptyPaths(segmentGroup, consumedSegments, routes, primarySegment) {
+    var /** @type {?} */ res = {};
+    res[PRIMARY_OUTLET] = primarySegment;
+    primarySegment._sourceSegment = segmentGroup;
+    primarySegment._segmentIndexShift = consumedSegments.length;
+    for (var _i = 0, routes_2 = routes; _i < routes_2.length; _i++) {
+        var r = routes_2[_i];
+        if (r.path === '' && getOutlet$1(r) !== PRIMARY_OUTLET) {
+            var /** @type {?} */ s = new UrlSegmentGroup([], {});
+            s._sourceSegment = segmentGroup;
+            s._segmentIndexShift = consumedSegments.length;
+            res[getOutlet$1(r)] = s;
+        }
+    }
+    return res;
+}
+/**
+ * @param {?} segmentGroup
+ * @param {?} slicedSegments
+ * @param {?} routes
+ * @return {?}
+ */
+function containsEmptyPathMatchesWithNamedOutlets(segmentGroup, slicedSegments, routes) {
+    return routes.some(function (r) { return emptyPathMatch(segmentGroup, slicedSegments, r) && getOutlet$1(r) !== PRIMARY_OUTLET; });
+}
+/**
+ * @param {?} segmentGroup
+ * @param {?} slicedSegments
+ * @param {?} routes
+ * @return {?}
+ */
+function containsEmptyPathMatches(segmentGroup, slicedSegments, routes) {
+    return routes.some(function (r) { return emptyPathMatch(segmentGroup, slicedSegments, r); });
+}
+/**
+ * @param {?} segmentGroup
+ * @param {?} slicedSegments
+ * @param {?} r
+ * @return {?}
+ */
+function emptyPathMatch(segmentGroup, slicedSegments, r) {
+    if ((segmentGroup.hasChildren() || slicedSegments.length > 0) && r.pathMatch === 'full') {
+        return false;
+    }
+    return r.path === '' && r.redirectTo === undefined;
+}
+/**
+ * @param {?} route
+ * @return {?}
+ */
+function getOutlet$1(route) {
+    return route.outlet || PRIMARY_OUTLET;
+}
+/**
+ * @param {?} route
+ * @return {?}
+ */
+function getData(route) {
+    return route.data || {};
+}
+/**
+ * @param {?} route
+ * @return {?}
+ */
+function getResolve(route) {
+    return route.resolve || {};
+}
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+/**
+ * \@whatItDoes Provides a way to customize when activated routes get reused.
+ *
+ * \@experimental
+ * @abstract
+ */
+var RouteReuseStrategy = /** @class */ (function () {
+    function RouteReuseStrategy() {
+    }
+    return RouteReuseStrategy;
+}());
+/**
+ * Does not detach any subtrees. Reuses routes as long as their route config is the same.
+ */
+var DefaultRouteReuseStrategy = /** @class */ (function () {
+    function DefaultRouteReuseStrategy() {
+    }
+    /**
+     * @param {?} route
+     * @return {?}
+     */
+    DefaultRouteReuseStrategy.prototype.shouldDetach = /**
+     * @param {?} route
+     * @return {?}
+     */
+    function (route) { return false; };
+    /**
+     * @param {?} route
+     * @param {?} detachedTree
+     * @return {?}
+     */
+    DefaultRouteReuseStrategy.prototype.store = /**
+     * @param {?} route
+     * @param {?} detachedTree
+     * @return {?}
+     */
+    function (route, detachedTree) { };
+    /**
+     * @param {?} route
+     * @return {?}
+     */
+    DefaultRouteReuseStrategy.prototype.shouldAttach = /**
+     * @param {?} route
+     * @return {?}
+     */
+    function (route) { return false; };
+    /**
+     * @param {?} route
+     * @return {?}
+     */
+    DefaultRouteReuseStrategy.prototype.retrieve = /**
+     * @param {?} route
+     * @return {?}
+     */
+    function (route) { return null; };
+    /**
+     * @param {?} future
+     * @param {?} curr
+     * @return {?}
+     */
+    DefaultRouteReuseStrategy.prototype.shouldReuseRoute = /**
+     * @param {?} future
+     * @param {?} curr
+     * @return {?}
+     */
+    function (future, curr) {
+        return future.routeConfig === curr.routeConfig;
+    };
+    return DefaultRouteReuseStrategy;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+/**
+ * \@docsNotRequired
+ * \@experimental
+ */
+var ROUTES = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["InjectionToken"]('ROUTES');
+var RouterConfigLoader = /** @class */ (function () {
+    function RouterConfigLoader(loader, compiler, onLoadStartListener, onLoadEndListener) {
+        this.loader = loader;
+        this.compiler = compiler;
+        this.onLoadStartListener = onLoadStartListener;
+        this.onLoadEndListener = onLoadEndListener;
+    }
+    /**
+     * @param {?} parentInjector
+     * @param {?} route
+     * @return {?}
+     */
+    RouterConfigLoader.prototype.load = /**
+     * @param {?} parentInjector
+     * @param {?} route
+     * @return {?}
+     */
+    function (parentInjector, route) {
+        var _this = this;
+        if (this.onLoadStartListener) {
+            this.onLoadStartListener(route);
+        }
+        var /** @type {?} */ moduleFactory$ = this.loadModuleFactory(/** @type {?} */ ((route.loadChildren)));
+        return __WEBPACK_IMPORTED_MODULE_7_rxjs_operator_map__["a" /* map */].call(moduleFactory$, function (factory) {
+            if (_this.onLoadEndListener) {
+                _this.onLoadEndListener(route);
+            }
+            var /** @type {?} */ module = factory.create(parentInjector);
+            return new LoadedRouterConfig(flatten(module.injector.get(ROUTES)), module);
+        });
+    };
+    /**
+     * @param {?} loadChildren
+     * @return {?}
+     */
+    RouterConfigLoader.prototype.loadModuleFactory = /**
+     * @param {?} loadChildren
+     * @return {?}
+     */
+    function (loadChildren) {
+        var _this = this;
+        if (typeof loadChildren === 'string') {
+            return Object(__WEBPACK_IMPORTED_MODULE_15_rxjs_observable_fromPromise__["a" /* fromPromise */])(this.loader.load(loadChildren));
+        }
+        else {
+            return __WEBPACK_IMPORTED_MODULE_8_rxjs_operator_mergeMap__["a" /* mergeMap */].call(wrapIntoObservable(loadChildren()), function (t) {
+                if (t instanceof __WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModuleFactory"]) {
+                    return Object(__WEBPACK_IMPORTED_MODULE_5_rxjs_observable_of__["a" /* of */])(t);
+                }
+                else {
+                    return Object(__WEBPACK_IMPORTED_MODULE_15_rxjs_observable_fromPromise__["a" /* fromPromise */])(_this.compiler.compileModuleAsync(t));
+                }
+            });
+        }
+    };
+    return RouterConfigLoader;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+/**
+ * \@whatItDoes Provides a way to migrate AngularJS applications to Angular.
+ *
+ * \@experimental
+ * @abstract
+ */
+var UrlHandlingStrategy = /** @class */ (function () {
+    function UrlHandlingStrategy() {
+    }
+    return UrlHandlingStrategy;
+}());
+/**
+ * \@experimental
+ */
+var DefaultUrlHandlingStrategy = /** @class */ (function () {
+    function DefaultUrlHandlingStrategy() {
+    }
+    /**
+     * @param {?} url
+     * @return {?}
+     */
+    DefaultUrlHandlingStrategy.prototype.shouldProcessUrl = /**
+     * @param {?} url
+     * @return {?}
+     */
+    function (url) { return true; };
+    /**
+     * @param {?} url
+     * @return {?}
+     */
+    DefaultUrlHandlingStrategy.prototype.extract = /**
+     * @param {?} url
+     * @return {?}
+     */
+    function (url) { return url; };
+    /**
+     * @param {?} newUrlPart
+     * @param {?} wholeUrl
+     * @return {?}
+     */
+    DefaultUrlHandlingStrategy.prototype.merge = /**
+     * @param {?} newUrlPart
+     * @param {?} wholeUrl
+     * @return {?}
+     */
+    function (newUrlPart, wholeUrl) { return newUrlPart; };
+    return DefaultUrlHandlingStrategy;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+/**
+ * \@whatItDoes Represents the extra options used during navigation.
+ *
+ * \@stable
+ * @record
+ */
+
+/**
+ * @param {?} error
+ * @return {?}
+ */
+function defaultErrorHandler(error) {
+    throw error;
+}
+/**
+ * \@internal
+ * @param {?} snapshot
+ * @return {?}
+ */
+function defaultRouterHook(snapshot) {
+    return /** @type {?} */ (Object(__WEBPACK_IMPORTED_MODULE_5_rxjs_observable_of__["a" /* of */])(null));
+}
+/**
+ * \@whatItDoes Provides the navigation and url manipulation capabilities.
+ *
+ * See {\@link Routes} for more details and examples.
+ *
+ * \@ngModule RouterModule
+ *
+ * \@stable
+ */
+var Router = /** @class */ (function () {
+    /**
+     * Creates the router service.
+     */
+    // TODO: vsavkin make internal after the final is out.
+    function Router(rootComponentType, urlSerializer, rootContexts, location, injector, loader, compiler, config) {
+        var _this = this;
+        this.rootComponentType = rootComponentType;
+        this.urlSerializer = urlSerializer;
+        this.rootContexts = rootContexts;
+        this.location = location;
+        this.config = config;
+        this.navigations = new __WEBPACK_IMPORTED_MODULE_3_rxjs_BehaviorSubject__["a" /* BehaviorSubject */](/** @type {?} */ ((null)));
+        this.navigationId = 0;
+        this.events = new __WEBPACK_IMPORTED_MODULE_4_rxjs_Subject__["a" /* Subject */]();
+        /**
+         * Error handler that is invoked when a navigation errors.
+         *
+         * See {\@link ErrorHandler} for more information.
+         */
+        this.errorHandler = defaultErrorHandler;
+        /**
+         * Indicates if at least one navigation happened.
+         */
+        this.navigated = false;
+        /**
+         * Used by RouterModule. This allows us to
+         * pause the navigation either before preactivation or after it.
+         * \@internal
+         */
+        this.hooks = {
+            beforePreactivation: defaultRouterHook,
+            afterPreactivation: defaultRouterHook
+        };
+        /**
+         * Extracts and merges URLs. Used for AngularJS to Angular migrations.
+         */
+        this.urlHandlingStrategy = new DefaultUrlHandlingStrategy();
+        this.routeReuseStrategy = new DefaultRouteReuseStrategy();
+        /**
+         * Define what the router should do if it receives a navigation request to the current URL.
+         * By default, the router will ignore this navigation. However, this prevents features such
+         * as a "refresh" button. Use this option to configure the behavior when navigating to the
+         * current URL. Default is 'ignore'.
+         */
+        this.onSameUrlNavigation = 'ignore';
+        /**
+         * Defines how the router merges params, data and resolved data from parent to child
+         * routes. Available options are:
+         *
+         * - `'emptyOnly'`, the default, only inherits parent params for path-less or component-less
+         *   routes.
+         * - `'always'`, enables unconditional inheritance of parent params.
+         */
+        this.paramsInheritanceStrategy = 'emptyOnly';
+        var /** @type {?} */ onLoadStart = function (r) { return _this.triggerEvent(new RouteConfigLoadStart(r)); };
+        var /** @type {?} */ onLoadEnd = function (r) { return _this.triggerEvent(new RouteConfigLoadEnd(r)); };
+        this.ngModule = injector.get(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModuleRef"]);
+        this.resetConfig(config);
+        this.currentUrlTree = createEmptyUrlTree();
+        this.rawUrlTree = this.currentUrlTree;
+        this.configLoader = new RouterConfigLoader(loader, compiler, onLoadStart, onLoadEnd);
+        this.routerState = createEmptyState(this.currentUrlTree, this.rootComponentType);
+        this.processNavigations();
+    }
+    /**
+     * @internal
+     * TODO: this should be removed once the constructor of the router made internal
+     */
+    /**
+     * \@internal
+     * TODO: this should be removed once the constructor of the router made internal
+     * @param {?} rootComponentType
+     * @return {?}
+     */
+    Router.prototype.resetRootComponentType = /**
+     * \@internal
+     * TODO: this should be removed once the constructor of the router made internal
+     * @param {?} rootComponentType
+     * @return {?}
+     */
+    function (rootComponentType) {
+        this.rootComponentType = rootComponentType;
+        // TODO: vsavkin router 4.0 should make the root component set to null
+        // this will simplify the lifecycle of the router.
+        this.routerState.root.component = this.rootComponentType;
+    };
+    /**
+     * Sets up the location change listener and performs the initial navigation.
+     */
+    /**
+     * Sets up the location change listener and performs the initial navigation.
+     * @return {?}
+     */
+    Router.prototype.initialNavigation = /**
+     * Sets up the location change listener and performs the initial navigation.
+     * @return {?}
+     */
+    function () {
+        this.setUpLocationChangeListener();
+        if (this.navigationId === 0) {
+            this.navigateByUrl(this.location.path(true), { replaceUrl: true });
+        }
+    };
+    /**
+     * Sets up the location change listener.
+     */
+    /**
+     * Sets up the location change listener.
+     * @return {?}
+     */
+    Router.prototype.setUpLocationChangeListener = /**
+     * Sets up the location change listener.
+     * @return {?}
+     */
+    function () {
+        var _this = this;
+        // Don't need to use Zone.wrap any more, because zone.js
+        // already patch onPopState, so location change callback will
+        // run into ngZone
+        if (!this.locationSubscription) {
+            this.locationSubscription = /** @type {?} */ (this.location.subscribe(function (change) {
+                var /** @type {?} */ rawUrlTree = _this.urlSerializer.parse(change['url']);
+                var /** @type {?} */ source = change['type'] === 'popstate' ? 'popstate' : 'hashchange';
+                setTimeout(function () { _this.scheduleNavigation(rawUrlTree, source, { replaceUrl: true }); }, 0);
+            }));
+        }
+    };
+    Object.defineProperty(Router.prototype, "url", {
+        /** The current url */
+        get: /**
+         * The current url
+         * @return {?}
+         */
+        function () { return this.serializeUrl(this.currentUrlTree); },
+        enumerable: true,
+        configurable: true
+    });
+    /** @internal */
+    /**
+     * \@internal
+     * @param {?} e
+     * @return {?}
+     */
+    Router.prototype.triggerEvent = /**
+     * \@internal
+     * @param {?} e
+     * @return {?}
+     */
+    function (e) { (/** @type {?} */ (this.events)).next(e); };
+    /**
+     * Resets the configuration used for navigation and generating links.
+     *
+     * ### Usage
+     *
+     * ```
+     * router.resetConfig([
+     *  { path: 'team/:id', component: TeamCmp, children: [
+     *    { path: 'simple', component: SimpleCmp },
+     *    { path: 'user/:name', component: UserCmp }
+     *  ]}
+     * ]);
+     * ```
+     */
+    /**
+     * Resets the configuration used for navigation and generating links.
+     *
+     * ### Usage
+     *
+     * ```
+     * router.resetConfig([
+     *  { path: 'team/:id', component: TeamCmp, children: [
+     *    { path: 'simple', component: SimpleCmp },
+     *    { path: 'user/:name', component: UserCmp }
+     *  ]}
+     * ]);
+     * ```
+     * @param {?} config
+     * @return {?}
+     */
+    Router.prototype.resetConfig = /**
+     * Resets the configuration used for navigation and generating links.
+     *
+     * ### Usage
+     *
+     * ```
+     * router.resetConfig([
+     *  { path: 'team/:id', component: TeamCmp, children: [
+     *    { path: 'simple', component: SimpleCmp },
+     *    { path: 'user/:name', component: UserCmp }
+     *  ]}
+     * ]);
+     * ```
+     * @param {?} config
+     * @return {?}
+     */
+    function (config) {
+        validateConfig(config);
+        this.config = config;
+        this.navigated = false;
+    };
+    /** @docsNotRequired */
+    /**
+     * \@docsNotRequired
+     * @return {?}
+     */
+    Router.prototype.ngOnDestroy = /**
+     * \@docsNotRequired
+     * @return {?}
+     */
+    function () { this.dispose(); };
+    /** Disposes of the router */
+    /**
+     * Disposes of the router
+     * @return {?}
+     */
+    Router.prototype.dispose = /**
+     * Disposes of the router
+     * @return {?}
+     */
+    function () {
+        if (this.locationSubscription) {
+            this.locationSubscription.unsubscribe();
+            this.locationSubscription = /** @type {?} */ ((null));
+        }
+    };
+    /**
+     * Applies an array of commands to the current url tree and creates a new url tree.
+     *
+     * When given an activate route, applies the given commands starting from the route.
+     * When not given a route, applies the given command starting from the root.
+     *
+     * ### Usage
+     *
+     * ```
+     * // create /team/33/user/11
+     * router.createUrlTree(['/team', 33, 'user', 11]);
+     *
+     * // create /team/33;expand=true/user/11
+     * router.createUrlTree(['/team', 33, {expand: true}, 'user', 11]);
+     *
+     * // you can collapse static segments like this (this works only with the first passed-in value):
+     * router.createUrlTree(['/team/33/user', userId]);
+     *
+     * // If the first segment can contain slashes, and you do not want the router to split it, you
+     * // can do the following:
+     *
+     * router.createUrlTree([{segmentPath: '/one/two'}]);
+     *
+     * // create /team/33/(user/11//right:chat)
+     * router.createUrlTree(['/team', 33, {outlets: {primary: 'user/11', right: 'chat'}}]);
+     *
+     * // remove the right secondary node
+     * router.createUrlTree(['/team', 33, {outlets: {primary: 'user/11', right: null}}]);
+     *
+     * // assuming the current url is `/team/33/user/11` and the route points to `user/11`
+     *
+     * // navigate to /team/33/user/11/details
+     * router.createUrlTree(['details'], {relativeTo: route});
+     *
+     * // navigate to /team/33/user/22
+     * router.createUrlTree(['../22'], {relativeTo: route});
+     *
+     * // navigate to /team/44/user/22
+     * router.createUrlTree(['../../team/44/user/22'], {relativeTo: route});
+     * ```
+     */
+    /**
+     * Applies an array of commands to the current url tree and creates a new url tree.
+     *
+     * When given an activate route, applies the given commands starting from the route.
+     * When not given a route, applies the given command starting from the root.
+     *
+     * ### Usage
+     *
+     * ```
+     * // create /team/33/user/11
+     * router.createUrlTree(['/team', 33, 'user', 11]);
+     *
+     * // create /team/33;expand=true/user/11
+     * router.createUrlTree(['/team', 33, {expand: true}, 'user', 11]);
+     *
+     * // you can collapse static segments like this (this works only with the first passed-in value):
+     * router.createUrlTree(['/team/33/user', userId]);
+     *
+     * // If the first segment can contain slashes, and you do not want the router to split it, you
+     * // can do the following:
+     *
+     * router.createUrlTree([{segmentPath: '/one/two'}]);
+     *
+     * // create /team/33/(user/11//right:chat)
+     * router.createUrlTree(['/team', 33, {outlets: {primary: 'user/11', right: 'chat'}}]);
+     *
+     * // remove the right secondary node
+     * router.createUrlTree(['/team', 33, {outlets: {primary: 'user/11', right: null}}]);
+     *
+     * // assuming the current url is `/team/33/user/11` and the route points to `user/11`
+     *
+     * // navigate to /team/33/user/11/details
+     * router.createUrlTree(['details'], {relativeTo: route});
+     *
+     * // navigate to /team/33/user/22
+     * router.createUrlTree(['../22'], {relativeTo: route});
+     *
+     * // navigate to /team/44/user/22
+     * router.createUrlTree(['../../team/44/user/22'], {relativeTo: route});
+     * ```
+     * @param {?} commands
+     * @param {?=} navigationExtras
+     * @return {?}
+     */
+    Router.prototype.createUrlTree = /**
+     * Applies an array of commands to the current url tree and creates a new url tree.
+     *
+     * When given an activate route, applies the given commands starting from the route.
+     * When not given a route, applies the given command starting from the root.
+     *
+     * ### Usage
+     *
+     * ```
+     * // create /team/33/user/11
+     * router.createUrlTree(['/team', 33, 'user', 11]);
+     *
+     * // create /team/33;expand=true/user/11
+     * router.createUrlTree(['/team', 33, {expand: true}, 'user', 11]);
+     *
+     * // you can collapse static segments like this (this works only with the first passed-in value):
+     * router.createUrlTree(['/team/33/user', userId]);
+     *
+     * // If the first segment can contain slashes, and you do not want the router to split it, you
+     * // can do the following:
+     *
+     * router.createUrlTree([{segmentPath: '/one/two'}]);
+     *
+     * // create /team/33/(user/11//right:chat)
+     * router.createUrlTree(['/team', 33, {outlets: {primary: 'user/11', right: 'chat'}}]);
+     *
+     * // remove the right secondary node
+     * router.createUrlTree(['/team', 33, {outlets: {primary: 'user/11', right: null}}]);
+     *
+     * // assuming the current url is `/team/33/user/11` and the route points to `user/11`
+     *
+     * // navigate to /team/33/user/11/details
+     * router.createUrlTree(['details'], {relativeTo: route});
+     *
+     * // navigate to /team/33/user/22
+     * router.createUrlTree(['../22'], {relativeTo: route});
+     *
+     * // navigate to /team/44/user/22
+     * router.createUrlTree(['../../team/44/user/22'], {relativeTo: route});
+     * ```
+     * @param {?} commands
+     * @param {?=} navigationExtras
+     * @return {?}
+     */
+    function (commands, navigationExtras) {
+        if (navigationExtras === void 0) { navigationExtras = {}; }
+        var relativeTo = navigationExtras.relativeTo, queryParams = navigationExtras.queryParams, fragment = navigationExtras.fragment, preserveQueryParams = navigationExtras.preserveQueryParams, queryParamsHandling = navigationExtras.queryParamsHandling, preserveFragment = navigationExtras.preserveFragment;
+        if (Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["isDevMode"])() && preserveQueryParams && /** @type {?} */ (console) && /** @type {?} */ (console.warn)) {
+            console.warn('preserveQueryParams is deprecated, use queryParamsHandling instead.');
+        }
+        var /** @type {?} */ a = relativeTo || this.routerState.root;
+        var /** @type {?} */ f = preserveFragment ? this.currentUrlTree.fragment : fragment;
+        var /** @type {?} */ q = null;
+        if (queryParamsHandling) {
+            switch (queryParamsHandling) {
+                case 'merge':
+                    q = Object(__WEBPACK_IMPORTED_MODULE_2_tslib__["a" /* __assign */])({}, this.currentUrlTree.queryParams, queryParams);
+                    break;
+                case 'preserve':
+                    q = this.currentUrlTree.queryParams;
+                    break;
+                default:
+                    q = queryParams || null;
+            }
+        }
+        else {
+            q = preserveQueryParams ? this.currentUrlTree.queryParams : queryParams || null;
+        }
+        if (q !== null) {
+            q = this.removeEmptyProps(q);
+        }
+        return createUrlTree(a, this.currentUrlTree, commands, /** @type {?} */ ((q)), /** @type {?} */ ((f)));
+    };
+    /**
+     * Navigate based on the provided url. This navigation is always absolute.
+     *
+     * Returns a promise that:
+     * - resolves to 'true' when navigation succeeds,
+     * - resolves to 'false' when navigation fails,
+     * - is rejected when an error happens.
+     *
+     * ### Usage
+     *
+     * ```
+     * router.navigateByUrl("/team/33/user/11");
+     *
+     * // Navigate without updating the URL
+     * router.navigateByUrl("/team/33/user/11", { skipLocationChange: true });
+     * ```
+     *
+     * In opposite to `navigate`, `navigateByUrl` takes a whole URL
+     * and does not apply any delta to the current one.
+     */
+    /**
+     * Navigate based on the provided url. This navigation is always absolute.
+     *
+     * Returns a promise that:
+     * - resolves to 'true' when navigation succeeds,
+     * - resolves to 'false' when navigation fails,
+     * - is rejected when an error happens.
+     *
+     * ### Usage
+     *
+     * ```
+     * router.navigateByUrl("/team/33/user/11");
+     *
+     * // Navigate without updating the URL
+     * router.navigateByUrl("/team/33/user/11", { skipLocationChange: true });
+     * ```
+     *
+     * In opposite to `navigate`, `navigateByUrl` takes a whole URL
+     * and does not apply any delta to the current one.
+     * @param {?} url
+     * @param {?=} extras
+     * @return {?}
+     */
+    Router.prototype.navigateByUrl = /**
+     * Navigate based on the provided url. This navigation is always absolute.
+     *
+     * Returns a promise that:
+     * - resolves to 'true' when navigation succeeds,
+     * - resolves to 'false' when navigation fails,
+     * - is rejected when an error happens.
+     *
+     * ### Usage
+     *
+     * ```
+     * router.navigateByUrl("/team/33/user/11");
+     *
+     * // Navigate without updating the URL
+     * router.navigateByUrl("/team/33/user/11", { skipLocationChange: true });
+     * ```
+     *
+     * In opposite to `navigate`, `navigateByUrl` takes a whole URL
+     * and does not apply any delta to the current one.
+     * @param {?} url
+     * @param {?=} extras
+     * @return {?}
+     */
+    function (url, extras) {
+        if (extras === void 0) { extras = { skipLocationChange: false }; }
+        var /** @type {?} */ urlTree = url instanceof UrlTree ? url : this.parseUrl(url);
+        var /** @type {?} */ mergedTree = this.urlHandlingStrategy.merge(urlTree, this.rawUrlTree);
+        return this.scheduleNavigation(mergedTree, 'imperative', extras);
+    };
+    /**
+     * Navigate based on the provided array of commands and a starting point.
+     * If no starting route is provided, the navigation is absolute.
+     *
+     * Returns a promise that:
+     * - resolves to 'true' when navigation succeeds,
+     * - resolves to 'false' when navigation fails,
+     * - is rejected when an error happens.
+     *
+     * ### Usage
+     *
+     * ```
+     * router.navigate(['team', 33, 'user', 11], {relativeTo: route});
+     *
+     * // Navigate without updating the URL
+     * router.navigate(['team', 33, 'user', 11], {relativeTo: route, skipLocationChange: true});
+     * ```
+     *
+     * In opposite to `navigateByUrl`, `navigate` always takes a delta that is applied to the current
+     * URL.
+     */
+    /**
+     * Navigate based on the provided array of commands and a starting point.
+     * If no starting route is provided, the navigation is absolute.
+     *
+     * Returns a promise that:
+     * - resolves to 'true' when navigation succeeds,
+     * - resolves to 'false' when navigation fails,
+     * - is rejected when an error happens.
+     *
+     * ### Usage
+     *
+     * ```
+     * router.navigate(['team', 33, 'user', 11], {relativeTo: route});
+     *
+     * // Navigate without updating the URL
+     * router.navigate(['team', 33, 'user', 11], {relativeTo: route, skipLocationChange: true});
+     * ```
+     *
+     * In opposite to `navigateByUrl`, `navigate` always takes a delta that is applied to the current
+     * URL.
+     * @param {?} commands
+     * @param {?=} extras
+     * @return {?}
+     */
+    Router.prototype.navigate = /**
+     * Navigate based on the provided array of commands and a starting point.
+     * If no starting route is provided, the navigation is absolute.
+     *
+     * Returns a promise that:
+     * - resolves to 'true' when navigation succeeds,
+     * - resolves to 'false' when navigation fails,
+     * - is rejected when an error happens.
+     *
+     * ### Usage
+     *
+     * ```
+     * router.navigate(['team', 33, 'user', 11], {relativeTo: route});
+     *
+     * // Navigate without updating the URL
+     * router.navigate(['team', 33, 'user', 11], {relativeTo: route, skipLocationChange: true});
+     * ```
+     *
+     * In opposite to `navigateByUrl`, `navigate` always takes a delta that is applied to the current
+     * URL.
+     * @param {?} commands
+     * @param {?=} extras
+     * @return {?}
+     */
+    function (commands, extras) {
+        if (extras === void 0) { extras = { skipLocationChange: false }; }
+        validateCommands(commands);
+        return this.navigateByUrl(this.createUrlTree(commands, extras), extras);
+    };
+    /** Serializes a {@link UrlTree} into a string */
+    /**
+     * Serializes a {\@link UrlTree} into a string
+     * @param {?} url
+     * @return {?}
+     */
+    Router.prototype.serializeUrl = /**
+     * Serializes a {\@link UrlTree} into a string
+     * @param {?} url
+     * @return {?}
+     */
+    function (url) { return this.urlSerializer.serialize(url); };
+    /** Parses a string into a {@link UrlTree} */
+    /**
+     * Parses a string into a {\@link UrlTree}
+     * @param {?} url
+     * @return {?}
+     */
+    Router.prototype.parseUrl = /**
+     * Parses a string into a {\@link UrlTree}
+     * @param {?} url
+     * @return {?}
+     */
+    function (url) { return this.urlSerializer.parse(url); };
+    /** Returns whether the url is activated */
+    /**
+     * Returns whether the url is activated
+     * @param {?} url
+     * @param {?} exact
+     * @return {?}
+     */
+    Router.prototype.isActive = /**
+     * Returns whether the url is activated
+     * @param {?} url
+     * @param {?} exact
+     * @return {?}
+     */
+    function (url, exact) {
+        if (url instanceof UrlTree) {
+            return containsTree(this.currentUrlTree, url, exact);
+        }
+        var /** @type {?} */ urlTree = this.urlSerializer.parse(url);
+        return containsTree(this.currentUrlTree, urlTree, exact);
+    };
+    /**
+     * @param {?} params
+     * @return {?}
+     */
+    Router.prototype.removeEmptyProps = /**
+     * @param {?} params
+     * @return {?}
+     */
+    function (params) {
+        return Object.keys(params).reduce(function (result, key) {
+            var /** @type {?} */ value = params[key];
+            if (value !== null && value !== undefined) {
+                result[key] = value;
+            }
+            return result;
+        }, {});
+    };
+    /**
+     * @return {?}
+     */
+    Router.prototype.processNavigations = /**
+     * @return {?}
+     */
+    function () {
+        var _this = this;
+        __WEBPACK_IMPORTED_MODULE_6_rxjs_operator_concatMap__["a" /* concatMap */]
+            .call(this.navigations, function (nav) {
+            if (nav) {
+                _this.executeScheduledNavigation(nav);
+                // a failed navigation should not stop the router from processing
+                // further navigations => the catch
+                return nav.promise.catch(function () { });
+            }
+            else {
+                return /** @type {?} */ (Object(__WEBPACK_IMPORTED_MODULE_5_rxjs_observable_of__["a" /* of */])(null));
+            }
+        })
+            .subscribe(function () { });
+    };
+    /**
+     * @param {?} rawUrl
+     * @param {?} source
+     * @param {?} extras
+     * @return {?}
+     */
+    Router.prototype.scheduleNavigation = /**
+     * @param {?} rawUrl
+     * @param {?} source
+     * @param {?} extras
+     * @return {?}
+     */
+    function (rawUrl, source, extras) {
+        var /** @type {?} */ lastNavigation = this.navigations.value;
+        // If the user triggers a navigation imperatively (e.g., by using navigateByUrl),
+        // and that navigation results in 'replaceState' that leads to the same URL,
+        // we should skip those.
+        if (lastNavigation && source !== 'imperative' && lastNavigation.source === 'imperative' &&
+            lastNavigation.rawUrl.toString() === rawUrl.toString()) {
+            return Promise.resolve(true); // return value is not used
+        }
+        // Because of a bug in IE and Edge, the location class fires two events (popstate and
+        // hashchange) every single time. The second one should be ignored. Otherwise, the URL will
+        // flicker. Handles the case when a popstate was emitted first.
+        if (lastNavigation && source == 'hashchange' && lastNavigation.source === 'popstate' &&
+            lastNavigation.rawUrl.toString() === rawUrl.toString()) {
+            return Promise.resolve(true); // return value is not used
+        }
+        // Because of a bug in IE and Edge, the location class fires two events (popstate and
+        // hashchange) every single time. The second one should be ignored. Otherwise, the URL will
+        // flicker. Handles the case when a hashchange was emitted first.
+        if (lastNavigation && source == 'popstate' && lastNavigation.source === 'hashchange' &&
+            lastNavigation.rawUrl.toString() === rawUrl.toString()) {
+            return Promise.resolve(true); // return value is not used
+        }
+        var /** @type {?} */ resolve = null;
+        var /** @type {?} */ reject = null;
+        var /** @type {?} */ promise = new Promise(function (res, rej) {
+            resolve = res;
+            reject = rej;
+        });
+        var /** @type {?} */ id = ++this.navigationId;
+        this.navigations.next({ id: id, source: source, rawUrl: rawUrl, extras: extras, resolve: resolve, reject: reject, promise: promise });
+        // Make sure that the error is propagated even though `processNavigations` catch
+        // handler does not rethrow
+        return promise.catch(function (e) { return Promise.reject(e); });
+    };
+    /**
+     * @param {?} __0
+     * @return {?}
+     */
+    Router.prototype.executeScheduledNavigation = /**
+     * @param {?} __0
+     * @return {?}
+     */
+    function (_a) {
+        var _this = this;
+        var id = _a.id, rawUrl = _a.rawUrl, extras = _a.extras, resolve = _a.resolve, reject = _a.reject;
+        var /** @type {?} */ url = this.urlHandlingStrategy.extract(rawUrl);
+        var /** @type {?} */ urlTransition = !this.navigated || url.toString() !== this.currentUrlTree.toString();
+        if ((this.onSameUrlNavigation === 'reload' ? true : urlTransition) &&
+            this.urlHandlingStrategy.shouldProcessUrl(rawUrl)) {
+            (/** @type {?} */ (this.events)).next(new NavigationStart(id, this.serializeUrl(url)));
+            Promise.resolve()
+                .then(function (_) {
+                return _this.runNavigate(url, rawUrl, !!extras.skipLocationChange, !!extras.replaceUrl, id, null);
+            })
+                .then(resolve, reject);
+            // we cannot process the current URL, but we could process the previous one =>
+            // we need to do some cleanup
+        }
+        else if (urlTransition && this.rawUrlTree &&
+            this.urlHandlingStrategy.shouldProcessUrl(this.rawUrlTree)) {
+            (/** @type {?} */ (this.events)).next(new NavigationStart(id, this.serializeUrl(url)));
+            Promise.resolve()
+                .then(function (_) {
+                return _this.runNavigate(url, rawUrl, false, false, id, createEmptyState(url, _this.rootComponentType).snapshot);
+            })
+                .then(resolve, reject);
+        }
+        else {
+            this.rawUrlTree = rawUrl;
+            resolve(null);
+        }
+    };
+    /**
+     * @param {?} url
+     * @param {?} rawUrl
+     * @param {?} skipLocationChange
+     * @param {?} replaceUrl
+     * @param {?} id
+     * @param {?} precreatedState
+     * @return {?}
+     */
+    Router.prototype.runNavigate = /**
+     * @param {?} url
+     * @param {?} rawUrl
+     * @param {?} skipLocationChange
+     * @param {?} replaceUrl
+     * @param {?} id
+     * @param {?} precreatedState
+     * @return {?}
+     */
+    function (url, rawUrl, skipLocationChange, replaceUrl, id, precreatedState) {
+        var _this = this;
+        if (id !== this.navigationId) {
+            (/** @type {?} */ (this.events))
+                .next(new NavigationCancel(id, this.serializeUrl(url), "Navigation ID " + id + " is not equal to the current navigation id " + this.navigationId));
+            return Promise.resolve(false);
+        }
+        return new Promise(function (resolvePromise, rejectPromise) {
+            // create an observable of the url and route state snapshot
+            // this operation do not result in any side effects
+            var /** @type {?} */ urlAndSnapshot$;
+            if (!precreatedState) {
+                var /** @type {?} */ moduleInjector = _this.ngModule.injector;
+                var /** @type {?} */ redirectsApplied$ = applyRedirects(moduleInjector, _this.configLoader, _this.urlSerializer, url, _this.config);
+                urlAndSnapshot$ = __WEBPACK_IMPORTED_MODULE_8_rxjs_operator_mergeMap__["a" /* mergeMap */].call(redirectsApplied$, function (appliedUrl) {
+                    return __WEBPACK_IMPORTED_MODULE_7_rxjs_operator_map__["a" /* map */].call(recognize(_this.rootComponentType, _this.config, appliedUrl, _this.serializeUrl(appliedUrl), _this.paramsInheritanceStrategy), function (snapshot) {
+                        (/** @type {?} */ (_this.events))
+                            .next(new RoutesRecognized(id, _this.serializeUrl(url), _this.serializeUrl(appliedUrl), snapshot));
+                        return { appliedUrl: appliedUrl, snapshot: snapshot };
+                    });
+                });
+            }
+            else {
+                urlAndSnapshot$ = Object(__WEBPACK_IMPORTED_MODULE_5_rxjs_observable_of__["a" /* of */])({ appliedUrl: url, snapshot: precreatedState });
+            }
+            var /** @type {?} */ beforePreactivationDone$ = __WEBPACK_IMPORTED_MODULE_8_rxjs_operator_mergeMap__["a" /* mergeMap */].call(urlAndSnapshot$, function (p) {
+                return __WEBPACK_IMPORTED_MODULE_7_rxjs_operator_map__["a" /* map */].call(_this.hooks.beforePreactivation(p.snapshot), function () { return p; });
+            });
+            // run preactivation: guards and data resolvers
+            var /** @type {?} */ preActivation;
+            var /** @type {?} */ preactivationSetup$ = __WEBPACK_IMPORTED_MODULE_7_rxjs_operator_map__["a" /* map */].call(beforePreactivationDone$, function (_a) {
+                var appliedUrl = _a.appliedUrl, snapshot = _a.snapshot;
+                var /** @type {?} */ moduleInjector = _this.ngModule.injector;
+                preActivation = new PreActivation(snapshot, _this.routerState.snapshot, moduleInjector, function (evt) { return _this.triggerEvent(evt); });
+                preActivation.initialize(_this.rootContexts);
+                return { appliedUrl: appliedUrl, snapshot: snapshot };
+            });
+            var /** @type {?} */ preactivationCheckGuards$ = __WEBPACK_IMPORTED_MODULE_8_rxjs_operator_mergeMap__["a" /* mergeMap */].call(preactivationSetup$, function (_a) {
+                var appliedUrl = _a.appliedUrl, snapshot = _a.snapshot;
+                if (_this.navigationId !== id)
+                    return Object(__WEBPACK_IMPORTED_MODULE_5_rxjs_observable_of__["a" /* of */])(false);
+                _this.triggerEvent(new GuardsCheckStart(id, _this.serializeUrl(url), appliedUrl, snapshot));
+                return __WEBPACK_IMPORTED_MODULE_7_rxjs_operator_map__["a" /* map */].call(preActivation.checkGuards(), function (shouldActivate) {
+                    _this.triggerEvent(new GuardsCheckEnd(id, _this.serializeUrl(url), appliedUrl, snapshot, shouldActivate));
+                    return { appliedUrl: appliedUrl, snapshot: snapshot, shouldActivate: shouldActivate };
+                });
+            });
+            var /** @type {?} */ preactivationResolveData$ = __WEBPACK_IMPORTED_MODULE_8_rxjs_operator_mergeMap__["a" /* mergeMap */].call(preactivationCheckGuards$, function (p) {
+                if (_this.navigationId !== id)
+                    return Object(__WEBPACK_IMPORTED_MODULE_5_rxjs_observable_of__["a" /* of */])(false);
+                if (p.shouldActivate && preActivation.isActivating()) {
+                    _this.triggerEvent(new ResolveStart(id, _this.serializeUrl(url), p.appliedUrl, p.snapshot));
+                    return __WEBPACK_IMPORTED_MODULE_7_rxjs_operator_map__["a" /* map */].call(preActivation.resolveData(_this.paramsInheritanceStrategy), function () {
+                        _this.triggerEvent(new ResolveEnd(id, _this.serializeUrl(url), p.appliedUrl, p.snapshot));
+                        return p;
+                    });
+                }
+                else {
+                    return Object(__WEBPACK_IMPORTED_MODULE_5_rxjs_observable_of__["a" /* of */])(p);
+                }
+            });
+            var /** @type {?} */ preactivationDone$ = __WEBPACK_IMPORTED_MODULE_8_rxjs_operator_mergeMap__["a" /* mergeMap */].call(preactivationResolveData$, function (p) {
+                return __WEBPACK_IMPORTED_MODULE_7_rxjs_operator_map__["a" /* map */].call(_this.hooks.afterPreactivation(p.snapshot), function () { return p; });
+            });
+            // create router state
+            // this operation has side effects => route state is being affected
+            var /** @type {?} */ routerState$ = __WEBPACK_IMPORTED_MODULE_7_rxjs_operator_map__["a" /* map */].call(preactivationDone$, function (_a) {
+                var appliedUrl = _a.appliedUrl, snapshot = _a.snapshot, shouldActivate = _a.shouldActivate;
+                if (shouldActivate) {
+                    var /** @type {?} */ state = createRouterState(_this.routeReuseStrategy, snapshot, _this.routerState);
+                    return { appliedUrl: appliedUrl, state: state, shouldActivate: shouldActivate };
+                }
+                else {
+                    return { appliedUrl: appliedUrl, state: null, shouldActivate: shouldActivate };
+                }
+            });
+            _this.activateRoutes(routerState$, _this.routerState, _this.currentUrlTree, id, url, rawUrl, skipLocationChange, replaceUrl, resolvePromise, rejectPromise);
+        });
+    };
+    /**
+     * Performs the logic of activating routes. This is a synchronous process by default. While this
+     * is a private method, it could be overridden to make activation asynchronous.
+     * @param {?} state
+     * @param {?} storedState
+     * @param {?} storedUrl
+     * @param {?} id
+     * @param {?} url
+     * @param {?} rawUrl
+     * @param {?} skipLocationChange
+     * @param {?} replaceUrl
+     * @param {?} resolvePromise
+     * @param {?} rejectPromise
+     * @return {?}
+     */
+    Router.prototype.activateRoutes = /**
+     * Performs the logic of activating routes. This is a synchronous process by default. While this
+     * is a private method, it could be overridden to make activation asynchronous.
+     * @param {?} state
+     * @param {?} storedState
+     * @param {?} storedUrl
+     * @param {?} id
+     * @param {?} url
+     * @param {?} rawUrl
+     * @param {?} skipLocationChange
+     * @param {?} replaceUrl
+     * @param {?} resolvePromise
+     * @param {?} rejectPromise
+     * @return {?}
+     */
+    function (state, storedState, storedUrl, id, url, rawUrl, skipLocationChange, replaceUrl, resolvePromise, rejectPromise) {
+        var _this = this;
+        // applied the new router state
+        // this operation has side effects
+        var /** @type {?} */ navigationIsSuccessful;
+        state
+            .forEach(function (_a) {
+            var appliedUrl = _a.appliedUrl, state = _a.state, shouldActivate = _a.shouldActivate;
+            if (!shouldActivate || id !== _this.navigationId) {
+                navigationIsSuccessful = false;
+                return;
+            }
+            _this.currentUrlTree = appliedUrl;
+            _this.rawUrlTree = _this.urlHandlingStrategy.merge(_this.currentUrlTree, rawUrl);
+            (/** @type {?} */ (_this)).routerState = state;
+            if (!skipLocationChange) {
+                var /** @type {?} */ path = _this.urlSerializer.serialize(_this.rawUrlTree);
+                if (_this.location.isCurrentPathEqualTo(path) || replaceUrl) {
+                    _this.location.replaceState(path);
+                }
+                else {
+                    _this.location.go(path);
+                }
+            }
+            new ActivateRoutes(_this.routeReuseStrategy, state, storedState, function (evt) { return _this.triggerEvent(evt); })
+                .activate(_this.rootContexts);
+            navigationIsSuccessful = true;
+        })
+            .then(function () {
+            if (navigationIsSuccessful) {
+                _this.navigated = true;
+                (/** @type {?} */ (_this.events))
+                    .next(new NavigationEnd(id, _this.serializeUrl(url), _this.serializeUrl(_this.currentUrlTree)));
+                resolvePromise(true);
+            }
+            else {
+                _this.resetUrlToCurrentUrlTree();
+                (/** @type {?} */ (_this.events))
+                    .next(new NavigationCancel(id, _this.serializeUrl(url), ''));
+                resolvePromise(false);
+            }
+        }, function (e) {
+            if (isNavigationCancelingError(e)) {
+                _this.navigated = true;
+                _this.resetStateAndUrl(storedState, storedUrl, rawUrl);
+                (/** @type {?} */ (_this.events))
+                    .next(new NavigationCancel(id, _this.serializeUrl(url), e.message));
+                resolvePromise(false);
+            }
+            else {
+                _this.resetStateAndUrl(storedState, storedUrl, rawUrl);
+                (/** @type {?} */ (_this.events))
+                    .next(new NavigationError(id, _this.serializeUrl(url), e));
+                try {
+                    resolvePromise(_this.errorHandler(e));
+                }
+                catch (/** @type {?} */ ee) {
+                    rejectPromise(ee);
+                }
+            }
+        });
+    };
+    /**
+     * @param {?} storedState
+     * @param {?} storedUrl
+     * @param {?} rawUrl
+     * @return {?}
+     */
+    Router.prototype.resetStateAndUrl = /**
+     * @param {?} storedState
+     * @param {?} storedUrl
+     * @param {?} rawUrl
+     * @return {?}
+     */
+    function (storedState, storedUrl, rawUrl) {
+        (/** @type {?} */ (this)).routerState = storedState;
+        this.currentUrlTree = storedUrl;
+        this.rawUrlTree = this.urlHandlingStrategy.merge(this.currentUrlTree, rawUrl);
+        this.resetUrlToCurrentUrlTree();
+    };
+    /**
+     * @return {?}
+     */
+    Router.prototype.resetUrlToCurrentUrlTree = /**
+     * @return {?}
+     */
+    function () {
+        this.location.replaceState(this.urlSerializer.serialize(this.rawUrlTree));
+    };
+    return Router;
+}());
+var ActivateRoutes = /** @class */ (function () {
+    function ActivateRoutes(routeReuseStrategy, futureState, currState, forwardEvent) {
+        this.routeReuseStrategy = routeReuseStrategy;
+        this.futureState = futureState;
+        this.currState = currState;
+        this.forwardEvent = forwardEvent;
+    }
+    /**
+     * @param {?} parentContexts
+     * @return {?}
+     */
+    ActivateRoutes.prototype.activate = /**
+     * @param {?} parentContexts
+     * @return {?}
+     */
+    function (parentContexts) {
+        var /** @type {?} */ futureRoot = this.futureState._root;
+        var /** @type {?} */ currRoot = this.currState ? this.currState._root : null;
+        this.deactivateChildRoutes(futureRoot, currRoot, parentContexts);
+        advanceActivatedRoute(this.futureState.root);
+        this.activateChildRoutes(futureRoot, currRoot, parentContexts);
+    };
+    /**
+     * @param {?} futureNode
+     * @param {?} currNode
+     * @param {?} contexts
+     * @return {?}
+     */
+    ActivateRoutes.prototype.deactivateChildRoutes = /**
+     * @param {?} futureNode
+     * @param {?} currNode
+     * @param {?} contexts
+     * @return {?}
+     */
+    function (futureNode, currNode, contexts) {
+        var _this = this;
+        var /** @type {?} */ children = nodeChildrenAsMap(currNode);
+        // Recurse on the routes active in the future state to de-activate deeper children
+        futureNode.children.forEach(function (futureChild) {
+            var /** @type {?} */ childOutletName = futureChild.value.outlet;
+            _this.deactivateRoutes(futureChild, children[childOutletName], contexts);
+            delete children[childOutletName];
+        });
+        // De-activate the routes that will not be re-used
+        forEach(children, function (v, childName) {
+            _this.deactivateRouteAndItsChildren(v, contexts);
+        });
+    };
+    /**
+     * @param {?} futureNode
+     * @param {?} currNode
+     * @param {?} parentContext
+     * @return {?}
+     */
+    ActivateRoutes.prototype.deactivateRoutes = /**
+     * @param {?} futureNode
+     * @param {?} currNode
+     * @param {?} parentContext
+     * @return {?}
+     */
+    function (futureNode, currNode, parentContext) {
+        var /** @type {?} */ future = futureNode.value;
+        var /** @type {?} */ curr = currNode ? currNode.value : null;
+        if (future === curr) {
+            // Reusing the node, check to see if the children need to be de-activated
+            if (future.component) {
+                // If we have a normal route, we need to go through an outlet.
+                var /** @type {?} */ context = parentContext.getContext(future.outlet);
+                if (context) {
+                    this.deactivateChildRoutes(futureNode, currNode, context.children);
+                }
+            }
+            else {
+                // if we have a componentless route, we recurse but keep the same outlet map.
+                this.deactivateChildRoutes(futureNode, currNode, parentContext);
+            }
+        }
+        else {
+            if (curr) {
+                // Deactivate the current route which will not be re-used
+                this.deactivateRouteAndItsChildren(currNode, parentContext);
+            }
+        }
+    };
+    /**
+     * @param {?} route
+     * @param {?} parentContexts
+     * @return {?}
+     */
+    ActivateRoutes.prototype.deactivateRouteAndItsChildren = /**
+     * @param {?} route
+     * @param {?} parentContexts
+     * @return {?}
+     */
+    function (route, parentContexts) {
+        if (this.routeReuseStrategy.shouldDetach(route.value.snapshot)) {
+            this.detachAndStoreRouteSubtree(route, parentContexts);
+        }
+        else {
+            this.deactivateRouteAndOutlet(route, parentContexts);
+        }
+    };
+    /**
+     * @param {?} route
+     * @param {?} parentContexts
+     * @return {?}
+     */
+    ActivateRoutes.prototype.detachAndStoreRouteSubtree = /**
+     * @param {?} route
+     * @param {?} parentContexts
+     * @return {?}
+     */
+    function (route, parentContexts) {
+        var /** @type {?} */ context = parentContexts.getContext(route.value.outlet);
+        if (context && context.outlet) {
+            var /** @type {?} */ componentRef = context.outlet.detach();
+            var /** @type {?} */ contexts = context.children.onOutletDeactivated();
+            this.routeReuseStrategy.store(route.value.snapshot, { componentRef: componentRef, route: route, contexts: contexts });
+        }
+    };
+    /**
+     * @param {?} route
+     * @param {?} parentContexts
+     * @return {?}
+     */
+    ActivateRoutes.prototype.deactivateRouteAndOutlet = /**
+     * @param {?} route
+     * @param {?} parentContexts
+     * @return {?}
+     */
+    function (route, parentContexts) {
+        var _this = this;
+        var /** @type {?} */ context = parentContexts.getContext(route.value.outlet);
+        if (context) {
+            var /** @type {?} */ children = nodeChildrenAsMap(route);
+            var /** @type {?} */ contexts_1 = route.value.component ? context.children : parentContexts;
+            forEach(children, function (v, k) { return _this.deactivateRouteAndItsChildren(v, contexts_1); });
+            if (context.outlet) {
+                // Destroy the component
+                context.outlet.deactivate();
+                // Destroy the contexts for all the outlets that were in the component
+                context.children.onOutletDeactivated();
+            }
+        }
+    };
+    /**
+     * @param {?} futureNode
+     * @param {?} currNode
+     * @param {?} contexts
+     * @return {?}
+     */
+    ActivateRoutes.prototype.activateChildRoutes = /**
+     * @param {?} futureNode
+     * @param {?} currNode
+     * @param {?} contexts
+     * @return {?}
+     */
+    function (futureNode, currNode, contexts) {
+        var _this = this;
+        var /** @type {?} */ children = nodeChildrenAsMap(currNode);
+        futureNode.children.forEach(function (c) {
+            _this.activateRoutes(c, children[c.value.outlet], contexts);
+            _this.forwardEvent(new ActivationEnd(c.value.snapshot));
+        });
+        if (futureNode.children.length) {
+            this.forwardEvent(new ChildActivationEnd(futureNode.value.snapshot));
+        }
+    };
+    /**
+     * @param {?} futureNode
+     * @param {?} currNode
+     * @param {?} parentContexts
+     * @return {?}
+     */
+    ActivateRoutes.prototype.activateRoutes = /**
+     * @param {?} futureNode
+     * @param {?} currNode
+     * @param {?} parentContexts
+     * @return {?}
+     */
+    function (futureNode, currNode, parentContexts) {
+        var /** @type {?} */ future = futureNode.value;
+        var /** @type {?} */ curr = currNode ? currNode.value : null;
+        advanceActivatedRoute(future);
+        // reusing the node
+        if (future === curr) {
+            if (future.component) {
+                // If we have a normal route, we need to go through an outlet.
+                var /** @type {?} */ context = parentContexts.getOrCreateContext(future.outlet);
+                this.activateChildRoutes(futureNode, currNode, context.children);
+            }
+            else {
+                // if we have a componentless route, we recurse but keep the same outlet map.
+                this.activateChildRoutes(futureNode, currNode, parentContexts);
+            }
+        }
+        else {
+            if (future.component) {
+                // if we have a normal route, we need to place the component into the outlet and recurse.
+                var /** @type {?} */ context = parentContexts.getOrCreateContext(future.outlet);
+                if (this.routeReuseStrategy.shouldAttach(future.snapshot)) {
+                    var /** @type {?} */ stored = (/** @type {?} */ (this.routeReuseStrategy.retrieve(future.snapshot)));
+                    this.routeReuseStrategy.store(future.snapshot, null);
+                    context.children.onOutletReAttached(stored.contexts);
+                    context.attachRef = stored.componentRef;
+                    context.route = stored.route.value;
+                    if (context.outlet) {
+                        // Attach right away when the outlet has already been instantiated
+                        // Otherwise attach from `RouterOutlet.ngOnInit` when it is instantiated
+                        context.outlet.attach(stored.componentRef, stored.route.value);
+                    }
+                    advanceActivatedRouteNodeAndItsChildren(stored.route);
+                }
+                else {
+                    var /** @type {?} */ config = parentLoadedConfig(future.snapshot);
+                    var /** @type {?} */ cmpFactoryResolver = config ? config.module.componentFactoryResolver : null;
+                    context.route = future;
+                    context.resolver = cmpFactoryResolver;
+                    if (context.outlet) {
+                        // Activate the outlet when it has already been instantiated
+                        // Otherwise it will get activated from its `ngOnInit` when instantiated
+                        context.outlet.activateWith(future, cmpFactoryResolver);
+                    }
+                    this.activateChildRoutes(futureNode, null, context.children);
+                }
+            }
+            else {
+                // if we have a componentless route, we recurse but keep the same outlet map.
+                this.activateChildRoutes(futureNode, null, parentContexts);
+            }
+        }
+    };
+    return ActivateRoutes;
+}());
+/**
+ * @param {?} node
+ * @return {?}
+ */
+function advanceActivatedRouteNodeAndItsChildren(node) {
+    advanceActivatedRoute(node.value);
+    node.children.forEach(advanceActivatedRouteNodeAndItsChildren);
+}
+/**
+ * @param {?} snapshot
+ * @return {?}
+ */
+function parentLoadedConfig(snapshot) {
+    for (var /** @type {?} */ s = snapshot.parent; s; s = s.parent) {
+        var /** @type {?} */ route = s.routeConfig;
+        if (route && route._loadedConfig)
+            return route._loadedConfig;
+        if (route && route.component)
+            return null;
+    }
+    return null;
+}
+/**
+ * @param {?} commands
+ * @return {?}
+ */
+function validateCommands(commands) {
+    for (var /** @type {?} */ i = 0; i < commands.length; i++) {
+        var /** @type {?} */ cmd = commands[i];
+        if (cmd == null) {
+            throw new Error("The requested path contains " + cmd + " segment at index " + i);
+        }
+    }
+}
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+/**
+ * \@whatItDoes Lets you link to specific parts of your app.
+ *
+ * \@howToUse
+ *
+ * Consider the following route configuration:
+ * `[{ path: 'user/:name', component: UserCmp }]`
+ *
+ * When linking to this `user/:name` route, you can write:
+ * `<a routerLink='/user/bob'>link to user component</a>`
+ *
+ * \@description
+ *
+ * The RouterLink directives let you link to specific parts of your app.
+ *
+ * When the link is static, you can use the directive as follows:
+ * `<a routerLink="/user/bob">link to user component</a>`
+ *
+ * If you use dynamic values to generate the link, you can pass an array of path
+ * segments, followed by the params for each segment.
+ *
+ * For instance `['/team', teamId, 'user', userName, {details: true}]`
+ * means that we want to generate a link to `/team/11/user/bob;details=true`.
+ *
+ * Multiple static segments can be merged into one
+ * (e.g., `['/team/11/user', userName, {details: true}]`).
+ *
+ * The first segment name can be prepended with `/`, `./`, or `../`:
+ * * If the first segment begins with `/`, the router will look up the route from the root of the
+ *   app.
+ * * If the first segment begins with `./`, or doesn't begin with a slash, the router will
+ *   instead look in the children of the current activated route.
+ * * And if the first segment begins with `../`, the router will go up one level.
+ *
+ * You can set query params and fragment as follows:
+ *
+ * ```
+ * <a [routerLink]="['/user/bob']" [queryParams]="{debug: true}" fragment="education">
+ *   link to user component
+ * </a>
+ * ```
+ * RouterLink will use these to generate this link: `/user/bob#education?debug=true`.
+ *
+ * (Deprecated in v4.0.0 use `queryParamsHandling` instead) You can also tell the
+ * directive to preserve the current query params and fragment:
+ *
+ * ```
+ * <a [routerLink]="['/user/bob']" preserveQueryParams preserveFragment>
+ *   link to user component
+ * </a>
+ * ```
+ *
+ * You can tell the directive to how to handle queryParams, available options are:
+ *  - `'merge'`: merge the queryParams into the current queryParams
+ *  - `'preserve'`: preserve the current queryParams
+ *  - default/`''`: use the queryParams only
+ *
+ * Same options for {\@link NavigationExtras#queryParamsHandling
+ * NavigationExtras#queryParamsHandling}.
+ *
+ * ```
+ * <a [routerLink]="['/user/bob']" [queryParams]="{debug: true}" queryParamsHandling="merge">
+ *   link to user component
+ * </a>
+ * ```
+ *
+ * The router link directive always treats the provided input as a delta to the current url.
+ *
+ * For instance, if the current url is `/user/(box//aux:team)`.
+ *
+ * Then the following link `<a [routerLink]="['/user/jim']">Jim</a>` will generate the link
+ * `/user/(jim//aux:team)`.
+ *
+ * See {\@link Router#createUrlTree createUrlTree} for more information.
+ *
+ * \@ngModule RouterModule
+ *
+ * \@stable
+ */
+var RouterLink = /** @class */ (function () {
+    function RouterLink(router, route, tabIndex, renderer, el) {
+        this.router = router;
+        this.route = route;
+        this.commands = [];
+        if (tabIndex == null) {
+            renderer.setAttribute(el.nativeElement, 'tabindex', '0');
+        }
+    }
+    Object.defineProperty(RouterLink.prototype, "routerLink", {
+        set: /**
+         * @param {?} commands
+         * @return {?}
+         */
+        function (commands) {
+            if (commands != null) {
+                this.commands = Array.isArray(commands) ? commands : [commands];
+            }
+            else {
+                this.commands = [];
+            }
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(RouterLink.prototype, "preserveQueryParams", {
+        set: /**
+         * @deprecated 4.0.0 use `queryParamsHandling` instead.
+         * @param {?} value
+         * @return {?}
+         */
+        function (value) {
+            if (Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["isDevMode"])() && /** @type {?} */ (console) && /** @type {?} */ (console.warn)) {
+                console.warn('preserveQueryParams is deprecated!, use queryParamsHandling instead.');
+            }
+            this.preserve = value;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * @return {?}
+     */
+    RouterLink.prototype.onClick = /**
+     * @return {?}
+     */
+    function () {
+        var /** @type {?} */ extras = {
+            skipLocationChange: attrBoolValue(this.skipLocationChange),
+            replaceUrl: attrBoolValue(this.replaceUrl),
+        };
+        this.router.navigateByUrl(this.urlTree, extras);
+        return true;
+    };
+    Object.defineProperty(RouterLink.prototype, "urlTree", {
+        get: /**
+         * @return {?}
+         */
+        function () {
+            return this.router.createUrlTree(this.commands, {
+                relativeTo: this.route,
+                queryParams: this.queryParams,
+                fragment: this.fragment,
+                preserveQueryParams: attrBoolValue(this.preserve),
+                queryParamsHandling: this.queryParamsHandling,
+                preserveFragment: attrBoolValue(this.preserveFragment),
+            });
+        },
+        enumerable: true,
+        configurable: true
+    });
+    RouterLink.decorators = [
+        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Directive"], args: [{ selector: ':not(a)[routerLink]' },] },
+    ];
+    /** @nocollapse */
+    RouterLink.ctorParameters = function () { return [
+        { type: Router, },
+        { type: ActivatedRoute, },
+        { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Attribute"], args: ['tabindex',] },] },
+        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Renderer2"], },
+        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["ElementRef"], },
+    ]; };
+    RouterLink.propDecorators = {
+        "queryParams": [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] },],
+        "fragment": [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] },],
+        "queryParamsHandling": [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] },],
+        "preserveFragment": [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] },],
+        "skipLocationChange": [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] },],
+        "replaceUrl": [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] },],
+        "routerLink": [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] },],
+        "preserveQueryParams": [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] },],
+        "onClick": [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["HostListener"], args: ['click',] },],
+    };
+    return RouterLink;
+}());
+/**
+ * \@whatItDoes Lets you link to specific parts of your app.
+ *
+ * See {\@link RouterLink} for more information.
+ *
+ * \@ngModule RouterModule
+ *
+ * \@stable
+ */
+var RouterLinkWithHref = /** @class */ (function () {
+    function RouterLinkWithHref(router, route, locationStrategy) {
+        var _this = this;
+        this.router = router;
+        this.route = route;
+        this.locationStrategy = locationStrategy;
+        this.commands = [];
+        this.subscription = router.events.subscribe(function (s) {
+            if (s instanceof NavigationEnd) {
+                _this.updateTargetUrlAndHref();
+            }
+        });
+    }
+    Object.defineProperty(RouterLinkWithHref.prototype, "routerLink", {
+        set: /**
+         * @param {?} commands
+         * @return {?}
+         */
+        function (commands) {
+            if (commands != null) {
+                this.commands = Array.isArray(commands) ? commands : [commands];
+            }
+            else {
+                this.commands = [];
+            }
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(RouterLinkWithHref.prototype, "preserveQueryParams", {
+        set: /**
+         * @param {?} value
+         * @return {?}
+         */
+        function (value) {
+            if (Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["isDevMode"])() && /** @type {?} */ (console) && /** @type {?} */ (console.warn)) {
+                console.warn('preserveQueryParams is deprecated, use queryParamsHandling instead.');
+            }
+            this.preserve = value;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * @param {?} changes
+     * @return {?}
+     */
+    RouterLinkWithHref.prototype.ngOnChanges = /**
+     * @param {?} changes
+     * @return {?}
+     */
+    function (changes) { this.updateTargetUrlAndHref(); };
+    /**
+     * @return {?}
+     */
+    RouterLinkWithHref.prototype.ngOnDestroy = /**
+     * @return {?}
+     */
+    function () { this.subscription.unsubscribe(); };
+    /**
+     * @param {?} button
+     * @param {?} ctrlKey
+     * @param {?} metaKey
+     * @param {?} shiftKey
+     * @return {?}
+     */
+    RouterLinkWithHref.prototype.onClick = /**
+     * @param {?} button
+     * @param {?} ctrlKey
+     * @param {?} metaKey
+     * @param {?} shiftKey
+     * @return {?}
+     */
+    function (button, ctrlKey, metaKey, shiftKey) {
+        if (button !== 0 || ctrlKey || metaKey || shiftKey) {
+            return true;
+        }
+        if (typeof this.target === 'string' && this.target != '_self') {
+            return true;
+        }
+        var /** @type {?} */ extras = {
+            skipLocationChange: attrBoolValue(this.skipLocationChange),
+            replaceUrl: attrBoolValue(this.replaceUrl),
+        };
+        this.router.navigateByUrl(this.urlTree, extras);
+        return false;
+    };
+    /**
+     * @return {?}
+     */
+    RouterLinkWithHref.prototype.updateTargetUrlAndHref = /**
+     * @return {?}
+     */
+    function () {
+        this.href = this.locationStrategy.prepareExternalUrl(this.router.serializeUrl(this.urlTree));
+    };
+    Object.defineProperty(RouterLinkWithHref.prototype, "urlTree", {
+        get: /**
+         * @return {?}
+         */
+        function () {
+            return this.router.createUrlTree(this.commands, {
+                relativeTo: this.route,
+                queryParams: this.queryParams,
+                fragment: this.fragment,
+                preserveQueryParams: attrBoolValue(this.preserve),
+                queryParamsHandling: this.queryParamsHandling,
+                preserveFragment: attrBoolValue(this.preserveFragment),
+            });
+        },
+        enumerable: true,
+        configurable: true
+    });
+    RouterLinkWithHref.decorators = [
+        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Directive"], args: [{ selector: 'a[routerLink]' },] },
+    ];
+    /** @nocollapse */
+    RouterLinkWithHref.ctorParameters = function () { return [
+        { type: Router, },
+        { type: ActivatedRoute, },
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_common__["g" /* LocationStrategy */], },
+    ]; };
+    RouterLinkWithHref.propDecorators = {
+        "target": [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["HostBinding"], args: ['attr.target',] }, { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] },],
+        "queryParams": [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] },],
+        "fragment": [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] },],
+        "queryParamsHandling": [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] },],
+        "preserveFragment": [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] },],
+        "skipLocationChange": [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] },],
+        "replaceUrl": [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] },],
+        "href": [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["HostBinding"] },],
+        "routerLink": [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] },],
+        "preserveQueryParams": [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] },],
+        "onClick": [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["HostListener"], args: ['click', ['$event.button', '$event.ctrlKey', '$event.metaKey', '$event.shiftKey'],] },],
+    };
+    return RouterLinkWithHref;
+}());
+/**
+ * @param {?} s
+ * @return {?}
+ */
+function attrBoolValue(s) {
+    return s === '' || !!s;
+}
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+/**
+ * \@whatItDoes Lets you add a CSS class to an element when the link's route becomes active.
+ *
+ * \@howToUse
+ *
+ * ```
+ * <a routerLink="/user/bob" routerLinkActive="active-link">Bob</a>
+ * ```
+ *
+ * \@description
+ *
+ * The RouterLinkActive directive lets you add a CSS class to an element when the link's route
+ * becomes active.
+ *
+ * Consider the following example:
+ *
+ * ```
+ * <a routerLink="/user/bob" routerLinkActive="active-link">Bob</a>
+ * ```
+ *
+ * When the url is either '/user' or '/user/bob', the active-link class will
+ * be added to the `a` tag. If the url changes, the class will be removed.
+ *
+ * You can set more than one class, as follows:
+ *
+ * ```
+ * <a routerLink="/user/bob" routerLinkActive="class1 class2">Bob</a>
+ * <a routerLink="/user/bob" [routerLinkActive]="['class1', 'class2']">Bob</a>
+ * ```
+ *
+ * You can configure RouterLinkActive by passing `exact: true`. This will add the classes
+ * only when the url matches the link exactly.
+ *
+ * ```
+ * <a routerLink="/user/bob" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:
+ * true}">Bob</a>
+ * ```
+ *
+ * You can assign the RouterLinkActive instance to a template variable and directly check
+ * the `isActive` status.
+ * ```
+ * <a routerLink="/user/bob" routerLinkActive #rla="routerLinkActive">
+ *   Bob {{ rla.isActive ? '(already open)' : ''}}
+ * </a>
+ * ```
+ *
+ * Finally, you can apply the RouterLinkActive directive to an ancestor of a RouterLink.
+ *
+ * ```
+ * <div routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">
+ *   <a routerLink="/user/jim">Jim</a>
+ *   <a routerLink="/user/bob">Bob</a>
+ * </div>
+ * ```
+ *
+ * This will set the active-link class on the div tag if the url is either '/user/jim' or
+ * '/user/bob'.
+ *
+ * \@ngModule RouterModule
+ *
+ * \@stable
+ */
+var RouterLinkActive = /** @class */ (function () {
+    function RouterLinkActive(router, element, renderer, cdr) {
+        var _this = this;
+        this.router = router;
+        this.element = element;
+        this.renderer = renderer;
+        this.cdr = cdr;
+        this.classes = [];
+        this.isActive = false;
+        this.routerLinkActiveOptions = { exact: false };
+        this.subscription = router.events.subscribe(function (s) {
+            if (s instanceof NavigationEnd) {
+                _this.update();
+            }
+        });
+    }
+    /**
+     * @return {?}
+     */
+    RouterLinkActive.prototype.ngAfterContentInit = /**
+     * @return {?}
+     */
+    function () {
+        var _this = this;
+        this.links.changes.subscribe(function (_) { return _this.update(); });
+        this.linksWithHrefs.changes.subscribe(function (_) { return _this.update(); });
+        this.update();
+    };
+    Object.defineProperty(RouterLinkActive.prototype, "routerLinkActive", {
+        set: /**
+         * @param {?} data
+         * @return {?}
+         */
+        function (data) {
+            var /** @type {?} */ classes = Array.isArray(data) ? data : data.split(' ');
+            this.classes = classes.filter(function (c) { return !!c; });
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * @param {?} changes
+     * @return {?}
+     */
+    RouterLinkActive.prototype.ngOnChanges = /**
+     * @param {?} changes
+     * @return {?}
+     */
+    function (changes) { this.update(); };
+    /**
+     * @return {?}
+     */
+    RouterLinkActive.prototype.ngOnDestroy = /**
+     * @return {?}
+     */
+    function () { this.subscription.unsubscribe(); };
+    /**
+     * @return {?}
+     */
+    RouterLinkActive.prototype.update = /**
+     * @return {?}
+     */
+    function () {
+        var _this = this;
+        if (!this.links || !this.linksWithHrefs || !this.router.navigated)
+            return;
+        Promise.resolve().then(function () {
+            var /** @type {?} */ hasActiveLinks = _this.hasActiveLinks();
+            if (_this.isActive !== hasActiveLinks) {
+                (/** @type {?} */ (_this)).isActive = hasActiveLinks;
+                _this.classes.forEach(function (c) {
+                    if (hasActiveLinks) {
+                        _this.renderer.addClass(_this.element.nativeElement, c);
+                    }
+                    else {
+                        _this.renderer.removeClass(_this.element.nativeElement, c);
+                    }
+                });
+            }
+        });
+    };
+    /**
+     * @param {?} router
+     * @return {?}
+     */
+    RouterLinkActive.prototype.isLinkActive = /**
+     * @param {?} router
+     * @return {?}
+     */
+    function (router) {
+        var _this = this;
+        return function (link) {
+            return router.isActive(link.urlTree, _this.routerLinkActiveOptions.exact);
+        };
+    };
+    /**
+     * @return {?}
+     */
+    RouterLinkActive.prototype.hasActiveLinks = /**
+     * @return {?}
+     */
+    function () {
+        return this.links.some(this.isLinkActive(this.router)) ||
+            this.linksWithHrefs.some(this.isLinkActive(this.router));
+    };
+    RouterLinkActive.decorators = [
+        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Directive"], args: [{
+                    selector: '[routerLinkActive]',
+                    exportAs: 'routerLinkActive',
+                },] },
+    ];
+    /** @nocollapse */
+    RouterLinkActive.ctorParameters = function () { return [
+        { type: Router, },
+        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["ElementRef"], },
+        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Renderer2"], },
+        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["ChangeDetectorRef"], },
+    ]; };
+    RouterLinkActive.propDecorators = {
+        "links": [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["ContentChildren"], args: [RouterLink, { descendants: true },] },],
+        "linksWithHrefs": [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["ContentChildren"], args: [RouterLinkWithHref, { descendants: true },] },],
+        "routerLinkActiveOptions": [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] },],
+        "routerLinkActive": [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Input"] },],
+    };
+    return RouterLinkActive;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+/**
+ * Store contextual information about a {\@link RouterOutlet}
+ *
+ * \@stable
+ */
+var OutletContext = /** @class */ (function () {
+    function OutletContext() {
+        this.outlet = null;
+        this.route = null;
+        this.resolver = null;
+        this.children = new ChildrenOutletContexts();
+        this.attachRef = null;
+    }
+    return OutletContext;
+}());
+/**
+ * Store contextual information about the children (= nested) {\@link RouterOutlet}
+ *
+ * \@stable
+ */
+var ChildrenOutletContexts = /** @class */ (function () {
+    function ChildrenOutletContexts() {
+        this.contexts = new Map();
+    }
+    /** Called when a `RouterOutlet` directive is instantiated */
+    /**
+     * Called when a `RouterOutlet` directive is instantiated
+     * @param {?} childName
+     * @param {?} outlet
+     * @return {?}
+     */
+    ChildrenOutletContexts.prototype.onChildOutletCreated = /**
+     * Called when a `RouterOutlet` directive is instantiated
+     * @param {?} childName
+     * @param {?} outlet
+     * @return {?}
+     */
+    function (childName, outlet) {
+        var /** @type {?} */ context = this.getOrCreateContext(childName);
+        context.outlet = outlet;
+        this.contexts.set(childName, context);
+    };
+    /**
+     * Called when a `RouterOutlet` directive is destroyed.
+     * We need to keep the context as the outlet could be destroyed inside a NgIf and might be
+     * re-created later.
+     */
+    /**
+     * Called when a `RouterOutlet` directive is destroyed.
+     * We need to keep the context as the outlet could be destroyed inside a NgIf and might be
+     * re-created later.
+     * @param {?} childName
+     * @return {?}
+     */
+    ChildrenOutletContexts.prototype.onChildOutletDestroyed = /**
+     * Called when a `RouterOutlet` directive is destroyed.
+     * We need to keep the context as the outlet could be destroyed inside a NgIf and might be
+     * re-created later.
+     * @param {?} childName
+     * @return {?}
+     */
+    function (childName) {
+        var /** @type {?} */ context = this.getContext(childName);
+        if (context) {
+            context.outlet = null;
+        }
+    };
+    /**
+     * Called when the corresponding route is deactivated during navigation.
+     * Because the component get destroyed, all children outlet are destroyed.
+     */
+    /**
+     * Called when the corresponding route is deactivated during navigation.
+     * Because the component get destroyed, all children outlet are destroyed.
+     * @return {?}
+     */
+    ChildrenOutletContexts.prototype.onOutletDeactivated = /**
+     * Called when the corresponding route is deactivated during navigation.
+     * Because the component get destroyed, all children outlet are destroyed.
+     * @return {?}
+     */
+    function () {
+        var /** @type {?} */ contexts = this.contexts;
+        this.contexts = new Map();
+        return contexts;
+    };
+    /**
+     * @param {?} contexts
+     * @return {?}
+     */
+    ChildrenOutletContexts.prototype.onOutletReAttached = /**
+     * @param {?} contexts
+     * @return {?}
+     */
+    function (contexts) { this.contexts = contexts; };
+    /**
+     * @param {?} childName
+     * @return {?}
+     */
+    ChildrenOutletContexts.prototype.getOrCreateContext = /**
+     * @param {?} childName
+     * @return {?}
+     */
+    function (childName) {
+        var /** @type {?} */ context = this.getContext(childName);
+        if (!context) {
+            context = new OutletContext();
+            this.contexts.set(childName, context);
+        }
+        return context;
+    };
+    /**
+     * @param {?} childName
+     * @return {?}
+     */
+    ChildrenOutletContexts.prototype.getContext = /**
+     * @param {?} childName
+     * @return {?}
+     */
+    function (childName) { return this.contexts.get(childName) || null; };
+    return ChildrenOutletContexts;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+/**
+ * \@whatItDoes Acts as a placeholder that Angular dynamically fills based on the current router
+ * state.
+ *
+ * \@howToUse
+ *
+ * ```
+ * <router-outlet></router-outlet>
+ * <router-outlet name='left'></router-outlet>
+ * <router-outlet name='right'></router-outlet>
+ * ```
+ *
+ * A router outlet will emit an activate event any time a new component is being instantiated,
+ * and a deactivate event when it is being destroyed.
+ *
+ * ```
+ * <router-outlet
+ *   (activate)='onActivate($event)'
+ *   (deactivate)='onDeactivate($event)'></router-outlet>
+ * ```
+ * \@ngModule RouterModule
+ *
+ * \@stable
+ */
+var RouterOutlet = /** @class */ (function () {
+    function RouterOutlet(parentContexts, location, resolver, name, changeDetector) {
+        this.parentContexts = parentContexts;
+        this.location = location;
+        this.resolver = resolver;
+        this.changeDetector = changeDetector;
+        this.activated = null;
+        this._activatedRoute = null;
+        this.activateEvents = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["EventEmitter"]();
+        this.deactivateEvents = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["EventEmitter"]();
+        this.name = name || PRIMARY_OUTLET;
+        parentContexts.onChildOutletCreated(this.name, this);
+    }
+    /**
+     * @return {?}
+     */
+    RouterOutlet.prototype.ngOnDestroy = /**
+     * @return {?}
+     */
+    function () { this.parentContexts.onChildOutletDestroyed(this.name); };
+    /**
+     * @return {?}
+     */
+    RouterOutlet.prototype.ngOnInit = /**
+     * @return {?}
+     */
+    function () {
+        if (!this.activated) {
+            // If the outlet was not instantiated at the time the route got activated we need to populate
+            // the outlet when it is initialized (ie inside a NgIf)
+            var /** @type {?} */ context = this.parentContexts.getContext(this.name);
+            if (context && context.route) {
+                if (context.attachRef) {
+                    // `attachRef` is populated when there is an existing component to mount
+                    this.attach(context.attachRef, context.route);
+                }
+                else {
+                    // otherwise the component defined in the configuration is created
+                    this.activateWith(context.route, context.resolver || null);
+                }
+            }
+        }
+    };
+    Object.defineProperty(RouterOutlet.prototype, "isActivated", {
+        get: /**
+         * @return {?}
+         */
+        function () { return !!this.activated; },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(RouterOutlet.prototype, "component", {
+        get: /**
+         * @return {?}
+         */
+        function () {
+            if (!this.activated)
+                throw new Error('Outlet is not activated');
+            return this.activated.instance;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(RouterOutlet.prototype, "activatedRoute", {
+        get: /**
+         * @return {?}
+         */
+        function () {
+            if (!this.activated)
+                throw new Error('Outlet is not activated');
+            return /** @type {?} */ (this._activatedRoute);
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(RouterOutlet.prototype, "activatedRouteData", {
+        get: /**
+         * @return {?}
+         */
+        function () {
+            if (this._activatedRoute) {
+                return this._activatedRoute.snapshot.data;
+            }
+            return {};
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Called when the `RouteReuseStrategy` instructs to detach the subtree
+     */
+    /**
+     * Called when the `RouteReuseStrategy` instructs to detach the subtree
+     * @return {?}
+     */
+    RouterOutlet.prototype.detach = /**
+     * Called when the `RouteReuseStrategy` instructs to detach the subtree
+     * @return {?}
+     */
+    function () {
+        if (!this.activated)
+            throw new Error('Outlet is not activated');
+        this.location.detach();
+        var /** @type {?} */ cmp = this.activated;
+        this.activated = null;
+        this._activatedRoute = null;
+        return cmp;
+    };
+    /**
+     * Called when the `RouteReuseStrategy` instructs to re-attach a previously detached subtree
+     */
+    /**
+     * Called when the `RouteReuseStrategy` instructs to re-attach a previously detached subtree
+     * @param {?} ref
+     * @param {?} activatedRoute
+     * @return {?}
+     */
+    RouterOutlet.prototype.attach = /**
+     * Called when the `RouteReuseStrategy` instructs to re-attach a previously detached subtree
+     * @param {?} ref
+     * @param {?} activatedRoute
+     * @return {?}
+     */
+    function (ref, activatedRoute) {
+        this.activated = ref;
+        this._activatedRoute = activatedRoute;
+        this.location.insert(ref.hostView);
+    };
+    /**
+     * @return {?}
+     */
+    RouterOutlet.prototype.deactivate = /**
+     * @return {?}
+     */
+    function () {
+        if (this.activated) {
+            var /** @type {?} */ c = this.component;
+            this.activated.destroy();
+            this.activated = null;
+            this._activatedRoute = null;
+            this.deactivateEvents.emit(c);
+        }
+    };
+    /**
+     * @param {?} activatedRoute
+     * @param {?} resolver
+     * @return {?}
+     */
+    RouterOutlet.prototype.activateWith = /**
+     * @param {?} activatedRoute
+     * @param {?} resolver
+     * @return {?}
+     */
+    function (activatedRoute, resolver) {
+        if (this.isActivated) {
+            throw new Error('Cannot activate an already activated outlet');
+        }
+        this._activatedRoute = activatedRoute;
+        var /** @type {?} */ snapshot = activatedRoute._futureSnapshot;
+        var /** @type {?} */ component = /** @type {?} */ (/** @type {?} */ ((snapshot.routeConfig)).component);
+        resolver = resolver || this.resolver;
+        var /** @type {?} */ factory = resolver.resolveComponentFactory(component);
+        var /** @type {?} */ childContexts = this.parentContexts.getOrCreateContext(this.name).children;
+        var /** @type {?} */ injector = new OutletInjector(activatedRoute, childContexts, this.location.injector);
+        this.activated = this.location.createComponent(factory, this.location.length, injector);
+        // Calling `markForCheck` to make sure we will run the change detection when the
+        // `RouterOutlet` is inside a `ChangeDetectionStrategy.OnPush` component.
+        this.changeDetector.markForCheck();
+        this.activateEvents.emit(this.activated.instance);
+    };
+    RouterOutlet.decorators = [
+        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Directive"], args: [{ selector: 'router-outlet', exportAs: 'outlet' },] },
+    ];
+    /** @nocollapse */
+    RouterOutlet.ctorParameters = function () { return [
+        { type: ChildrenOutletContexts, },
+        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["ViewContainerRef"], },
+        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["ComponentFactoryResolver"], },
+        { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Attribute"], args: ['name',] },] },
+        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["ChangeDetectorRef"], },
+    ]; };
+    RouterOutlet.propDecorators = {
+        "activateEvents": [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Output"], args: ['activate',] },],
+        "deactivateEvents": [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Output"], args: ['deactivate',] },],
+    };
+    return RouterOutlet;
+}());
+var OutletInjector = /** @class */ (function () {
+    function OutletInjector(route, childContexts, parent) {
+        this.route = route;
+        this.childContexts = childContexts;
+        this.parent = parent;
+    }
+    /**
+     * @param {?} token
+     * @param {?=} notFoundValue
+     * @return {?}
+     */
+    OutletInjector.prototype.get = /**
+     * @param {?} token
+     * @param {?=} notFoundValue
+     * @return {?}
+     */
+    function (token, notFoundValue) {
+        if (token === ActivatedRoute) {
+            return this.route;
+        }
+        if (token === ChildrenOutletContexts) {
+            return this.childContexts;
+        }
+        return this.parent.get(token, notFoundValue);
+    };
+    return OutletInjector;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+*@license
+*Copyright Google Inc. All Rights Reserved.
+*
+*Use of this source code is governed by an MIT-style license that can be
+*found in the LICENSE file at https://angular.io/license
+*/
+/**
+ * \@whatItDoes Provides a preloading strategy.
+ *
+ * \@experimental
+ * @abstract
+ */
+var PreloadingStrategy = /** @class */ (function () {
+    function PreloadingStrategy() {
+    }
+    return PreloadingStrategy;
+}());
+/**
+ * \@whatItDoes Provides a preloading strategy that preloads all modules as quickly as possible.
+ *
+ * \@howToUse
+ *
+ * ```
+ * RouteModule.forRoot(ROUTES, {preloadingStrategy: PreloadAllModules})
+ * ```
+ *
+ * \@experimental
+ */
+var PreloadAllModules = /** @class */ (function () {
+    function PreloadAllModules() {
+    }
+    /**
+     * @param {?} route
+     * @param {?} fn
+     * @return {?}
+     */
+    PreloadAllModules.prototype.preload = /**
+     * @param {?} route
+     * @param {?} fn
+     * @return {?}
+     */
+    function (route, fn) {
+        return __WEBPACK_IMPORTED_MODULE_11_rxjs_operator_catch__["a" /* _catch */].call(fn(), function () { return Object(__WEBPACK_IMPORTED_MODULE_5_rxjs_observable_of__["a" /* of */])(null); });
+    };
+    return PreloadAllModules;
+}());
+/**
+ * \@whatItDoes Provides a preloading strategy that does not preload any modules.
+ *
+ * \@description
+ *
+ * This strategy is enabled by default.
+ *
+ * \@experimental
+ */
+var NoPreloading = /** @class */ (function () {
+    function NoPreloading() {
+    }
+    /**
+     * @param {?} route
+     * @param {?} fn
+     * @return {?}
+     */
+    NoPreloading.prototype.preload = /**
+     * @param {?} route
+     * @param {?} fn
+     * @return {?}
+     */
+    function (route, fn) { return Object(__WEBPACK_IMPORTED_MODULE_5_rxjs_observable_of__["a" /* of */])(null); };
+    return NoPreloading;
+}());
+/**
+ * The preloader optimistically loads all router configurations to
+ * make navigations into lazily-loaded sections of the application faster.
+ *
+ * The preloader runs in the background. When the router bootstraps, the preloader
+ * starts listening to all navigation events. After every such event, the preloader
+ * will check if any configurations can be loaded lazily.
+ *
+ * If a route is protected by `canLoad` guards, the preloaded will not load it.
+ *
+ * \@stable
+ */
+var RouterPreloader = /** @class */ (function () {
+    function RouterPreloader(router, moduleLoader, compiler, injector, preloadingStrategy) {
+        this.router = router;
+        this.injector = injector;
+        this.preloadingStrategy = preloadingStrategy;
+        var /** @type {?} */ onStartLoad = function (r) { return router.triggerEvent(new RouteConfigLoadStart(r)); };
+        var /** @type {?} */ onEndLoad = function (r) { return router.triggerEvent(new RouteConfigLoadEnd(r)); };
+        this.loader = new RouterConfigLoader(moduleLoader, compiler, onStartLoad, onEndLoad);
+    }
+    /**
+     * @return {?}
+     */
+    RouterPreloader.prototype.setUpPreloading = /**
+     * @return {?}
+     */
+    function () {
+        var _this = this;
+        var /** @type {?} */ navigations$ = __WEBPACK_IMPORTED_MODULE_21_rxjs_operator_filter__["a" /* filter */].call(this.router.events, function (e) { return e instanceof NavigationEnd; });
+        this.subscription = __WEBPACK_IMPORTED_MODULE_6_rxjs_operator_concatMap__["a" /* concatMap */].call(navigations$, function () { return _this.preload(); }).subscribe(function () { });
+    };
+    /**
+     * @return {?}
+     */
+    RouterPreloader.prototype.preload = /**
+     * @return {?}
+     */
+    function () {
+        var /** @type {?} */ ngModule = this.injector.get(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModuleRef"]);
+        return this.processRoutes(ngModule, this.router.config);
+    };
+    // TODO(jasonaden): This class relies on code external to the class to call setUpPreloading. If
+    // this hasn't been done, ngOnDestroy will fail as this.subscription will be undefined. This
+    // should be refactored.
+    /**
+     * @return {?}
+     */
+    RouterPreloader.prototype.ngOnDestroy = /**
+     * @return {?}
+     */
+    function () { this.subscription.unsubscribe(); };
+    /**
+     * @param {?} ngModule
+     * @param {?} routes
+     * @return {?}
+     */
+    RouterPreloader.prototype.processRoutes = /**
+     * @param {?} ngModule
+     * @param {?} routes
+     * @return {?}
+     */
+    function (ngModule, routes) {
+        var /** @type {?} */ res = [];
+        for (var _i = 0, routes_1 = routes; _i < routes_1.length; _i++) {
+            var route = routes_1[_i];
+            // we already have the config loaded, just recurse
+            if (route.loadChildren && !route.canLoad && route._loadedConfig) {
+                var /** @type {?} */ childConfig = route._loadedConfig;
+                res.push(this.processRoutes(childConfig.module, childConfig.routes));
+                // no config loaded, fetch the config
+            }
+            else if (route.loadChildren && !route.canLoad) {
+                res.push(this.preloadConfig(ngModule, route));
+                // recurse into children
+            }
+            else if (route.children) {
+                res.push(this.processRoutes(ngModule, route.children));
+            }
+        }
+        return __WEBPACK_IMPORTED_MODULE_18_rxjs_operator_mergeAll__["a" /* mergeAll */].call(Object(__WEBPACK_IMPORTED_MODULE_10_rxjs_observable_from__["a" /* from */])(res));
+    };
+    /**
+     * @param {?} ngModule
+     * @param {?} route
+     * @return {?}
+     */
+    RouterPreloader.prototype.preloadConfig = /**
+     * @param {?} ngModule
+     * @param {?} route
+     * @return {?}
+     */
+    function (ngModule, route) {
+        var _this = this;
+        return this.preloadingStrategy.preload(route, function () {
+            var /** @type {?} */ loaded$ = _this.loader.load(ngModule.injector, route);
+            return __WEBPACK_IMPORTED_MODULE_8_rxjs_operator_mergeMap__["a" /* mergeMap */].call(loaded$, function (config) {
+                route._loadedConfig = config;
+                return _this.processRoutes(config.module, config.routes);
+            });
+        });
+    };
+    RouterPreloader.decorators = [
+        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Injectable"] },
+    ];
+    /** @nocollapse */
+    RouterPreloader.ctorParameters = function () { return [
+        { type: Router, },
+        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModuleFactoryLoader"], },
+        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Compiler"], },
+        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Injector"], },
+        { type: PreloadingStrategy, },
+    ]; };
+    return RouterPreloader;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+/**
+ * \@whatItDoes Contains a list of directives
+ * \@stable
+ */
+var ROUTER_DIRECTIVES = [RouterOutlet, RouterLink, RouterLinkWithHref, RouterLinkActive];
+/**
+ * \@whatItDoes Is used in DI to configure the router.
+ * \@stable
+ */
+var ROUTER_CONFIGURATION = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["InjectionToken"]('ROUTER_CONFIGURATION');
+/**
+ * \@docsNotRequired
+ */
+var ROUTER_FORROOT_GUARD = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["InjectionToken"]('ROUTER_FORROOT_GUARD');
+var ROUTER_PROVIDERS = [
+    __WEBPACK_IMPORTED_MODULE_0__angular_common__["f" /* Location */],
+    { provide: UrlSerializer, useClass: DefaultUrlSerializer },
+    {
+        provide: Router,
+        useFactory: setupRouter,
+        deps: [
+            __WEBPACK_IMPORTED_MODULE_1__angular_core__["ApplicationRef"], UrlSerializer, ChildrenOutletContexts, __WEBPACK_IMPORTED_MODULE_0__angular_common__["f" /* Location */], __WEBPACK_IMPORTED_MODULE_1__angular_core__["Injector"],
+            __WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModuleFactoryLoader"], __WEBPACK_IMPORTED_MODULE_1__angular_core__["Compiler"], ROUTES, ROUTER_CONFIGURATION,
+            [UrlHandlingStrategy, new __WEBPACK_IMPORTED_MODULE_1__angular_core__["Optional"]()], [RouteReuseStrategy, new __WEBPACK_IMPORTED_MODULE_1__angular_core__["Optional"]()]
+        ]
+    },
+    ChildrenOutletContexts,
+    { provide: ActivatedRoute, useFactory: rootRoute, deps: [Router] },
+    { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModuleFactoryLoader"], useClass: __WEBPACK_IMPORTED_MODULE_1__angular_core__["SystemJsNgModuleLoader"] },
+    RouterPreloader,
+    NoPreloading,
+    PreloadAllModules,
+    { provide: ROUTER_CONFIGURATION, useValue: { enableTracing: false } },
+];
+/**
+ * @return {?}
+ */
+function routerNgProbeToken() {
+    return new __WEBPACK_IMPORTED_MODULE_1__angular_core__["NgProbeToken"]('Router', Router);
+}
+/**
+ * \@whatItDoes Adds router directives and providers.
+ *
+ * \@howToUse
+ *
+ * RouterModule can be imported multiple times: once per lazily-loaded bundle.
+ * Since the router deals with a global shared resource--location, we cannot have
+ * more than one router service active.
+ *
+ * That is why there are two ways to create the module: `RouterModule.forRoot` and
+ * `RouterModule.forChild`.
+ *
+ * * `forRoot` creates a module that contains all the directives, the given routes, and the router
+ *   service itself.
+ * * `forChild` creates a module that contains all the directives and the given routes, but does not
+ *   include the router service.
+ *
+ * When registered at the root, the module should be used as follows
+ *
+ * ```
+ * \@NgModule({
+ *   imports: [RouterModule.forRoot(ROUTES)]
+ * })
+ * class MyNgModule {}
+ * ```
+ *
+ * For submodules and lazy loaded submodules the module should be used as follows:
+ *
+ * ```
+ * \@NgModule({
+ *   imports: [RouterModule.forChild(ROUTES)]
+ * })
+ * class MyNgModule {}
+ * ```
+ *
+ * \@description
+ *
+ * Managing state transitions is one of the hardest parts of building applications. This is
+ * especially true on the web, where you also need to ensure that the state is reflected in the URL.
+ * In addition, we often want to split applications into multiple bundles and load them on demand.
+ * Doing this transparently is not trivial.
+ *
+ * The Angular router solves these problems. Using the router, you can declaratively specify
+ * application states, manage state transitions while taking care of the URL, and load bundles on
+ * demand.
+ *
+ * [Read this developer guide](https://angular.io/docs/ts/latest/guide/router.html) to get an
+ * overview of how the router should be used.
+ *
+ * \@stable
+ */
+var RouterModule = /** @class */ (function () {
+    // Note: We are injecting the Router so it gets created eagerly...
+    function RouterModule(guard, router) {
+    }
+    /**
+     * Creates a module with all the router providers and directives. It also optionally sets up an
+     * application listener to perform an initial navigation.
+     *
+     * Options (see {@link ExtraOptions}):
+     * * `enableTracing` makes the router log all its internal events to the console.
+     * * `useHash` enables the location strategy that uses the URL fragment instead of the history
+     * API.
+     * * `initialNavigation` disables the initial navigation.
+     * * `errorHandler` provides a custom error handler.
+     * * `preloadingStrategy` configures a preloading strategy (see {@link PreloadAllModules}).
+     * * `onSameUrlNavigation` configures how the router handles navigation to the current URL. See
+     * {@link ExtraOptions} for more details.
+     */
+    /**
+     * Creates a module with all the router providers and directives. It also optionally sets up an
+     * application listener to perform an initial navigation.
+     *
+     * Options (see {\@link ExtraOptions}):
+     * * `enableTracing` makes the router log all its internal events to the console.
+     * * `useHash` enables the location strategy that uses the URL fragment instead of the history
+     * API.
+     * * `initialNavigation` disables the initial navigation.
+     * * `errorHandler` provides a custom error handler.
+     * * `preloadingStrategy` configures a preloading strategy (see {\@link PreloadAllModules}).
+     * * `onSameUrlNavigation` configures how the router handles navigation to the current URL. See
+     * {\@link ExtraOptions} for more details.
+     * @param {?} routes
+     * @param {?=} config
+     * @return {?}
+     */
+    RouterModule.forRoot = /**
+     * Creates a module with all the router providers and directives. It also optionally sets up an
+     * application listener to perform an initial navigation.
+     *
+     * Options (see {\@link ExtraOptions}):
+     * * `enableTracing` makes the router log all its internal events to the console.
+     * * `useHash` enables the location strategy that uses the URL fragment instead of the history
+     * API.
+     * * `initialNavigation` disables the initial navigation.
+     * * `errorHandler` provides a custom error handler.
+     * * `preloadingStrategy` configures a preloading strategy (see {\@link PreloadAllModules}).
+     * * `onSameUrlNavigation` configures how the router handles navigation to the current URL. See
+     * {\@link ExtraOptions} for more details.
+     * @param {?} routes
+     * @param {?=} config
+     * @return {?}
+     */
+    function (routes, config) {
+        return {
+            ngModule: RouterModule,
+            providers: [
+                ROUTER_PROVIDERS,
+                provideRoutes(routes),
+                {
+                    provide: ROUTER_FORROOT_GUARD,
+                    useFactory: provideForRootGuard,
+                    deps: [[Router, new __WEBPACK_IMPORTED_MODULE_1__angular_core__["Optional"](), new __WEBPACK_IMPORTED_MODULE_1__angular_core__["SkipSelf"]()]]
+                },
+                { provide: ROUTER_CONFIGURATION, useValue: config ? config : {} },
+                {
+                    provide: __WEBPACK_IMPORTED_MODULE_0__angular_common__["g" /* LocationStrategy */],
+                    useFactory: provideLocationStrategy,
+                    deps: [
+                        __WEBPACK_IMPORTED_MODULE_0__angular_common__["i" /* PlatformLocation */], [new __WEBPACK_IMPORTED_MODULE_1__angular_core__["Inject"](__WEBPACK_IMPORTED_MODULE_0__angular_common__["a" /* APP_BASE_HREF */]), new __WEBPACK_IMPORTED_MODULE_1__angular_core__["Optional"]()], ROUTER_CONFIGURATION
+                    ]
+                },
+                {
+                    provide: PreloadingStrategy,
+                    useExisting: config && config.preloadingStrategy ? config.preloadingStrategy :
+                        NoPreloading
+                },
+                { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["NgProbeToken"], multi: true, useFactory: routerNgProbeToken },
+                provideRouterInitializer(),
+            ],
+        };
+    };
+    /**
+     * Creates a module with all the router directives and a provider registering routes.
+     */
+    /**
+     * Creates a module with all the router directives and a provider registering routes.
+     * @param {?} routes
+     * @return {?}
+     */
+    RouterModule.forChild = /**
+     * Creates a module with all the router directives and a provider registering routes.
+     * @param {?} routes
+     * @return {?}
+     */
+    function (routes) {
+        return { ngModule: RouterModule, providers: [provideRoutes(routes)] };
+    };
+    RouterModule.decorators = [
+        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"], args: [{ declarations: ROUTER_DIRECTIVES, exports: ROUTER_DIRECTIVES },] },
+    ];
+    /** @nocollapse */
+    RouterModule.ctorParameters = function () { return [
+        { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Optional"] }, { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Inject"], args: [ROUTER_FORROOT_GUARD,] },] },
+        { type: Router, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Optional"] },] },
+    ]; };
+    return RouterModule;
+}());
+/**
+ * @param {?} platformLocationStrategy
+ * @param {?} baseHref
+ * @param {?=} options
+ * @return {?}
+ */
+function provideLocationStrategy(platformLocationStrategy, baseHref, options) {
+    if (options === void 0) { options = {}; }
+    return options.useHash ? new __WEBPACK_IMPORTED_MODULE_0__angular_common__["d" /* HashLocationStrategy */](platformLocationStrategy, baseHref) :
+        new __WEBPACK_IMPORTED_MODULE_0__angular_common__["h" /* PathLocationStrategy */](platformLocationStrategy, baseHref);
+}
+/**
+ * @param {?} router
+ * @return {?}
+ */
+function provideForRootGuard(router) {
+    if (router) {
+        throw new Error("RouterModule.forRoot() called twice. Lazy loaded modules should use RouterModule.forChild() instead.");
+    }
+    return 'guarded';
+}
+/**
+ * \@whatItDoes Registers routes.
+ *
+ * \@howToUse
+ *
+ * ```
+ * \@NgModule({
+ *   imports: [RouterModule.forChild(ROUTES)],
+ *   providers: [provideRoutes(EXTRA_ROUTES)]
+ * })
+ * class MyNgModule {}
+ * ```
+ *
+ * \@stable
+ * @param {?} routes
+ * @return {?}
+ */
+function provideRoutes(routes) {
+    return [
+        { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["ANALYZE_FOR_ENTRY_COMPONENTS"], multi: true, useValue: routes },
+        { provide: ROUTES, multi: true, useValue: routes },
+    ];
+}
+/**
+ * \@whatItDoes Represents options to configure the router.
+ *
+ * \@stable
+ * @record
+ */
+
+/**
+ * @param {?} ref
+ * @param {?} urlSerializer
+ * @param {?} contexts
+ * @param {?} location
+ * @param {?} injector
+ * @param {?} loader
+ * @param {?} compiler
+ * @param {?} config
+ * @param {?=} opts
+ * @param {?=} urlHandlingStrategy
+ * @param {?=} routeReuseStrategy
+ * @return {?}
+ */
+function setupRouter(ref, urlSerializer, contexts, location, injector, loader, compiler, config, opts, urlHandlingStrategy, routeReuseStrategy) {
+    if (opts === void 0) { opts = {}; }
+    var /** @type {?} */ router = new Router(null, urlSerializer, contexts, location, injector, loader, compiler, flatten(config));
+    if (urlHandlingStrategy) {
+        router.urlHandlingStrategy = urlHandlingStrategy;
+    }
+    if (routeReuseStrategy) {
+        router.routeReuseStrategy = routeReuseStrategy;
+    }
+    if (opts.errorHandler) {
+        router.errorHandler = opts.errorHandler;
+    }
+    if (opts.enableTracing) {
+        var /** @type {?} */ dom_1 = Object(__WEBPACK_IMPORTED_MODULE_20__angular_platform_browser__["ɵgetDOM"])();
+        router.events.subscribe(function (e) {
+            dom_1.logGroup("Router Event: " + ((/** @type {?} */ (e.constructor))).name);
+            dom_1.log(e.toString());
+            dom_1.log(e);
+            dom_1.logGroupEnd();
+        });
+    }
+    if (opts.onSameUrlNavigation) {
+        router.onSameUrlNavigation = opts.onSameUrlNavigation;
+    }
+    if (opts.paramsInheritanceStrategy) {
+        router.paramsInheritanceStrategy = opts.paramsInheritanceStrategy;
+    }
+    return router;
+}
+/**
+ * @param {?} router
+ * @return {?}
+ */
+function rootRoute(router) {
+    return router.routerState.root;
+}
+/**
+ * To initialize the router properly we need to do in two steps:
+ *
+ * We need to start the navigation in a APP_INITIALIZER to block the bootstrap if
+ * a resolver or a guards executes asynchronously. Second, we need to actually run
+ * activation in a BOOTSTRAP_LISTENER. We utilize the afterPreactivation
+ * hook provided by the router to do that.
+ *
+ * The router navigation starts, reaches the point when preactivation is done, and then
+ * pauses. It waits for the hook to be resolved. We then resolve it only in a bootstrap listener.
+ */
+var RouterInitializer = /** @class */ (function () {
+    function RouterInitializer(injector) {
+        this.injector = injector;
+        this.initNavigation = false;
+        this.resultOfPreactivationDone = new __WEBPACK_IMPORTED_MODULE_4_rxjs_Subject__["a" /* Subject */]();
+    }
+    /**
+     * @return {?}
+     */
+    RouterInitializer.prototype.appInitializer = /**
+     * @return {?}
+     */
+    function () {
+        var _this = this;
+        var /** @type {?} */ p = this.injector.get(__WEBPACK_IMPORTED_MODULE_0__angular_common__["e" /* LOCATION_INITIALIZED */], Promise.resolve(null));
+        return p.then(function () {
+            var /** @type {?} */ resolve = /** @type {?} */ ((null));
+            var /** @type {?} */ res = new Promise(function (r) { return resolve = r; });
+            var /** @type {?} */ router = _this.injector.get(Router);
+            var /** @type {?} */ opts = _this.injector.get(ROUTER_CONFIGURATION);
+            if (_this.isLegacyDisabled(opts) || _this.isLegacyEnabled(opts)) {
+                resolve(true);
+            }
+            else if (opts.initialNavigation === 'disabled') {
+                router.setUpLocationChangeListener();
+                resolve(true);
+            }
+            else if (opts.initialNavigation === 'enabled') {
+                router.hooks.afterPreactivation = function () {
+                    // only the initial navigation should be delayed
+                    if (!_this.initNavigation) {
+                        _this.initNavigation = true;
+                        resolve(true);
+                        return _this.resultOfPreactivationDone;
+                        // subsequent navigations should not be delayed
+                    }
+                    else {
+                        return /** @type {?} */ (Object(__WEBPACK_IMPORTED_MODULE_5_rxjs_observable_of__["a" /* of */])(null));
+                    }
+                };
+                router.initialNavigation();
+            }
+            else {
+                throw new Error("Invalid initialNavigation options: '" + opts.initialNavigation + "'");
+            }
+            return res;
+        });
+    };
+    /**
+     * @param {?} bootstrappedComponentRef
+     * @return {?}
+     */
+    RouterInitializer.prototype.bootstrapListener = /**
+     * @param {?} bootstrappedComponentRef
+     * @return {?}
+     */
+    function (bootstrappedComponentRef) {
+        var /** @type {?} */ opts = this.injector.get(ROUTER_CONFIGURATION);
+        var /** @type {?} */ preloader = this.injector.get(RouterPreloader);
+        var /** @type {?} */ router = this.injector.get(Router);
+        var /** @type {?} */ ref = this.injector.get(__WEBPACK_IMPORTED_MODULE_1__angular_core__["ApplicationRef"]);
+        if (bootstrappedComponentRef !== ref.components[0]) {
+            return;
+        }
+        if (this.isLegacyEnabled(opts)) {
+            router.initialNavigation();
+        }
+        else if (this.isLegacyDisabled(opts)) {
+            router.setUpLocationChangeListener();
+        }
+        preloader.setUpPreloading();
+        router.resetRootComponentType(ref.componentTypes[0]);
+        this.resultOfPreactivationDone.next(/** @type {?} */ ((null)));
+        this.resultOfPreactivationDone.complete();
+    };
+    /**
+     * @param {?} opts
+     * @return {?}
+     */
+    RouterInitializer.prototype.isLegacyEnabled = /**
+     * @param {?} opts
+     * @return {?}
+     */
+    function (opts) {
+        return opts.initialNavigation === 'legacy_enabled' || opts.initialNavigation === true ||
+            opts.initialNavigation === undefined;
+    };
+    /**
+     * @param {?} opts
+     * @return {?}
+     */
+    RouterInitializer.prototype.isLegacyDisabled = /**
+     * @param {?} opts
+     * @return {?}
+     */
+    function (opts) {
+        return opts.initialNavigation === 'legacy_disabled' || opts.initialNavigation === false;
+    };
+    RouterInitializer.decorators = [
+        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Injectable"] },
+    ];
+    /** @nocollapse */
+    RouterInitializer.ctorParameters = function () { return [
+        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Injector"], },
+    ]; };
+    return RouterInitializer;
+}());
+/**
+ * @param {?} r
+ * @return {?}
+ */
+function getAppInitializer(r) {
+    return r.appInitializer.bind(r);
+}
+/**
+ * @param {?} r
+ * @return {?}
+ */
+function getBootstrapListener(r) {
+    return r.bootstrapListener.bind(r);
+}
+/**
+ * A token for the router initializer that will be called after the app is bootstrapped.
+ *
+ * \@experimental
+ */
+var ROUTER_INITIALIZER = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["InjectionToken"]('Router Initializer');
+/**
+ * @return {?}
+ */
+function provideRouterInitializer() {
+    return [
+        RouterInitializer,
+        {
+            provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["APP_INITIALIZER"],
+            multi: true,
+            useFactory: getAppInitializer,
+            deps: [RouterInitializer]
+        },
+        { provide: ROUTER_INITIALIZER, useFactory: getBootstrapListener, deps: [RouterInitializer] },
+        { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["APP_BOOTSTRAP_LISTENER"], multi: true, useExisting: ROUTER_INITIALIZER },
+    ];
+}
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+/**
+ * \@stable
+ */
+var VERSION = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["Version"]('5.2.6');
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+/**
+ * @module
+ * @description
+ * Entry point for all public APIs of this package.
+ */
+
+// This file only reexports content of the `src` folder. Keep it that way.
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * Generated bundle index. Do not edit.
+ */
+
+
+//# sourceMappingURL=router.js.map
+
+
+/***/ }),
+
+/***/ "./node_modules/rxjs/_esm5/BehaviorSubject.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BehaviorSubject; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Subject__ = __webpack_require__("./node_modules/rxjs/_esm5/Subject.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__util_ObjectUnsubscribedError__ = __webpack_require__("./node_modules/rxjs/_esm5/util/ObjectUnsubscribedError.js");
+/** PURE_IMPORTS_START ._Subject,._util_ObjectUnsubscribedError PURE_IMPORTS_END */
+var __extends = (this && this.__extends) || function (d, b) {
+    for (var p in b)
+        if (b.hasOwnProperty(p))
+            d[p] = b[p];
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+};
+
+
+/**
+ * @class BehaviorSubject<T>
+ */
+var BehaviorSubject = /*@__PURE__*/ (/*@__PURE__*/ function (_super) {
+    __extends(BehaviorSubject, _super);
+    function BehaviorSubject(_value) {
+        _super.call(this);
+        this._value = _value;
+    }
+    Object.defineProperty(BehaviorSubject.prototype, "value", {
+        get: function () {
+            return this.getValue();
+        },
+        enumerable: true,
+        configurable: true
+    });
+    BehaviorSubject.prototype._subscribe = function (subscriber) {
+        var subscription = _super.prototype._subscribe.call(this, subscriber);
+        if (subscription && !subscription.closed) {
+            subscriber.next(this._value);
+        }
+        return subscription;
+    };
+    BehaviorSubject.prototype.getValue = function () {
+        if (this.hasError) {
+            throw this.thrownError;
+        }
+        else if (this.closed) {
+            throw new __WEBPACK_IMPORTED_MODULE_1__util_ObjectUnsubscribedError__["a" /* ObjectUnsubscribedError */]();
+        }
+        else {
+            return this._value;
+        }
+    };
+    BehaviorSubject.prototype.next = function (value) {
+        _super.prototype.next.call(this, this._value = value);
+    };
+    return BehaviorSubject;
+}(__WEBPACK_IMPORTED_MODULE_0__Subject__["a" /* Subject */]));
+//# sourceMappingURL=BehaviorSubject.js.map 
 
 
 /***/ }),
@@ -67887,6 +78330,142 @@ var InnerSubscriber = /*@__PURE__*/ (/*@__PURE__*/ function (_super) {
     return InnerSubscriber;
 }(__WEBPACK_IMPORTED_MODULE_0__Subscriber__["a" /* Subscriber */]));
 //# sourceMappingURL=InnerSubscriber.js.map 
+
+
+/***/ }),
+
+/***/ "./node_modules/rxjs/_esm5/Notification.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Notification; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Observable__ = __webpack_require__("./node_modules/rxjs/_esm5/Observable.js");
+/** PURE_IMPORTS_START ._Observable PURE_IMPORTS_END */
+
+/**
+ * Represents a push-based event or value that an {@link Observable} can emit.
+ * This class is particularly useful for operators that manage notifications,
+ * like {@link materialize}, {@link dematerialize}, {@link observeOn}, and
+ * others. Besides wrapping the actual delivered value, it also annotates it
+ * with metadata of, for instance, what type of push message it is (`next`,
+ * `error`, or `complete`).
+ *
+ * @see {@link materialize}
+ * @see {@link dematerialize}
+ * @see {@link observeOn}
+ *
+ * @class Notification<T>
+ */
+var Notification = /*@__PURE__*/ (/*@__PURE__*/ function () {
+    function Notification(kind, value, error) {
+        this.kind = kind;
+        this.value = value;
+        this.error = error;
+        this.hasValue = kind === 'N';
+    }
+    /**
+     * Delivers to the given `observer` the value wrapped by this Notification.
+     * @param {Observer} observer
+     * @return
+     */
+    Notification.prototype.observe = function (observer) {
+        switch (this.kind) {
+            case 'N':
+                return observer.next && observer.next(this.value);
+            case 'E':
+                return observer.error && observer.error(this.error);
+            case 'C':
+                return observer.complete && observer.complete();
+        }
+    };
+    /**
+     * Given some {@link Observer} callbacks, deliver the value represented by the
+     * current Notification to the correctly corresponding callback.
+     * @param {function(value: T): void} next An Observer `next` callback.
+     * @param {function(err: any): void} [error] An Observer `error` callback.
+     * @param {function(): void} [complete] An Observer `complete` callback.
+     * @return {any}
+     */
+    Notification.prototype.do = function (next, error, complete) {
+        var kind = this.kind;
+        switch (kind) {
+            case 'N':
+                return next && next(this.value);
+            case 'E':
+                return error && error(this.error);
+            case 'C':
+                return complete && complete();
+        }
+    };
+    /**
+     * Takes an Observer or its individual callback functions, and calls `observe`
+     * or `do` methods accordingly.
+     * @param {Observer|function(value: T): void} nextOrObserver An Observer or
+     * the `next` callback.
+     * @param {function(err: any): void} [error] An Observer `error` callback.
+     * @param {function(): void} [complete] An Observer `complete` callback.
+     * @return {any}
+     */
+    Notification.prototype.accept = function (nextOrObserver, error, complete) {
+        if (nextOrObserver && typeof nextOrObserver.next === 'function') {
+            return this.observe(nextOrObserver);
+        }
+        else {
+            return this.do(nextOrObserver, error, complete);
+        }
+    };
+    /**
+     * Returns a simple Observable that just delivers the notification represented
+     * by this Notification instance.
+     * @return {any}
+     */
+    Notification.prototype.toObservable = function () {
+        var kind = this.kind;
+        switch (kind) {
+            case 'N':
+                return __WEBPACK_IMPORTED_MODULE_0__Observable__["a" /* Observable */].of(this.value);
+            case 'E':
+                return __WEBPACK_IMPORTED_MODULE_0__Observable__["a" /* Observable */].throw(this.error);
+            case 'C':
+                return __WEBPACK_IMPORTED_MODULE_0__Observable__["a" /* Observable */].empty();
+        }
+        throw new Error('unexpected notification kind value');
+    };
+    /**
+     * A shortcut to create a Notification instance of the type `next` from a
+     * given value.
+     * @param {T} value The `next` value.
+     * @return {Notification<T>} The "next" Notification representing the
+     * argument.
+     */
+    Notification.createNext = function (value) {
+        if (typeof value !== 'undefined') {
+            return new Notification('N', value);
+        }
+        return Notification.undefinedValueNotification;
+    };
+    /**
+     * A shortcut to create a Notification instance of the type `error` from a
+     * given error.
+     * @param {any} [err] The `error` error.
+     * @return {Notification<T>} The "error" Notification representing the
+     * argument.
+     */
+    Notification.createError = function (err) {
+        return new Notification('E', undefined, err);
+    };
+    /**
+     * A shortcut to create a Notification instance of the type `complete`.
+     * @return {Notification<any>} The valueless "complete" Notification.
+     */
+    Notification.createComplete = function () {
+        return Notification.completeNotification;
+    };
+    Notification.completeNotification = new Notification('C');
+    Notification.undefinedValueNotification = new Notification('N', undefined);
+    return Notification;
+}());
+//# sourceMappingURL=Notification.js.map 
 
 
 /***/ }),
@@ -68167,7 +78746,7 @@ var Observable = /*@__PURE__*/ (/*@__PURE__*/ function () {
         if (operations.length === 0) {
             return this;
         }
-        return Object(__WEBPACK_IMPORTED_MODULE_3__util_pipe__["a" /* pipeFromArray */])(operations)(this);
+        return Object(__WEBPACK_IMPORTED_MODULE_3__util_pipe__["b" /* pipeFromArray */])(operations)(this);
     };
     /* tslint:enable:max-line-length */
     Observable.prototype.toPromise = function (PromiseCtor) {
@@ -68987,6 +79566,105 @@ function flattenUnsubscriptionErrors(errors) {
 
 /***/ }),
 
+/***/ "./node_modules/rxjs/_esm5/add/operator/map.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Observable__ = __webpack_require__("./node_modules/rxjs/_esm5/Observable.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__operator_map__ = __webpack_require__("./node_modules/rxjs/_esm5/operator/map.js");
+/** PURE_IMPORTS_START .._.._Observable,.._.._operator_map PURE_IMPORTS_END */
+
+
+__WEBPACK_IMPORTED_MODULE_0__Observable__["a" /* Observable */].prototype.map = __WEBPACK_IMPORTED_MODULE_1__operator_map__["a" /* map */];
+//# sourceMappingURL=map.js.map 
+
+
+/***/ }),
+
+/***/ "./node_modules/rxjs/_esm5/observable/ArrayLikeObservable.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ArrayLikeObservable; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Observable__ = __webpack_require__("./node_modules/rxjs/_esm5/Observable.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ScalarObservable__ = __webpack_require__("./node_modules/rxjs/_esm5/observable/ScalarObservable.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__EmptyObservable__ = __webpack_require__("./node_modules/rxjs/_esm5/observable/EmptyObservable.js");
+/** PURE_IMPORTS_START .._Observable,._ScalarObservable,._EmptyObservable PURE_IMPORTS_END */
+var __extends = (this && this.__extends) || function (d, b) {
+    for (var p in b)
+        if (b.hasOwnProperty(p))
+            d[p] = b[p];
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+};
+
+
+
+/**
+ * We need this JSDoc comment for affecting ESDoc.
+ * @extends {Ignored}
+ * @hide true
+ */
+var ArrayLikeObservable = /*@__PURE__*/ (/*@__PURE__*/ function (_super) {
+    __extends(ArrayLikeObservable, _super);
+    function ArrayLikeObservable(arrayLike, scheduler) {
+        _super.call(this);
+        this.arrayLike = arrayLike;
+        this.scheduler = scheduler;
+        if (!scheduler && arrayLike.length === 1) {
+            this._isScalar = true;
+            this.value = arrayLike[0];
+        }
+    }
+    ArrayLikeObservable.create = function (arrayLike, scheduler) {
+        var length = arrayLike.length;
+        if (length === 0) {
+            return new __WEBPACK_IMPORTED_MODULE_2__EmptyObservable__["a" /* EmptyObservable */]();
+        }
+        else if (length === 1) {
+            return new __WEBPACK_IMPORTED_MODULE_1__ScalarObservable__["a" /* ScalarObservable */](arrayLike[0], scheduler);
+        }
+        else {
+            return new ArrayLikeObservable(arrayLike, scheduler);
+        }
+    };
+    ArrayLikeObservable.dispatch = function (state) {
+        var arrayLike = state.arrayLike, index = state.index, length = state.length, subscriber = state.subscriber;
+        if (subscriber.closed) {
+            return;
+        }
+        if (index >= length) {
+            subscriber.complete();
+            return;
+        }
+        subscriber.next(arrayLike[index]);
+        state.index = index + 1;
+        this.schedule(state);
+    };
+    ArrayLikeObservable.prototype._subscribe = function (subscriber) {
+        var index = 0;
+        var _a = this, arrayLike = _a.arrayLike, scheduler = _a.scheduler;
+        var length = arrayLike.length;
+        if (scheduler) {
+            return scheduler.schedule(ArrayLikeObservable.dispatch, 0, {
+                arrayLike: arrayLike, index: index, length: length, subscriber: subscriber
+            });
+        }
+        else {
+            for (var i = 0; i < length && !subscriber.closed; i++) {
+                subscriber.next(arrayLike[i]);
+            }
+            subscriber.complete();
+        }
+    };
+    return ArrayLikeObservable;
+}(__WEBPACK_IMPORTED_MODULE_0__Observable__["a" /* Observable */]));
+//# sourceMappingURL=ArrayLikeObservable.js.map 
+
+
+/***/ }),
+
 /***/ "./node_modules/rxjs/_esm5/observable/ArrayObservable.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -69401,6 +80079,466 @@ var EmptyObservable = /*@__PURE__*/ (/*@__PURE__*/ function (_super) {
 
 /***/ }),
 
+/***/ "./node_modules/rxjs/_esm5/observable/FromObservable.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FromObservable; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__util_isArray__ = __webpack_require__("./node_modules/rxjs/_esm5/util/isArray.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__util_isArrayLike__ = __webpack_require__("./node_modules/rxjs/_esm5/util/isArrayLike.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__util_isPromise__ = __webpack_require__("./node_modules/rxjs/_esm5/util/isPromise.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__PromiseObservable__ = __webpack_require__("./node_modules/rxjs/_esm5/observable/PromiseObservable.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__IteratorObservable__ = __webpack_require__("./node_modules/rxjs/_esm5/observable/IteratorObservable.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ArrayObservable__ = __webpack_require__("./node_modules/rxjs/_esm5/observable/ArrayObservable.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ArrayLikeObservable__ = __webpack_require__("./node_modules/rxjs/_esm5/observable/ArrayLikeObservable.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__symbol_iterator__ = __webpack_require__("./node_modules/rxjs/_esm5/symbol/iterator.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Observable__ = __webpack_require__("./node_modules/rxjs/_esm5/Observable.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__operators_observeOn__ = __webpack_require__("./node_modules/rxjs/_esm5/operators/observeOn.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__symbol_observable__ = __webpack_require__("./node_modules/rxjs/_esm5/symbol/observable.js");
+/** PURE_IMPORTS_START .._util_isArray,.._util_isArrayLike,.._util_isPromise,._PromiseObservable,._IteratorObservable,._ArrayObservable,._ArrayLikeObservable,.._symbol_iterator,.._Observable,.._operators_observeOn,.._symbol_observable PURE_IMPORTS_END */
+var __extends = (this && this.__extends) || function (d, b) {
+    for (var p in b)
+        if (b.hasOwnProperty(p))
+            d[p] = b[p];
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+};
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * We need this JSDoc comment for affecting ESDoc.
+ * @extends {Ignored}
+ * @hide true
+ */
+var FromObservable = /*@__PURE__*/ (/*@__PURE__*/ function (_super) {
+    __extends(FromObservable, _super);
+    function FromObservable(ish, scheduler) {
+        _super.call(this, null);
+        this.ish = ish;
+        this.scheduler = scheduler;
+    }
+    /**
+     * Creates an Observable from an Array, an array-like object, a Promise, an
+     * iterable object, or an Observable-like object.
+     *
+     * <span class="informal">Converts almost anything to an Observable.</span>
+     *
+     * <img src="./img/from.png" width="100%">
+     *
+     * Convert various other objects and data types into Observables. `from`
+     * converts a Promise or an array-like or an
+     * [iterable](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#iterable)
+     * object into an Observable that emits the items in that promise or array or
+     * iterable. A String, in this context, is treated as an array of characters.
+     * Observable-like objects (contains a function named with the ES2015 Symbol
+     * for Observable) can also be converted through this operator.
+     *
+     * @example <caption>Converts an array to an Observable</caption>
+     * var array = [10, 20, 30];
+     * var result = Rx.Observable.from(array);
+     * result.subscribe(x => console.log(x));
+     *
+     * // Results in the following:
+     * // 10 20 30
+     *
+     * @example <caption>Convert an infinite iterable (from a generator) to an Observable</caption>
+     * function* generateDoubles(seed) {
+     *   var i = seed;
+     *   while (true) {
+     *     yield i;
+     *     i = 2 * i; // double it
+     *   }
+     * }
+     *
+     * var iterator = generateDoubles(3);
+     * var result = Rx.Observable.from(iterator).take(10);
+     * result.subscribe(x => console.log(x));
+     *
+     * // Results in the following:
+     * // 3 6 12 24 48 96 192 384 768 1536
+     *
+     * @see {@link create}
+     * @see {@link fromEvent}
+     * @see {@link fromEventPattern}
+     * @see {@link fromPromise}
+     *
+     * @param {ObservableInput<T>} ish A subscribable object, a Promise, an
+     * Observable-like, an Array, an iterable or an array-like object to be
+     * converted.
+     * @param {Scheduler} [scheduler] The scheduler on which to schedule the
+     * emissions of values.
+     * @return {Observable<T>} The Observable whose values are originally from the
+     * input object that was converted.
+     * @static true
+     * @name from
+     * @owner Observable
+     */
+    FromObservable.create = function (ish, scheduler) {
+        if (ish != null) {
+            if (typeof ish[__WEBPACK_IMPORTED_MODULE_10__symbol_observable__["a" /* observable */]] === 'function') {
+                if (ish instanceof __WEBPACK_IMPORTED_MODULE_8__Observable__["a" /* Observable */] && !scheduler) {
+                    return ish;
+                }
+                return new FromObservable(ish, scheduler);
+            }
+            else if (Object(__WEBPACK_IMPORTED_MODULE_0__util_isArray__["a" /* isArray */])(ish)) {
+                return new __WEBPACK_IMPORTED_MODULE_5__ArrayObservable__["a" /* ArrayObservable */](ish, scheduler);
+            }
+            else if (Object(__WEBPACK_IMPORTED_MODULE_2__util_isPromise__["a" /* isPromise */])(ish)) {
+                return new __WEBPACK_IMPORTED_MODULE_3__PromiseObservable__["a" /* PromiseObservable */](ish, scheduler);
+            }
+            else if (typeof ish[__WEBPACK_IMPORTED_MODULE_7__symbol_iterator__["a" /* iterator */]] === 'function' || typeof ish === 'string') {
+                return new __WEBPACK_IMPORTED_MODULE_4__IteratorObservable__["a" /* IteratorObservable */](ish, scheduler);
+            }
+            else if (Object(__WEBPACK_IMPORTED_MODULE_1__util_isArrayLike__["a" /* isArrayLike */])(ish)) {
+                return new __WEBPACK_IMPORTED_MODULE_6__ArrayLikeObservable__["a" /* ArrayLikeObservable */](ish, scheduler);
+            }
+        }
+        throw new TypeError((ish !== null && typeof ish || ish) + ' is not observable');
+    };
+    FromObservable.prototype._subscribe = function (subscriber) {
+        var ish = this.ish;
+        var scheduler = this.scheduler;
+        if (scheduler == null) {
+            return ish[__WEBPACK_IMPORTED_MODULE_10__symbol_observable__["a" /* observable */]]().subscribe(subscriber);
+        }
+        else {
+            return ish[__WEBPACK_IMPORTED_MODULE_10__symbol_observable__["a" /* observable */]]().subscribe(new __WEBPACK_IMPORTED_MODULE_9__operators_observeOn__["a" /* ObserveOnSubscriber */](subscriber, scheduler, 0));
+        }
+    };
+    return FromObservable;
+}(__WEBPACK_IMPORTED_MODULE_8__Observable__["a" /* Observable */]));
+//# sourceMappingURL=FromObservable.js.map 
+
+
+/***/ }),
+
+/***/ "./node_modules/rxjs/_esm5/observable/IteratorObservable.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return IteratorObservable; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__util_root__ = __webpack_require__("./node_modules/rxjs/_esm5/util/root.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Observable__ = __webpack_require__("./node_modules/rxjs/_esm5/Observable.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__symbol_iterator__ = __webpack_require__("./node_modules/rxjs/_esm5/symbol/iterator.js");
+/** PURE_IMPORTS_START .._util_root,.._Observable,.._symbol_iterator PURE_IMPORTS_END */
+var __extends = (this && this.__extends) || function (d, b) {
+    for (var p in b)
+        if (b.hasOwnProperty(p))
+            d[p] = b[p];
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+};
+
+
+
+/**
+ * We need this JSDoc comment for affecting ESDoc.
+ * @extends {Ignored}
+ * @hide true
+ */
+var IteratorObservable = /*@__PURE__*/ (/*@__PURE__*/ function (_super) {
+    __extends(IteratorObservable, _super);
+    function IteratorObservable(iterator, scheduler) {
+        _super.call(this);
+        this.scheduler = scheduler;
+        if (iterator == null) {
+            throw new Error('iterator cannot be null.');
+        }
+        this.iterator = getIterator(iterator);
+    }
+    IteratorObservable.create = function (iterator, scheduler) {
+        return new IteratorObservable(iterator, scheduler);
+    };
+    IteratorObservable.dispatch = function (state) {
+        var index = state.index, hasError = state.hasError, iterator = state.iterator, subscriber = state.subscriber;
+        if (hasError) {
+            subscriber.error(state.error);
+            return;
+        }
+        var result = iterator.next();
+        if (result.done) {
+            subscriber.complete();
+            return;
+        }
+        subscriber.next(result.value);
+        state.index = index + 1;
+        if (subscriber.closed) {
+            if (typeof iterator.return === 'function') {
+                iterator.return();
+            }
+            return;
+        }
+        this.schedule(state);
+    };
+    IteratorObservable.prototype._subscribe = function (subscriber) {
+        var index = 0;
+        var _a = this, iterator = _a.iterator, scheduler = _a.scheduler;
+        if (scheduler) {
+            return scheduler.schedule(IteratorObservable.dispatch, 0, {
+                index: index, iterator: iterator, subscriber: subscriber
+            });
+        }
+        else {
+            do {
+                var result = iterator.next();
+                if (result.done) {
+                    subscriber.complete();
+                    break;
+                }
+                else {
+                    subscriber.next(result.value);
+                }
+                if (subscriber.closed) {
+                    if (typeof iterator.return === 'function') {
+                        iterator.return();
+                    }
+                    break;
+                }
+            } while (true);
+        }
+    };
+    return IteratorObservable;
+}(__WEBPACK_IMPORTED_MODULE_1__Observable__["a" /* Observable */]));
+var StringIterator = /*@__PURE__*/ (/*@__PURE__*/ function () {
+    function StringIterator(str, idx, len) {
+        if (idx === void 0) {
+            idx = 0;
+        }
+        if (len === void 0) {
+            len = str.length;
+        }
+        this.str = str;
+        this.idx = idx;
+        this.len = len;
+    }
+    StringIterator.prototype[__WEBPACK_IMPORTED_MODULE_2__symbol_iterator__["a" /* iterator */]] = function () { return (this); };
+    StringIterator.prototype.next = function () {
+        return this.idx < this.len ? {
+            done: false,
+            value: this.str.charAt(this.idx++)
+        } : {
+            done: true,
+            value: undefined
+        };
+    };
+    return StringIterator;
+}());
+var ArrayIterator = /*@__PURE__*/ (/*@__PURE__*/ function () {
+    function ArrayIterator(arr, idx, len) {
+        if (idx === void 0) {
+            idx = 0;
+        }
+        if (len === void 0) {
+            len = toLength(arr);
+        }
+        this.arr = arr;
+        this.idx = idx;
+        this.len = len;
+    }
+    ArrayIterator.prototype[__WEBPACK_IMPORTED_MODULE_2__symbol_iterator__["a" /* iterator */]] = function () { return this; };
+    ArrayIterator.prototype.next = function () {
+        return this.idx < this.len ? {
+            done: false,
+            value: this.arr[this.idx++]
+        } : {
+            done: true,
+            value: undefined
+        };
+    };
+    return ArrayIterator;
+}());
+function getIterator(obj) {
+    var i = obj[__WEBPACK_IMPORTED_MODULE_2__symbol_iterator__["a" /* iterator */]];
+    if (!i && typeof obj === 'string') {
+        return new StringIterator(obj);
+    }
+    if (!i && obj.length !== undefined) {
+        return new ArrayIterator(obj);
+    }
+    if (!i) {
+        throw new TypeError('object is not iterable');
+    }
+    return obj[__WEBPACK_IMPORTED_MODULE_2__symbol_iterator__["a" /* iterator */]]();
+}
+var maxSafeInteger = /*@__PURE__*/ Math.pow(2, 53) - 1;
+function toLength(o) {
+    var len = +o.length;
+    if (isNaN(len)) {
+        return 0;
+    }
+    if (len === 0 || !numberIsFinite(len)) {
+        return len;
+    }
+    len = sign(len) * Math.floor(Math.abs(len));
+    if (len <= 0) {
+        return 0;
+    }
+    if (len > maxSafeInteger) {
+        return maxSafeInteger;
+    }
+    return len;
+}
+function numberIsFinite(value) {
+    return typeof value === 'number' && __WEBPACK_IMPORTED_MODULE_0__util_root__["a" /* root */].isFinite(value);
+}
+function sign(value) {
+    var valueAsNumber = +value;
+    if (valueAsNumber === 0) {
+        return valueAsNumber;
+    }
+    if (isNaN(valueAsNumber)) {
+        return valueAsNumber;
+    }
+    return valueAsNumber < 0 ? -1 : 1;
+}
+//# sourceMappingURL=IteratorObservable.js.map 
+
+
+/***/ }),
+
+/***/ "./node_modules/rxjs/_esm5/observable/PromiseObservable.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PromiseObservable; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__util_root__ = __webpack_require__("./node_modules/rxjs/_esm5/util/root.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Observable__ = __webpack_require__("./node_modules/rxjs/_esm5/Observable.js");
+/** PURE_IMPORTS_START .._util_root,.._Observable PURE_IMPORTS_END */
+var __extends = (this && this.__extends) || function (d, b) {
+    for (var p in b)
+        if (b.hasOwnProperty(p))
+            d[p] = b[p];
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+};
+
+
+/**
+ * We need this JSDoc comment for affecting ESDoc.
+ * @extends {Ignored}
+ * @hide true
+ */
+var PromiseObservable = /*@__PURE__*/ (/*@__PURE__*/ function (_super) {
+    __extends(PromiseObservable, _super);
+    function PromiseObservable(promise, scheduler) {
+        _super.call(this);
+        this.promise = promise;
+        this.scheduler = scheduler;
+    }
+    /**
+     * Converts a Promise to an Observable.
+     *
+     * <span class="informal">Returns an Observable that just emits the Promise's
+     * resolved value, then completes.</span>
+     *
+     * Converts an ES2015 Promise or a Promises/A+ spec compliant Promise to an
+     * Observable. If the Promise resolves with a value, the output Observable
+     * emits that resolved value as a `next`, and then completes. If the Promise
+     * is rejected, then the output Observable emits the corresponding Error.
+     *
+     * @example <caption>Convert the Promise returned by Fetch to an Observable</caption>
+     * var result = Rx.Observable.fromPromise(fetch('http://myserver.com/'));
+     * result.subscribe(x => console.log(x), e => console.error(e));
+     *
+     * @see {@link bindCallback}
+     * @see {@link from}
+     *
+     * @param {PromiseLike<T>} promise The promise to be converted.
+     * @param {Scheduler} [scheduler] An optional IScheduler to use for scheduling
+     * the delivery of the resolved value (or the rejection).
+     * @return {Observable<T>} An Observable which wraps the Promise.
+     * @static true
+     * @name fromPromise
+     * @owner Observable
+     */
+    PromiseObservable.create = function (promise, scheduler) {
+        return new PromiseObservable(promise, scheduler);
+    };
+    PromiseObservable.prototype._subscribe = function (subscriber) {
+        var _this = this;
+        var promise = this.promise;
+        var scheduler = this.scheduler;
+        if (scheduler == null) {
+            if (this._isScalar) {
+                if (!subscriber.closed) {
+                    subscriber.next(this.value);
+                    subscriber.complete();
+                }
+            }
+            else {
+                promise.then(function (value) {
+                    _this.value = value;
+                    _this._isScalar = true;
+                    if (!subscriber.closed) {
+                        subscriber.next(value);
+                        subscriber.complete();
+                    }
+                }, function (err) {
+                    if (!subscriber.closed) {
+                        subscriber.error(err);
+                    }
+                })
+                    .then(null, function (err) {
+                    // escape the promise trap, throw unhandled errors
+                    __WEBPACK_IMPORTED_MODULE_0__util_root__["a" /* root */].setTimeout(function () { throw err; });
+                });
+            }
+        }
+        else {
+            if (this._isScalar) {
+                if (!subscriber.closed) {
+                    return scheduler.schedule(dispatchNext, 0, { value: this.value, subscriber: subscriber });
+                }
+            }
+            else {
+                promise.then(function (value) {
+                    _this.value = value;
+                    _this._isScalar = true;
+                    if (!subscriber.closed) {
+                        subscriber.add(scheduler.schedule(dispatchNext, 0, { value: value, subscriber: subscriber }));
+                    }
+                }, function (err) {
+                    if (!subscriber.closed) {
+                        subscriber.add(scheduler.schedule(dispatchError, 0, { err: err, subscriber: subscriber }));
+                    }
+                })
+                    .then(null, function (err) {
+                    // escape the promise trap, throw unhandled errors
+                    __WEBPACK_IMPORTED_MODULE_0__util_root__["a" /* root */].setTimeout(function () { throw err; });
+                });
+            }
+        }
+    };
+    return PromiseObservable;
+}(__WEBPACK_IMPORTED_MODULE_1__Observable__["a" /* Observable */]));
+function dispatchNext(arg) {
+    var value = arg.value, subscriber = arg.subscriber;
+    if (!subscriber.closed) {
+        subscriber.next(value);
+        subscriber.complete();
+    }
+}
+function dispatchError(arg) {
+    var err = arg.err, subscriber = arg.subscriber;
+    if (!subscriber.closed) {
+        subscriber.error(err);
+    }
+}
+//# sourceMappingURL=PromiseObservable.js.map 
+
+
+/***/ }),
+
 /***/ "./node_modules/rxjs/_esm5/observable/ScalarObservable.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -69466,6 +80604,34 @@ var ScalarObservable = /*@__PURE__*/ (/*@__PURE__*/ function (_super) {
     return ScalarObservable;
 }(__WEBPACK_IMPORTED_MODULE_0__Observable__["a" /* Observable */]));
 //# sourceMappingURL=ScalarObservable.js.map 
+
+
+/***/ }),
+
+/***/ "./node_modules/rxjs/_esm5/observable/from.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return from; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__FromObservable__ = __webpack_require__("./node_modules/rxjs/_esm5/observable/FromObservable.js");
+/** PURE_IMPORTS_START ._FromObservable PURE_IMPORTS_END */
+
+var from = __WEBPACK_IMPORTED_MODULE_0__FromObservable__["a" /* FromObservable */].create;
+//# sourceMappingURL=from.js.map 
+
+
+/***/ }),
+
+/***/ "./node_modules/rxjs/_esm5/observable/fromPromise.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return fromPromise; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__PromiseObservable__ = __webpack_require__("./node_modules/rxjs/_esm5/observable/PromiseObservable.js");
+/** PURE_IMPORTS_START ._PromiseObservable PURE_IMPORTS_END */
+
+var fromPromise = __WEBPACK_IMPORTED_MODULE_0__PromiseObservable__["a" /* PromiseObservable */].create;
+//# sourceMappingURL=fromPromise.js.map 
 
 
 /***/ }),
@@ -69572,6 +80738,680 @@ function merge() {
 
 /***/ }),
 
+/***/ "./node_modules/rxjs/_esm5/observable/of.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return of; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ArrayObservable__ = __webpack_require__("./node_modules/rxjs/_esm5/observable/ArrayObservable.js");
+/** PURE_IMPORTS_START ._ArrayObservable PURE_IMPORTS_END */
+
+var of = __WEBPACK_IMPORTED_MODULE_0__ArrayObservable__["a" /* ArrayObservable */].of;
+//# sourceMappingURL=of.js.map 
+
+
+/***/ }),
+
+/***/ "./node_modules/rxjs/_esm5/operator/catch.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = _catch;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__operators_catchError__ = __webpack_require__("./node_modules/rxjs/_esm5/operators/catchError.js");
+/** PURE_IMPORTS_START .._operators_catchError PURE_IMPORTS_END */
+
+/**
+ * Catches errors on the observable to be handled by returning a new observable or throwing an error.
+ *
+ * <img src="./img/catch.png" width="100%">
+ *
+ * @example <caption>Continues with a different Observable when there's an error</caption>
+ *
+ * Observable.of(1, 2, 3, 4, 5)
+ *   .map(n => {
+ * 	   if (n == 4) {
+ * 	     throw 'four!';
+ *     }
+ *	   return n;
+ *   })
+ *   .catch(err => Observable.of('I', 'II', 'III', 'IV', 'V'))
+ *   .subscribe(x => console.log(x));
+ *   // 1, 2, 3, I, II, III, IV, V
+ *
+ * @example <caption>Retries the caught source Observable again in case of error, similar to retry() operator</caption>
+ *
+ * Observable.of(1, 2, 3, 4, 5)
+ *   .map(n => {
+ * 	   if (n === 4) {
+ * 	     throw 'four!';
+ *     }
+ * 	   return n;
+ *   })
+ *   .catch((err, caught) => caught)
+ *   .take(30)
+ *   .subscribe(x => console.log(x));
+ *   // 1, 2, 3, 1, 2, 3, ...
+ *
+ * @example <caption>Throws a new error when the source Observable throws an error</caption>
+ *
+ * Observable.of(1, 2, 3, 4, 5)
+ *   .map(n => {
+ *     if (n == 4) {
+ *       throw 'four!';
+ *     }
+ *     return n;
+ *   })
+ *   .catch(err => {
+ *     throw 'error in source. Details: ' + err;
+ *   })
+ *   .subscribe(
+ *     x => console.log(x),
+ *     err => console.log(err)
+ *   );
+ *   // 1, 2, 3, error in source. Details: four!
+ *
+ * @param {function} selector a function that takes as arguments `err`, which is the error, and `caught`, which
+ *  is the source observable, in case you'd like to "retry" that observable by returning it again. Whatever observable
+ *  is returned by the `selector` will be used to continue the observable chain.
+ * @return {Observable} An observable that originates from either the source or the observable returned by the
+ *  catch `selector` function.
+ * @method catch
+ * @name catch
+ * @owner Observable
+ */
+function _catch(selector) {
+    return Object(__WEBPACK_IMPORTED_MODULE_0__operators_catchError__["a" /* catchError */])(selector)(this);
+}
+//# sourceMappingURL=catch.js.map 
+
+
+/***/ }),
+
+/***/ "./node_modules/rxjs/_esm5/operator/concatAll.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = concatAll;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__operators_concatAll__ = __webpack_require__("./node_modules/rxjs/_esm5/operators/concatAll.js");
+/** PURE_IMPORTS_START .._operators_concatAll PURE_IMPORTS_END */
+
+/* tslint:enable:max-line-length */
+/**
+ * Converts a higher-order Observable into a first-order Observable by
+ * concatenating the inner Observables in order.
+ *
+ * <span class="informal">Flattens an Observable-of-Observables by putting one
+ * inner Observable after the other.</span>
+ *
+ * <img src="./img/concatAll.png" width="100%">
+ *
+ * Joins every Observable emitted by the source (a higher-order Observable), in
+ * a serial fashion. It subscribes to each inner Observable only after the
+ * previous inner Observable has completed, and merges all of their values into
+ * the returned observable.
+ *
+ * __Warning:__ If the source Observable emits Observables quickly and
+ * endlessly, and the inner Observables it emits generally complete slower than
+ * the source emits, you can run into memory issues as the incoming Observables
+ * collect in an unbounded buffer.
+ *
+ * Note: `concatAll` is equivalent to `mergeAll` with concurrency parameter set
+ * to `1`.
+ *
+ * @example <caption>For each click event, tick every second from 0 to 3, with no concurrency</caption>
+ * var clicks = Rx.Observable.fromEvent(document, 'click');
+ * var higherOrder = clicks.map(ev => Rx.Observable.interval(1000).take(4));
+ * var firstOrder = higherOrder.concatAll();
+ * firstOrder.subscribe(x => console.log(x));
+ *
+ * // Results in the following:
+ * // (results are not concurrent)
+ * // For every click on the "document" it will emit values 0 to 3 spaced
+ * // on a 1000ms interval
+ * // one click = 1000ms-> 0 -1000ms-> 1 -1000ms-> 2 -1000ms-> 3
+ *
+ * @see {@link combineAll}
+ * @see {@link concat}
+ * @see {@link concatMap}
+ * @see {@link concatMapTo}
+ * @see {@link exhaust}
+ * @see {@link mergeAll}
+ * @see {@link switch}
+ * @see {@link zipAll}
+ *
+ * @return {Observable} An Observable emitting values from all the inner
+ * Observables concatenated.
+ * @method concatAll
+ * @owner Observable
+ */
+function concatAll() {
+    return Object(__WEBPACK_IMPORTED_MODULE_0__operators_concatAll__["a" /* concatAll */])()(this);
+}
+//# sourceMappingURL=concatAll.js.map 
+
+
+/***/ }),
+
+/***/ "./node_modules/rxjs/_esm5/operator/concatMap.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = concatMap;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__operators_concatMap__ = __webpack_require__("./node_modules/rxjs/_esm5/operators/concatMap.js");
+/** PURE_IMPORTS_START .._operators_concatMap PURE_IMPORTS_END */
+
+/* tslint:enable:max-line-length */
+/**
+ * Projects each source value to an Observable which is merged in the output
+ * Observable, in a serialized fashion waiting for each one to complete before
+ * merging the next.
+ *
+ * <span class="informal">Maps each value to an Observable, then flattens all of
+ * these inner Observables using {@link concatAll}.</span>
+ *
+ * <img src="./img/concatMap.png" width="100%">
+ *
+ * Returns an Observable that emits items based on applying a function that you
+ * supply to each item emitted by the source Observable, where that function
+ * returns an (so-called "inner") Observable. Each new inner Observable is
+ * concatenated with the previous inner Observable.
+ *
+ * __Warning:__ if source values arrive endlessly and faster than their
+ * corresponding inner Observables can complete, it will result in memory issues
+ * as inner Observables amass in an unbounded buffer waiting for their turn to
+ * be subscribed to.
+ *
+ * Note: `concatMap` is equivalent to `mergeMap` with concurrency parameter set
+ * to `1`.
+ *
+ * @example <caption>For each click event, tick every second from 0 to 3, with no concurrency</caption>
+ * var clicks = Rx.Observable.fromEvent(document, 'click');
+ * var result = clicks.concatMap(ev => Rx.Observable.interval(1000).take(4));
+ * result.subscribe(x => console.log(x));
+ *
+ * // Results in the following:
+ * // (results are not concurrent)
+ * // For every click on the "document" it will emit values 0 to 3 spaced
+ * // on a 1000ms interval
+ * // one click = 1000ms-> 0 -1000ms-> 1 -1000ms-> 2 -1000ms-> 3
+ *
+ * @see {@link concat}
+ * @see {@link concatAll}
+ * @see {@link concatMapTo}
+ * @see {@link exhaustMap}
+ * @see {@link mergeMap}
+ * @see {@link switchMap}
+ *
+ * @param {function(value: T, ?index: number): ObservableInput} project A function
+ * that, when applied to an item emitted by the source Observable, returns an
+ * Observable.
+ * @param {function(outerValue: T, innerValue: I, outerIndex: number, innerIndex: number): any} [resultSelector]
+ * A function to produce the value on the output Observable based on the values
+ * and the indices of the source (outer) emission and the inner Observable
+ * emission. The arguments passed to this function are:
+ * - `outerValue`: the value that came from the source
+ * - `innerValue`: the value that came from the projected Observable
+ * - `outerIndex`: the "index" of the value that came from the source
+ * - `innerIndex`: the "index" of the value from the projected Observable
+ * @return {Observable} An Observable that emits the result of applying the
+ * projection function (and the optional `resultSelector`) to each item emitted
+ * by the source Observable and taking values from each projected inner
+ * Observable sequentially.
+ * @method concatMap
+ * @owner Observable
+ */
+function concatMap(project, resultSelector) {
+    return Object(__WEBPACK_IMPORTED_MODULE_0__operators_concatMap__["a" /* concatMap */])(project, resultSelector)(this);
+}
+//# sourceMappingURL=concatMap.js.map 
+
+
+/***/ }),
+
+/***/ "./node_modules/rxjs/_esm5/operator/every.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = every;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__operators_every__ = __webpack_require__("./node_modules/rxjs/_esm5/operators/every.js");
+/** PURE_IMPORTS_START .._operators_every PURE_IMPORTS_END */
+
+/**
+ * Returns an Observable that emits whether or not every item of the source satisfies the condition specified.
+ *
+ * @example <caption>A simple example emitting true if all elements are less than 5, false otherwise</caption>
+ *  Observable.of(1, 2, 3, 4, 5, 6)
+ *     .every(x => x < 5)
+ *     .subscribe(x => console.log(x)); // -> false
+ *
+ * @param {function} predicate A function for determining if an item meets a specified condition.
+ * @param {any} [thisArg] Optional object to use for `this` in the callback.
+ * @return {Observable} An Observable of booleans that determines if all items of the source Observable meet the condition specified.
+ * @method every
+ * @owner Observable
+ */
+function every(predicate, thisArg) {
+    return Object(__WEBPACK_IMPORTED_MODULE_0__operators_every__["a" /* every */])(predicate, thisArg)(this);
+}
+//# sourceMappingURL=every.js.map 
+
+
+/***/ }),
+
+/***/ "./node_modules/rxjs/_esm5/operator/filter.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = filter;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__operators_filter__ = __webpack_require__("./node_modules/rxjs/_esm5/operators/filter.js");
+/** PURE_IMPORTS_START .._operators_filter PURE_IMPORTS_END */
+
+/* tslint:enable:max-line-length */
+/**
+ * Filter items emitted by the source Observable by only emitting those that
+ * satisfy a specified predicate.
+ *
+ * <span class="informal">Like
+ * [Array.prototype.filter()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter),
+ * it only emits a value from the source if it passes a criterion function.</span>
+ *
+ * <img src="./img/filter.png" width="100%">
+ *
+ * Similar to the well-known `Array.prototype.filter` method, this operator
+ * takes values from the source Observable, passes them through a `predicate`
+ * function and only emits those values that yielded `true`.
+ *
+ * @example <caption>Emit only click events whose target was a DIV element</caption>
+ * var clicks = Rx.Observable.fromEvent(document, 'click');
+ * var clicksOnDivs = clicks.filter(ev => ev.target.tagName === 'DIV');
+ * clicksOnDivs.subscribe(x => console.log(x));
+ *
+ * @see {@link distinct}
+ * @see {@link distinctUntilChanged}
+ * @see {@link distinctUntilKeyChanged}
+ * @see {@link ignoreElements}
+ * @see {@link partition}
+ * @see {@link skip}
+ *
+ * @param {function(value: T, index: number): boolean} predicate A function that
+ * evaluates each value emitted by the source Observable. If it returns `true`,
+ * the value is emitted, if `false` the value is not passed to the output
+ * Observable. The `index` parameter is the number `i` for the i-th source
+ * emission that has happened since the subscription, starting from the number
+ * `0`.
+ * @param {any} [thisArg] An optional argument to determine the value of `this`
+ * in the `predicate` function.
+ * @return {Observable} An Observable of values from the source that were
+ * allowed by the `predicate` function.
+ * @method filter
+ * @owner Observable
+ */
+function filter(predicate, thisArg) {
+    return Object(__WEBPACK_IMPORTED_MODULE_0__operators_filter__["a" /* filter */])(predicate, thisArg)(this);
+}
+//# sourceMappingURL=filter.js.map 
+
+
+/***/ }),
+
+/***/ "./node_modules/rxjs/_esm5/operator/first.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = first;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__operators_first__ = __webpack_require__("./node_modules/rxjs/_esm5/operators/first.js");
+/** PURE_IMPORTS_START .._operators_first PURE_IMPORTS_END */
+
+/**
+ * Emits only the first value (or the first value that meets some condition)
+ * emitted by the source Observable.
+ *
+ * <span class="informal">Emits only the first value. Or emits only the first
+ * value that passes some test.</span>
+ *
+ * <img src="./img/first.png" width="100%">
+ *
+ * If called with no arguments, `first` emits the first value of the source
+ * Observable, then completes. If called with a `predicate` function, `first`
+ * emits the first value of the source that matches the specified condition. It
+ * may also take a `resultSelector` function to produce the output value from
+ * the input value, and a `defaultValue` to emit in case the source completes
+ * before it is able to emit a valid value. Throws an error if `defaultValue`
+ * was not provided and a matching element is not found.
+ *
+ * @example <caption>Emit only the first click that happens on the DOM</caption>
+ * var clicks = Rx.Observable.fromEvent(document, 'click');
+ * var result = clicks.first();
+ * result.subscribe(x => console.log(x));
+ *
+ * @example <caption>Emits the first click that happens on a DIV</caption>
+ * var clicks = Rx.Observable.fromEvent(document, 'click');
+ * var result = clicks.first(ev => ev.target.tagName === 'DIV');
+ * result.subscribe(x => console.log(x));
+ *
+ * @see {@link filter}
+ * @see {@link find}
+ * @see {@link take}
+ *
+ * @throws {EmptyError} Delivers an EmptyError to the Observer's `error`
+ * callback if the Observable completes before any `next` notification was sent.
+ *
+ * @param {function(value: T, index: number, source: Observable<T>): boolean} [predicate]
+ * An optional function called with each item to test for condition matching.
+ * @param {function(value: T, index: number): R} [resultSelector] A function to
+ * produce the value on the output Observable based on the values
+ * and the indices of the source Observable. The arguments passed to this
+ * function are:
+ * - `value`: the value that was emitted on the source.
+ * - `index`: the "index" of the value from the source.
+ * @param {R} [defaultValue] The default value emitted in case no valid value
+ * was found on the source.
+ * @return {Observable<T|R>} An Observable of the first item that matches the
+ * condition.
+ * @method first
+ * @owner Observable
+ */
+function first(predicate, resultSelector, defaultValue) {
+    return Object(__WEBPACK_IMPORTED_MODULE_0__operators_first__["a" /* first */])(predicate, resultSelector, defaultValue)(this);
+}
+//# sourceMappingURL=first.js.map 
+
+
+/***/ }),
+
+/***/ "./node_modules/rxjs/_esm5/operator/last.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = last;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__operators_last__ = __webpack_require__("./node_modules/rxjs/_esm5/operators/last.js");
+/** PURE_IMPORTS_START .._operators_last PURE_IMPORTS_END */
+
+/* tslint:enable:max-line-length */
+/**
+ * Returns an Observable that emits only the last item emitted by the source Observable.
+ * It optionally takes a predicate function as a parameter, in which case, rather than emitting
+ * the last item from the source Observable, the resulting Observable will emit the last item
+ * from the source Observable that satisfies the predicate.
+ *
+ * <img src="./img/last.png" width="100%">
+ *
+ * @throws {EmptyError} Delivers an EmptyError to the Observer's `error`
+ * callback if the Observable completes before any `next` notification was sent.
+ * @param {function} predicate - The condition any source emitted item has to satisfy.
+ * @return {Observable} An Observable that emits only the last item satisfying the given condition
+ * from the source, or an NoSuchElementException if no such items are emitted.
+ * @throws - Throws if no items that match the predicate are emitted by the source Observable.
+ * @method last
+ * @owner Observable
+ */
+function last(predicate, resultSelector, defaultValue) {
+    return Object(__WEBPACK_IMPORTED_MODULE_0__operators_last__["a" /* last */])(predicate, resultSelector, defaultValue)(this);
+}
+//# sourceMappingURL=last.js.map 
+
+
+/***/ }),
+
+/***/ "./node_modules/rxjs/_esm5/operator/map.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = map;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__operators_map__ = __webpack_require__("./node_modules/rxjs/_esm5/operators/map.js");
+/** PURE_IMPORTS_START .._operators_map PURE_IMPORTS_END */
+
+/**
+ * Applies a given `project` function to each value emitted by the source
+ * Observable, and emits the resulting values as an Observable.
+ *
+ * <span class="informal">Like [Array.prototype.map()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map),
+ * it passes each source value through a transformation function to get
+ * corresponding output values.</span>
+ *
+ * <img src="./img/map.png" width="100%">
+ *
+ * Similar to the well known `Array.prototype.map` function, this operator
+ * applies a projection to each value and emits that projection in the output
+ * Observable.
+ *
+ * @example <caption>Map every click to the clientX position of that click</caption>
+ * var clicks = Rx.Observable.fromEvent(document, 'click');
+ * var positions = clicks.map(ev => ev.clientX);
+ * positions.subscribe(x => console.log(x));
+ *
+ * @see {@link mapTo}
+ * @see {@link pluck}
+ *
+ * @param {function(value: T, index: number): R} project The function to apply
+ * to each `value` emitted by the source Observable. The `index` parameter is
+ * the number `i` for the i-th emission that has happened since the
+ * subscription, starting from the number `0`.
+ * @param {any} [thisArg] An optional argument to define what `this` is in the
+ * `project` function.
+ * @return {Observable<R>} An Observable that emits the values from the source
+ * Observable transformed by the given `project` function.
+ * @method map
+ * @owner Observable
+ */
+function map(project, thisArg) {
+    return Object(__WEBPACK_IMPORTED_MODULE_0__operators_map__["a" /* map */])(project, thisArg)(this);
+}
+//# sourceMappingURL=map.js.map 
+
+
+/***/ }),
+
+/***/ "./node_modules/rxjs/_esm5/operator/mergeAll.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = mergeAll;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__operators_mergeAll__ = __webpack_require__("./node_modules/rxjs/_esm5/operators/mergeAll.js");
+/** PURE_IMPORTS_START .._operators_mergeAll PURE_IMPORTS_END */
+
+/**
+ * Converts a higher-order Observable into a first-order Observable which
+ * concurrently delivers all values that are emitted on the inner Observables.
+ *
+ * <span class="informal">Flattens an Observable-of-Observables.</span>
+ *
+ * <img src="./img/mergeAll.png" width="100%">
+ *
+ * `mergeAll` subscribes to an Observable that emits Observables, also known as
+ * a higher-order Observable. Each time it observes one of these emitted inner
+ * Observables, it subscribes to that and delivers all the values from the
+ * inner Observable on the output Observable. The output Observable only
+ * completes once all inner Observables have completed. Any error delivered by
+ * a inner Observable will be immediately emitted on the output Observable.
+ *
+ * @example <caption>Spawn a new interval Observable for each click event, and blend their outputs as one Observable</caption>
+ * var clicks = Rx.Observable.fromEvent(document, 'click');
+ * var higherOrder = clicks.map((ev) => Rx.Observable.interval(1000));
+ * var firstOrder = higherOrder.mergeAll();
+ * firstOrder.subscribe(x => console.log(x));
+ *
+ * @example <caption>Count from 0 to 9 every second for each click, but only allow 2 concurrent timers</caption>
+ * var clicks = Rx.Observable.fromEvent(document, 'click');
+ * var higherOrder = clicks.map((ev) => Rx.Observable.interval(1000).take(10));
+ * var firstOrder = higherOrder.mergeAll(2);
+ * firstOrder.subscribe(x => console.log(x));
+ *
+ * @see {@link combineAll}
+ * @see {@link concatAll}
+ * @see {@link exhaust}
+ * @see {@link merge}
+ * @see {@link mergeMap}
+ * @see {@link mergeMapTo}
+ * @see {@link mergeScan}
+ * @see {@link switch}
+ * @see {@link zipAll}
+ *
+ * @param {number} [concurrent=Number.POSITIVE_INFINITY] Maximum number of inner
+ * Observables being subscribed to concurrently.
+ * @return {Observable} An Observable that emits values coming from all the
+ * inner Observables emitted by the source Observable.
+ * @method mergeAll
+ * @owner Observable
+ */
+function mergeAll(concurrent) {
+    if (concurrent === void 0) {
+        concurrent = Number.POSITIVE_INFINITY;
+    }
+    return Object(__WEBPACK_IMPORTED_MODULE_0__operators_mergeAll__["a" /* mergeAll */])(concurrent)(this);
+}
+//# sourceMappingURL=mergeAll.js.map 
+
+
+/***/ }),
+
+/***/ "./node_modules/rxjs/_esm5/operator/mergeMap.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = mergeMap;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__operators_mergeMap__ = __webpack_require__("./node_modules/rxjs/_esm5/operators/mergeMap.js");
+/** PURE_IMPORTS_START .._operators_mergeMap PURE_IMPORTS_END */
+
+/* tslint:enable:max-line-length */
+/**
+ * Projects each source value to an Observable which is merged in the output
+ * Observable.
+ *
+ * <span class="informal">Maps each value to an Observable, then flattens all of
+ * these inner Observables using {@link mergeAll}.</span>
+ *
+ * <img src="./img/mergeMap.png" width="100%">
+ *
+ * Returns an Observable that emits items based on applying a function that you
+ * supply to each item emitted by the source Observable, where that function
+ * returns an Observable, and then merging those resulting Observables and
+ * emitting the results of this merger.
+ *
+ * @example <caption>Map and flatten each letter to an Observable ticking every 1 second</caption>
+ * var letters = Rx.Observable.of('a', 'b', 'c');
+ * var result = letters.mergeMap(x =>
+ *   Rx.Observable.interval(1000).map(i => x+i)
+ * );
+ * result.subscribe(x => console.log(x));
+ *
+ * // Results in the following:
+ * // a0
+ * // b0
+ * // c0
+ * // a1
+ * // b1
+ * // c1
+ * // continues to list a,b,c with respective ascending integers
+ *
+ * @see {@link concatMap}
+ * @see {@link exhaustMap}
+ * @see {@link merge}
+ * @see {@link mergeAll}
+ * @see {@link mergeMapTo}
+ * @see {@link mergeScan}
+ * @see {@link switchMap}
+ *
+ * @param {function(value: T, ?index: number): ObservableInput} project A function
+ * that, when applied to an item emitted by the source Observable, returns an
+ * Observable.
+ * @param {function(outerValue: T, innerValue: I, outerIndex: number, innerIndex: number): any} [resultSelector]
+ * A function to produce the value on the output Observable based on the values
+ * and the indices of the source (outer) emission and the inner Observable
+ * emission. The arguments passed to this function are:
+ * - `outerValue`: the value that came from the source
+ * - `innerValue`: the value that came from the projected Observable
+ * - `outerIndex`: the "index" of the value that came from the source
+ * - `innerIndex`: the "index" of the value from the projected Observable
+ * @param {number} [concurrent=Number.POSITIVE_INFINITY] Maximum number of input
+ * Observables being subscribed to concurrently.
+ * @return {Observable} An Observable that emits the result of applying the
+ * projection function (and the optional `resultSelector`) to each item emitted
+ * by the source Observable and merging the results of the Observables obtained
+ * from this transformation.
+ * @method mergeMap
+ * @owner Observable
+ */
+function mergeMap(project, resultSelector, concurrent) {
+    if (concurrent === void 0) {
+        concurrent = Number.POSITIVE_INFINITY;
+    }
+    return Object(__WEBPACK_IMPORTED_MODULE_0__operators_mergeMap__["a" /* mergeMap */])(project, resultSelector, concurrent)(this);
+}
+//# sourceMappingURL=mergeMap.js.map 
+
+
+/***/ }),
+
+/***/ "./node_modules/rxjs/_esm5/operator/reduce.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = reduce;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__operators_reduce__ = __webpack_require__("./node_modules/rxjs/_esm5/operators/reduce.js");
+/** PURE_IMPORTS_START .._operators_reduce PURE_IMPORTS_END */
+
+/* tslint:enable:max-line-length */
+/**
+ * Applies an accumulator function over the source Observable, and returns the
+ * accumulated result when the source completes, given an optional seed value.
+ *
+ * <span class="informal">Combines together all values emitted on the source,
+ * using an accumulator function that knows how to join a new source value into
+ * the accumulation from the past.</span>
+ *
+ * <img src="./img/reduce.png" width="100%">
+ *
+ * Like
+ * [Array.prototype.reduce()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce),
+ * `reduce` applies an `accumulator` function against an accumulation and each
+ * value of the source Observable (from the past) to reduce it to a single
+ * value, emitted on the output Observable. Note that `reduce` will only emit
+ * one value, only when the source Observable completes. It is equivalent to
+ * applying operator {@link scan} followed by operator {@link last}.
+ *
+ * Returns an Observable that applies a specified `accumulator` function to each
+ * item emitted by the source Observable. If a `seed` value is specified, then
+ * that value will be used as the initial value for the accumulator. If no seed
+ * value is specified, the first item of the source is used as the seed.
+ *
+ * @example <caption>Count the number of click events that happened in 5 seconds</caption>
+ * var clicksInFiveSeconds = Rx.Observable.fromEvent(document, 'click')
+ *   .takeUntil(Rx.Observable.interval(5000));
+ * var ones = clicksInFiveSeconds.mapTo(1);
+ * var seed = 0;
+ * var count = ones.reduce((acc, one) => acc + one, seed);
+ * count.subscribe(x => console.log(x));
+ *
+ * @see {@link count}
+ * @see {@link expand}
+ * @see {@link mergeScan}
+ * @see {@link scan}
+ *
+ * @param {function(acc: R, value: T, index: number): R} accumulator The accumulator function
+ * called on each source value.
+ * @param {R} [seed] The initial accumulation value.
+ * @return {Observable<R>} An Observable that emits a single value that is the
+ * result of accumulating the values emitted by the source Observable.
+ * @method reduce
+ * @owner Observable
+ */
+function reduce(accumulator, seed) {
+    // providing a seed of `undefined` *should* be valid and trigger
+    // hasSeed! so don't use `seed !== undefined` checks!
+    // For this reason, we have to check it here at the original call site
+    // otherwise inside Operator/Subscriber we won't know if `undefined`
+    // means they didn't provide anything or if they literally provided `undefined`
+    if (arguments.length >= 2) {
+        return Object(__WEBPACK_IMPORTED_MODULE_0__operators_reduce__["a" /* reduce */])(accumulator, seed)(this);
+    }
+    return Object(__WEBPACK_IMPORTED_MODULE_0__operators_reduce__["a" /* reduce */])(accumulator)(this);
+}
+//# sourceMappingURL=reduce.js.map 
+
+
+/***/ }),
+
 /***/ "./node_modules/rxjs/_esm5/operator/share.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -69601,6 +81441,949 @@ function share() {
 }
 ;
 //# sourceMappingURL=share.js.map 
+
+
+/***/ }),
+
+/***/ "./node_modules/rxjs/_esm5/operators/catchError.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = catchError;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__OuterSubscriber__ = __webpack_require__("./node_modules/rxjs/_esm5/OuterSubscriber.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__util_subscribeToResult__ = __webpack_require__("./node_modules/rxjs/_esm5/util/subscribeToResult.js");
+/** PURE_IMPORTS_START .._OuterSubscriber,.._util_subscribeToResult PURE_IMPORTS_END */
+var __extends = (this && this.__extends) || function (d, b) {
+    for (var p in b)
+        if (b.hasOwnProperty(p))
+            d[p] = b[p];
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+};
+
+
+/**
+ * Catches errors on the observable to be handled by returning a new observable or throwing an error.
+ *
+ * <img src="./img/catch.png" width="100%">
+ *
+ * @example <caption>Continues with a different Observable when there's an error</caption>
+ *
+ * Observable.of(1, 2, 3, 4, 5)
+ *   .map(n => {
+ * 	   if (n == 4) {
+ * 	     throw 'four!';
+ *     }
+ *	   return n;
+ *   })
+ *   .catch(err => Observable.of('I', 'II', 'III', 'IV', 'V'))
+ *   .subscribe(x => console.log(x));
+ *   // 1, 2, 3, I, II, III, IV, V
+ *
+ * @example <caption>Retries the caught source Observable again in case of error, similar to retry() operator</caption>
+ *
+ * Observable.of(1, 2, 3, 4, 5)
+ *   .map(n => {
+ * 	   if (n === 4) {
+ * 	     throw 'four!';
+ *     }
+ * 	   return n;
+ *   })
+ *   .catch((err, caught) => caught)
+ *   .take(30)
+ *   .subscribe(x => console.log(x));
+ *   // 1, 2, 3, 1, 2, 3, ...
+ *
+ * @example <caption>Throws a new error when the source Observable throws an error</caption>
+ *
+ * Observable.of(1, 2, 3, 4, 5)
+ *   .map(n => {
+ *     if (n == 4) {
+ *       throw 'four!';
+ *     }
+ *     return n;
+ *   })
+ *   .catch(err => {
+ *     throw 'error in source. Details: ' + err;
+ *   })
+ *   .subscribe(
+ *     x => console.log(x),
+ *     err => console.log(err)
+ *   );
+ *   // 1, 2, 3, error in source. Details: four!
+ *
+ * @param {function} selector a function that takes as arguments `err`, which is the error, and `caught`, which
+ *  is the source observable, in case you'd like to "retry" that observable by returning it again. Whatever observable
+ *  is returned by the `selector` will be used to continue the observable chain.
+ * @return {Observable} An observable that originates from either the source or the observable returned by the
+ *  catch `selector` function.
+ * @name catchError
+ */
+function catchError(selector) {
+    return function catchErrorOperatorFunction(source) {
+        var operator = new CatchOperator(selector);
+        var caught = source.lift(operator);
+        return (operator.caught = caught);
+    };
+}
+var CatchOperator = /*@__PURE__*/ (/*@__PURE__*/ function () {
+    function CatchOperator(selector) {
+        this.selector = selector;
+    }
+    CatchOperator.prototype.call = function (subscriber, source) {
+        return source.subscribe(new CatchSubscriber(subscriber, this.selector, this.caught));
+    };
+    return CatchOperator;
+}());
+/**
+ * We need this JSDoc comment for affecting ESDoc.
+ * @ignore
+ * @extends {Ignored}
+ */
+var CatchSubscriber = /*@__PURE__*/ (/*@__PURE__*/ function (_super) {
+    __extends(CatchSubscriber, _super);
+    function CatchSubscriber(destination, selector, caught) {
+        _super.call(this, destination);
+        this.selector = selector;
+        this.caught = caught;
+    }
+    // NOTE: overriding `error` instead of `_error` because we don't want
+    // to have this flag this subscriber as `isStopped`. We can mimic the
+    // behavior of the RetrySubscriber (from the `retry` operator), where
+    // we unsubscribe from our source chain, reset our Subscriber flags,
+    // then subscribe to the selector result.
+    CatchSubscriber.prototype.error = function (err) {
+        if (!this.isStopped) {
+            var result = void 0;
+            try {
+                result = this.selector(err, this.caught);
+            }
+            catch (err2) {
+                _super.prototype.error.call(this, err2);
+                return;
+            }
+            this._unsubscribeAndRecycle();
+            this.add(Object(__WEBPACK_IMPORTED_MODULE_1__util_subscribeToResult__["a" /* subscribeToResult */])(this, result));
+        }
+    };
+    return CatchSubscriber;
+}(__WEBPACK_IMPORTED_MODULE_0__OuterSubscriber__["a" /* OuterSubscriber */]));
+//# sourceMappingURL=catchError.js.map 
+
+
+/***/ }),
+
+/***/ "./node_modules/rxjs/_esm5/operators/concatAll.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = concatAll;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__mergeAll__ = __webpack_require__("./node_modules/rxjs/_esm5/operators/mergeAll.js");
+/** PURE_IMPORTS_START ._mergeAll PURE_IMPORTS_END */
+
+/**
+ * Converts a higher-order Observable into a first-order Observable by
+ * concatenating the inner Observables in order.
+ *
+ * <span class="informal">Flattens an Observable-of-Observables by putting one
+ * inner Observable after the other.</span>
+ *
+ * <img src="./img/concatAll.png" width="100%">
+ *
+ * Joins every Observable emitted by the source (a higher-order Observable), in
+ * a serial fashion. It subscribes to each inner Observable only after the
+ * previous inner Observable has completed, and merges all of their values into
+ * the returned observable.
+ *
+ * __Warning:__ If the source Observable emits Observables quickly and
+ * endlessly, and the inner Observables it emits generally complete slower than
+ * the source emits, you can run into memory issues as the incoming Observables
+ * collect in an unbounded buffer.
+ *
+ * Note: `concatAll` is equivalent to `mergeAll` with concurrency parameter set
+ * to `1`.
+ *
+ * @example <caption>For each click event, tick every second from 0 to 3, with no concurrency</caption>
+ * var clicks = Rx.Observable.fromEvent(document, 'click');
+ * var higherOrder = clicks.map(ev => Rx.Observable.interval(1000).take(4));
+ * var firstOrder = higherOrder.concatAll();
+ * firstOrder.subscribe(x => console.log(x));
+ *
+ * // Results in the following:
+ * // (results are not concurrent)
+ * // For every click on the "document" it will emit values 0 to 3 spaced
+ * // on a 1000ms interval
+ * // one click = 1000ms-> 0 -1000ms-> 1 -1000ms-> 2 -1000ms-> 3
+ *
+ * @see {@link combineAll}
+ * @see {@link concat}
+ * @see {@link concatMap}
+ * @see {@link concatMapTo}
+ * @see {@link exhaust}
+ * @see {@link mergeAll}
+ * @see {@link switch}
+ * @see {@link zipAll}
+ *
+ * @return {Observable} An Observable emitting values from all the inner
+ * Observables concatenated.
+ * @method concatAll
+ * @owner Observable
+ */
+function concatAll() {
+    return Object(__WEBPACK_IMPORTED_MODULE_0__mergeAll__["a" /* mergeAll */])(1);
+}
+//# sourceMappingURL=concatAll.js.map 
+
+
+/***/ }),
+
+/***/ "./node_modules/rxjs/_esm5/operators/concatMap.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = concatMap;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__mergeMap__ = __webpack_require__("./node_modules/rxjs/_esm5/operators/mergeMap.js");
+/** PURE_IMPORTS_START ._mergeMap PURE_IMPORTS_END */
+
+/* tslint:enable:max-line-length */
+/**
+ * Projects each source value to an Observable which is merged in the output
+ * Observable, in a serialized fashion waiting for each one to complete before
+ * merging the next.
+ *
+ * <span class="informal">Maps each value to an Observable, then flattens all of
+ * these inner Observables using {@link concatAll}.</span>
+ *
+ * <img src="./img/concatMap.png" width="100%">
+ *
+ * Returns an Observable that emits items based on applying a function that you
+ * supply to each item emitted by the source Observable, where that function
+ * returns an (so-called "inner") Observable. Each new inner Observable is
+ * concatenated with the previous inner Observable.
+ *
+ * __Warning:__ if source values arrive endlessly and faster than their
+ * corresponding inner Observables can complete, it will result in memory issues
+ * as inner Observables amass in an unbounded buffer waiting for their turn to
+ * be subscribed to.
+ *
+ * Note: `concatMap` is equivalent to `mergeMap` with concurrency parameter set
+ * to `1`.
+ *
+ * @example <caption>For each click event, tick every second from 0 to 3, with no concurrency</caption>
+ * var clicks = Rx.Observable.fromEvent(document, 'click');
+ * var result = clicks.concatMap(ev => Rx.Observable.interval(1000).take(4));
+ * result.subscribe(x => console.log(x));
+ *
+ * // Results in the following:
+ * // (results are not concurrent)
+ * // For every click on the "document" it will emit values 0 to 3 spaced
+ * // on a 1000ms interval
+ * // one click = 1000ms-> 0 -1000ms-> 1 -1000ms-> 2 -1000ms-> 3
+ *
+ * @see {@link concat}
+ * @see {@link concatAll}
+ * @see {@link concatMapTo}
+ * @see {@link exhaustMap}
+ * @see {@link mergeMap}
+ * @see {@link switchMap}
+ *
+ * @param {function(value: T, ?index: number): ObservableInput} project A function
+ * that, when applied to an item emitted by the source Observable, returns an
+ * Observable.
+ * @param {function(outerValue: T, innerValue: I, outerIndex: number, innerIndex: number): any} [resultSelector]
+ * A function to produce the value on the output Observable based on the values
+ * and the indices of the source (outer) emission and the inner Observable
+ * emission. The arguments passed to this function are:
+ * - `outerValue`: the value that came from the source
+ * - `innerValue`: the value that came from the projected Observable
+ * - `outerIndex`: the "index" of the value that came from the source
+ * - `innerIndex`: the "index" of the value from the projected Observable
+ * @return {Observable} An Observable that emits the result of applying the
+ * projection function (and the optional `resultSelector`) to each item emitted
+ * by the source Observable and taking values from each projected inner
+ * Observable sequentially.
+ * @method concatMap
+ * @owner Observable
+ */
+function concatMap(project, resultSelector) {
+    return Object(__WEBPACK_IMPORTED_MODULE_0__mergeMap__["a" /* mergeMap */])(project, resultSelector, 1);
+}
+//# sourceMappingURL=concatMap.js.map 
+
+
+/***/ }),
+
+/***/ "./node_modules/rxjs/_esm5/operators/defaultIfEmpty.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = defaultIfEmpty;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Subscriber__ = __webpack_require__("./node_modules/rxjs/_esm5/Subscriber.js");
+/** PURE_IMPORTS_START .._Subscriber PURE_IMPORTS_END */
+var __extends = (this && this.__extends) || function (d, b) {
+    for (var p in b)
+        if (b.hasOwnProperty(p))
+            d[p] = b[p];
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+};
+
+/* tslint:enable:max-line-length */
+/**
+ * Emits a given value if the source Observable completes without emitting any
+ * `next` value, otherwise mirrors the source Observable.
+ *
+ * <span class="informal">If the source Observable turns out to be empty, then
+ * this operator will emit a default value.</span>
+ *
+ * <img src="./img/defaultIfEmpty.png" width="100%">
+ *
+ * `defaultIfEmpty` emits the values emitted by the source Observable or a
+ * specified default value if the source Observable is empty (completes without
+ * having emitted any `next` value).
+ *
+ * @example <caption>If no clicks happen in 5 seconds, then emit "no clicks"</caption>
+ * var clicks = Rx.Observable.fromEvent(document, 'click');
+ * var clicksBeforeFive = clicks.takeUntil(Rx.Observable.interval(5000));
+ * var result = clicksBeforeFive.defaultIfEmpty('no clicks');
+ * result.subscribe(x => console.log(x));
+ *
+ * @see {@link empty}
+ * @see {@link last}
+ *
+ * @param {any} [defaultValue=null] The default value used if the source
+ * Observable is empty.
+ * @return {Observable} An Observable that emits either the specified
+ * `defaultValue` if the source Observable emits no items, or the values emitted
+ * by the source Observable.
+ * @method defaultIfEmpty
+ * @owner Observable
+ */
+function defaultIfEmpty(defaultValue) {
+    if (defaultValue === void 0) {
+        defaultValue = null;
+    }
+    return function (source) { return source.lift(new DefaultIfEmptyOperator(defaultValue)); };
+}
+var DefaultIfEmptyOperator = /*@__PURE__*/ (/*@__PURE__*/ function () {
+    function DefaultIfEmptyOperator(defaultValue) {
+        this.defaultValue = defaultValue;
+    }
+    DefaultIfEmptyOperator.prototype.call = function (subscriber, source) {
+        return source.subscribe(new DefaultIfEmptySubscriber(subscriber, this.defaultValue));
+    };
+    return DefaultIfEmptyOperator;
+}());
+/**
+ * We need this JSDoc comment for affecting ESDoc.
+ * @ignore
+ * @extends {Ignored}
+ */
+var DefaultIfEmptySubscriber = /*@__PURE__*/ (/*@__PURE__*/ function (_super) {
+    __extends(DefaultIfEmptySubscriber, _super);
+    function DefaultIfEmptySubscriber(destination, defaultValue) {
+        _super.call(this, destination);
+        this.defaultValue = defaultValue;
+        this.isEmpty = true;
+    }
+    DefaultIfEmptySubscriber.prototype._next = function (value) {
+        this.isEmpty = false;
+        this.destination.next(value);
+    };
+    DefaultIfEmptySubscriber.prototype._complete = function () {
+        if (this.isEmpty) {
+            this.destination.next(this.defaultValue);
+        }
+        this.destination.complete();
+    };
+    return DefaultIfEmptySubscriber;
+}(__WEBPACK_IMPORTED_MODULE_0__Subscriber__["a" /* Subscriber */]));
+//# sourceMappingURL=defaultIfEmpty.js.map 
+
+
+/***/ }),
+
+/***/ "./node_modules/rxjs/_esm5/operators/every.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = every;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Subscriber__ = __webpack_require__("./node_modules/rxjs/_esm5/Subscriber.js");
+/** PURE_IMPORTS_START .._Subscriber PURE_IMPORTS_END */
+var __extends = (this && this.__extends) || function (d, b) {
+    for (var p in b)
+        if (b.hasOwnProperty(p))
+            d[p] = b[p];
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+};
+
+/**
+ * Returns an Observable that emits whether or not every item of the source satisfies the condition specified.
+ *
+ * @example <caption>A simple example emitting true if all elements are less than 5, false otherwise</caption>
+ *  Observable.of(1, 2, 3, 4, 5, 6)
+ *     .every(x => x < 5)
+ *     .subscribe(x => console.log(x)); // -> false
+ *
+ * @param {function} predicate A function for determining if an item meets a specified condition.
+ * @param {any} [thisArg] Optional object to use for `this` in the callback.
+ * @return {Observable} An Observable of booleans that determines if all items of the source Observable meet the condition specified.
+ * @method every
+ * @owner Observable
+ */
+function every(predicate, thisArg) {
+    return function (source) { return source.lift(new EveryOperator(predicate, thisArg, source)); };
+}
+var EveryOperator = /*@__PURE__*/ (/*@__PURE__*/ function () {
+    function EveryOperator(predicate, thisArg, source) {
+        this.predicate = predicate;
+        this.thisArg = thisArg;
+        this.source = source;
+    }
+    EveryOperator.prototype.call = function (observer, source) {
+        return source.subscribe(new EverySubscriber(observer, this.predicate, this.thisArg, this.source));
+    };
+    return EveryOperator;
+}());
+/**
+ * We need this JSDoc comment for affecting ESDoc.
+ * @ignore
+ * @extends {Ignored}
+ */
+var EverySubscriber = /*@__PURE__*/ (/*@__PURE__*/ function (_super) {
+    __extends(EverySubscriber, _super);
+    function EverySubscriber(destination, predicate, thisArg, source) {
+        _super.call(this, destination);
+        this.predicate = predicate;
+        this.thisArg = thisArg;
+        this.source = source;
+        this.index = 0;
+        this.thisArg = thisArg || this;
+    }
+    EverySubscriber.prototype.notifyComplete = function (everyValueMatch) {
+        this.destination.next(everyValueMatch);
+        this.destination.complete();
+    };
+    EverySubscriber.prototype._next = function (value) {
+        var result = false;
+        try {
+            result = this.predicate.call(this.thisArg, value, this.index++, this.source);
+        }
+        catch (err) {
+            this.destination.error(err);
+            return;
+        }
+        if (!result) {
+            this.notifyComplete(false);
+        }
+    };
+    EverySubscriber.prototype._complete = function () {
+        this.notifyComplete(true);
+    };
+    return EverySubscriber;
+}(__WEBPACK_IMPORTED_MODULE_0__Subscriber__["a" /* Subscriber */]));
+//# sourceMappingURL=every.js.map 
+
+
+/***/ }),
+
+/***/ "./node_modules/rxjs/_esm5/operators/filter.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = filter;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Subscriber__ = __webpack_require__("./node_modules/rxjs/_esm5/Subscriber.js");
+/** PURE_IMPORTS_START .._Subscriber PURE_IMPORTS_END */
+var __extends = (this && this.__extends) || function (d, b) {
+    for (var p in b)
+        if (b.hasOwnProperty(p))
+            d[p] = b[p];
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+};
+
+/* tslint:enable:max-line-length */
+/**
+ * Filter items emitted by the source Observable by only emitting those that
+ * satisfy a specified predicate.
+ *
+ * <span class="informal">Like
+ * [Array.prototype.filter()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter),
+ * it only emits a value from the source if it passes a criterion function.</span>
+ *
+ * <img src="./img/filter.png" width="100%">
+ *
+ * Similar to the well-known `Array.prototype.filter` method, this operator
+ * takes values from the source Observable, passes them through a `predicate`
+ * function and only emits those values that yielded `true`.
+ *
+ * @example <caption>Emit only click events whose target was a DIV element</caption>
+ * var clicks = Rx.Observable.fromEvent(document, 'click');
+ * var clicksOnDivs = clicks.filter(ev => ev.target.tagName === 'DIV');
+ * clicksOnDivs.subscribe(x => console.log(x));
+ *
+ * @see {@link distinct}
+ * @see {@link distinctUntilChanged}
+ * @see {@link distinctUntilKeyChanged}
+ * @see {@link ignoreElements}
+ * @see {@link partition}
+ * @see {@link skip}
+ *
+ * @param {function(value: T, index: number): boolean} predicate A function that
+ * evaluates each value emitted by the source Observable. If it returns `true`,
+ * the value is emitted, if `false` the value is not passed to the output
+ * Observable. The `index` parameter is the number `i` for the i-th source
+ * emission that has happened since the subscription, starting from the number
+ * `0`.
+ * @param {any} [thisArg] An optional argument to determine the value of `this`
+ * in the `predicate` function.
+ * @return {Observable} An Observable of values from the source that were
+ * allowed by the `predicate` function.
+ * @method filter
+ * @owner Observable
+ */
+function filter(predicate, thisArg) {
+    return function filterOperatorFunction(source) {
+        return source.lift(new FilterOperator(predicate, thisArg));
+    };
+}
+var FilterOperator = /*@__PURE__*/ (/*@__PURE__*/ function () {
+    function FilterOperator(predicate, thisArg) {
+        this.predicate = predicate;
+        this.thisArg = thisArg;
+    }
+    FilterOperator.prototype.call = function (subscriber, source) {
+        return source.subscribe(new FilterSubscriber(subscriber, this.predicate, this.thisArg));
+    };
+    return FilterOperator;
+}());
+/**
+ * We need this JSDoc comment for affecting ESDoc.
+ * @ignore
+ * @extends {Ignored}
+ */
+var FilterSubscriber = /*@__PURE__*/ (/*@__PURE__*/ function (_super) {
+    __extends(FilterSubscriber, _super);
+    function FilterSubscriber(destination, predicate, thisArg) {
+        _super.call(this, destination);
+        this.predicate = predicate;
+        this.thisArg = thisArg;
+        this.count = 0;
+    }
+    // the try catch block below is left specifically for
+    // optimization and perf reasons. a tryCatcher is not necessary here.
+    FilterSubscriber.prototype._next = function (value) {
+        var result;
+        try {
+            result = this.predicate.call(this.thisArg, value, this.count++);
+        }
+        catch (err) {
+            this.destination.error(err);
+            return;
+        }
+        if (result) {
+            this.destination.next(value);
+        }
+    };
+    return FilterSubscriber;
+}(__WEBPACK_IMPORTED_MODULE_0__Subscriber__["a" /* Subscriber */]));
+//# sourceMappingURL=filter.js.map 
+
+
+/***/ }),
+
+/***/ "./node_modules/rxjs/_esm5/operators/first.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = first;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Subscriber__ = __webpack_require__("./node_modules/rxjs/_esm5/Subscriber.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__util_EmptyError__ = __webpack_require__("./node_modules/rxjs/_esm5/util/EmptyError.js");
+/** PURE_IMPORTS_START .._Subscriber,.._util_EmptyError PURE_IMPORTS_END */
+var __extends = (this && this.__extends) || function (d, b) {
+    for (var p in b)
+        if (b.hasOwnProperty(p))
+            d[p] = b[p];
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+};
+
+
+/**
+ * Emits only the first value (or the first value that meets some condition)
+ * emitted by the source Observable.
+ *
+ * <span class="informal">Emits only the first value. Or emits only the first
+ * value that passes some test.</span>
+ *
+ * <img src="./img/first.png" width="100%">
+ *
+ * If called with no arguments, `first` emits the first value of the source
+ * Observable, then completes. If called with a `predicate` function, `first`
+ * emits the first value of the source that matches the specified condition. It
+ * may also take a `resultSelector` function to produce the output value from
+ * the input value, and a `defaultValue` to emit in case the source completes
+ * before it is able to emit a valid value. Throws an error if `defaultValue`
+ * was not provided and a matching element is not found.
+ *
+ * @example <caption>Emit only the first click that happens on the DOM</caption>
+ * var clicks = Rx.Observable.fromEvent(document, 'click');
+ * var result = clicks.first();
+ * result.subscribe(x => console.log(x));
+ *
+ * @example <caption>Emits the first click that happens on a DIV</caption>
+ * var clicks = Rx.Observable.fromEvent(document, 'click');
+ * var result = clicks.first(ev => ev.target.tagName === 'DIV');
+ * result.subscribe(x => console.log(x));
+ *
+ * @see {@link filter}
+ * @see {@link find}
+ * @see {@link take}
+ *
+ * @throws {EmptyError} Delivers an EmptyError to the Observer's `error`
+ * callback if the Observable completes before any `next` notification was sent.
+ *
+ * @param {function(value: T, index: number, source: Observable<T>): boolean} [predicate]
+ * An optional function called with each item to test for condition matching.
+ * @param {function(value: T, index: number): R} [resultSelector] A function to
+ * produce the value on the output Observable based on the values
+ * and the indices of the source Observable. The arguments passed to this
+ * function are:
+ * - `value`: the value that was emitted on the source.
+ * - `index`: the "index" of the value from the source.
+ * @param {R} [defaultValue] The default value emitted in case no valid value
+ * was found on the source.
+ * @return {Observable<T|R>} An Observable of the first item that matches the
+ * condition.
+ * @method first
+ * @owner Observable
+ */
+function first(predicate, resultSelector, defaultValue) {
+    return function (source) { return source.lift(new FirstOperator(predicate, resultSelector, defaultValue, source)); };
+}
+var FirstOperator = /*@__PURE__*/ (/*@__PURE__*/ function () {
+    function FirstOperator(predicate, resultSelector, defaultValue, source) {
+        this.predicate = predicate;
+        this.resultSelector = resultSelector;
+        this.defaultValue = defaultValue;
+        this.source = source;
+    }
+    FirstOperator.prototype.call = function (observer, source) {
+        return source.subscribe(new FirstSubscriber(observer, this.predicate, this.resultSelector, this.defaultValue, this.source));
+    };
+    return FirstOperator;
+}());
+/**
+ * We need this JSDoc comment for affecting ESDoc.
+ * @ignore
+ * @extends {Ignored}
+ */
+var FirstSubscriber = /*@__PURE__*/ (/*@__PURE__*/ function (_super) {
+    __extends(FirstSubscriber, _super);
+    function FirstSubscriber(destination, predicate, resultSelector, defaultValue, source) {
+        _super.call(this, destination);
+        this.predicate = predicate;
+        this.resultSelector = resultSelector;
+        this.defaultValue = defaultValue;
+        this.source = source;
+        this.index = 0;
+        this.hasCompleted = false;
+        this._emitted = false;
+    }
+    FirstSubscriber.prototype._next = function (value) {
+        var index = this.index++;
+        if (this.predicate) {
+            this._tryPredicate(value, index);
+        }
+        else {
+            this._emit(value, index);
+        }
+    };
+    FirstSubscriber.prototype._tryPredicate = function (value, index) {
+        var result;
+        try {
+            result = this.predicate(value, index, this.source);
+        }
+        catch (err) {
+            this.destination.error(err);
+            return;
+        }
+        if (result) {
+            this._emit(value, index);
+        }
+    };
+    FirstSubscriber.prototype._emit = function (value, index) {
+        if (this.resultSelector) {
+            this._tryResultSelector(value, index);
+            return;
+        }
+        this._emitFinal(value);
+    };
+    FirstSubscriber.prototype._tryResultSelector = function (value, index) {
+        var result;
+        try {
+            result = this.resultSelector(value, index);
+        }
+        catch (err) {
+            this.destination.error(err);
+            return;
+        }
+        this._emitFinal(result);
+    };
+    FirstSubscriber.prototype._emitFinal = function (value) {
+        var destination = this.destination;
+        if (!this._emitted) {
+            this._emitted = true;
+            destination.next(value);
+            destination.complete();
+            this.hasCompleted = true;
+        }
+    };
+    FirstSubscriber.prototype._complete = function () {
+        var destination = this.destination;
+        if (!this.hasCompleted && typeof this.defaultValue !== 'undefined') {
+            destination.next(this.defaultValue);
+            destination.complete();
+        }
+        else if (!this.hasCompleted) {
+            destination.error(new __WEBPACK_IMPORTED_MODULE_1__util_EmptyError__["a" /* EmptyError */]);
+        }
+    };
+    return FirstSubscriber;
+}(__WEBPACK_IMPORTED_MODULE_0__Subscriber__["a" /* Subscriber */]));
+//# sourceMappingURL=first.js.map 
+
+
+/***/ }),
+
+/***/ "./node_modules/rxjs/_esm5/operators/last.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = last;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Subscriber__ = __webpack_require__("./node_modules/rxjs/_esm5/Subscriber.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__util_EmptyError__ = __webpack_require__("./node_modules/rxjs/_esm5/util/EmptyError.js");
+/** PURE_IMPORTS_START .._Subscriber,.._util_EmptyError PURE_IMPORTS_END */
+var __extends = (this && this.__extends) || function (d, b) {
+    for (var p in b)
+        if (b.hasOwnProperty(p))
+            d[p] = b[p];
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+};
+
+
+/* tslint:enable:max-line-length */
+/**
+ * Returns an Observable that emits only the last item emitted by the source Observable.
+ * It optionally takes a predicate function as a parameter, in which case, rather than emitting
+ * the last item from the source Observable, the resulting Observable will emit the last item
+ * from the source Observable that satisfies the predicate.
+ *
+ * <img src="./img/last.png" width="100%">
+ *
+ * @throws {EmptyError} Delivers an EmptyError to the Observer's `error`
+ * callback if the Observable completes before any `next` notification was sent.
+ * @param {function} predicate - The condition any source emitted item has to satisfy.
+ * @return {Observable} An Observable that emits only the last item satisfying the given condition
+ * from the source, or an NoSuchElementException if no such items are emitted.
+ * @throws - Throws if no items that match the predicate are emitted by the source Observable.
+ * @method last
+ * @owner Observable
+ */
+function last(predicate, resultSelector, defaultValue) {
+    return function (source) { return source.lift(new LastOperator(predicate, resultSelector, defaultValue, source)); };
+}
+var LastOperator = /*@__PURE__*/ (/*@__PURE__*/ function () {
+    function LastOperator(predicate, resultSelector, defaultValue, source) {
+        this.predicate = predicate;
+        this.resultSelector = resultSelector;
+        this.defaultValue = defaultValue;
+        this.source = source;
+    }
+    LastOperator.prototype.call = function (observer, source) {
+        return source.subscribe(new LastSubscriber(observer, this.predicate, this.resultSelector, this.defaultValue, this.source));
+    };
+    return LastOperator;
+}());
+/**
+ * We need this JSDoc comment for affecting ESDoc.
+ * @ignore
+ * @extends {Ignored}
+ */
+var LastSubscriber = /*@__PURE__*/ (/*@__PURE__*/ function (_super) {
+    __extends(LastSubscriber, _super);
+    function LastSubscriber(destination, predicate, resultSelector, defaultValue, source) {
+        _super.call(this, destination);
+        this.predicate = predicate;
+        this.resultSelector = resultSelector;
+        this.defaultValue = defaultValue;
+        this.source = source;
+        this.hasValue = false;
+        this.index = 0;
+        if (typeof defaultValue !== 'undefined') {
+            this.lastValue = defaultValue;
+            this.hasValue = true;
+        }
+    }
+    LastSubscriber.prototype._next = function (value) {
+        var index = this.index++;
+        if (this.predicate) {
+            this._tryPredicate(value, index);
+        }
+        else {
+            if (this.resultSelector) {
+                this._tryResultSelector(value, index);
+                return;
+            }
+            this.lastValue = value;
+            this.hasValue = true;
+        }
+    };
+    LastSubscriber.prototype._tryPredicate = function (value, index) {
+        var result;
+        try {
+            result = this.predicate(value, index, this.source);
+        }
+        catch (err) {
+            this.destination.error(err);
+            return;
+        }
+        if (result) {
+            if (this.resultSelector) {
+                this._tryResultSelector(value, index);
+                return;
+            }
+            this.lastValue = value;
+            this.hasValue = true;
+        }
+    };
+    LastSubscriber.prototype._tryResultSelector = function (value, index) {
+        var result;
+        try {
+            result = this.resultSelector(value, index);
+        }
+        catch (err) {
+            this.destination.error(err);
+            return;
+        }
+        this.lastValue = result;
+        this.hasValue = true;
+    };
+    LastSubscriber.prototype._complete = function () {
+        var destination = this.destination;
+        if (this.hasValue) {
+            destination.next(this.lastValue);
+            destination.complete();
+        }
+        else {
+            destination.error(new __WEBPACK_IMPORTED_MODULE_1__util_EmptyError__["a" /* EmptyError */]);
+        }
+    };
+    return LastSubscriber;
+}(__WEBPACK_IMPORTED_MODULE_0__Subscriber__["a" /* Subscriber */]));
+//# sourceMappingURL=last.js.map 
+
+
+/***/ }),
+
+/***/ "./node_modules/rxjs/_esm5/operators/map.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = map;
+/* unused harmony export MapOperator */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Subscriber__ = __webpack_require__("./node_modules/rxjs/_esm5/Subscriber.js");
+/** PURE_IMPORTS_START .._Subscriber PURE_IMPORTS_END */
+var __extends = (this && this.__extends) || function (d, b) {
+    for (var p in b)
+        if (b.hasOwnProperty(p))
+            d[p] = b[p];
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+};
+
+/**
+ * Applies a given `project` function to each value emitted by the source
+ * Observable, and emits the resulting values as an Observable.
+ *
+ * <span class="informal">Like [Array.prototype.map()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map),
+ * it passes each source value through a transformation function to get
+ * corresponding output values.</span>
+ *
+ * <img src="./img/map.png" width="100%">
+ *
+ * Similar to the well known `Array.prototype.map` function, this operator
+ * applies a projection to each value and emits that projection in the output
+ * Observable.
+ *
+ * @example <caption>Map every click to the clientX position of that click</caption>
+ * var clicks = Rx.Observable.fromEvent(document, 'click');
+ * var positions = clicks.map(ev => ev.clientX);
+ * positions.subscribe(x => console.log(x));
+ *
+ * @see {@link mapTo}
+ * @see {@link pluck}
+ *
+ * @param {function(value: T, index: number): R} project The function to apply
+ * to each `value` emitted by the source Observable. The `index` parameter is
+ * the number `i` for the i-th emission that has happened since the
+ * subscription, starting from the number `0`.
+ * @param {any} [thisArg] An optional argument to define what `this` is in the
+ * `project` function.
+ * @return {Observable<R>} An Observable that emits the values from the source
+ * Observable transformed by the given `project` function.
+ * @method map
+ * @owner Observable
+ */
+function map(project, thisArg) {
+    return function mapOperation(source) {
+        if (typeof project !== 'function') {
+            throw new TypeError('argument is not a function. Are you looking for `mapTo()`?');
+        }
+        return source.lift(new MapOperator(project, thisArg));
+    };
+}
+var MapOperator = /*@__PURE__*/ (/*@__PURE__*/ function () {
+    function MapOperator(project, thisArg) {
+        this.project = project;
+        this.thisArg = thisArg;
+    }
+    MapOperator.prototype.call = function (subscriber, source) {
+        return source.subscribe(new MapSubscriber(subscriber, this.project, this.thisArg));
+    };
+    return MapOperator;
+}());
+/**
+ * We need this JSDoc comment for affecting ESDoc.
+ * @ignore
+ * @extends {Ignored}
+ */
+var MapSubscriber = /*@__PURE__*/ (/*@__PURE__*/ function (_super) {
+    __extends(MapSubscriber, _super);
+    function MapSubscriber(destination, project, thisArg) {
+        _super.call(this, destination);
+        this.project = project;
+        this.count = 0;
+        this.thisArg = thisArg || this;
+    }
+    // NOTE: This looks unoptimized, but it's actually purposefully NOT
+    // using try/catch optimizations.
+    MapSubscriber.prototype._next = function (value) {
+        var result;
+        try {
+            result = this.project.call(this.thisArg, value, this.count++);
+        }
+        catch (err) {
+            this.destination.error(err);
+            return;
+        }
+        this.destination.next(result);
+    };
+    return MapSubscriber;
+}(__WEBPACK_IMPORTED_MODULE_0__Subscriber__["a" /* Subscriber */]));
+//# sourceMappingURL=map.js.map 
 
 
 /***/ }),
@@ -69929,6 +82712,220 @@ var MulticastOperator = /*@__PURE__*/ (/*@__PURE__*/ function () {
 
 /***/ }),
 
+/***/ "./node_modules/rxjs/_esm5/operators/observeOn.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export observeOn */
+/* unused harmony export ObserveOnOperator */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ObserveOnSubscriber; });
+/* unused harmony export ObserveOnMessage */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Subscriber__ = __webpack_require__("./node_modules/rxjs/_esm5/Subscriber.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Notification__ = __webpack_require__("./node_modules/rxjs/_esm5/Notification.js");
+/** PURE_IMPORTS_START .._Subscriber,.._Notification PURE_IMPORTS_END */
+var __extends = (this && this.__extends) || function (d, b) {
+    for (var p in b)
+        if (b.hasOwnProperty(p))
+            d[p] = b[p];
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+};
+
+
+/**
+ *
+ * Re-emits all notifications from source Observable with specified scheduler.
+ *
+ * <span class="informal">Ensure a specific scheduler is used, from outside of an Observable.</span>
+ *
+ * `observeOn` is an operator that accepts a scheduler as a first parameter, which will be used to reschedule
+ * notifications emitted by the source Observable. It might be useful, if you do not have control over
+ * internal scheduler of a given Observable, but want to control when its values are emitted nevertheless.
+ *
+ * Returned Observable emits the same notifications (nexted values, complete and error events) as the source Observable,
+ * but rescheduled with provided scheduler. Note that this doesn't mean that source Observables internal
+ * scheduler will be replaced in any way. Original scheduler still will be used, but when the source Observable emits
+ * notification, it will be immediately scheduled again - this time with scheduler passed to `observeOn`.
+ * An anti-pattern would be calling `observeOn` on Observable that emits lots of values synchronously, to split
+ * that emissions into asynchronous chunks. For this to happen, scheduler would have to be passed into the source
+ * Observable directly (usually into the operator that creates it). `observeOn` simply delays notifications a
+ * little bit more, to ensure that they are emitted at expected moments.
+ *
+ * As a matter of fact, `observeOn` accepts second parameter, which specifies in milliseconds with what delay notifications
+ * will be emitted. The main difference between {@link delay} operator and `observeOn` is that `observeOn`
+ * will delay all notifications - including error notifications - while `delay` will pass through error
+ * from source Observable immediately when it is emitted. In general it is highly recommended to use `delay` operator
+ * for any kind of delaying of values in the stream, while using `observeOn` to specify which scheduler should be used
+ * for notification emissions in general.
+ *
+ * @example <caption>Ensure values in subscribe are called just before browser repaint.</caption>
+ * const intervals = Rx.Observable.interval(10); // Intervals are scheduled
+ *                                               // with async scheduler by default...
+ *
+ * intervals
+ * .observeOn(Rx.Scheduler.animationFrame)       // ...but we will observe on animationFrame
+ * .subscribe(val => {                           // scheduler to ensure smooth animation.
+ *   someDiv.style.height = val + 'px';
+ * });
+ *
+ * @see {@link delay}
+ *
+ * @param {IScheduler} scheduler Scheduler that will be used to reschedule notifications from source Observable.
+ * @param {number} [delay] Number of milliseconds that states with what delay every notification should be rescheduled.
+ * @return {Observable<T>} Observable that emits the same notifications as the source Observable,
+ * but with provided scheduler.
+ *
+ * @method observeOn
+ * @owner Observable
+ */
+function observeOn(scheduler, delay) {
+    if (delay === void 0) {
+        delay = 0;
+    }
+    return function observeOnOperatorFunction(source) {
+        return source.lift(new ObserveOnOperator(scheduler, delay));
+    };
+}
+var ObserveOnOperator = /*@__PURE__*/ (/*@__PURE__*/ function () {
+    function ObserveOnOperator(scheduler, delay) {
+        if (delay === void 0) {
+            delay = 0;
+        }
+        this.scheduler = scheduler;
+        this.delay = delay;
+    }
+    ObserveOnOperator.prototype.call = function (subscriber, source) {
+        return source.subscribe(new ObserveOnSubscriber(subscriber, this.scheduler, this.delay));
+    };
+    return ObserveOnOperator;
+}());
+/**
+ * We need this JSDoc comment for affecting ESDoc.
+ * @ignore
+ * @extends {Ignored}
+ */
+var ObserveOnSubscriber = /*@__PURE__*/ (/*@__PURE__*/ function (_super) {
+    __extends(ObserveOnSubscriber, _super);
+    function ObserveOnSubscriber(destination, scheduler, delay) {
+        if (delay === void 0) {
+            delay = 0;
+        }
+        _super.call(this, destination);
+        this.scheduler = scheduler;
+        this.delay = delay;
+    }
+    ObserveOnSubscriber.dispatch = function (arg) {
+        var notification = arg.notification, destination = arg.destination;
+        notification.observe(destination);
+        this.unsubscribe();
+    };
+    ObserveOnSubscriber.prototype.scheduleMessage = function (notification) {
+        this.add(this.scheduler.schedule(ObserveOnSubscriber.dispatch, this.delay, new ObserveOnMessage(notification, this.destination)));
+    };
+    ObserveOnSubscriber.prototype._next = function (value) {
+        this.scheduleMessage(__WEBPACK_IMPORTED_MODULE_1__Notification__["a" /* Notification */].createNext(value));
+    };
+    ObserveOnSubscriber.prototype._error = function (err) {
+        this.scheduleMessage(__WEBPACK_IMPORTED_MODULE_1__Notification__["a" /* Notification */].createError(err));
+    };
+    ObserveOnSubscriber.prototype._complete = function () {
+        this.scheduleMessage(__WEBPACK_IMPORTED_MODULE_1__Notification__["a" /* Notification */].createComplete());
+    };
+    return ObserveOnSubscriber;
+}(__WEBPACK_IMPORTED_MODULE_0__Subscriber__["a" /* Subscriber */]));
+var ObserveOnMessage = /*@__PURE__*/ (/*@__PURE__*/ function () {
+    function ObserveOnMessage(notification, destination) {
+        this.notification = notification;
+        this.destination = destination;
+    }
+    return ObserveOnMessage;
+}());
+//# sourceMappingURL=observeOn.js.map 
+
+
+/***/ }),
+
+/***/ "./node_modules/rxjs/_esm5/operators/reduce.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = reduce;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__scan__ = __webpack_require__("./node_modules/rxjs/_esm5/operators/scan.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__takeLast__ = __webpack_require__("./node_modules/rxjs/_esm5/operators/takeLast.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__defaultIfEmpty__ = __webpack_require__("./node_modules/rxjs/_esm5/operators/defaultIfEmpty.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__util_pipe__ = __webpack_require__("./node_modules/rxjs/_esm5/util/pipe.js");
+/** PURE_IMPORTS_START ._scan,._takeLast,._defaultIfEmpty,.._util_pipe PURE_IMPORTS_END */
+
+
+
+
+/* tslint:enable:max-line-length */
+/**
+ * Applies an accumulator function over the source Observable, and returns the
+ * accumulated result when the source completes, given an optional seed value.
+ *
+ * <span class="informal">Combines together all values emitted on the source,
+ * using an accumulator function that knows how to join a new source value into
+ * the accumulation from the past.</span>
+ *
+ * <img src="./img/reduce.png" width="100%">
+ *
+ * Like
+ * [Array.prototype.reduce()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce),
+ * `reduce` applies an `accumulator` function against an accumulation and each
+ * value of the source Observable (from the past) to reduce it to a single
+ * value, emitted on the output Observable. Note that `reduce` will only emit
+ * one value, only when the source Observable completes. It is equivalent to
+ * applying operator {@link scan} followed by operator {@link last}.
+ *
+ * Returns an Observable that applies a specified `accumulator` function to each
+ * item emitted by the source Observable. If a `seed` value is specified, then
+ * that value will be used as the initial value for the accumulator. If no seed
+ * value is specified, the first item of the source is used as the seed.
+ *
+ * @example <caption>Count the number of click events that happened in 5 seconds</caption>
+ * var clicksInFiveSeconds = Rx.Observable.fromEvent(document, 'click')
+ *   .takeUntil(Rx.Observable.interval(5000));
+ * var ones = clicksInFiveSeconds.mapTo(1);
+ * var seed = 0;
+ * var count = ones.reduce((acc, one) => acc + one, seed);
+ * count.subscribe(x => console.log(x));
+ *
+ * @see {@link count}
+ * @see {@link expand}
+ * @see {@link mergeScan}
+ * @see {@link scan}
+ *
+ * @param {function(acc: R, value: T, index: number): R} accumulator The accumulator function
+ * called on each source value.
+ * @param {R} [seed] The initial accumulation value.
+ * @return {Observable<R>} An Observable that emits a single value that is the
+ * result of accumulating the values emitted by the source Observable.
+ * @method reduce
+ * @owner Observable
+ */
+function reduce(accumulator, seed) {
+    // providing a seed of `undefined` *should* be valid and trigger
+    // hasSeed! so don't use `seed !== undefined` checks!
+    // For this reason, we have to check it here at the original call site
+    // otherwise inside Operator/Subscriber we won't know if `undefined`
+    // means they didn't provide anything or if they literally provided `undefined`
+    if (arguments.length >= 2) {
+        return function reduceOperatorFunctionWithSeed(source) {
+            return Object(__WEBPACK_IMPORTED_MODULE_3__util_pipe__["a" /* pipe */])(Object(__WEBPACK_IMPORTED_MODULE_0__scan__["a" /* scan */])(accumulator, seed), Object(__WEBPACK_IMPORTED_MODULE_1__takeLast__["a" /* takeLast */])(1), Object(__WEBPACK_IMPORTED_MODULE_2__defaultIfEmpty__["a" /* defaultIfEmpty */])(seed))(source);
+        };
+    }
+    return function reduceOperatorFunction(source) {
+        return Object(__WEBPACK_IMPORTED_MODULE_3__util_pipe__["a" /* pipe */])(Object(__WEBPACK_IMPORTED_MODULE_0__scan__["a" /* scan */])(function (acc, value, index) {
+            return accumulator(acc, value, index + 1);
+        }), Object(__WEBPACK_IMPORTED_MODULE_1__takeLast__["a" /* takeLast */])(1))(source);
+    };
+}
+//# sourceMappingURL=reduce.js.map 
+
+
+/***/ }),
+
 /***/ "./node_modules/rxjs/_esm5/operators/refCount.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -70025,6 +83022,140 @@ var RefCountSubscriber = /*@__PURE__*/ (/*@__PURE__*/ function (_super) {
 
 /***/ }),
 
+/***/ "./node_modules/rxjs/_esm5/operators/scan.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = scan;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Subscriber__ = __webpack_require__("./node_modules/rxjs/_esm5/Subscriber.js");
+/** PURE_IMPORTS_START .._Subscriber PURE_IMPORTS_END */
+var __extends = (this && this.__extends) || function (d, b) {
+    for (var p in b)
+        if (b.hasOwnProperty(p))
+            d[p] = b[p];
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+};
+
+/* tslint:enable:max-line-length */
+/**
+ * Applies an accumulator function over the source Observable, and returns each
+ * intermediate result, with an optional seed value.
+ *
+ * <span class="informal">It's like {@link reduce}, but emits the current
+ * accumulation whenever the source emits a value.</span>
+ *
+ * <img src="./img/scan.png" width="100%">
+ *
+ * Combines together all values emitted on the source, using an accumulator
+ * function that knows how to join a new source value into the accumulation from
+ * the past. Is similar to {@link reduce}, but emits the intermediate
+ * accumulations.
+ *
+ * Returns an Observable that applies a specified `accumulator` function to each
+ * item emitted by the source Observable. If a `seed` value is specified, then
+ * that value will be used as the initial value for the accumulator. If no seed
+ * value is specified, the first item of the source is used as the seed.
+ *
+ * @example <caption>Count the number of click events</caption>
+ * var clicks = Rx.Observable.fromEvent(document, 'click');
+ * var ones = clicks.mapTo(1);
+ * var seed = 0;
+ * var count = ones.scan((acc, one) => acc + one, seed);
+ * count.subscribe(x => console.log(x));
+ *
+ * @see {@link expand}
+ * @see {@link mergeScan}
+ * @see {@link reduce}
+ *
+ * @param {function(acc: R, value: T, index: number): R} accumulator
+ * The accumulator function called on each source value.
+ * @param {T|R} [seed] The initial accumulation value.
+ * @return {Observable<R>} An observable of the accumulated values.
+ * @method scan
+ * @owner Observable
+ */
+function scan(accumulator, seed) {
+    var hasSeed = false;
+    // providing a seed of `undefined` *should* be valid and trigger
+    // hasSeed! so don't use `seed !== undefined` checks!
+    // For this reason, we have to check it here at the original call site
+    // otherwise inside Operator/Subscriber we won't know if `undefined`
+    // means they didn't provide anything or if they literally provided `undefined`
+    if (arguments.length >= 2) {
+        hasSeed = true;
+    }
+    return function scanOperatorFunction(source) {
+        return source.lift(new ScanOperator(accumulator, seed, hasSeed));
+    };
+}
+var ScanOperator = /*@__PURE__*/ (/*@__PURE__*/ function () {
+    function ScanOperator(accumulator, seed, hasSeed) {
+        if (hasSeed === void 0) {
+            hasSeed = false;
+        }
+        this.accumulator = accumulator;
+        this.seed = seed;
+        this.hasSeed = hasSeed;
+    }
+    ScanOperator.prototype.call = function (subscriber, source) {
+        return source.subscribe(new ScanSubscriber(subscriber, this.accumulator, this.seed, this.hasSeed));
+    };
+    return ScanOperator;
+}());
+/**
+ * We need this JSDoc comment for affecting ESDoc.
+ * @ignore
+ * @extends {Ignored}
+ */
+var ScanSubscriber = /*@__PURE__*/ (/*@__PURE__*/ function (_super) {
+    __extends(ScanSubscriber, _super);
+    function ScanSubscriber(destination, accumulator, _seed, hasSeed) {
+        _super.call(this, destination);
+        this.accumulator = accumulator;
+        this._seed = _seed;
+        this.hasSeed = hasSeed;
+        this.index = 0;
+    }
+    Object.defineProperty(ScanSubscriber.prototype, "seed", {
+        get: function () {
+            return this._seed;
+        },
+        set: function (value) {
+            this.hasSeed = true;
+            this._seed = value;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    ScanSubscriber.prototype._next = function (value) {
+        if (!this.hasSeed) {
+            this.seed = value;
+            this.destination.next(value);
+        }
+        else {
+            return this._tryNext(value);
+        }
+    };
+    ScanSubscriber.prototype._tryNext = function (value) {
+        var index = this.index++;
+        var result;
+        try {
+            result = this.accumulator(this.seed, value, index);
+        }
+        catch (err) {
+            this.destination.error(err);
+        }
+        this.seed = result;
+        this.destination.next(result);
+    };
+    return ScanSubscriber;
+}(__WEBPACK_IMPORTED_MODULE_0__Subscriber__["a" /* Subscriber */]));
+//# sourceMappingURL=scan.js.map 
+
+
+/***/ }),
+
 /***/ "./node_modules/rxjs/_esm5/operators/share.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -70057,6 +83188,128 @@ function share() {
 }
 ;
 //# sourceMappingURL=share.js.map 
+
+
+/***/ }),
+
+/***/ "./node_modules/rxjs/_esm5/operators/takeLast.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = takeLast;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Subscriber__ = __webpack_require__("./node_modules/rxjs/_esm5/Subscriber.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__util_ArgumentOutOfRangeError__ = __webpack_require__("./node_modules/rxjs/_esm5/util/ArgumentOutOfRangeError.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__observable_EmptyObservable__ = __webpack_require__("./node_modules/rxjs/_esm5/observable/EmptyObservable.js");
+/** PURE_IMPORTS_START .._Subscriber,.._util_ArgumentOutOfRangeError,.._observable_EmptyObservable PURE_IMPORTS_END */
+var __extends = (this && this.__extends) || function (d, b) {
+    for (var p in b)
+        if (b.hasOwnProperty(p))
+            d[p] = b[p];
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+};
+
+
+
+/**
+ * Emits only the last `count` values emitted by the source Observable.
+ *
+ * <span class="informal">Remembers the latest `count` values, then emits those
+ * only when the source completes.</span>
+ *
+ * <img src="./img/takeLast.png" width="100%">
+ *
+ * `takeLast` returns an Observable that emits at most the last `count` values
+ * emitted by the source Observable. If the source emits fewer than `count`
+ * values then all of its values are emitted. This operator must wait until the
+ * `complete` notification emission from the source in order to emit the `next`
+ * values on the output Observable, because otherwise it is impossible to know
+ * whether or not more values will be emitted on the source. For this reason,
+ * all values are emitted synchronously, followed by the complete notification.
+ *
+ * @example <caption>Take the last 3 values of an Observable with many values</caption>
+ * var many = Rx.Observable.range(1, 100);
+ * var lastThree = many.takeLast(3);
+ * lastThree.subscribe(x => console.log(x));
+ *
+ * @see {@link take}
+ * @see {@link takeUntil}
+ * @see {@link takeWhile}
+ * @see {@link skip}
+ *
+ * @throws {ArgumentOutOfRangeError} When using `takeLast(i)`, it delivers an
+ * ArgumentOutOrRangeError to the Observer's `error` callback if `i < 0`.
+ *
+ * @param {number} count The maximum number of values to emit from the end of
+ * the sequence of values emitted by the source Observable.
+ * @return {Observable<T>} An Observable that emits at most the last count
+ * values emitted by the source Observable.
+ * @method takeLast
+ * @owner Observable
+ */
+function takeLast(count) {
+    return function takeLastOperatorFunction(source) {
+        if (count === 0) {
+            return new __WEBPACK_IMPORTED_MODULE_2__observable_EmptyObservable__["a" /* EmptyObservable */]();
+        }
+        else {
+            return source.lift(new TakeLastOperator(count));
+        }
+    };
+}
+var TakeLastOperator = /*@__PURE__*/ (/*@__PURE__*/ function () {
+    function TakeLastOperator(total) {
+        this.total = total;
+        if (this.total < 0) {
+            throw new __WEBPACK_IMPORTED_MODULE_1__util_ArgumentOutOfRangeError__["a" /* ArgumentOutOfRangeError */];
+        }
+    }
+    TakeLastOperator.prototype.call = function (subscriber, source) {
+        return source.subscribe(new TakeLastSubscriber(subscriber, this.total));
+    };
+    return TakeLastOperator;
+}());
+/**
+ * We need this JSDoc comment for affecting ESDoc.
+ * @ignore
+ * @extends {Ignored}
+ */
+var TakeLastSubscriber = /*@__PURE__*/ (/*@__PURE__*/ function (_super) {
+    __extends(TakeLastSubscriber, _super);
+    function TakeLastSubscriber(destination, total) {
+        _super.call(this, destination);
+        this.total = total;
+        this.ring = new Array();
+        this.count = 0;
+    }
+    TakeLastSubscriber.prototype._next = function (value) {
+        var ring = this.ring;
+        var total = this.total;
+        var count = this.count++;
+        if (ring.length < total) {
+            ring.push(value);
+        }
+        else {
+            var index = count % total;
+            ring[index] = value;
+        }
+    };
+    TakeLastSubscriber.prototype._complete = function () {
+        var destination = this.destination;
+        var count = this.count;
+        if (count > 0) {
+            var total = this.count >= this.total ? this.total : this.count;
+            var ring = this.ring;
+            for (var i = 0; i < total; i++) {
+                var idx = (count++) % total;
+                destination.next(ring[idx]);
+            }
+        }
+        destination.complete();
+    };
+    return TakeLastSubscriber;
+}(__WEBPACK_IMPORTED_MODULE_0__Subscriber__["a" /* Subscriber */]));
+//# sourceMappingURL=takeLast.js.map 
 
 
 /***/ }),
@@ -70164,6 +83417,82 @@ var rxSubscriber = (typeof Symbol === 'function' && typeof Symbol.for === 'funct
  */
 var $$rxSubscriber = rxSubscriber;
 //# sourceMappingURL=rxSubscriber.js.map 
+
+
+/***/ }),
+
+/***/ "./node_modules/rxjs/_esm5/util/ArgumentOutOfRangeError.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ArgumentOutOfRangeError; });
+/** PURE_IMPORTS_START  PURE_IMPORTS_END */
+var __extends = (this && this.__extends) || function (d, b) {
+    for (var p in b)
+        if (b.hasOwnProperty(p))
+            d[p] = b[p];
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+};
+/**
+ * An error thrown when an element was queried at a certain index of an
+ * Observable, but no such index or position exists in that sequence.
+ *
+ * @see {@link elementAt}
+ * @see {@link take}
+ * @see {@link takeLast}
+ *
+ * @class ArgumentOutOfRangeError
+ */
+var ArgumentOutOfRangeError = /*@__PURE__*/ (/*@__PURE__*/ function (_super) {
+    __extends(ArgumentOutOfRangeError, _super);
+    function ArgumentOutOfRangeError() {
+        var err = _super.call(this, 'argument out of range');
+        this.name = err.name = 'ArgumentOutOfRangeError';
+        this.stack = err.stack;
+        this.message = err.message;
+    }
+    return ArgumentOutOfRangeError;
+}(Error));
+//# sourceMappingURL=ArgumentOutOfRangeError.js.map 
+
+
+/***/ }),
+
+/***/ "./node_modules/rxjs/_esm5/util/EmptyError.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EmptyError; });
+/** PURE_IMPORTS_START  PURE_IMPORTS_END */
+var __extends = (this && this.__extends) || function (d, b) {
+    for (var p in b)
+        if (b.hasOwnProperty(p))
+            d[p] = b[p];
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+};
+/**
+ * An error thrown when an Observable or a sequence was queried but has no
+ * elements.
+ *
+ * @see {@link first}
+ * @see {@link last}
+ * @see {@link single}
+ *
+ * @class EmptyError
+ */
+var EmptyError = /*@__PURE__*/ (/*@__PURE__*/ function (_super) {
+    __extends(EmptyError, _super);
+    function EmptyError() {
+        var err = _super.call(this, 'no elements in sequence');
+        this.name = err.name = 'EmptyError';
+        this.stack = err.stack;
+        this.message = err.message;
+    }
+    return EmptyError;
+}(Error));
+//# sourceMappingURL=EmptyError.js.map 
 
 
 /***/ }),
@@ -70364,8 +83693,8 @@ function noop() { }
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* unused harmony export pipe */
-/* harmony export (immutable) */ __webpack_exports__["a"] = pipeFromArray;
+/* harmony export (immutable) */ __webpack_exports__["a"] = pipe;
+/* harmony export (immutable) */ __webpack_exports__["b"] = pipeFromArray;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__noop__ = __webpack_require__("./node_modules/rxjs/_esm5/util/noop.js");
 /** PURE_IMPORTS_START ._noop PURE_IMPORTS_END */
 

@@ -88,32 +88,6 @@ namespace Recipes.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Nutrition",
-                columns: table => new
-                {
-                    NutritionId = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Type = table.Column<string>(nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Nutrition", x => x.NutritionId);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "NutritionMeasurement",
-                columns: table => new
-                {
-                    NutrMeasId = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Measurement = table.Column<string>(nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_NutritionMeasurement", x => x.NutrMeasId);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Skill",
                 columns: table => new
                 {
@@ -140,44 +114,28 @@ namespace Recipes.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "TimingMeasurement",
-                columns: table => new
-                {
-                    TimeMeasId = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Measurement = table.Column<string>(nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_TimingMeasurement", x => x.TimeMeasId);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "TimingType",
-                columns: table => new
-                {
-                    TimeTypeId = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Type = table.Column<string>(nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_TimingType", x => x.TimeTypeId);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Recipes",
                 columns: table => new
                 {
                     RecipeId = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    CategoryId = table.Column<int>(nullable: false),
-                    CourseId = table.Column<int>(nullable: false),
+                    Calories = table.Column<int>(nullable: true),
+                    Carbohydrates = table.Column<int>(nullable: true),
+                    CategoryId = table.Column<int>(nullable: true),
+                    CookTime = table.Column<string>(nullable: true),
+                    CourseId = table.Column<int>(nullable: true),
+                    Fat = table.Column<int>(nullable: true),
+                    Fibre = table.Column<int>(nullable: true),
                     Portions = table.Column<int>(nullable: false),
+                    PrepTime = table.Column<string>(nullable: true),
+                    Protein = table.Column<int>(nullable: true),
                     Rating = table.Column<int>(nullable: false),
                     RecipeImage = table.Column<string>(nullable: true),
                     RecipeName = table.Column<string>(nullable: true),
-                    SkillId = table.Column<int>(nullable: false)
+                    Salt = table.Column<int>(nullable: true),
+                    Saturated = table.Column<int>(nullable: true),
+                    SkillId = table.Column<int>(nullable: true),
+                    Sugars = table.Column<int>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -187,19 +145,19 @@ namespace Recipes.Migrations
                         column: x => x.CategoryId,
                         principalTable: "Category",
                         principalColumn: "CategoryId",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_Recipes_Course_CourseId",
                         column: x => x.CourseId,
                         principalTable: "Course",
                         principalColumn: "CourseId",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_Recipes_Skill_SkillId",
                         column: x => x.SkillId,
                         principalTable: "Skill",
                         principalColumn: "SkillId",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -208,8 +166,8 @@ namespace Recipes.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    CuisineId = table.Column<int>(nullable: false),
-                    RecipeId = table.Column<int>(nullable: false)
+                    CuisineId = table.Column<int>(nullable: true),
+                    RecipeId = table.Column<int>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -219,13 +177,13 @@ namespace Recipes.Migrations
                         column: x => x.CuisineId,
                         principalTable: "Cuisine",
                         principalColumn: "CuisineId",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_RecipeCuisine_Recipes_RecipeId",
                         column: x => x.RecipeId,
                         principalTable: "Recipes",
                         principalColumn: "RecipeId",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -234,39 +192,39 @@ namespace Recipes.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    IngPrepId = table.Column<int>(nullable: true),
-                    IngrMeasId = table.Column<int>(nullable: true),
-                    IngredientId = table.Column<int>(nullable: false),
+                    IngredientId = table.Column<int>(nullable: true),
+                    MeasurementIngrMeasId = table.Column<int>(nullable: true),
+                    PreparationIngPrepId = table.Column<int>(nullable: true),
                     Quantity = table.Column<int>(nullable: true),
-                    RecipeId = table.Column<int>(nullable: false)
+                    RecipeId = table.Column<int>(nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_RecipeIngredient", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_RecipeIngredient_IngredientPreparation_IngPrepId",
-                        column: x => x.IngPrepId,
-                        principalTable: "IngredientPreparation",
-                        principalColumn: "IngPrepId",
-                        onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK_RecipeIngredient_IngredientMeasurement_IngrMeasId",
-                        column: x => x.IngrMeasId,
-                        principalTable: "IngredientMeasurement",
-                        principalColumn: "IngrMeasId",
-                        onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
                         name: "FK_RecipeIngredient_Ingredient_IngredientId",
                         column: x => x.IngredientId,
                         principalTable: "Ingredient",
                         principalColumn: "IngredientId",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_RecipeIngredient_IngredientMeasurement_MeasurementIngrMeasId",
+                        column: x => x.MeasurementIngrMeasId,
+                        principalTable: "IngredientMeasurement",
+                        principalColumn: "IngrMeasId",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_RecipeIngredient_IngredientPreparation_PreparationIngPrepId",
+                        column: x => x.PreparationIngPrepId,
+                        principalTable: "IngredientPreparation",
+                        principalColumn: "IngPrepId",
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_RecipeIngredient_Recipes_RecipeId",
                         column: x => x.RecipeId,
                         principalTable: "Recipes",
                         principalColumn: "RecipeId",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -276,7 +234,7 @@ namespace Recipes.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Method = table.Column<string>(nullable: true),
-                    RecipeId = table.Column<int>(nullable: false),
+                    RecipeId = table.Column<int>(nullable: true),
                     StepNumber = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
@@ -287,7 +245,7 @@ namespace Recipes.Migrations
                         column: x => x.RecipeId,
                         principalTable: "Recipes",
                         principalColumn: "RecipeId",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -297,7 +255,7 @@ namespace Recipes.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Note = table.Column<string>(nullable: true),
-                    RecipeId = table.Column<int>(nullable: false)
+                    RecipeId = table.Column<int>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -307,41 +265,7 @@ namespace Recipes.Migrations
                         column: x => x.RecipeId,
                         principalTable: "Recipes",
                         principalColumn: "RecipeId",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "RecipeNutrition",
-                columns: table => new
-                {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    NutrMeasId = table.Column<int>(nullable: false),
-                    NutritionId = table.Column<int>(nullable: false),
-                    Quantity = table.Column<string>(nullable: true),
-                    RecipeId = table.Column<int>(nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_RecipeNutrition", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_RecipeNutrition_NutritionMeasurement_NutrMeasId",
-                        column: x => x.NutrMeasId,
-                        principalTable: "NutritionMeasurement",
-                        principalColumn: "NutrMeasId",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_RecipeNutrition_Nutrition_NutritionId",
-                        column: x => x.NutritionId,
-                        principalTable: "Nutrition",
-                        principalColumn: "NutritionId",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_RecipeNutrition_Recipes_RecipeId",
-                        column: x => x.RecipeId,
-                        principalTable: "Recipes",
-                        principalColumn: "RecipeId",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -350,8 +274,8 @@ namespace Recipes.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    RecipeId = table.Column<int>(nullable: false),
-                    TagId = table.Column<int>(nullable: false)
+                    RecipeId = table.Column<int>(nullable: true),
+                    TagId = table.Column<int>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -361,47 +285,13 @@ namespace Recipes.Migrations
                         column: x => x.RecipeId,
                         principalTable: "Recipes",
                         principalColumn: "RecipeId",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_RecipeTags_Tag_TagId",
                         column: x => x.TagId,
                         principalTable: "Tag",
                         principalColumn: "TagId",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "RecipeTimings",
-                columns: table => new
-                {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Quantity = table.Column<int>(nullable: false),
-                    RecipeId = table.Column<int>(nullable: false),
-                    TimeMeasId = table.Column<int>(nullable: false),
-                    TimingTypeId = table.Column<int>(nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_RecipeTimings", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_RecipeTimings_Recipes_RecipeId",
-                        column: x => x.RecipeId,
-                        principalTable: "Recipes",
-                        principalColumn: "RecipeId",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_RecipeTimings_TimingMeasurement_TimeMeasId",
-                        column: x => x.TimeMeasId,
-                        principalTable: "TimingMeasurement",
-                        principalColumn: "TimeMeasId",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_RecipeTimings_TimingType_TimingTypeId",
-                        column: x => x.TimingTypeId,
-                        principalTable: "TimingType",
-                        principalColumn: "TimeTypeId",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateIndex(
@@ -415,19 +305,19 @@ namespace Recipes.Migrations
                 column: "RecipeId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_RecipeIngredient_IngPrepId",
-                table: "RecipeIngredient",
-                column: "IngPrepId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_RecipeIngredient_IngrMeasId",
-                table: "RecipeIngredient",
-                column: "IngrMeasId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_RecipeIngredient_IngredientId",
                 table: "RecipeIngredient",
                 column: "IngredientId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_RecipeIngredient_MeasurementIngrMeasId",
+                table: "RecipeIngredient",
+                column: "MeasurementIngrMeasId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_RecipeIngredient_PreparationIngPrepId",
+                table: "RecipeIngredient",
+                column: "PreparationIngPrepId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_RecipeIngredient_RecipeId",
@@ -442,21 +332,6 @@ namespace Recipes.Migrations
             migrationBuilder.CreateIndex(
                 name: "IX_RecipeNote_RecipeId",
                 table: "RecipeNote",
-                column: "RecipeId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_RecipeNutrition_NutrMeasId",
-                table: "RecipeNutrition",
-                column: "NutrMeasId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_RecipeNutrition_NutritionId",
-                table: "RecipeNutrition",
-                column: "NutritionId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_RecipeNutrition_RecipeId",
-                table: "RecipeNutrition",
                 column: "RecipeId");
 
             migrationBuilder.CreateIndex(
@@ -483,21 +358,6 @@ namespace Recipes.Migrations
                 name: "IX_RecipeTags_TagId",
                 table: "RecipeTags",
                 column: "TagId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_RecipeTimings_RecipeId",
-                table: "RecipeTimings",
-                column: "RecipeId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_RecipeTimings_TimeMeasId",
-                table: "RecipeTimings",
-                column: "TimeMeasId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_RecipeTimings_TimingTypeId",
-                table: "RecipeTimings",
-                column: "TimingTypeId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -515,43 +375,25 @@ namespace Recipes.Migrations
                 name: "RecipeNote");
 
             migrationBuilder.DropTable(
-                name: "RecipeNutrition");
-
-            migrationBuilder.DropTable(
                 name: "RecipeTags");
-
-            migrationBuilder.DropTable(
-                name: "RecipeTimings");
 
             migrationBuilder.DropTable(
                 name: "Cuisine");
 
             migrationBuilder.DropTable(
-                name: "IngredientPreparation");
+                name: "Ingredient");
 
             migrationBuilder.DropTable(
                 name: "IngredientMeasurement");
 
             migrationBuilder.DropTable(
-                name: "Ingredient");
-
-            migrationBuilder.DropTable(
-                name: "NutritionMeasurement");
-
-            migrationBuilder.DropTable(
-                name: "Nutrition");
-
-            migrationBuilder.DropTable(
-                name: "Tag");
+                name: "IngredientPreparation");
 
             migrationBuilder.DropTable(
                 name: "Recipes");
 
             migrationBuilder.DropTable(
-                name: "TimingMeasurement");
-
-            migrationBuilder.DropTable(
-                name: "TimingType");
+                name: "Tag");
 
             migrationBuilder.DropTable(
                 name: "Category");

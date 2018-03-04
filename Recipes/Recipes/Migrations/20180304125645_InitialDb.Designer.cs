@@ -11,7 +11,7 @@ using System;
 namespace Recipes.Migrations
 {
     [DbContext(typeof(RecipeContext))]
-    [Migration("20180303154551_InitialDb")]
+    [Migration("20180304125645_InitialDb")]
     partial class InitialDb
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -93,40 +93,30 @@ namespace Recipes.Migrations
                     b.ToTable("IngredientPreparation");
                 });
 
-            modelBuilder.Entity("Recipes.Data.Entities.Nutrition", b =>
-                {
-                    b.Property<int>("NutritionId")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<string>("Type");
-
-                    b.HasKey("NutritionId");
-
-                    b.ToTable("Nutrition");
-                });
-
-            modelBuilder.Entity("Recipes.Data.Entities.NutritionMeasurement", b =>
-                {
-                    b.Property<int>("NutrMeasId")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<string>("Measurement");
-
-                    b.HasKey("NutrMeasId");
-
-                    b.ToTable("NutritionMeasurement");
-                });
-
             modelBuilder.Entity("Recipes.Data.Entities.Recipe", b =>
                 {
                     b.Property<int>("RecipeId")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<int>("CategoryId");
+                    b.Property<int?>("Calories");
 
-                    b.Property<int>("CourseId");
+                    b.Property<int?>("Carbohydrates");
+
+                    b.Property<int?>("CategoryId");
+
+                    b.Property<string>("CookTime");
+
+                    b.Property<int?>("CourseId");
+
+                    b.Property<int?>("Fat");
+
+                    b.Property<int?>("Fibre");
 
                     b.Property<int>("Portions");
+
+                    b.Property<string>("PrepTime");
+
+                    b.Property<int?>("Protein");
 
                     b.Property<int>("Rating");
 
@@ -134,7 +124,13 @@ namespace Recipes.Migrations
 
                     b.Property<string>("RecipeName");
 
-                    b.Property<int>("SkillId");
+                    b.Property<int?>("Salt");
+
+                    b.Property<int?>("Saturated");
+
+                    b.Property<int?>("SkillId");
+
+                    b.Property<int?>("Sugars");
 
                     b.HasKey("RecipeId");
 
@@ -152,9 +148,9 @@ namespace Recipes.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<int>("CuisineId");
+                    b.Property<int?>("CuisineId");
 
-                    b.Property<int>("RecipeId");
+                    b.Property<int?>("RecipeId");
 
                     b.HasKey("Id");
 
@@ -170,23 +166,23 @@ namespace Recipes.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<int?>("IngPrepId");
+                    b.Property<int?>("IngredientId");
 
-                    b.Property<int?>("IngrMeasId");
+                    b.Property<int?>("MeasurementIngrMeasId");
 
-                    b.Property<int>("IngredientId");
+                    b.Property<int?>("PreparationIngPrepId");
 
                     b.Property<int?>("Quantity");
 
-                    b.Property<int>("RecipeId");
+                    b.Property<int?>("RecipeId");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("IngPrepId");
-
-                    b.HasIndex("IngrMeasId");
-
                     b.HasIndex("IngredientId");
+
+                    b.HasIndex("MeasurementIngrMeasId");
+
+                    b.HasIndex("PreparationIngPrepId");
 
                     b.HasIndex("RecipeId");
 
@@ -200,7 +196,7 @@ namespace Recipes.Migrations
 
                     b.Property<string>("Method");
 
-                    b.Property<int>("RecipeId");
+                    b.Property<int?>("RecipeId");
 
                     b.Property<int>("StepNumber");
 
@@ -218,7 +214,7 @@ namespace Recipes.Migrations
 
                     b.Property<string>("Note");
 
-                    b.Property<int>("RecipeId");
+                    b.Property<int?>("RecipeId");
 
                     b.HasKey("Id");
 
@@ -227,38 +223,14 @@ namespace Recipes.Migrations
                     b.ToTable("RecipeNote");
                 });
 
-            modelBuilder.Entity("Recipes.Data.Entities.RecipeNutrition", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<int>("NutrMeasId");
-
-                    b.Property<int>("NutritionId");
-
-                    b.Property<string>("Quantity");
-
-                    b.Property<int>("RecipeId");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("NutrMeasId");
-
-                    b.HasIndex("NutritionId");
-
-                    b.HasIndex("RecipeId");
-
-                    b.ToTable("RecipeNutrition");
-                });
-
             modelBuilder.Entity("Recipes.Data.Entities.RecipeTags", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<int>("RecipeId");
+                    b.Property<int?>("RecipeId");
 
-                    b.Property<int>("TagId");
+                    b.Property<int?>("TagId");
 
                     b.HasKey("Id");
 
@@ -267,30 +239,6 @@ namespace Recipes.Migrations
                     b.HasIndex("TagId");
 
                     b.ToTable("RecipeTags");
-                });
-
-            modelBuilder.Entity("Recipes.Data.Entities.RecipeTimings", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<int>("Quantity");
-
-                    b.Property<int>("RecipeId");
-
-                    b.Property<int>("TimeMeasId");
-
-                    b.Property<int>("TimingTypeId");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("RecipeId");
-
-                    b.HasIndex("TimeMeasId");
-
-                    b.HasIndex("TimingTypeId");
-
-                    b.ToTable("RecipeTimings");
                 });
 
             modelBuilder.Entity("Recipes.Data.Entities.Skill", b =>
@@ -317,145 +265,74 @@ namespace Recipes.Migrations
                     b.ToTable("Tag");
                 });
 
-            modelBuilder.Entity("Recipes.Data.Entities.TimingMeasurement", b =>
-                {
-                    b.Property<int>("TimeMeasId")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<string>("Measurement");
-
-                    b.HasKey("TimeMeasId");
-
-                    b.ToTable("TimingMeasurement");
-                });
-
-            modelBuilder.Entity("Recipes.Data.Entities.TimingType", b =>
-                {
-                    b.Property<int>("TimeTypeId")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<string>("Type");
-
-                    b.HasKey("TimeTypeId");
-
-                    b.ToTable("TimingType");
-                });
-
             modelBuilder.Entity("Recipes.Data.Entities.Recipe", b =>
                 {
                     b.HasOne("Recipes.Data.Entities.Category", "Category")
                         .WithMany()
-                        .HasForeignKey("CategoryId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("CategoryId");
 
                     b.HasOne("Recipes.Data.Entities.Course", "Course")
                         .WithMany()
-                        .HasForeignKey("CourseId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("CourseId");
 
                     b.HasOne("Recipes.Data.Entities.Skill", "Skill")
                         .WithMany()
-                        .HasForeignKey("SkillId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("SkillId");
                 });
 
             modelBuilder.Entity("Recipes.Data.Entities.RecipeCuisine", b =>
                 {
                     b.HasOne("Recipes.Data.Entities.Cuisine", "Cuisine")
                         .WithMany()
-                        .HasForeignKey("CuisineId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("CuisineId");
 
                     b.HasOne("Recipes.Data.Entities.Recipe", "Recipe")
                         .WithMany("Cuisine")
-                        .HasForeignKey("RecipeId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("RecipeId");
                 });
 
             modelBuilder.Entity("Recipes.Data.Entities.RecipeIngredient", b =>
                 {
-                    b.HasOne("Recipes.Data.Entities.IngredientPreparation", "Preparation")
+                    b.HasOne("Recipes.Data.Entities.Ingredient", "Ingredient")
                         .WithMany()
-                        .HasForeignKey("IngPrepId");
+                        .HasForeignKey("IngredientId");
 
                     b.HasOne("Recipes.Data.Entities.IngredientMeasurement", "Measurement")
                         .WithMany()
-                        .HasForeignKey("IngrMeasId");
+                        .HasForeignKey("MeasurementIngrMeasId");
 
-                    b.HasOne("Recipes.Data.Entities.Ingredient", "Ingredient")
+                    b.HasOne("Recipes.Data.Entities.IngredientPreparation", "Preparation")
                         .WithMany()
-                        .HasForeignKey("IngredientId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("PreparationIngPrepId");
 
                     b.HasOne("Recipes.Data.Entities.Recipe", "Recipe")
                         .WithMany("Ingredients")
-                        .HasForeignKey("RecipeId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("RecipeId");
                 });
 
             modelBuilder.Entity("Recipes.Data.Entities.RecipeMethod", b =>
                 {
                     b.HasOne("Recipes.Data.Entities.Recipe", "Recipe")
                         .WithMany("Methods")
-                        .HasForeignKey("RecipeId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("RecipeId");
                 });
 
             modelBuilder.Entity("Recipes.Data.Entities.RecipeNote", b =>
                 {
                     b.HasOne("Recipes.Data.Entities.Recipe", "Recipe")
                         .WithMany("Notes")
-                        .HasForeignKey("RecipeId")
-                        .OnDelete(DeleteBehavior.Cascade);
-                });
-
-            modelBuilder.Entity("Recipes.Data.Entities.RecipeNutrition", b =>
-                {
-                    b.HasOne("Recipes.Data.Entities.NutritionMeasurement", "Measurement")
-                        .WithMany()
-                        .HasForeignKey("NutrMeasId")
-                        .OnDelete(DeleteBehavior.Cascade);
-
-                    b.HasOne("Recipes.Data.Entities.Nutrition", "Type")
-                        .WithMany()
-                        .HasForeignKey("NutritionId")
-                        .OnDelete(DeleteBehavior.Cascade);
-
-                    b.HasOne("Recipes.Data.Entities.Recipe", "Recipe")
-                        .WithMany("Nutrition")
-                        .HasForeignKey("RecipeId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("RecipeId");
                 });
 
             modelBuilder.Entity("Recipes.Data.Entities.RecipeTags", b =>
                 {
                     b.HasOne("Recipes.Data.Entities.Recipe", "Recipe")
                         .WithMany("Tags")
-                        .HasForeignKey("RecipeId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("RecipeId");
 
                     b.HasOne("Recipes.Data.Entities.Tag", "Tag")
                         .WithMany()
-                        .HasForeignKey("TagId")
-                        .OnDelete(DeleteBehavior.Cascade);
-                });
-
-            modelBuilder.Entity("Recipes.Data.Entities.RecipeTimings", b =>
-                {
-                    b.HasOne("Recipes.Data.Entities.Recipe", "Recipe")
-                        .WithMany("Timings")
-                        .HasForeignKey("RecipeId")
-                        .OnDelete(DeleteBehavior.Cascade);
-
-                    b.HasOne("Recipes.Data.Entities.TimingMeasurement", "Measurement")
-                        .WithMany()
-                        .HasForeignKey("TimeMeasId")
-                        .OnDelete(DeleteBehavior.Cascade);
-
-                    b.HasOne("Recipes.Data.Entities.TimingType", "Type")
-                        .WithMany()
-                        .HasForeignKey("TimingTypeId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("TagId");
                 });
 #pragma warning restore 612, 618
         }

@@ -8,19 +8,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 var platform_browser_1 = require("@angular/platform-browser");
 var core_1 = require("@angular/core");
+var http_1 = require("@angular/common/http");
 var app_component_1 = require("./app.component");
+var recipeResults_component_1 = require("./results/recipeResults.component");
+var recipe_component_1 = require("./recipe/recipe.component");
+var dataService_1 = require("./shared/dataService");
+var router_1 = require("@angular/router");
+var routes = [
+    //{ path: "", component: Results },
+    //{ path: "recipe", component: Recipe }
+    { path: "", component: recipe_component_1.Recipe }
+];
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
             declarations: [
-                app_component_1.AppComponent
+                app_component_1.AppComponent,
+                recipeResults_component_1.Results,
+                recipe_component_1.Recipe
             ],
             imports: [
-                platform_browser_1.BrowserModule
+                platform_browser_1.BrowserModule,
+                http_1.HttpClientModule,
+                router_1.RouterModule.forRoot(routes, {
+                    useHash: true,
+                    enableTracing: false // for Debugging of the Routes
+                })
             ],
-            providers: [],
+            providers: [
+                dataService_1.DataService
+            ],
             bootstrap: [app_component_1.AppComponent]
         })
     ], AppModule);

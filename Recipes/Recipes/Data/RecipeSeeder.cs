@@ -92,28 +92,6 @@ namespace Recipes.Data
                 _ctx.SaveChanges();
             }
 
-            if (!_ctx.Nutrition.Any())
-            {
-                // Need to create sample nutrition data
-                var filepath = Path.Combine(_hosting.ContentRootPath, "Data/Seeders/nutrition.json");
-                var json = File.ReadAllText(filepath);
-                var nutrition = JsonConvert.DeserializeObject<IEnumerable<Nutrition>>(json);
-                _ctx.Nutrition.AddRange(nutrition);
-
-                _ctx.SaveChanges();
-            }
-
-            if (!_ctx.NutritionMeasurement.Any())
-            {
-                // Need to create sample nutrition measurements data
-                var filepath = Path.Combine(_hosting.ContentRootPath, "Data/Seeders/nutritionmeasurement.json");
-                var json = File.ReadAllText(filepath);
-                var nutritionmeasurement = JsonConvert.DeserializeObject<IEnumerable<NutritionMeasurement>>(json);
-                _ctx.NutritionMeasurement.AddRange(nutritionmeasurement);
-
-                _ctx.SaveChanges();
-            }
-
             if (!_ctx.Skill.Any())
             {
                 // Need to create sample skill data
@@ -136,83 +114,38 @@ namespace Recipes.Data
                 _ctx.SaveChanges();
             }
 
-            if (!_ctx.TimingMeasurement.Any())
-            {
-                // Need to create sample timing measurements data
-                var filepath = Path.Combine(_hosting.ContentRootPath, "Data/Seeders/timingmeasurement.json");
-                var json = File.ReadAllText(filepath);
-                var timingmeasurement = JsonConvert.DeserializeObject<IEnumerable<TimingMeasurement>>(json);
-                _ctx.TimingMeasurement.AddRange(timingmeasurement);
+            //if (!_ctx.Recipes.Any())
+            //{
+            //    // Need to create sample recipe data
+            //    var filepath = Path.Combine(_hosting.ContentRootPath, "Data/Seeders/recipes.json");
+            //    var json = File.ReadAllText(filepath);
+            //    var recipe = JsonConvert.DeserializeObject<IEnumerable<Recipe>>(json);
+            //    _ctx.Recipes.AddRange(recipe);
 
-                _ctx.SaveChanges();
-            }
+            //    _ctx.SaveChanges();
+            //}
 
-            if (!_ctx.TimingType.Any())
-            {
-                // Need to create sample timing types data
-                var filepath = Path.Combine(_hosting.ContentRootPath, "Data/Seeders/timingtype.json");
-                var json = File.ReadAllText(filepath);
-                var timingtype = JsonConvert.DeserializeObject<IEnumerable<TimingType>>(json);
-                _ctx.TimingType.AddRange(timingtype);
+            //if (!_ctx.RecipeIngredient.Any())
+            //{
+            //    // Need to create sample recipe ingredients data
+            //    var filepath = Path.Combine(_hosting.ContentRootPath, "Data/Seeders/recipeingredient.json");
+            //    var json = File.ReadAllText(filepath);
+            //    var recipeingredient = JsonConvert.DeserializeObject<IEnumerable<RecipeIngredient>>(json);
+            //    _ctx.RecipeIngredient.AddRange(recipeingredient);
 
-                _ctx.SaveChanges();
-            }
+            //    _ctx.SaveChanges();
+            //}
 
-            if (!_ctx.Recipes.Any())
-            {
-                // Need to create sample recipe data
-                var filepath = Path.Combine(_hosting.ContentRootPath, "Data/Seeders/recipes.json");
-                var json = File.ReadAllText(filepath);
-                var recipe = JsonConvert.DeserializeObject<IEnumerable<Recipe>>(json);
-                _ctx.Recipes.AddRange(recipe);
+            //if (!_ctx.RecipeMethod.Any())
+            //{
+            //    // Need to create sample recipe methods data
+            //    var filepath = Path.Combine(_hosting.ContentRootPath, "Data/Seeders/recipemethod.json");
+            //    var json = File.ReadAllText(filepath);
+            //    var recipemethod = JsonConvert.DeserializeObject<IEnumerable<RecipeMethod>>(json);
+            //    _ctx.RecipeMethod.AddRange(recipemethod);
 
-                _ctx.SaveChanges();
-            }
-
-            if (!_ctx.RecipeIngredient.Any())
-            {
-                // Need to create sample recipe ingredients data
-                var filepath = Path.Combine(_hosting.ContentRootPath, "Data/Seeders/recipeingredient.json");
-                var json = File.ReadAllText(filepath);
-                var recipeingredient = JsonConvert.DeserializeObject<IEnumerable<RecipeIngredient>>(json);
-                _ctx.RecipeIngredient.AddRange(recipeingredient);
-
-                _ctx.SaveChanges();
-            }
-
-            if (!_ctx.RecipeMethod.Any())
-            {
-                // Need to create sample recipe methods data
-                var filepath = Path.Combine(_hosting.ContentRootPath, "Data/Seeders/recipemethod.json");
-                var json = File.ReadAllText(filepath);
-                var recipemethod = JsonConvert.DeserializeObject<IEnumerable<RecipeMethod>>(json);
-                _ctx.RecipeMethod.AddRange(recipemethod);
-
-                _ctx.SaveChanges();
-            }
-
-            if (!_ctx.RecipeNutrition.Any())
-            {
-                // Need to create sample recipe nutrition data
-                var filepath = Path.Combine(_hosting.ContentRootPath, "Data/Seeders/recipenutrition.json");
-                var json = File.ReadAllText(filepath);
-                var receipenutrition = JsonConvert.DeserializeObject<IEnumerable<RecipeNutrition>>(json);
-                _ctx.RecipeNutrition.AddRange(receipenutrition);
-
-                _ctx.SaveChanges();
-            }
-
-            if (!_ctx.RecipeTimings.Any())
-            {
-                // Need to create sample recipe timings data
-                var filepath = Path.Combine(_hosting.ContentRootPath, "Data/Seeders/recipetimings.json");
-                var json = File.ReadAllText(filepath);
-                var recipetimings = JsonConvert.DeserializeObject<IEnumerable<RecipeTimings>>(json);
-                _ctx.RecipeTimings.AddRange(recipetimings);
-
-                _ctx.SaveChanges();
-            }
-
+            //    _ctx.SaveChanges();
+            //}
         }
     }
 }

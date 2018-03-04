@@ -2,17 +2,18 @@
 import { DataService } from '../shared/dataService';
 
 @Component({
-    selector: 'recipe-results',
+    selector: 'results',
     templateUrl: 'recipeResults.component.html',
     styleUrls: []
 })
-export class RecipeResults implements OnInit {
+export class Results implements OnInit {
+    public recipes = [];
 
     constructor(private data: DataService) {
         this.recipes = data.recipes;
     }
 
-    public recipes = [];
+    
 
     ngOnInit(): void {
         this.data.loadRecipes()

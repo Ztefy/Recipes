@@ -21,54 +21,38 @@ namespace Recipes.Data
             _logger = logger;
         }
 
-        public IEnumerable<Recipe> GetAllRecipes()
+        public IEnumerable<Category> GetAllCategories()
         {
             try
             {
-                _logger.LogInformation("GetAllRecipes was called");
+                _logger.LogInformation("GetAllCategories was called");
 
-                return _ctx.Recipes
-                    .Include(r => r.Category)
-                    .Include(r => r.Nutrition).ThenInclude(n => n.Type)
-                    .Include(r => r.Nutrition).ThenInclude(n => n.Measurement)
-                    .Include(r => r.Skill)
-                    .OrderBy(r => r.RecipeName)
+                return _ctx.Category
+                    .OrderBy(c => c.Name)
                     .ToList();
             }
             catch (Exception ex)
             {
-                _logger.LogError($"Failed to get all recipes: {ex}");
+                _logger.LogError($"Failed to get categories: {ex}");
                 return null;
             }
-
         }
 
-        public Recipe GetRecipeById(int id)
+        public IEnumerable<Category> GetCategoryById(int id)
         {
-            return _ctx.Recipes
-                .Include(r => r.Category)
-                .Include(r => r.Course)
-                .Include(r => r.Cuisine).ThenInclude(c => c.Cuisine)
-                .Include(r => r.Ingredients).ThenInclude(i => i.Ingredient)
-                .Include(r => r.Ingredients).ThenInclude(i => i.Measurement)
-                .Include(r => r.Ingredients).ThenInclude(i => i.Preparation)
-                .Include(r => r.Methods)
-                .Include(r => r.Notes)
-                .Include(r => r.Nutrition).ThenInclude(n => n.Type)
-                .Include(r => r.Nutrition).ThenInclude(n => n.Measurement)
-                .Include(r => r.Skill)
-                .Include(r => r.Tags).ThenInclude(t => t.Tag)
-                .Include(r => r.Timings).ThenInclude(t => t.Type)
-                .Include(r => r.Timings).ThenInclude(t => t.Measurement)
-                .Where(r => r.RecipeId == id)
-                .FirstOrDefault();
-        }
+            try
+            {
+                _logger.LogInformation("GetCategoryById was called");
 
-        public IEnumerable<Recipe> GetRecipesByCategory(string category)
-        {
-            return _ctx.Recipes
-                .Where(r => r.Category.Name == category)
-                .ToList();
+                return _ctx.Category
+                    .Where(c => c.CategoryId == id)
+                    .ToList();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Failed to get category: {ex}");
+                return null;
+            }
         }
 
         public bool SaveAll()

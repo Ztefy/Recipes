@@ -15,18 +15,23 @@ namespace Recipes.Data.Entities
         public string RecipeImage { get; set; }
         public int Portions { get; set; }
         public int Rating { get; set; }
-        public ICollection<RecipeTimings> Timings { get; set; }
-        public ICollection<RecipeNutrition> Nutrition { get; set; }
+        public string PrepTime { get; set; }
+        public string CookTime { get; set; }
+        public int? Calories { get; set; }
+        public int? Fat { get; set; }
+        public int? Saturated { get; set; }
+        public int? Carbohydrates { get; set; }
+        public int? Sugars { get; set; }
+        public int? Fibre { get; set; }
+        public int? Protein { get; set; }
+        public int? Salt { get; set; }
         public ICollection<RecipeIngredient> Ingredients { get; set; }
         public ICollection<RecipeMethod> Methods { get; set; }
         public ICollection<RecipeNote> Notes { get; set; }
         public ICollection<RecipeCuisine> Cuisine { get; set; }
         public ICollection<RecipeTags> Tags { get; set; }
-        public int SkillId { get; set; }
         public Skill Skill { get; set; }
-        public int CourseId { get; set; }
         public Course Course { get; set; }
-        public int CategoryId { get; set; }
         public Category Category { get; set; }
     }
 }
