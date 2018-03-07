@@ -14,6 +14,9 @@ namespace Recipes.Data
         IEnumerable<Cuisine> GetAllCuisines();
         Cuisine GetCuisineById(int id);
 
+        IEnumerable<Ingredient> GetAllIngredients();
+        Ingredient GetIngredientById(int id);
+
         bool SaveAll();
         void AddEntity(object model);
     }

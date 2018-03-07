@@ -132,5 +132,39 @@ namespace Recipes.Data
                 return null;
             }
         }
+
+        public IEnumerable<Ingredient> GetAllIngredients()
+        {
+            try
+            {
+                _logger.LogInformation("GetAllIngredients was called");
+
+                return _ctx.Ingredient
+                    .OrderBy(i => i.Name)
+                    .ToList();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Failed to get ingredients: {ex}");
+                return null;
+            }
+        }
+
+        public Ingredient GetIngredientById(int id)
+        {
+            try
+            {
+                _logger.LogInformation("GetIngredientById was called");
+
+                return _ctx.Ingredient
+                    .Where(i => i.IngredientId == id)
+                    .FirstOrDefault();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Failed to get ingredient: {ex}");
+                return null;
+            }
+        }
     }
 }
