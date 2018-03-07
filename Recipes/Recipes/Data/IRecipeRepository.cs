@@ -8,6 +8,9 @@ namespace Recipes.Data
         IEnumerable<Category> GetAllCategories();
         Category GetCategoryById(int id);
 
+        IEnumerable<Course> GetAllCourses();
+        Course GetCourseById(int id);
+
         bool SaveAll();
         void AddEntity(object model);
     }

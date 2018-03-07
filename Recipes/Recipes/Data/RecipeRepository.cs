@@ -21,6 +21,16 @@ namespace Recipes.Data
             _logger = logger;
         }
 
+        public void AddEntity(object model)
+        {
+            _ctx.Add(model);
+        }
+
+        public bool SaveAll()
+        {
+            return _ctx.SaveChanges() > 0;
+        }
+
         public IEnumerable<Category> GetAllCategories()
         {
             try
@@ -55,14 +65,38 @@ namespace Recipes.Data
             }
         }
 
-        public void AddEntity(object model)
+        public IEnumerable<Course> GetAllCourses()
         {
-            _ctx.Add(model);
+            try
+            {
+                _logger.LogInformation("GetAllCourses was called");
+
+                return _ctx.Course
+                    .OrderBy(c => c.Name)
+                    .ToList();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Failed to get courses: {ex}");
+                return null;
+            }
         }
 
-        public bool SaveAll()
+        public Course GetCourseById(int id)
         {
-            return _ctx.SaveChanges() > 0;
+            try
+            {
+                _logger.LogInformation("GetCourseById was called");
+
+                return _ctx.Course
+                    .Where(c => c.CourseId == id)
+                    .FirstOrDefault();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Failed to get course: {ex}");
+                return null;
+            }
         }
     }
 }

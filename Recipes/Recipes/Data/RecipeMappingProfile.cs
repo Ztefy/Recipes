@@ -14,7 +14,11 @@ namespace Recipes.Data
         public RecipeMappingProfile()
         {
             CreateMap<Category, CategoryViewModel>()
-                .ForMember(c => c.CategoryName, ex => ex.MapFrom(r => r.Name))
+                .ForMember(c => c.CategoryName, ex => ex.MapFrom(c => c.Name))
+                .ReverseMap();
+
+            CreateMap<Course, CourseViewModel>()
+                .ForMember(c => c.CourseName, ex => ex.MapFrom(c => c.Name))
                 .ReverseMap();
         }
     }
