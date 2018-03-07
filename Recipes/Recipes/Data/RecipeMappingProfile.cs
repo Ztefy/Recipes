@@ -20,6 +20,10 @@ namespace Recipes.Data
             CreateMap<Course, CourseViewModel>()
                 .ForMember(c => c.CourseName, ex => ex.MapFrom(c => c.Name))
                 .ReverseMap();
+
+            CreateMap<Cuisine, CuisineViewModel>()
+                .ForMember(c => c.CuisineName, ex => ex.MapFrom(c => c.Name))
+                .ReverseMap();
         }
     }
 }

@@ -98,5 +98,39 @@ namespace Recipes.Data
                 return null;
             }
         }
+
+        public IEnumerable<Cuisine> GetAllCuisines()
+        {
+            try
+            {
+                _logger.LogInformation("GetAllCuisines was called");
+
+                return _ctx.Cuisine
+                    .OrderBy(c => c.Name)
+                    .ToList();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Failed to get cuisines: {ex}");
+                return null;
+            }
+        }
+
+        public Cuisine GetCuisineById(int id)
+        {
+            try
+            {
+                _logger.LogInformation("GetCuisineById was called");
+
+                return _ctx.Cuisine
+                    .Where(c => c.CuisineId == id)
+                    .FirstOrDefault();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Failed to get cuisine: {ex}");
+                return null;
+            }
+        }
     }
 }
