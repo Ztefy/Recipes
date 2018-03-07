@@ -166,5 +166,39 @@ namespace Recipes.Data
                 return null;
             }
         }
+
+        public IEnumerable<IngredientMeasurement> GetAllIngredientMeasurements()
+        {
+            try
+            {
+                _logger.LogInformation("GetAllIngredientMeasurements was called");
+
+                return _ctx.IngredientMeasurement
+                    .OrderBy(i => i.Measurement)
+                    .ToList();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Failed to get ingredient measurements: {ex}");
+                return null;
+            }
+        }
+
+        public IngredientMeasurement GetIngredientMeasurementById(int id)
+        {
+            try
+            {
+                _logger.LogInformation("GetIngredientMeasurementById was called");
+
+                return _ctx.IngredientMeasurement
+                    .Where(i => i.IngrMeasId == id)
+                    .FirstOrDefault();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Failed to get ingredient measurement: {ex}");
+                return null;
+            }
+        }
     }
 }

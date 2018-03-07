@@ -28,6 +28,11 @@ namespace Recipes.Data
             CreateMap<Ingredient, IngredientViewModel>()
                 .ForMember(i => i.IngredientName, ex => ex.MapFrom(i => i.Name))
                 .ReverseMap();
+
+            CreateMap<IngredientMeasurement, IngredientMeasurementViewModel>()
+                .ForMember(i => i.IngredientMeasurementId, ex => ex.MapFrom(i => i.IngrMeasId))
+                .ForMember(i => i.IngredientMeasurement, ex => ex.MapFrom(i => i.Measurement))
+                .ReverseMap();
         }
     }
 }
