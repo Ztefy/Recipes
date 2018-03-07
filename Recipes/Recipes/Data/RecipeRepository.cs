@@ -38,7 +38,7 @@ namespace Recipes.Data
             }
         }
 
-        public IEnumerable<Category> GetCategoryById(int id)
+        public Category GetCategoryById(int id)
         {
             try
             {
@@ -46,7 +46,7 @@ namespace Recipes.Data
 
                 return _ctx.Category
                     .Where(c => c.CategoryId == id)
-                    .ToList();
+                    .FirstOrDefault();
             }
             catch (Exception ex)
             {

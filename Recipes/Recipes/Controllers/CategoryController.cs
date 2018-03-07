@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Recipes.Data;
 using Recipes.Data.Entities;
@@ -16,11 +17,15 @@ namespace Recipes.Controllers
     {
         private readonly IRecipeRepository _repository;
         private readonly ILogger<CategoryController> _logger;
+        private readonly IMapper _mapper;
 
-        public CategoryController(IRecipeRepository repository, ILogger<CategoryController> logger)
+        public CategoryController(IRecipeRepository repository,
+            ILogger<CategoryController> logger,
+            IMapper mapper)
         {
             _repository = repository;
             _logger = logger;
+            _mapper = mapper;
         }
 
         [HttpGet]
@@ -28,7 +33,7 @@ namespace Recipes.Controllers
         {
             try
             {
-                return Ok(_repository.GetAllCategories());
+                return Ok(_mapper.Map<IEnumerable<Category>,IEnumerable<CategoryViewModel>>(_repository.GetAllCategories()));
             }
             catch (Exception ex)
             {
@@ -44,7 +49,7 @@ namespace Recipes.Controllers
             {
                 var category = _repository.GetCategoryById(id);
 
-                if (category != null) return Ok(category);
+                if (category != null) return Ok(_mapper.Map<Category, CategoryViewModel>(category));
                 else return NotFound();
             }
             catch (Exception ex)
@@ -62,22 +67,12 @@ namespace Recipes.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    var newCategory = new Category()
-                    {
-                        CategoryId = model.CategoryId,
-                        Name = model.CategoryName
-                    };
+                    var newCategory = _mapper.Map<CategoryViewModel, Category>(model);
 
                     _repository.AddEntity(newCategory);
                     if (_repository.SaveAll())
                     {
-                        var vm = new CategoryViewModel()
-                        {
-                            CategoryId = newCategory.CategoryId,
-                            CategoryName = newCategory.Name
-                        };
-
-                        return Created($"/api/category/{vm.CategoryId}", vm);
+                        return Created($"/api/category/{newCategory.CategoryId}", _mapper.Map<Category,CategoryViewModel>(newCategory));
                     }
                 }
                 else
