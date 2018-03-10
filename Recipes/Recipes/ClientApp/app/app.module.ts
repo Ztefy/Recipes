@@ -4,9 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 
 import { AppComponent } from './app.component';
-//import { Results } from './results/recipeResults.component';
-//import { Recipe } from './recipe/recipe.component';
-//import { DataService } from './shared/dataService';
+import { CreateRecipe } from './recipe/createRecipe.component';
 
 import { RouterModule } from '@angular/router';
 
@@ -18,9 +16,8 @@ let routes = [
 
 @NgModule({
   declarations: [
-      AppComponent
-      //Results,
-      //Recipe
+      AppComponent,
+      CreateRecipe
   ],
   imports: [
       BrowserModule,
@@ -31,7 +28,6 @@ let routes = [
       })
   ],
   providers: [
-      //DataService
   ],
   bootstrap: [AppComponent]
 })

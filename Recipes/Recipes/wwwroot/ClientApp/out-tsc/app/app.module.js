@@ -10,9 +10,7 @@ var platform_browser_1 = require("@angular/platform-browser");
 var core_1 = require("@angular/core");
 var http_1 = require("@angular/common/http");
 var app_component_1 = require("./app.component");
-//import { Results } from './results/recipeResults.component';
-//import { Recipe } from './recipe/recipe.component';
-//import { DataService } from './shared/dataService';
+var createRecipe_component_1 = require("./recipe/createRecipe.component");
 var router_1 = require("@angular/router");
 var routes = [];
 var AppModule = /** @class */ (function () {
@@ -21,9 +19,8 @@ var AppModule = /** @class */ (function () {
     AppModule = __decorate([
         core_1.NgModule({
             declarations: [
-                app_component_1.AppComponent
-                //Results,
-                //Recipe
+                app_component_1.AppComponent,
+                createRecipe_component_1.CreateRecipe
             ],
             imports: [
                 platform_browser_1.BrowserModule,

@@ -1,0 +1,154 @@
+﻿<h1>Recipe Creation</h1>
+
+<form id="basicInfo">
+    <div class="form-group">
+        <label for="recipeTitleInput">Recipe Title</label>
+        <input type="text" class="form-control" id="recipeTitleInput" />
+    </div>
+    <div class="form-group">
+        <label for="recipeImageInput">Recipe Image</label>
+        <input type="file" class="form-control-file" id="recipeImageInput" />
+    </div>
+</form>
+<form id="generalInfo">
+    <div class="form-group">
+        <label for="recipePortionInput">Number of portions</label>
+        <input type="number" class="form-control" id="recipePortionInput" />
+    </div>
+    <div class="form-group">
+        <label for="recipePrepTimeInput">Prep time</label>
+        <input type="text" class="form-control" id="recipePrepTimeInput" />
+    </div>
+    <div class="form-group">
+        <label for="recipeCookTimeInput">Cook time</label>
+        <input type="text" class="form-control" id="recipeCookTimeInput" />
+    </div>
+    <div class="form-group">
+        <label for="recipeSkillInput">Skill</label>
+        <select id="recipeSkillInput"  class="form-control">
+            <option selected>Choose...</option>
+            <option>Skill 1</option>
+            <option>Skill 2</option>
+            <option>Skill 3</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="recipeRatingInput">Rating</label>
+        <input type="number" class="form-control" id="recipeRatingInput"/>
+    </div>
+    <div class="form-group">
+        <label for="recipeCourseInput">Course</label>
+        <select id="recipeCourseInput" class="form-control">
+            <option selected>Choose...</option>
+            <option>Course 1</option>
+            <option>Course 2</option>
+            <option>Course 3</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="recipeCuisineInput">Cuisine</label>
+        <select id="recipeCusineInput" class="form-control">
+            <option selected>Choose...</option>
+            <option>Cuisine 1</option>
+            <option>Cuisine 2</option>
+            <option>Cuisine 3</option>
+        </select>
+    </div>
+    <button type="button" class="btn btn-primary">Add Cuisine</button>
+    <button type="button" class="btn btn-primary">Remove Cuisine</button>
+    <div class="form-group">
+        <label for="recipeTagInput">Tag</label>
+        <select id="recipeTagInput" class="form-control">
+            <option selected>Choose...</option>
+            <option>Tag 1</option>
+            <option>Tag 2</option>
+            <option>Tag 3</option>
+        </select>
+    </div>
+    <button type="button" class="btn btn-primary">Add Tag</button>
+    <button type="button" class="btn btn-primary">Remove Tag</button>
+</form>
+<form id="nutritionInfo">
+    <div class="form-group">
+        <label for="recipeCalorieInput">Calories (kcal)</label>
+        <input type="number" class="form-control" id="recipeCalorieInput" />
+    </div>
+    <div class="form-group">
+        <label for="recipeProteinInput">Protein (g)</label>
+        <input type="number" class="form-control" id="recipeProteinInput" />
+    </div>
+    <div class="form-group">
+        <label for="recipeCarbohydrateInput">Carbohydrates (g)</label>
+        <input type="number" class="form-control" id="recipeCarbohydrateInput" />
+    </div>
+    <div class="form-group">
+        <label for="recipeFatInput">Fat (g)</label>
+        <input type="number" class="form-control" id="recipeFatInput" />
+    </div>
+    <div class="form-group">
+        <label for="recipeSaturatedFatInput">Saturated Fat (g)</label>
+        <input type="number" class="form-control" id="recipeSaturatedFatInput" />
+    </div>
+    <div class="form-group">
+        <label for="recipeFibreInput">Fibre (g)</label>
+        <input type="number" class="form-control" id="recipeFibreInput" />
+    </div>
+    <div class="form-group">
+        <label for="recipeSugarInput">Sugar (g)</label>
+        <input type="number" class="form-control" id="recipeSugarInput" />
+    </div>
+    <div class="form-group">
+        <label for="recipeSaltInput">Salt (g)</label>
+        <input type="number" class="form-control" id="recipeSaltInput" />
+    </div>
+</form>
+<form id="ingredientInfo">
+    <div class="form-group">
+        <label for="recipeIngredientQuantityInput">Ingredient Quantity</label>
+        <input type="number" class="form-control" id="recipeIngredientQuantityInput" />
+        <label for="recipeIngredientMeasurementInput">Ingredient Measurement</label>
+        <select id="recipeIngredientMeasurementInput" class="form-control">
+            <option selected>Choose...</option>
+            <option>Measurement 1</option>
+            <option>Measurement 2</option>
+            <option>Measurement 3</option>
+        </select>
+        <label for="recipeIngredientInput">Ingredient</label>
+        <select id="recipeIngredientInput" class="form-control">
+            <option selected>Choose...</option>
+            <option>Ingredient 1</option>
+            <option>Ingredient 2</option>
+            <option>Ingredient 3</option>
+        </select>
+        <label for="recipeIngredientPreparationInput">Ingredient Preparation</label>
+        <select id="recipeIngredientPreparationInput" class="form-control">
+            <option selected>Choose...</option>
+            <option>Preparation 1</option>
+            <option>Preparation 2</option>
+            <option>Preparation 3</option>
+        </select>
+    </div>
+    <button type="button" class="btn btn-primary">Add Ingredient</button>
+    <button type="button" class="btn btn-primary">Remove Ingredient</button>
+</form>
+<form id="methodInfo">
+    <div class="form-group">
+        <label for="recipeMethodInput">Method</label>
+        <select id="recipeMethodInput" class="form-control">
+            <option selected>Choose...</option>
+            <option>Method 1</option>
+            <option>Method 2</option>
+            <option>Method 3</option>
+        </select>
+    </div>
+    <button type="button" class="btn btn-primary">Add Method</button>
+    <button type="button" class="btn btn-primary">Remove Method</button>
+</form>
+<form id="noteInfo">
+    <div class="form-group">
+        <label for="recipeNoteInput">Note</label>
+        <input type="text" class="form-control" id="recipeNoteInput" />
+    </div>
+    <button type="button" class="btn btn-primary">Add Note</button>
+    <button type="button" class="btn btn-primary">Remove Note</button>
+</form>

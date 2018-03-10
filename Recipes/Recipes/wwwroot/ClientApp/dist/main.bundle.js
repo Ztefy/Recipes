@@ -20,7 +20,7 @@ webpackEmptyAsyncContext.id = "./ClientApp/$$_lazy_route_resource lazy recursive
 /***/ "./ClientApp/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n    <base href=\"/\">\r\n</head>\r\n<body>\r\n    <h1>{{ Title }}</h1>\r\n    <router-outlet></router-outlet>\r\n</body>\r\n</html>"
+module.exports = "<!DOCTYPE html>\r\n<html>\r\n<head>\r\n    <title>app.component</title>\r\n</head>\r\n<body>\r\n    <create-recipe></create-recipe>\r\n</body>\r\n</html>"
 
 /***/ }),
 
@@ -71,15 +71,9 @@ var platform_browser_1 = __webpack_require__("./node_modules/@angular/platform-b
 var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 var http_1 = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
 var app_component_1 = __webpack_require__("./ClientApp/app/app.component.ts");
-var recipeResults_component_1 = __webpack_require__("./ClientApp/app/results/recipeResults.component.ts");
-var recipe_component_1 = __webpack_require__("./ClientApp/app/recipe/recipe.component.ts");
-var dataService_1 = __webpack_require__("./ClientApp/app/shared/dataService.ts");
+var createRecipe_component_1 = __webpack_require__("./ClientApp/app/recipe/createRecipe.component.ts");
 var router_1 = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
-var routes = [
-    //{ path: "", component: Results },
-    //{ path: "recipe", component: Recipe }
-    { path: "", component: recipe_component_1.Recipe }
-];
+var routes = [];
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -87,8 +81,7 @@ var AppModule = /** @class */ (function () {
         core_1.NgModule({
             declarations: [
                 app_component_1.AppComponent,
-                recipeResults_component_1.Results,
-                recipe_component_1.Recipe
+                createRecipe_component_1.CreateRecipe
             ],
             imports: [
                 platform_browser_1.BrowserModule,
@@ -98,9 +91,7 @@ var AppModule = /** @class */ (function () {
                     enableTracing: false // for Debugging of the Routes
                 })
             ],
-            providers: [
-                dataService_1.DataService
-            ],
+            providers: [],
             bootstrap: [app_component_1.AppComponent]
         })
     ], AppModule);
@@ -111,14 +102,14 @@ exports.AppModule = AppModule;
 
 /***/ }),
 
-/***/ "./ClientApp/app/recipe/recipe.component.html":
+/***/ "./ClientApp/app/recipe/createRecipe.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h3>Recipe</h3>\r\n\r\n<div class=\"row\">\r\n    <div class=\"col-md-12 col-sm-12\">\r\n        <div class=\"recipe-title\">\r\n            <h2>Recipe Name</h2>\r\n        </div>\r\n    </div>\r\n\r\n    <div class=\"col-md-4 col-sm-12\">\r\n        <div class=\"recipe-image\">\r\n            <img src=\"~/img/download.jpg\" />\r\n        </div>\r\n    </div>\r\n\r\n    <div class=\"col-md-4 col-sm-12\">\r\n        <div id=\"recipe-info\">\r\n            <div class=\"card\">\r\n                <div class=\"card-header\" id=\"headingInfo\">\r\n                    <h5 class=\"mb-0\">\r\n                        <button class=\"btn btn-block btn-dark\" data-toggle=\"collapse\" data-target=\"#collapseInfo\" aria-expanded=\"true\" aria-controls=\"collapseInfo\" style=\"white-space: normal\">\r\n                            General Info:\r\n                        </button>\r\n                    </h5>\r\n                </div>\r\n\r\n                <div id=\"collapseInfo\" class=\"collapse show\" aria-labelledby=\"collapseInfo\" data-parent=\"#recipe-info\">\r\n                    <div class=\"card-body\">\r\n                        <ul>\r\n                            <li>Portions: 4</li>\r\n                            <li>Prep time: 30 mins</li>\r\n                            <li>Cook time: 40 mins</li>\r\n                            <li>Skill: Easy</li>\r\n                        </ul>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n\r\n    <div class=\"col-md-4 col-sm-12\">\r\n        <div id=\"recipe-nutrition\">\r\n            <div class=\"card\">\r\n                <div class=\"card-header\" id=\"headingNutrition\">\r\n                    <h5 class=\"mb-0\">\r\n                        <button class=\"btn btn-block btn-dark\" data-toggle=\"collapse\" data-target=\"#collapseNutrition\" aria-expanded=\"true\" aria-controls=\"collapseNutrition\" style=\"white-space: normal\">\r\n                            Nutritional Info (per portion):\r\n                        </button>\r\n                    </h5>\r\n                </div>\r\n\r\n                <div id=\"collapseNutrition\" class=\"collapse show\" aria-labelledby=\"collapseNutrition\" data-parent=\"#recipe-nutrition\">\r\n                    <div class=\"card-body\">\r\n                        <ul>\r\n                            <li>Calories: 500kcal</li>\r\n                            <li>Protein: 50g</li>\r\n                            <li>Carbohydrates: 60g</li>\r\n                            <li>Fat: 10g</li>\r\n                            <li>Saturated Fat: 4g</li>\r\n                            <li>Fibre: 10g</li>\r\n                            <li>Sugar: 5g</li>\r\n                            <li>Salt: 1.2g</li>\r\n                        </ul>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n\r\n<div class=\"row\">\r\n    <div class=\"col-md-4 col-sm-12\">\r\n        <div id=\"recipe-ingredients\">\r\n            <div class=\"card\">\r\n                <div class=\"card-header\" id=\"headingIngredients\">\r\n                    <h5 class=\"mb-0\">\r\n                        <button class=\"btn btn-block btn-dark\" data-toggle=\"collapse\" data-target=\"#collapseIngredients\" aria-expanded=\"true\" aria-controls=\"collapseIngredients\" style=\"white-space: normal\">\r\n                            Ingredients:\r\n                        </button>\r\n                    </h5>\r\n                </div>\r\n\r\n                <div id=\"collapseIngredients\" class=\"collapse show\" aria-labelledby=\"collapseIngredients\" data-parent=\"#recipe-ingredients\">\r\n                    <div class=\"card-body\">\r\n                        <ul>\r\n                            <li>Ingredient 1</li>\r\n                            <li>Ingredient 2</li>\r\n                            <li>Ingredient 3</li>\r\n                            <li>Ingredient 4</li>\r\n                            <li>Ingredient 5</li>\r\n                            <li>Ingredient 6</li>\r\n                            <li>Ingredient 7</li>\r\n                            <li>Ingredient 8</li>\r\n                            <li>Ingredient 9</li>\r\n                            <li>Ingredient 10</li>\r\n                        </ul>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n\r\n    <div class=\"col-md-8 col-sm-12\">\r\n        <div id=\"recipe-method\">\r\n            <div class=\"card\">\r\n                <div class=\"card-header\" id=\"headingMethod\">\r\n                    <h5 class=\"mb-0\">\r\n                        <button class=\"btn btn-block btn-dark\" data-toggle=\"collapse\" data-target=\"#collapseMethod\" aria-expanded=\"true\" aria-controls=\"collapseMethod\" style=\"white-space: normal\">\r\n                            Method:\r\n                        </button>\r\n                    </h5>\r\n                </div>\r\n\r\n                <div id=\"collapseMethod\" class=\"collapse show\" aria-labelledby=\"collapseMethod\" data-parent=\"#recipe-method\">\r\n                    <div class=\"card-body\">\r\n                        <ul>\r\n                            <li>1. Things to do here to prepare and cook the reipe.</li>\r\n                            <li>2. Things to do here to prepare and cook the reipe.</li>\r\n                            <li>3. Things to do here to prepare and cook the reipe.</li>\r\n                            <li>4. Things to do here to prepare and cook the reipe.</li>\r\n                            <li>5. Things to do here to prepare and cook the reipe.</li>\r\n                            <li>6. Things to do here to prepare and cook the reipe.</li>\r\n                            <li>7. Things to do here to prepare and cook the reipe.</li>\r\n                            <li>8. Things to do here to prepare and cook the reipe.</li>\r\n                            <li>9. Things to do here to prepare and cook the reipe.</li>\r\n                            <li>10. Things to do here to prepare and cook the reipe.</li>\r\n                            <li>11. Things to do here to prepare and cook the reipe.</li>\r\n                            <li>12. Things to do here to prepare and cook the reipe.</li>\r\n                            <li>13. Things to do here to prepare and cook the reipe.</li>\r\n                            <li>14. Things to do here to prepare and cook the reipe.</li>\r\n                            <li>15. Things to do here to prepare and cook the reipe.</li>\r\n                            <li>16. Things to do here to prepare and cook the reipe.</li>\r\n                            <li>17. Things to do here to prepare and cook the reipe.</li>\r\n                            <li>18. Things to do here to prepare and cook the reipe.</li>\r\n                            <li>19. Things to do here to prepare and cook the reipe.</li>\r\n                            <li>20. Things to do here to prepare and cook the reipe.</li>\r\n                        </ul>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n\r\n<div class=\"row\">\r\n    <div class=\"col-md-12 col-sm-12\">\r\n        <div id=\"recipe-notes\">\r\n            <div class=\"card\">\r\n                <div class=\"card-header\" id=\"headingNotes\">\r\n                    <h5 class=\"mb-0\">\r\n                        <button class=\"btn btn-block btn-dark\" data-toggle=\"collapse\" data-target=\"#collapseNotes\" aria-expanded=\"true\" aria-controls=\"collapseNotes\" style=\"white-space: normal\">\r\n                            Notes:\r\n                        </button>\r\n                    </h5>\r\n                </div>\r\n\r\n                <div id=\"collapseNotes\" class=\"collapse show\" aria-labelledby=\"collapseNotes\" data-parent=\"#recipe-notes\">\r\n                    <div class=\"card-body\">\r\n                        <ul>\r\n                            <li>1. Notes</li>\r\n                            <li>2. Notes</li>\r\n                            <li>3. Notes</li>\r\n                            <li>4. Notes</li>\r\n                            <li>5. Notes</li>\r\n                        </ul>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>"
+module.exports = "<h1>Recipe Creation</h1>\r\n\r\n<form id=\"basicInfo\">\r\n    <div class=\"form-group\">\r\n        <label for=\"recipeTitleInput\">Recipe Title</label>\r\n        <input type=\"text\" class=\"form-control\" id=\"recipeTitleInput\" />\r\n    </div>\r\n    <div class=\"form-group\">\r\n        <label for=\"recipeImageInput\">Recipe Image</label>\r\n        <input type=\"file\" class=\"form-control-file\" id=\"recipeImageInput\" />\r\n    </div>\r\n</form>\r\n<form id=\"generalInfo\">\r\n    <div class=\"form-group\">\r\n        <label for=\"recipePortionInput\">Number of portions</label>\r\n        <input type=\"number\" class=\"form-control\" id=\"recipePortionInput\" />\r\n    </div>\r\n    <div class=\"form-group\">\r\n        <label for=\"recipePrepTimeInput\">Prep time</label>\r\n        <input type=\"text\" class=\"form-control\" id=\"recipePrepTimeInput\" />\r\n    </div>\r\n    <div class=\"form-group\">\r\n        <label for=\"recipeCookTimeInput\">Cook time</label>\r\n        <input type=\"text\" class=\"form-control\" id=\"recipeCookTimeInput\" />\r\n    </div>\r\n    <div class=\"form-group\">\r\n        <label for=\"recipeSkillInput\">Skill</label>\r\n        <select id=\"recipeSkillInput\"  class=\"form-control\">\r\n            <option selected>Choose...</option>\r\n            <option>Skill 1</option>\r\n            <option>Skill 2</option>\r\n            <option>Skill 3</option>\r\n        </select>\r\n    </div>\r\n    <div class=\"form-group\">\r\n        <label for=\"recipeRatingInput\">Rating</label>\r\n        <input type=\"number\" class=\"form-control\" id=\"recipeRatingInput\"/>\r\n    </div>\r\n    <div class=\"form-group\">\r\n        <label for=\"recipeCourseInput\">Course</label>\r\n        <select id=\"recipeCourseInput\" class=\"form-control\">\r\n            <option selected>Choose...</option>\r\n            <option>Course 1</option>\r\n            <option>Course 2</option>\r\n            <option>Course 3</option>\r\n        </select>\r\n    </div>\r\n    <div class=\"form-group\">\r\n        <label for=\"recipeCuisineInput\">Cuisine</label>\r\n        <select id=\"recipeCusineInput\" class=\"form-control\">\r\n            <option selected>Choose...</option>\r\n            <option>Cuisine 1</option>\r\n            <option>Cuisine 2</option>\r\n            <option>Cuisine 3</option>\r\n        </select>\r\n    </div>\r\n    <button type=\"button\" class=\"btn btn-primary\">Add Cuisine</button>\r\n    <button type=\"button\" class=\"btn btn-primary\">Remove Cuisine</button>\r\n    <div class=\"form-group\">\r\n        <label for=\"recipeTagInput\">Tag</label>\r\n        <select id=\"recipeTagInput\" class=\"form-control\">\r\n            <option selected>Choose...</option>\r\n            <option>Tag 1</option>\r\n            <option>Tag 2</option>\r\n            <option>Tag 3</option>\r\n        </select>\r\n    </div>\r\n    <button type=\"button\" class=\"btn btn-primary\">Add Tag</button>\r\n    <button type=\"button\" class=\"btn btn-primary\">Remove Tag</button>\r\n</form>\r\n<form id=\"nutritionInfo\">\r\n    <div class=\"form-group\">\r\n        <label for=\"recipeCalorieInput\">Calories (kcal)</label>\r\n        <input type=\"number\" class=\"form-control\" id=\"recipeCalorieInput\" />\r\n    </div>\r\n    <div class=\"form-group\">\r\n        <label for=\"recipeProteinInput\">Protein (g)</label>\r\n        <input type=\"number\" class=\"form-control\" id=\"recipeProteinInput\" />\r\n    </div>\r\n    <div class=\"form-group\">\r\n        <label for=\"recipeCarbohydrateInput\">Carbohydrates (g)</label>\r\n        <input type=\"number\" class=\"form-control\" id=\"recipeCarbohydrateInput\" />\r\n    </div>\r\n    <div class=\"form-group\">\r\n        <label for=\"recipeFatInput\">Fat (g)</label>\r\n        <input type=\"number\" class=\"form-control\" id=\"recipeFatInput\" />\r\n    </div>\r\n    <div class=\"form-group\">\r\n        <label for=\"recipeSaturatedFatInput\">Saturated Fat (g)</label>\r\n        <input type=\"number\" class=\"form-control\" id=\"recipeSaturatedFatInput\" />\r\n    </div>\r\n    <div class=\"form-group\">\r\n        <label for=\"recipeFibreInput\">Fibre (g)</label>\r\n        <input type=\"number\" class=\"form-control\" id=\"recipeFibreInput\" />\r\n    </div>\r\n    <div class=\"form-group\">\r\n        <label for=\"recipeSugarInput\">Sugar (g)</label>\r\n        <input type=\"number\" class=\"form-control\" id=\"recipeSugarInput\" />\r\n    </div>\r\n    <div class=\"form-group\">\r\n        <label for=\"recipeSaltInput\">Salt (g)</label>\r\n        <input type=\"number\" class=\"form-control\" id=\"recipeSaltInput\" />\r\n    </div>\r\n</form>\r\n<form id=\"ingredientInfo\">\r\n    <div class=\"form-group\">\r\n        <label for=\"recipeIngredientQuantityInput\">Ingredient Quantity</label>\r\n        <input type=\"number\" class=\"form-control\" id=\"recipeIngredientQuantityInput\" />\r\n        <label for=\"recipeIngredientMeasurementInput\">Ingredient Measurement</label>\r\n        <select id=\"recipeIngredientMeasurementInput\" class=\"form-control\">\r\n            <option selected>Choose...</option>\r\n            <option>Measurement 1</option>\r\n            <option>Measurement 2</option>\r\n            <option>Measurement 3</option>\r\n        </select>\r\n        <label for=\"recipeIngredientInput\">Ingredient</label>\r\n        <select id=\"recipeIngredientInput\" class=\"form-control\">\r\n            <option selected>Choose...</option>\r\n            <option>Ingredient 1</option>\r\n            <option>Ingredient 2</option>\r\n            <option>Ingredient 3</option>\r\n        </select>\r\n        <label for=\"recipeIngredientPreparationInput\">Ingredient Preparation</label>\r\n        <select id=\"recipeIngredientPreparationInput\" class=\"form-control\">\r\n            <option selected>Choose...</option>\r\n            <option>Preparation 1</option>\r\n            <option>Preparation 2</option>\r\n            <option>Preparation 3</option>\r\n        </select>\r\n    </div>\r\n    <button type=\"button\" class=\"btn btn-primary\">Add Ingredient</button>\r\n    <button type=\"button\" class=\"btn btn-primary\">Remove Ingredient</button>\r\n</form>\r\n<form id=\"methodInfo\">\r\n    <div class=\"form-group\">\r\n        <label for=\"recipeMethodInput\">Method</label>\r\n        <select id=\"recipeMethodInput\" class=\"form-control\">\r\n            <option selected>Choose...</option>\r\n            <option>Method 1</option>\r\n            <option>Method 2</option>\r\n            <option>Method 3</option>\r\n        </select>\r\n    </div>\r\n    <button type=\"button\" class=\"btn btn-primary\">Add Method</button>\r\n    <button type=\"button\" class=\"btn btn-primary\">Remove Method</button>\r\n</form>\r\n<form id=\"noteInfo\">\r\n    <div class=\"form-group\">\r\n        <label for=\"recipeNoteInput\">Note</label>\r\n        <input type=\"text\" class=\"form-control\" id=\"recipeNoteInput\" />\r\n    </div>\r\n    <button type=\"button\" class=\"btn btn-primary\">Add Note</button>\r\n    <button type=\"button\" class=\"btn btn-primary\">Remove Note</button>\r\n</form>"
 
 /***/ }),
 
-/***/ "./ClientApp/app/recipe/recipe.component.ts":
+/***/ "./ClientApp/app/recipe/createRecipe.component.ts":
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -131,124 +122,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-var Recipe = /** @class */ (function () {
-    function Recipe() {
+var CreateRecipe = /** @class */ (function () {
+    function CreateRecipe() {
     }
-    Recipe = __decorate([
+    CreateRecipe = __decorate([
         core_1.Component({
-            selector: 'recipe',
-            template: __webpack_require__("./ClientApp/app/recipe/recipe.component.html"),
+            selector: 'create-recipe',
+            template: __webpack_require__("./ClientApp/app/recipe/createRecipe.component.html"),
             styleUrls: []
         })
-    ], Recipe);
-    return Recipe;
+    ], CreateRecipe);
+    return CreateRecipe;
 }());
-exports.Recipe = Recipe;
-
-
-/***/ }),
-
-/***/ "./ClientApp/app/results/recipeResults.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"card-deck\">\r\n    <div *ngFor=\"let r of recipes\" class=\"card\">\r\n        <img class=\"card-img-top img-fluid\" src=\"/img/{{ r.RecipeImage }}).jpg\" alt=\"{{ r.RecipeName }}\">\r\n        <div class=\"card-body\">\r\n            <h5 class=\"card-title\">{{ r.RecipeName }}</h5>\r\n            <br />Portions: {{ r.Portions }}\r\n            <br />Prep time: 30 mins\r\n            <br />Cook time: 40 mins\r\n            <br />Skill: {{ r.Skill.SkillLevel }}\r\n            <br />Rating: {{ r.Rating }}\r\n            <p class=\"card-text\"><small class=\"text-muted\">Calories: 500kcal</small></p>\r\n        </div>\r\n    </div>\r\n</div>"
-
-/***/ }),
-
-/***/ "./ClientApp/app/results/recipeResults.component.ts":
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-var dataService_1 = __webpack_require__("./ClientApp/app/shared/dataService.ts");
-var Results = /** @class */ (function () {
-    function Results(data) {
-        this.data = data;
-        this.recipes = [];
-        this.recipes = data.recipes;
-    }
-    Results.prototype.ngOnInit = function () {
-        var _this = this;
-        this.data.loadRecipes()
-            .subscribe(function (success) {
-            if (success) {
-                _this.recipes = _this.data.recipes;
-            }
-        });
-    };
-    Results = __decorate([
-        core_1.Component({
-            selector: 'results',
-            template: __webpack_require__("./ClientApp/app/results/recipeResults.component.html"),
-            styleUrls: []
-        }),
-        __metadata("design:paramtypes", [dataService_1.DataService])
-    ], Results);
-    return Results;
-}());
-exports.Results = Results;
-
-
-/***/ }),
-
-/***/ "./ClientApp/app/shared/dataService.ts":
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-var http_1 = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
-var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-__webpack_require__("./node_modules/rxjs/_esm5/add/operator/map.js");
-var DataService = /** @class */ (function () {
-    function DataService(http) {
-        this.http = http;
-        this.recipe = [];
-        this.recipes = [];
-    }
-    DataService.prototype.loadRecipe = function (id) {
-        var _this = this;
-        return this.http.get('/api/recipe')
-            .map(function (data) {
-            _this.recipe = data;
-            return true;
-        });
-    };
-    DataService.prototype.loadRecipes = function () {
-        var _this = this;
-        return this.http.get('/api/recipes')
-            .map(function (data) {
-            _this.recipes = data;
-            return true;
-        });
-    };
-    DataService = __decorate([
-        core_1.Injectable(),
-        __metadata("design:paramtypes", [http_1.HttpClient])
-    ], DataService);
-    return DataService;
-}());
-exports.DataService = DataService;
+exports.CreateRecipe = CreateRecipe;
 
 
 /***/ }),
