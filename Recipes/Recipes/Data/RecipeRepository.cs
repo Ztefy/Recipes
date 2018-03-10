@@ -200,5 +200,39 @@ namespace Recipes.Data
                 return null;
             }
         }
+
+        public IEnumerable<Skill> GetAllSkills()
+        {
+            try
+            {
+                _logger.LogInformation("GetAllSkills was called");
+
+                return _ctx.Skill
+                    .OrderBy(s => s.SkillLevel)
+                    .ToList();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Failed to get skills: {ex}");
+                return null;
+            }
+        }
+
+        public Skill GetSkillById(int id)
+        {
+            try
+            {
+                _logger.LogInformation("GetSkillById was called");
+
+                return _ctx.Skill
+                    .Where(s => s.SkillId == id)
+                    .FirstOrDefault();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Failed to get skill: {ex}");
+                return null;
+            }
+        }
     }
 }

@@ -20,6 +20,9 @@ namespace Recipes.Data
         IEnumerable<IngredientMeasurement> GetAllIngredientMeasurements();
         IngredientMeasurement GetIngredientMeasurementById(int id);
 
+        IEnumerable<Skill> GetAllSkills();
+        Skill GetSkillById(int id);
+
         bool SaveAll();
         void AddEntity(object model);
     }

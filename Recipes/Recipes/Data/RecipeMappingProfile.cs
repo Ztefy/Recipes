@@ -33,6 +33,10 @@ namespace Recipes.Data
                 .ForMember(i => i.IngredientMeasurementId, ex => ex.MapFrom(i => i.IngrMeasId))
                 .ForMember(i => i.IngredientMeasurement, ex => ex.MapFrom(i => i.Measurement))
                 .ReverseMap();
+
+            CreateMap<Skill, SkillViewModel>()
+                .ForMember(s => s.Skill, ex => ex.MapFrom(s => s.SkillLevel))
+                .ReverseMap();
         }
     }
 }
