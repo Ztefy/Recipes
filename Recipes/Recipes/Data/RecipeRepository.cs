@@ -234,5 +234,39 @@ namespace Recipes.Data
                 return null;
             }
         }
+
+        public IEnumerable<Tag> GetAllTags()
+        {
+            try
+            {
+                _logger.LogInformation("GetAllTags was called");
+
+                return _ctx.Tag
+                    .OrderBy(t => t.Name)
+                    .ToList();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Failed to get tags: {ex}");
+                return null;
+            }
+        }
+
+        public Tag GetTagById(int id)
+        {
+            try
+            {
+                _logger.LogInformation("GetTagById was called");
+
+                return _ctx.Tag
+                    .Where(t => t.TagId == id)
+                    .FirstOrDefault();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Failed to get tag: {ex}");
+                return null;
+            }
+        }
     }
 }

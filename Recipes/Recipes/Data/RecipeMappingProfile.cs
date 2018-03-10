@@ -37,6 +37,10 @@ namespace Recipes.Data
             CreateMap<Skill, SkillViewModel>()
                 .ForMember(s => s.Skill, ex => ex.MapFrom(s => s.SkillLevel))
                 .ReverseMap();
+
+            CreateMap<Tag, TagViewModel>()
+                .ForMember(t => t.Tag, ex => ex.MapFrom(t => t.Name))
+                .ReverseMap();
         }
     }
 }

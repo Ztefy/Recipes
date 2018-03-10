@@ -23,6 +23,9 @@ namespace Recipes.Data
         IEnumerable<Skill> GetAllSkills();
         Skill GetSkillById(int id);
 
+        IEnumerable<Tag> GetAllTags();
+        Tag GetTagById(int id);
+
         bool SaveAll();
         void AddEntity(object model);
     }
