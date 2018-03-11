@@ -21,13 +21,7 @@ var DataService = /** @class */ (function () {
         this.ingredients = [];
         this.ingredientMeasurements = [];
         this.ingredientPreparations = [];
-        this.skills = [{
-                name: "Skill 1"
-            }, {
-                name: "Skill 2"
-            }, {
-                name: "Skill 3"
-            }];
+        this.skills = [];
         this.tags = [];
     }
     DataService.prototype.loadCategories = function () {
@@ -75,6 +69,14 @@ var DataService = /** @class */ (function () {
         return this.http.get('/api/ingredientPreparation')
             .map(function (data) {
             _this.ingredientPreparations = data;
+            return true;
+        });
+    };
+    DataService.prototype.loadSkills = function () {
+        var _this = this;
+        return this.http.get('/api/skill')
+            .map(function (data) {
+            _this.skills = data;
             return true;
         });
     };

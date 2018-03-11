@@ -1,5 +1,13 @@
 ﻿import { Component, OnInit } from '@angular/core';
 import { DataService } from '../shared/dataService';
+import { Category } from '../shared/category';
+import { Course } from '../shared/course';
+import { Cuisine } from '../shared/cuisine';
+import { Ingredient } from '../shared/ingredient';
+import { IngredientMeasurement } from '../shared/ingredientmeasurement';
+import { IngredientPreparation } from '../shared/ingredientpreparation';
+import { Skill } from '../shared/skill';
+import { Tag } from '../shared/tag';
 
 @Component({
     selector: 'create-recipe',
@@ -12,21 +20,21 @@ export class CreateRecipe implements OnInit {
     constructor(private data: DataService) {
     }
 
-    public categories = [];
+    public categories: Category[];
 
-    public courses = [];
+    public courses: Course[];
 
-    public cuisines = [];
+    public cuisines: Cuisine[];
 
-    public ingredients = [];
+    public ingredients: Ingredient[];
 
-    public ingredientMeasurements = [];
+    public ingredientMeasurements: IngredientMeasurement[];
 
-    public ingredientPreparations = [];
+    public ingredientPreparations: IngredientPreparation[];
 
-    public skills = [];
+    public skills: Skill[];
 
-    public tags = [];
+    public tags: Tag[];
 
     ngOnInit(): void {
         this.data.loadCategories()

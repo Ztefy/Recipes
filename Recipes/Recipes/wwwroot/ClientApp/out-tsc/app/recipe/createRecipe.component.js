@@ -14,7 +14,6 @@ var dataService_1 = require("../shared/dataService");
 var CreateRecipe = /** @class */ (function () {
     function CreateRecipe(data) {
         this.data = data;
-        this.categories = [];
         this.courses = [];
         this.cuisines = [];
         this.ingredients = [];
@@ -22,7 +21,6 @@ var CreateRecipe = /** @class */ (function () {
         this.ingredientPreparations = [];
         this.skills = [];
         this.tags = [];
-        this.skills = data.skills;
     }
     CreateRecipe.prototype.ngOnInit = function () {
         var _this = this;
@@ -60,6 +58,12 @@ var CreateRecipe = /** @class */ (function () {
             .subscribe(function (success) {
             if (success) {
                 _this.ingredientPreparations = _this.data.ingredientPreparations;
+            }
+        });
+        this.data.loadSkills()
+            .subscribe(function (success) {
+            if (success) {
+                _this.skills = _this.data.skills;
             }
         });
         this.data.loadTags()

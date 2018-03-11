@@ -132,14 +132,6 @@ var dataService_1 = __webpack_require__("./ClientApp/app/shared/dataService.ts")
 var CreateRecipe = /** @class */ (function () {
     function CreateRecipe(data) {
         this.data = data;
-        this.categories = [];
-        this.courses = [];
-        this.cuisines = [];
-        this.ingredients = [];
-        this.ingredientMeasurements = [];
-        this.ingredientPreparations = [];
-        this.skills = [];
-        this.tags = [];
     }
     CreateRecipe.prototype.ngOnInit = function () {
         var _this = this;
