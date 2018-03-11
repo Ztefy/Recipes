@@ -11,6 +11,7 @@ var core_1 = require("@angular/core");
 var http_1 = require("@angular/common/http");
 var app_component_1 = require("./app.component");
 var createRecipe_component_1 = require("./recipe/createRecipe.component");
+var dataService_1 = require("./shared/dataService");
 var router_1 = require("@angular/router");
 var routes = [];
 var AppModule = /** @class */ (function () {
@@ -30,7 +31,9 @@ var AppModule = /** @class */ (function () {
                     enableTracing: false // for Debugging of the Routes
                 })
             ],
-            providers: [],
+            providers: [
+                dataService_1.DataService
+            ],
             bootstrap: [app_component_1.AppComponent]
         })
     ], AppModule);

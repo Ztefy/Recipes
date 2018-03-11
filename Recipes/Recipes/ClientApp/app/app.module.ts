@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { CreateRecipe } from './recipe/createRecipe.component';
+import { DataService } from './shared/dataService';
 
 import { RouterModule } from '@angular/router';
 
@@ -28,6 +29,7 @@ let routes = [
       })
   ],
   providers: [
+      DataService
   ],
   bootstrap: [AppComponent]
 })

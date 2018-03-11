@@ -1,41 +1,64 @@
 "use strict";
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-var http_1 = require("@angular/common/http");
-var core_1 = require("@angular/core");
-require("rxjs/add/operator/map");
 var DataService = /** @class */ (function () {
-    function DataService(http) {
-        this.http = http;
-        //public recipe: recipes.Recipe = [];
-        //loadRecipe(id: number): recipes.Recipe {
-        //    return this.http.get('/api/recipe')
-        //        .map((data: any[]) => {
-        //            this.recipe = data;
-        //            return true;
-        //});
-        this.recipes = [];
+    function DataService() {
+        this.categories = [{
+                name: "Category 1"
+            }, {
+                name: "Category 2"
+            }, {
+                name: "Category 3"
+            }];
+        this.courses = [{
+                name: "Course 1"
+            }, {
+                name: "Course 2"
+            }, {
+                name: "Course 3"
+            }];
+        this.cuisines = [{
+                name: "Cuisine 1"
+            }, {
+                name: "Cuisine 2"
+            }, {
+                name: "Cuisine 3"
+            }];
+        this.ingredients = [{
+                name: "Ingredient 1"
+            }, {
+                name: "Ingredient 2"
+            }, {
+                name: "Ingredient 3"
+            }];
+        this.ingredientMeasurements = [{
+                name: "Measurement 1"
+            }, {
+                name: "Measurement 2"
+            }, {
+                name: "Measurement 3"
+            }];
+        this.ingredientPreparations = [{
+                name: "Preparation 1"
+            }, {
+                name: "Preparation 2"
+            }, {
+                name: "Preparation 3"
+            }];
+        this.skills = [{
+                name: "Skill 1"
+            }, {
+                name: "Skill 2"
+            }, {
+                name: "Skill 3"
+            }];
+        this.tags = [{
+                name: "Tag 1"
+            }, {
+                name: "Tag 2"
+            }, {
+                name: "Tag 3"
+            }];
     }
-    DataService.prototype.loadRecipes = function () {
-        var _this = this;
-        return this.http.get('/api/recipes')
-            .map(function (data) {
-            _this.recipes = data;
-            return true;
-        });
-    };
-    DataService = __decorate([
-        core_1.Injectable(),
-        __metadata("design:paramtypes", [http_1.HttpClient])
-    ], DataService);
     return DataService;
 }());
 exports.DataService = DataService;

@@ -1,16 +1,5 @@
 ﻿<h1>Recipe Creation</h1>
 
-<form id="basicInfo">
-    <div class="form-group">
-        <label for="recipeTitleInput">Recipe Title</label>
-        <input type="text" class="form-control" id="recipeTitleInput" />
-    </div>
-    <div class="form-group">
-        <label for="recipeImageInput">Recipe Image</label>
-        <input type="file" class="form-control-file" id="recipeImageInput" />
-    </div>
-</form>
-
 <div id="recipe-info">
     <div class="card">
         <div class="card-header" id="headingInfo">
@@ -23,63 +12,99 @@
 
         <div id="collapseInfo" class="collapse show" aria-labelledby="collapseInfo" data-parent="#recipe-info">
             <div class="card-body">
+                <form id="basicInfo">
+                    <div class="row">
+                        <div class="col col-md-4">
+                            <div class="form-group">
+                                <label for="recipeImageInput">Recipe Image</label>
+                                <input type="file" class="form-control-file" id="recipeImageInput" />
+                            </div>
+                        </div>
+                        <div class="col col-md-8">
+                            <div class="form-group">
+                                <label for="recipeTitleInput">Recipe Title</label>
+                                <input type="text" class="form-control" id="recipeTitleInput" />
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
                 <form id="generalInfo">
-                    <div class="form-group">
-                        <label for="recipePortionInput">Number of portions</label>
-                        <input type="number" class="form-control" id="recipePortionInput" />
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="recipePortionInput">Number of portions</label>
+                                <input type="number" class="form-control" id="recipePortionInput" />
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="recipeSkillInput">Skill</label>
+                                <select id="recipeSkillInput" class="form-control">
+                                    <option selected>Choose...</option>
+                                    <option *ngFor="let s of skills">{{ s.name }}</option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="recipePrepTimeInput">Prep time</label>
-                        <input type="text" class="form-control" id="recipePrepTimeInput" />
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="recipePrepTimeInput">Prep time</label>
+                                <input type="text" class="form-control" id="recipePrepTimeInput" />
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="recipeRatingInput">Rating</label>
+                                <input type="number" class="form-control" id="recipeRatingInput" />
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="recipeCookTimeInput">Cook time</label>
-                        <input type="text" class="form-control" id="recipeCookTimeInput" />
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="recipeCookTimeInput">Cook time</label>
+                                <input type="text" class="form-control" id="recipeCookTimeInput" />
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="recipeCourseInput">Course</label>
+                                <select id="recipeCourseInput" class="form-control">
+                                    <option selected>Choose...</option>
+                                    <option *ngFor="let c of courses">{{ c.name }}</option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="recipeSkillInput">Skill</label>
-                        <select id="recipeSkillInput" class="form-control">
-                            <option selected>Choose...</option>
-                            <option>Skill 1</option>
-                            <option>Skill 2</option>
-                            <option>Skill 3</option>
-                        </select>
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="recipeTagInput">Tag</label>
+                                <select id="recipeTagInput" class="form-control">
+                                    <option selected>Choose...</option>
+                                    <option *ngFor="let t of tags">{{ t.name }}</option>
+                                </select>
+                            </div>
+                            <button type="button" class="btn btn-secondary">Add Tag</button>
+                            <button type="button" class="btn btn-secondary">Remove Tag</button>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="recipeCuisineInput">Cuisine</label>
+                                <select id="recipeCusineInput" class="form-control">
+                                    <option selected>Choose...</option>
+                                    <option *ngFor="let c of cuisines">{{ c.name }}</option>
+                                </select>
+                            </div>
+                            <button type="button" class="btn btn-secondary">Add Cuisine</button>
+                            <button type="button" class="btn btn-secondary">Remove Cuisine</button>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="recipeRatingInput">Rating</label>
-                        <input type="number" class="form-control" id="recipeRatingInput" />
-                    </div>
-                    <div class="form-group">
-                        <label for="recipeCourseInput">Course</label>
-                        <select id="recipeCourseInput" class="form-control">
-                            <option selected>Choose...</option>
-                            <option>Course 1</option>
-                            <option>Course 2</option>
-                            <option>Course 3</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="recipeCuisineInput">Cuisine</label>
-                        <select id="recipeCusineInput" class="form-control">
-                            <option selected>Choose...</option>
-                            <option>Cuisine 1</option>
-                            <option>Cuisine 2</option>
-                            <option>Cuisine 3</option>
-                        </select>
-                    </div>
-                    <button type="button" class="btn btn-secondary">Add Cuisine</button>
-                    <button type="button" class="btn btn-secondary">Remove Cuisine</button>
-                    <div class="form-group">
-                        <label for="recipeTagInput">Tag</label>
-                        <select id="recipeTagInput" class="form-control">
-                            <option selected>Choose...</option>
-                            <option>Tag 1</option>
-                            <option>Tag 2</option>
-                            <option>Tag 3</option>
-                        </select>
-                    </div>
-                    <button type="button" class="btn btn-secondary">Add Tag</button>
-                    <button type="button" class="btn btn-secondary">Remove Tag</button>
                 </form>
             </div>
         </div>
@@ -99,37 +124,61 @@
         <div id="collapseNutrition" class="collapse show" aria-labelledby="collapseNutrition" data-parent="#recipe-nutrition">
             <div class="card-body">
                 <form>
-                    <div class="form-group">
-                        <label for="recipeCalorieInput">Calories (kcal)</label>
-                        <input type="number" class="form-control" id="recipeCalorieInput" />
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="recipeCalorieInput">Calories (kcal)</label>
+                                <input type="number" class="form-control" id="recipeCalorieInput" />
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="recipeProteinInput">Protein (g)</label>
+                                <input type="number" class="form-control" id="recipeProteinInput" />
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="recipeCarbohydrateInput">Carbohydrates (g)</label>
+                                <input type="number" class="form-control" id="recipeCarbohydrateInput" />
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="recipeProteinInput">Protein (g)</label>
-                        <input type="number" class="form-control" id="recipeProteinInput" />
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="recipeFatInput">Fat (g)</label>
+                                <input type="number" class="form-control" id="recipeFatInput" />
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="recipeSaturatedFatInput">Saturated Fat (g)</label>
+                                <input type="number" class="form-control" id="recipeSaturatedFatInput" />
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="recipeFibreInput">Fibre (g)</label>
+                                <input type="number" class="form-control" id="recipeFibreInput" />
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="recipeCarbohydrateInput">Carbohydrates (g)</label>
-                        <input type="number" class="form-control" id="recipeCarbohydrateInput" />
-                    </div>
-                    <div class="form-group">
-                        <label for="recipeFatInput">Fat (g)</label>
-                        <input type="number" class="form-control" id="recipeFatInput" />
-                    </div>
-                    <div class="form-group">
-                        <label for="recipeSaturatedFatInput">Saturated Fat (g)</label>
-                        <input type="number" class="form-control" id="recipeSaturatedFatInput" />
-                    </div>
-                    <div class="form-group">
-                        <label for="recipeFibreInput">Fibre (g)</label>
-                        <input type="number" class="form-control" id="recipeFibreInput" />
-                    </div>
-                    <div class="form-group">
-                        <label for="recipeSugarInput">Sugar (g)</label>
-                        <input type="number" class="form-control" id="recipeSugarInput" />
-                    </div>
-                    <div class="form-group">
-                        <label for="recipeSaltInput">Salt (g)</label>
-                        <input type="number" class="form-control" id="recipeSaltInput" />
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="recipeSugarInput">Sugar (g)</label>
+                                <input type="number" class="form-control" id="recipeSugarInput" />
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="recipeSaltInput">Salt (g)</label>
+                                <input type="number" class="form-control" id="recipeSaltInput" />
+                            </div>
+                        </div>
+                        <div class="col">
+                        </div>
                     </div>
                 </form>
             </div>
@@ -159,27 +208,21 @@
                             <label for="recipeIngredientMeasurementInput">Measurement</label>
                             <select id="recipeIngredientMeasurementInput" class="form-control">
                                 <option selected>Choose...</option>
-                                <option>Measurement 1</option>
-                                <option>Measurement 2</option>
-                                <option>Measurement 3</option>
+                                <option *ngFor="let m of ingredientMeasurements">{{ m.name }}</option>
                             </select>
                         </div>
                         <div class="form-group col-md-6">
                             <label for="recipeIngredientInput">Ingredient</label>
                             <select id="recipeIngredientInput" class="form-control">
                                 <option selected>Choose...</option>
-                                <option>Ingredient 1</option>
-                                <option>Ingredient 2</option>
-                                <option>Ingredient 3</option>
+                                <option *ngFor="let i of ingredients">{{ i.name }}</option>
                             </select>
                         </div>
                         <div class="form-group col-md-2">
                             <label for="recipeIngredientPreparationInput">Preparation</label>
                             <select id="recipeIngredientPreparationInput" class="form-control">
                                 <option selected>Choose...</option>
-                                <option>Preparation 1</option>
-                                <option>Preparation 2</option>
-                                <option>Preparation 3</option>
+                                <option *ngFor="let p for ingredientPreparations">{{ p.name }}</option>
                             </select>
                         </div>
                     </div>
@@ -241,3 +284,4 @@
     </div>
 </div>
 
+<button type="submit" class="btn btn-primary">Create Recipe</button>
