@@ -1,65 +1,89 @@
-﻿export class DataService {
-    public categories = [{
-        name: "Category 1"
-    }, {
-        name: "Category 2"
-        }, {
-            name: "Category 3"
-        }];
+﻿import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import 'rxjs/add/operator/map';
 
-    public courses = [{
-        name: "Course 1"
-    }, {
-        name: "Course 2"
-    }, {
-        name: "Course 3"
-    }];
+@Injectable()
+export class DataService {
 
-    public cuisines = [{
-        name: "Cuisine 1"
-    }, {
-        name: "Cuisine 2"
-    }, {
-        name: "Cuisine 3"
-    }];
+    constructor(private http: HttpClient) { }
 
-    public ingredients = [{
-        name: "Ingredient 1"
-    }, {
-        name: "Ingredient 2"
-    }, {
-        name: "Ingredient 3"
-    }];
+    public categories = [];
 
-    public ingredientMeasurements = [{
-        name: "Measurement 1"
-    }, {
-        name: "Measurement 2"
-    }, {
-        name: "Measurement 3"
-    }];
+    public courses = [];
 
-    public ingredientPreparations = [{
-        name: "Preparation 1"
-    }, {
-        name: "Preparation 2"
-    }, {
-        name: "Preparation 3"
-    }];
+    public cuisines = [];
 
-    public skills = [{
-        name: "Skill 1"
-    }, {
-        name: "Skill 2"
-    }, {
-        name: "Skill 3"
-    }];
+    public ingredients = [];
 
-    public tags = [{
-        name: "Tag 1"
-    }, {
-        name: "Tag 2"
-    }, {
-        name: "Tag 3"
-    }];
+    public ingredientMeasurements = [];
+
+    public ingredientPreparations = [];
+
+    public skills = [];
+
+    public tags = [];
+
+    loadCategories() {
+        return this.http.get('/api/category')
+            .map((data: any[]) => {
+                this.categories = data;
+                return true;
+            });
+    }
+
+    loadCourses() {
+        return this.http.get('/api/course')
+            .map((data: any[]) => {
+                this.courses = data;
+                return true;
+            });
+    }
+
+    loadCuisines() {
+        return this.http.get('/api/cuisine')
+            .map((data: any[]) => {
+                this.cuisines = data;
+                return true;
+            });
+    }
+
+    loadIngredients() {
+        return this.http.get('/api/ingredient')
+            .map((data: any[]) => {
+                this.ingredients = data;
+                return true;
+            });
+    }
+
+    loadIngredientMeasurements() {
+        return this.http.get('/api/ingredientMeasurement')
+            .map((data: any[]) => {
+                this.ingredientMeasurements = data;
+                return true;
+            });
+    }
+
+    loadIngredientPreparations() {
+        return this.http.get('/api/ingredientPreparation')
+            .map((data: any[]) => {
+                this.ingredientPreparations = data;
+                return true;
+            });
+    }
+
+    loadSkills() {
+        return this.http.get('/api/skill')
+            .map((data: []) => {
+                this.skills = data;
+                return true;
+            });
+    }
+
+    loadTags() {
+        return this.http.get('/api/tag')
+            .map((data: any[]) => {
+                this.tags = data;
+                return true;
+            });
+    }
 }

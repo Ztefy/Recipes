@@ -22,15 +22,53 @@ var CreateRecipe = /** @class */ (function () {
         this.ingredientPreparations = [];
         this.skills = [];
         this.tags = [];
-        this.categories = data.categories;
-        this.courses = data.courses;
-        this.cuisines = data.cuisines;
-        this.ingredients = data.ingredients;
-        this.ingredientMeasurements = data.ingredientMeasurements;
-        this.ingredientPreparations = data.ingredientPreparations;
         this.skills = data.skills;
-        this.tags = data.tags;
     }
+    CreateRecipe.prototype.ngOnInit = function () {
+        var _this = this;
+        this.data.loadCategories()
+            .subscribe(function (success) {
+            if (success) {
+                _this.categories = _this.data.categories;
+            }
+        });
+        this.data.loadCourses()
+            .subscribe(function (success) {
+            if (success) {
+                _this.courses = _this.data.courses;
+            }
+        });
+        this.data.loadCuisines()
+            .subscribe(function (success) {
+            if (success) {
+                _this.cuisines = _this.data.cuisines;
+            }
+        });
+        this.data.loadIngredients()
+            .subscribe(function (success) {
+            if (success) {
+                _this.ingredients = _this.data.ingredients;
+            }
+        });
+        this.data.loadIngredientMeasurements()
+            .subscribe(function (success) {
+            if (success) {
+                _this.ingredientMeasurements = _this.data.ingredientMeasurements;
+            }
+        });
+        this.data.loadIngredientPreparations()
+            .subscribe(function (success) {
+            if (success) {
+                _this.ingredientPreparations = _this.data.ingredientPreparations;
+            }
+        });
+        this.data.loadTags()
+            .subscribe(function (success) {
+            if (success) {
+                _this.tags = _this.data.tags;
+            }
+        });
+    };
     CreateRecipe = __decorate([
         core_1.Component({
             selector: 'create-recipe',

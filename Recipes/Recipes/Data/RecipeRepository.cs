@@ -201,6 +201,41 @@ namespace Recipes.Data
             }
         }
 
+        public IEnumerable<IngredientPreparation> GetAllIngredientPreprations()
+        {
+            try
+            {
+                _logger.LogInformation("GetAllIngredientPreparations was called");
+
+                return _ctx.IngredientPreparation
+                    .OrderBy(i => i.Preparation)
+                    .ToList();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Failed to get ingredient preparations: {ex}");
+                return null;
+            }
+        }
+
+        public IngredientPreparation GetIngredientPreparationById(int id)
+        {
+            try
+            {
+                _logger.LogInformation("GetIngredientPreparationById was called");
+
+                return _ctx.IngredientPreparation
+                    .Where(i => i.IngPrepId == id)
+                    .FirstOrDefault();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Failed to get ingredient preparation: {ex}");
+                return null;
+            }
+        }
+
+
         public IEnumerable<Skill> GetAllSkills()
         {
             try

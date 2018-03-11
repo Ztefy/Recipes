@@ -42,7 +42,7 @@
                                 <label for="recipeSkillInput">Skill</label>
                                 <select id="recipeSkillInput" class="form-control">
                                     <option selected>Choose...</option>
-                                    <option *ngFor="let s of skills">{{ s.name }}</option>
+                                    <option *ngFor="let s of skills">{{ s.skill }}</option>
                                 </select>
                             </div>
                         </div>
@@ -57,8 +57,11 @@
                         </div>
                         <div class="col">
                             <div class="form-group">
-                                <label for="recipeRatingInput">Rating</label>
-                                <input type="number" class="form-control" id="recipeRatingInput" />
+                                <label for="recipeCategoryInput">Category</label>
+                                <select id="recipeCategoryInput" class="form-control">
+                                    <option selected>Choose...</option>
+                                    <option *ngFor="let c of categories">{{ c.categoryName }}</option>
+                                </select>
                             </div>
                         </div>
                     </div>
@@ -75,9 +78,29 @@
                                 <label for="recipeCourseInput">Course</label>
                                 <select id="recipeCourseInput" class="form-control">
                                     <option selected>Choose...</option>
-                                    <option *ngFor="let c of courses">{{ c.name }}</option>
+                                    <option *ngFor="let c of courses">{{ c.courseName }}</option>
                                 </select>
                             </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="recipeRatingInput">Rating</label>
+                                <input type="number" class="form-control" id="recipeRatingInput" />
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="recipeCuisineInput">Cuisine</label>
+                                <select id="recipeCusineInput" class="form-control">
+                                    <option selected>Choose...</option>
+                                    <option *ngFor="let c of cuisines">{{ c.cuisineName }}</option>
+                                </select>
+                            </div>
+                            <button type="button" class="btn btn-secondary">Add Cuisine</button>
+                            <button type="button" class="btn btn-secondary">Remove Cuisine</button>
                         </div>
                     </div>
 
@@ -87,22 +110,13 @@
                                 <label for="recipeTagInput">Tag</label>
                                 <select id="recipeTagInput" class="form-control">
                                     <option selected>Choose...</option>
-                                    <option *ngFor="let t of tags">{{ t.name }}</option>
+                                    <option *ngFor="let t of tags">{{ t.tag }}</option>
                                 </select>
                             </div>
                             <button type="button" class="btn btn-secondary">Add Tag</button>
                             <button type="button" class="btn btn-secondary">Remove Tag</button>
                         </div>
                         <div class="col">
-                            <div class="form-group">
-                                <label for="recipeCuisineInput">Cuisine</label>
-                                <select id="recipeCusineInput" class="form-control">
-                                    <option selected>Choose...</option>
-                                    <option *ngFor="let c of cuisines">{{ c.name }}</option>
-                                </select>
-                            </div>
-                            <button type="button" class="btn btn-secondary">Add Cuisine</button>
-                            <button type="button" class="btn btn-secondary">Remove Cuisine</button>
                         </div>
                     </div>
                 </form>
@@ -208,21 +222,21 @@
                             <label for="recipeIngredientMeasurementInput">Measurement</label>
                             <select id="recipeIngredientMeasurementInput" class="form-control">
                                 <option selected>Choose...</option>
-                                <option *ngFor="let m of ingredientMeasurements">{{ m.name }}</option>
+                                <option *ngFor="let m of ingredientMeasurements">{{ m.ingredientMeasurement }}</option>
                             </select>
                         </div>
                         <div class="form-group col-md-6">
                             <label for="recipeIngredientInput">Ingredient</label>
                             <select id="recipeIngredientInput" class="form-control">
                                 <option selected>Choose...</option>
-                                <option *ngFor="let i of ingredients">{{ i.name }}</option>
+                                <option *ngFor="let i of ingredients">{{ i.ingredientName }}</option>
                             </select>
                         </div>
                         <div class="form-group col-md-2">
                             <label for="recipeIngredientPreparationInput">Preparation</label>
                             <select id="recipeIngredientPreparationInput" class="form-control">
                                 <option selected>Choose...</option>
-                                <option *ngFor="let p for ingredientPreparations">{{ p.name }}</option>
+                                <option *ngFor="let p of ingredientPreparations">{{ p.ingredientPreparation }}</option>
                             </select>
                         </div>
                     </div>
