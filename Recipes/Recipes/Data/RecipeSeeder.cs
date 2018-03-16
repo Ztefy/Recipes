@@ -14,12 +14,15 @@ namespace Recipes.Data
     {
         private readonly RecipeContext _ctx;
         public IHostingEnvironment _hosting;
+        private readonly IRecipeRepository _repository;
 
         public RecipeSeeder(RecipeContext ctx,
-            IHostingEnvironment hosting)
+            IHostingEnvironment hosting,
+            IRecipeRepository repository)
         {
             _ctx = ctx;
             _hosting = hosting;
+            _repository = repository;
         }
 
         public void Seed()
@@ -114,38 +117,130 @@ namespace Recipes.Data
                 _ctx.SaveChanges();
             }
 
-            //if (!_ctx.Recipes.Any())
-            //{
-            //    // Need to create sample recipe data
-            //    var filepath = Path.Combine(_hosting.ContentRootPath, "Data/Seeders/recipes.json");
-            //    var json = File.ReadAllText(filepath);
-            //    var recipe = JsonConvert.DeserializeObject<IEnumerable<Recipe>>(json);
-            //    _ctx.Recipes.AddRange(recipe);
+            if (!_ctx.Recipes.Any())
+            {
+                // Need to create sample recipe data
+                var skill = _repository.GetAllSkills();
+                var course = _repository.GetAllCourses();
+                var category = _repository.GetAllCategories();
+                var ingredient = _repository.GetAllIngredients();
+                var ingredientmeasurement = _repository.GetAllIngredientMeasurements();
+                var ingredientpreparation = _repository.GetAllIngredientPreprations();
+                var cuisine = _repository.GetAllCuisines();
+                var tag = _repository.GetAllTags();
 
-            //    _ctx.SaveChanges();
-            //}
+                var recipe = new Recipe()
+                {
+                    RecipeName = "Test Recipe",
+                    RecipeImage = "",
+                    Portions = 4,
+                    Rating = 3,
+                    PrepTime = "10 mins",
+                    CookTime = "40 mins",
+                    Calories = 450,
+                    Fat = 10,
+                    Saturated = 2,
+                    Carbohydrates = 15,
+                    Sugars = 2,
+                    Fibre = 3,
+                    Protein = 15,
+                    Salt = 1,
 
-            //if (!_ctx.RecipeIngredient.Any())
-            //{
-            //    // Need to create sample recipe ingredients data
-            //    var filepath = Path.Combine(_hosting.ContentRootPath, "Data/Seeders/recipeingredient.json");
-            //    var json = File.ReadAllText(filepath);
-            //    var recipeingredient = JsonConvert.DeserializeObject<IEnumerable<RecipeIngredient>>(json);
-            //    _ctx.RecipeIngredient.AddRange(recipeingredient);
+                    Skill = skill.First(),
+                    Course = course.First(),
+                    Category = category.First(),
 
-            //    _ctx.SaveChanges();
-            //}
+                    Ingredients = new List<RecipeIngredient>()
+                    {
+                        new RecipeIngredient()
+                        {
+                            Ingredient = ingredient.First(),
+                            Quantity = 400,
+                            Measurement = ingredientmeasurement.First(),
+                            Preparation = ingredientpreparation.First()
+                        },
+                        new RecipeIngredient()
+                        {
+                            Ingredient = ingredient.First(),
+                            Quantity = 50,
+                            Measurement = ingredientmeasurement.First(),
+                            Preparation = ingredientpreparation.First()
+                        },
+                        new RecipeIngredient()
+                        {
+                            Ingredient = ingredient.First(),
+                            Quantity = 150,
+                            Measurement = ingredientmeasurement.First(),
+                            Preparation = ingredientpreparation.First()
+                        },
+                        new RecipeIngredient()
+                        {
+                            Ingredient = ingredient.First(),
+                            Quantity = 2,
+                            Measurement = ingredientmeasurement.First(),
+                            Preparation = ingredientpreparation.First()
+                        },
+                        new RecipeIngredient()
+                        {
+                            Ingredient = ingredient.First(),
+                            Quantity = 34,
+                            Measurement = ingredientmeasurement.First(),
+                            Preparation = ingredientpreparation.First()
+                        }
+},
 
-            //if (!_ctx.RecipeMethod.Any())
-            //{
-            //    // Need to create sample recipe methods data
-            //    var filepath = Path.Combine(_hosting.ContentRootPath, "Data/Seeders/recipemethod.json");
-            //    var json = File.ReadAllText(filepath);
-            //    var recipemethod = JsonConvert.DeserializeObject<IEnumerable<RecipeMethod>>(json);
-            //    _ctx.RecipeMethod.AddRange(recipemethod);
+                    Methods = new List<RecipeMethod>()
+                    {
+                        new RecipeMethod()
+                        {
+                            StepNumber = 1,
+                            Method = "1st steps to do."
+                        },
+                        new RecipeMethod()
+                        {
+                            StepNumber = 2,
+                            Method = "2nd steps to do."
+                        },
+                        new RecipeMethod()
+                        {
+                            StepNumber = 3,
+                            Method = "3rd steps to do."
+                        }
+                    },
 
-            //    _ctx.SaveChanges();
-            //}
+                    Notes = new List<RecipeNote>()
+                    {
+                        new RecipeNote()
+                        {
+                            Note = "1st note on recipe."
+                        },
+                        new RecipeNote()
+                        {
+                            Note = "2nd note on recipe"
+                        }
+                    },
+
+                    Cuisine = new List<RecipeCuisine>()
+                    {
+                        new RecipeCuisine()
+                        {
+                            Cuisine = cuisine.First()
+                        }
+                    },
+
+                    Tags = new List<RecipeTags>()
+                    {
+                        new RecipeTags()
+                        {
+                            Tag = tag.First()
+                        }
+                    }
+                };
+
+                _ctx.Recipes.Add(recipe);
+
+                _ctx.SaveChanges();
+            }
         }
     }
 }

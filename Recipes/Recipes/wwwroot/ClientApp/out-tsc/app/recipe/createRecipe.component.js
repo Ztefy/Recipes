@@ -14,13 +14,6 @@ var dataService_1 = require("../shared/dataService");
 var CreateRecipe = /** @class */ (function () {
     function CreateRecipe(data) {
         this.data = data;
-        this.courses = [];
-        this.cuisines = [];
-        this.ingredients = [];
-        this.ingredientMeasurements = [];
-        this.ingredientPreparations = [];
-        this.skills = [];
-        this.tags = [];
     }
     CreateRecipe.prototype.ngOnInit = function () {
         var _this = this;

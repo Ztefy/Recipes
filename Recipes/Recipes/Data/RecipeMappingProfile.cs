@@ -46,6 +46,29 @@ namespace Recipes.Data
             CreateMap<Tag, TagViewModel>()
                 .ForMember(t => t.Tag, ex => ex.MapFrom(t => t.Name))
                 .ReverseMap();
+
+            CreateMap<Recipe, RecipeViewModel>()
+                .ReverseMap();
+
+            CreateMap<RecipeIngredient, RecipeIngredientViewModel>()
+                .ForMember(i => i.IngredientId, ex => ex.MapFrom(i => i.Ingredient))
+                .ForMember(i => i.MeasurementId, ex => ex.MapFrom(i => i.Measurement))
+                .ForMember(i => i.PreparationId, ex => ex.MapFrom(i => i.Preparation))
+                .ReverseMap();
+
+            CreateMap<RecipeMethod, RecipeMethodViewModel>()
+                .ReverseMap();
+
+            CreateMap<RecipeCuisine, RecipeCuisineViewModel>()
+                .ForMember(c => c.CuisineId, ex => ex.MapFrom(c => c.Cuisine))
+                .ReverseMap();
+
+            CreateMap<RecipeNote, RecipeNoteViewModel>()
+                .ReverseMap();
+
+            CreateMap<RecipeTags, RecipeTagViewModel>()
+                .ForMember(t => t.TagId, ex => ex.MapFrom(t => t.Tag))
+                .ReverseMap();
         }
     }
 }

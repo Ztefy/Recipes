@@ -29,6 +29,10 @@ namespace Recipes.Data
         IEnumerable<Tag> GetAllTags();
         Tag GetTagById(int id);
 
+        IEnumerable<Recipe> GetAllRecipes();
+        Recipe GetRecipeById(int id);
+        //void AddRecipe(Recipe newRecipe);
+
         bool SaveAll();
         void AddEntity(object model);
     }

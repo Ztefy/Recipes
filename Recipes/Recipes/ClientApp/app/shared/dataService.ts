@@ -32,7 +32,7 @@ export class DataService {
 
     public tags: Tag[] = [];
 
-    loadCategories(): Observable<boolean> {
+    public loadCategories(): Observable<boolean> {
         return this.http.get('/api/category')
             .map((data: any[]) => {
                 this.categories = data;
@@ -40,7 +40,7 @@ export class DataService {
             });
     }
 
-    loadCourses(): Observable<boolean> {
+    public loadCourses(): Observable<boolean> {
         return this.http.get('/api/course')
             .map((data: any[]) => {
                 this.courses = data;
@@ -48,7 +48,7 @@ export class DataService {
             });
     }
 
-    loadCuisines(): Observable<boolean> {
+    public loadCuisines(): Observable<boolean> {
         return this.http.get('/api/cuisine')
             .map((data: any[]) => {
                 this.cuisines = data;
@@ -56,7 +56,7 @@ export class DataService {
             });
     }
 
-    loadIngredients(): Observable<boolean> {
+    public loadIngredients(): Observable<boolean> {
         return this.http.get('/api/ingredient')
             .map((data: any[]) => {
                 this.ingredients = data;
@@ -64,7 +64,7 @@ export class DataService {
             });
     }
 
-    loadIngredientMeasurements(): Observable<boolean> {
+    public loadIngredientMeasurements(): Observable<boolean> {
         return this.http.get('/api/ingredientMeasurement')
             .map((data: any[]) => {
                 this.ingredientMeasurements = data;
@@ -72,7 +72,7 @@ export class DataService {
             });
     }
 
-    loadIngredientPreparations(): Observable<boolean> {
+    public loadIngredientPreparations(): Observable<boolean> {
         return this.http.get('/api/ingredientPreparation')
             .map((data: any[]) => {
                 this.ingredientPreparations = data;
@@ -80,7 +80,7 @@ export class DataService {
             });
     }
 
-    loadSkills(): Observable<boolean> {
+    public loadSkills(): Observable<boolean> {
         return this.http.get('/api/skill')
             .map((data: any[]) => {
                 this.skills = data;
@@ -88,11 +88,15 @@ export class DataService {
             });
     }
 
-    loadTags(): Observable<boolean> {
+    public loadTags(): Observable<boolean> {
         return this.http.get('/api/tag')
             .map((data: any[]) => {
                 this.tags = data;
                 return true;
             });
+    }
+
+    public AddCuisineToRecipe(cuisine: Cuisine) {
+
     }
 }

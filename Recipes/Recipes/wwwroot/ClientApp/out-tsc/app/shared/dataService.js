@@ -88,6 +88,8 @@ var DataService = /** @class */ (function () {
             return true;
         });
     };
+    DataService.prototype.AddCuisineToRecipe = function (cuisine) {
+    };
     DataService = __decorate([
         core_1.Injectable(),
         __metadata("design:paramtypes", [http_1.HttpClient])

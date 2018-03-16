@@ -7,10 +7,13 @@ using System.Threading.Tasks;
 
 namespace Recipes.ViewModels
 {
-    public class TagViewModel
+    public class RecipeMethodViewModel
     {
-        public int TagId { get; set; }
+        public int Id { get; set; }
+        [Range(1, int.MaxValue)]
+        public int StepNumber { get; set; }
         [Required]
-        public string Tag { get; set; }
+        [MinLength(5)]
+        public string Method { get; set; }
     }
 }

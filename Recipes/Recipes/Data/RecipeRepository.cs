@@ -303,5 +303,64 @@ namespace Recipes.Data
                 return null;
             }
         }
+
+        public IEnumerable<Recipe> GetAllRecipes()
+        {
+            try
+            {
+                _logger.LogInformation("GetAllRecipes was called");
+                    return _ctx.Recipes
+                        .OrderBy(r => r.RecipeName)
+                        .ToList();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Failed to get recipes: {ex}");
+                return null;
+            }
+        }
+
+        public Recipe GetRecipeById(int id)
+        {
+            try
+            {
+                _logger.LogInformation("GetRecipeById was called");
+
+                return _ctx.Recipes
+                        .Include(r => r.Skill)
+                        .Include(r => r.Course)
+                        .Include(r => r.Category)
+                        .Include(r => r.Ingredients)
+                            .ThenInclude(i => i.Ingredient)
+                        .Include(r => r.Ingredients)
+                            .ThenInclude(i => i.Measurement)
+                        .Include(r => r.Ingredients)
+                            .ThenInclude(i => i.Preparation)
+                        .Include(r => r.Methods)
+                        .Include(r => r.Notes)
+                        .Include(r => r.Cuisine)
+                            .ThenInclude (c => c.Cuisine)
+                        .Include(r => r.Tags)
+                            .ThenInclude(t => t.Tag)
+                        .Where(r => r.RecipeId == id)
+                        .FirstOrDefault();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Failed to get recipe: {ex}");
+                return null;
+            }
+        }
+
+        //public void AddRecipe(Recipe newRecipe)
+        //{
+        //    // Convert new recipe to lookup of recipe
+        //    foreach (var ingredient in newRecipe.Ingredients)
+        //    {
+        //        ingredient.Ingredient = _ctx.Ingredient.Find(ingredient.Ingredient.IngredientId);
+        //    }
+
+        //    AddEntity(newRecipe);
+        //}
     }
 }
