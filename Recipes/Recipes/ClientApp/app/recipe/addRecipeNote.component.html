@@ -1,0 +1,16 @@
+﻿<h6>Note: {{ recipeNoteInput }}</h6>
+<div>Count: {{ data.recipe.notes.length }}</div>
+
+<div class="input-group mb-3" *ngFor="let r of data.recipe.notes">
+    <input type="text" readonly class="form-control" id="recipeNotes" value="{{ r.note }}" />
+    <div class="input-group-append">
+        <button class="btn btn-secondary" type="button">Remove Note</button>
+    </div>
+</div>
+
+<div class="input-group">
+    <textarea class="form-control" [(ngModel)]="recipeNoteInput" rows="3"></textarea>
+    <div class="input-group-append">
+        <button class="btn btn-secondary" type="button" (click)="addNote(recipeNoteInput)">Add Note</button>
+    </div>
+</div>

@@ -28,7 +28,6 @@
 }
 
 export class RecipeIngredient {
-    id: number;
     quantity: number;
     ingredientId: number;
     ingredientName: string;
@@ -39,24 +38,20 @@ export class RecipeIngredient {
 }
 
 export class RecipeMethod {
-    id: number;
     stepNumber: number;
     method: string;
 }
 
 export class RecipeNote {
-    id: number;
     note: string;
 }
 
 export class RecipeCuisine {
-    id: number;
     cuisineId: number;
     cuisineName: string;
 }
 
 export class RecipeTag {
-    id: number;
     tagId: number;
     tagName: string;
 }

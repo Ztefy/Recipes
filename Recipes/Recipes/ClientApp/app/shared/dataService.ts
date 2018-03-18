@@ -9,7 +9,7 @@ import { IngredientMeasurement } from '../shared/ingredientmeasurement';
 import { IngredientPreparation } from '../shared/ingredientpreparation';
 import { Skill } from '../shared/skill';
 import { Tag } from '../shared/tag';
-import { Recipe, RecipeCuisine, RecipeTag } from '../shared/recipe';
+import { Recipe, RecipeCuisine, RecipeTag, RecipeNote } from '../shared/recipe';
 import 'rxjs/add/operator/map';
 
 @Injectable()
@@ -119,6 +119,16 @@ export class DataService {
         rtag.tagName = tag.tag;
 
         this.recipe.tags.push(rtag);
+    }
+
+    public NoteAddToRecipe(note) {
+
+        let rnote: RecipeNote;
+
+        rnote = new RecipeNote();
+        rnote.note = note;
+
+        this.recipe.notes.push(rnote);
     }
 
     //TODO - Not functioning

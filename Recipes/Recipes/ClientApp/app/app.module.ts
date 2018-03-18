@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { CreateRecipe } from './recipe/createRecipe.component';
 import { AddRecipeCuisine } from './recipe/addRecipeCuisine.component';
 import { AddRecipeTag } from './recipe/addRecipeTag.component';
+import { AddRecipeNote } from './recipe/addRecipeNote.component';
 import { DataService } from './shared/dataService';
 
 let routes = [
@@ -21,7 +22,8 @@ let routes = [
       AppComponent,
       CreateRecipe,
       AddRecipeCuisine,
-      AddRecipeTag
+      AddRecipeTag,
+      AddRecipeNote
   ],
   imports: [
       BrowserModule,

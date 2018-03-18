@@ -99,15 +99,6 @@
                     <div class="row">
                         <div class="col">
                             <recipe-tag></recipe-tag>
-                            <!--<div class="form-group">
-                                <label for="recipeTagInput">Tag</label>
-                                <select id="recipeTagInput" class="form-control">
-                                    <option selected>Choose...</option>
-                                    <option *ngFor="let t of tags">{{ t.tag }}</option>
-                                </select>
-                            </div>
-                            <button type="button" class="btn btn-secondary">Add Tag</button>
-                            <button type="button" class="btn btn-secondary">Remove Tag</button>-->
                         </div>
                         <div class="col">
                         </div>
@@ -279,12 +270,7 @@
         <div id="collapseNotes" class="collapse show" aria-labelledby="collapseNotes" data-parent="#recipe-notes">
             <div class="card-body">
                 <form id="noteInfo">
-                    <div class="form-group">
-                        <label for="recipeNoteInput">Note</label>
-                        <textarea class="form-control" id="recipeNoteInput" rows="3"></textarea>
-                    </div>
-                    <button type="button" class="btn btn-secondary">Add Note</button>
-                    <button type="button" class="btn btn-secondary">Remove Note</button>
+                    <recipe-note></recipe-note>
                 </form>
             </div>
         </div>
