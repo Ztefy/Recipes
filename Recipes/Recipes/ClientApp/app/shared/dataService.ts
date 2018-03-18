@@ -9,7 +9,7 @@ import { IngredientMeasurement } from '../shared/ingredientmeasurement';
 import { IngredientPreparation } from '../shared/ingredientpreparation';
 import { Skill } from '../shared/skill';
 import { Tag } from '../shared/tag';
-import { Recipe, RecipeCuisine } from '../shared/recipe';
+import { Recipe, RecipeCuisine, RecipeTag } from '../shared/recipe';
 import 'rxjs/add/operator/map';
 
 @Injectable()
@@ -99,7 +99,7 @@ export class DataService {
             });
     }
 
-    public AddToRecipe(cuisine: Cuisine) {
+    public CuisineAddToRecipe(cuisine: Cuisine) {
 
         let rcuisine: RecipeCuisine;
 
@@ -108,6 +108,17 @@ export class DataService {
         rcuisine.cuisineName = cuisine.cuisineName;
 
         this.recipe.cuisine.push(rcuisine);
+    }
+
+    public TagAddToRecipe(tag: Tag) {
+
+        let rtag: RecipeTag;
+
+        rtag = new RecipeTag();
+        rtag.tagId = tag.tagId;
+        rtag.tagName = tag.tag;
+
+        this.recipe.tags.push(rtag);
     }
 
     //TODO - Not functioning

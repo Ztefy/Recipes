@@ -1,0 +1,17 @@
+﻿<h6>Tag:</h6>
+
+<div class="input-group mb-3" *ngFor="let r of data.recipe.tags">
+    <input type="text" readonly class="form-control" id="recipeTags" value="{{ r.tagId }} - {{ r.tagName }}" />
+    <div class="input-group-append">
+        <button class="btn btn-secondary" type="button">Remove Tag</button>
+    </div>
+</div>
+
+<div class="input-group">
+    <select class="custom-select" [(ngModel)]="recipeTagInput" placeholder="Choose...">
+        <option *ngFor="let t of tags" [ngValue]="t">{{ t.tag }}</option>
+    </select>
+    <div class="input-group-append">
+        <button class="btn btn-secondary" type="button" (click)="addTag(recipeTagInput)">Add Tag</button>
+    </div>
+</div>

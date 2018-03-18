@@ -8,6 +8,7 @@ import { IngredientPreparation } from '../shared/ingredientpreparation';
 import { Skill } from '../shared/skill';
 import { Tag } from '../shared/tag';
 import { AddRecipeCuisine } from '../recipe/addRecipeCuisine.component';
+import { AddRecipeTag } from '../recipe/addRecipeTag.component';
 
 @Component({
     selector: 'create-recipe',
@@ -30,8 +31,6 @@ export class CreateRecipe implements OnInit {
     public ingredientPreparations: IngredientPreparation[];
 
     public skills: Skill[];
-
-    public tags: Tag[];
 
     ngOnInit(): void {
         this.data.loadCategories()
@@ -76,11 +75,5 @@ export class CreateRecipe implements OnInit {
                 }
             })
 
-        this.data.loadTags()
-            .subscribe(success => {
-                if (success) {
-                    this.tags = this.data.tags;
-                }
-            })
     }
 }

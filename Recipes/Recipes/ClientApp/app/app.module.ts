@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { CreateRecipe } from './recipe/createRecipe.component';
 import { AddRecipeCuisine } from './recipe/addRecipeCuisine.component';
+import { AddRecipeTag } from './recipe/addRecipeTag.component';
 import { DataService } from './shared/dataService';
 
 let routes = [
@@ -19,7 +20,8 @@ let routes = [
   declarations: [
       AppComponent,
       CreateRecipe,
-      AddRecipeCuisine
+      AddRecipeCuisine,
+      AddRecipeTag
   ],
   imports: [
       BrowserModule,

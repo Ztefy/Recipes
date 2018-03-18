@@ -24,7 +24,7 @@ export class AddRecipeCuisine implements OnInit {
     }
 
     addCuisine(cuisine: Cuisine) {
-        this.data.AddToRecipe(cuisine);
+        this.data.CuisineAddToRecipe(cuisine);
     }
 
     //TODO - Not functioning
