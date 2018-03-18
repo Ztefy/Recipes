@@ -29,12 +29,6 @@ var CreateRecipe = /** @class */ (function () {
                 _this.courses = _this.data.courses;
             }
         });
-        this.data.loadCuisines()
-            .subscribe(function (success) {
-            if (success) {
-                _this.cuisines = _this.data.cuisines;
-            }
-        });
         this.data.loadIngredients()
             .subscribe(function (success) {
             if (success) {

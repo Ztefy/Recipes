@@ -11,6 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var http_1 = require("@angular/common/http");
 var core_1 = require("@angular/core");
+var recipe_1 = require("../shared/recipe");
 require("rxjs/add/operator/map");
 var DataService = /** @class */ (function () {
     function DataService(http) {
@@ -23,6 +24,7 @@ var DataService = /** @class */ (function () {
         this.ingredientPreparations = [];
         this.skills = [];
         this.tags = [];
+        this.recipe = new recipe_1.Recipe();
     }
     DataService.prototype.loadCategories = function () {
         var _this = this;
@@ -88,7 +90,16 @@ var DataService = /** @class */ (function () {
             return true;
         });
     };
-    DataService.prototype.AddCuisineToRecipe = function (cuisine) {
+    DataService.prototype.AddToRecipe = function (cuisine) {
+        var rcuisine;
+        rcuisine = new recipe_1.RecipeCuisine();
+        rcuisine.cuisineId = cuisine.cuisineId;
+        rcuisine.cuisineName = cuisine.cuisineName;
+        this.recipe.cuisine.push(rcuisine);
+    };
+    DataService.prototype.RemoveFromRecipe = function (cuisine) {
+        var index = this.recipe.cuisine.findIndex(cuisine);
+        this.recipe.cuisine.splice(index, 1);
     };
     DataService = __decorate([
         core_1.Injectable(),

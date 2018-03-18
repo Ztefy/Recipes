@@ -2,12 +2,12 @@
 import { DataService } from '../shared/dataService';
 import { Category } from '../shared/category';
 import { Course } from '../shared/course';
-import { Cuisine } from '../shared/cuisine';
 import { Ingredient } from '../shared/ingredient';
 import { IngredientMeasurement } from '../shared/ingredientmeasurement';
 import { IngredientPreparation } from '../shared/ingredientpreparation';
 import { Skill } from '../shared/skill';
 import { Tag } from '../shared/tag';
+import { AddRecipeCuisine } from '../recipe/addRecipeCuisine.component';
 
 @Component({
     selector: 'create-recipe',
@@ -17,14 +17,11 @@ import { Tag } from '../shared/tag';
 
 export class CreateRecipe implements OnInit {
 
-    constructor(private data: DataService) {
-    }
+    constructor(private data: DataService) { }
 
     public categories: Category[];
 
     public courses: Course[];
-
-    public cuisines: Cuisine[];
 
     public ingredients: Ingredient[];
 
@@ -48,13 +45,6 @@ export class CreateRecipe implements OnInit {
             .subscribe(success => {
                 if (success) {
                     this.courses = this.data.courses;
-                }
-            })
-
-        this.data.loadCuisines()
-            .subscribe(success => {
-                if (success) {
-                    this.cuisines = this.data.cuisines;
                 }
             })
 

@@ -9,6 +9,7 @@ import { IngredientMeasurement } from '../shared/ingredientmeasurement';
 import { IngredientPreparation } from '../shared/ingredientpreparation';
 import { Skill } from '../shared/skill';
 import { Tag } from '../shared/tag';
+import { Recipe, RecipeCuisine } from '../shared/recipe';
 import 'rxjs/add/operator/map';
 
 @Injectable()
@@ -31,6 +32,8 @@ export class DataService {
     public skills: Skill[] = [];
 
     public tags: Tag[] = [];
+
+    public recipe: Recipe = new Recipe();
 
     public loadCategories(): Observable<boolean> {
         return this.http.get('/api/category')
@@ -96,7 +99,21 @@ export class DataService {
             });
     }
 
-    public AddCuisineToRecipe(cuisine: Cuisine) {
+    public AddToRecipe(cuisine: Cuisine) {
 
+        let rcuisine: RecipeCuisine;
+
+        rcuisine = new RecipeCuisine();
+        rcuisine.cuisineId = cuisine.cuisineId;
+        rcuisine.cuisineName = cuisine.cuisineName;
+
+        this.recipe.cuisine.push(rcuisine);
     }
+
+    //TODO - Not functioning
+    //public RemoveFromRecipe(cuisine) {
+    //    const index: number = this.recipe.cuisine.findIndex(cuisine);
+
+    //    this.recipe.cuisine.splice(index, 1);
+    //}
 }

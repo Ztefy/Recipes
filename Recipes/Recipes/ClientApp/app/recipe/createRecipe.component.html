@@ -60,7 +60,7 @@
                                 <label for="recipeCategoryInput">Category</label>
                                 <select id="recipeCategoryInput" class="form-control">
                                     <option selected>Choose...</option>
-                                    <option *ngFor="let c of categories">{{ c.categoryName }}</option>
+                                    <option *ngFor="let ca of categories">{{ ca.categoryName }}</option>
                                 </select>
                             </div>
                         </div>
@@ -78,7 +78,7 @@
                                 <label for="recipeCourseInput">Course</label>
                                 <select id="recipeCourseInput" class="form-control">
                                     <option selected>Choose...</option>
-                                    <option *ngFor="let c of courses">{{ c.courseName }}</option>
+                                    <option *ngFor="let co of courses">{{ co.courseName }}</option>
                                 </select>
                             </div>
                         </div>
@@ -92,15 +92,16 @@
                             </div>
                         </div>
                         <div class="col">
-                            <div class="form-group">
+                            <recipe-cuisine></recipe-cuisine>
+                            <!--<div class="form-group">
                                 <label for="recipeCuisineInput">Cuisine</label>
-                                <select id="recipeCusineInput" class="form-control">
+                                <select id="recipeCusineInput" class="form-control" placeholder="Choose...">
                                     <option selected>Choose...</option>
-                                    <option *ngFor="let c of cuisines">{{ c.cuisineName }}</option>
+                                    <option *ngFor="let cu of cuisines">{{ cu.cuisineName }}</option>
                                 </select>
-                            </div>
-                            <button type="button" class="btn btn-secondary">Add Cuisine</button>
-                            <button type="button" class="btn btn-secondary">Remove Cuisine</button>
+                                <button type="button" class="btn btn-secondary" (click)="addCuisine(cu)">Add Cuisine</button>
+                                <button type="button" class="btn btn-secondary">Remove Cuisine</button>
+                            </div>-->
                         </div>
                     </div>
 

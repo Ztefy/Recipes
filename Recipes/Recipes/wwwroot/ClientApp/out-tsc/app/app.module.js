@@ -9,10 +9,12 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var platform_browser_1 = require("@angular/platform-browser");
 var core_1 = require("@angular/core");
 var http_1 = require("@angular/common/http");
+var router_1 = require("@angular/router");
+var forms_1 = require("@angular/forms");
 var app_component_1 = require("./app.component");
 var createRecipe_component_1 = require("./recipe/createRecipe.component");
+var addRecipeCuisine_component_1 = require("./recipe/addRecipeCuisine.component");
 var dataService_1 = require("./shared/dataService");
-var router_1 = require("@angular/router");
 var routes = [];
 var AppModule = /** @class */ (function () {
     function AppModule() {
@@ -21,11 +23,13 @@ var AppModule = /** @class */ (function () {
         core_1.NgModule({
             declarations: [
                 app_component_1.AppComponent,
-                createRecipe_component_1.CreateRecipe
+                createRecipe_component_1.CreateRecipe,
+                addRecipeCuisine_component_1.AddRecipeCuisine
             ],
             imports: [
                 platform_browser_1.BrowserModule,
                 http_1.HttpClientModule,
+                forms_1.FormsModule,
                 router_1.RouterModule.forRoot(routes, {
                     useHash: true,
                     enableTracing: false // for Debugging of the Routes
