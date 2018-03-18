@@ -9,7 +9,7 @@ import { IngredientMeasurement } from '../shared/ingredientmeasurement';
 import { IngredientPreparation } from '../shared/ingredientpreparation';
 import { Skill } from '../shared/skill';
 import { Tag } from '../shared/tag';
-import { Recipe, RecipeCuisine, RecipeTag, RecipeNote } from '../shared/recipe';
+import { Recipe, RecipeCuisine, RecipeTag, RecipeNote, RecipeMethod } from '../shared/recipe';
 import 'rxjs/add/operator/map';
 
 @Injectable()
@@ -129,6 +129,17 @@ export class DataService {
         rnote.note = note;
 
         this.recipe.notes.push(rnote);
+    }
+
+    public MethodAddToRecipe(method) {
+
+        let rmethod: RecipeMethod;
+
+        rmethod = new RecipeMethod();
+        rmethod.stepNumber = this.recipe.methods.length+1;
+        rmethod.method = method;
+
+        this.recipe.methods.push(rmethod);
     }
 
     //TODO - Not functioning

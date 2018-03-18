@@ -9,6 +9,7 @@ import { CreateRecipe } from './recipe/createRecipe.component';
 import { AddRecipeCuisine } from './recipe/addRecipeCuisine.component';
 import { AddRecipeTag } from './recipe/addRecipeTag.component';
 import { AddRecipeNote } from './recipe/addRecipeNote.component';
+import { AddRecipeMethod } from './recipe/addRecipeMethod.component';
 import { DataService } from './shared/dataService';
 
 let routes = [
@@ -23,7 +24,8 @@ let routes = [
       CreateRecipe,
       AddRecipeCuisine,
       AddRecipeTag,
-      AddRecipeNote
+      AddRecipeNote,
+      AddRecipeMethod
   ],
   imports: [
       BrowserModule,

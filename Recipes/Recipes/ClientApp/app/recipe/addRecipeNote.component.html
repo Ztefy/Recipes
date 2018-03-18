@@ -1,6 +1,4 @@
-﻿<h6>Note: {{ recipeNoteInput }}</h6>
-<div>Count: {{ data.recipe.notes.length }}</div>
-
+﻿<h6>Note:</h6>
 <div class="input-group mb-3" *ngFor="let r of data.recipe.notes">
     <input type="text" readonly class="form-control" id="recipeNotes" value="{{ r.note }}" />
     <div class="input-group-append">
