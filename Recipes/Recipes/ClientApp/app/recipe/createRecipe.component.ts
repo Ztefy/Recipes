@@ -2,9 +2,6 @@
 import { DataService } from '../shared/dataService';
 import { Category } from '../shared/category';
 import { Course } from '../shared/course';
-import { Ingredient } from '../shared/ingredient';
-import { IngredientMeasurement } from '../shared/ingredientmeasurement';
-import { IngredientPreparation } from '../shared/ingredientpreparation';
 import { Skill } from '../shared/skill';
 import { Tag } from '../shared/tag';
 import { AddRecipeCuisine } from '../recipe/addRecipeCuisine.component';
@@ -24,12 +21,6 @@ export class CreateRecipe implements OnInit {
 
     public courses: Course[];
 
-    public ingredients: Ingredient[];
-
-    public ingredientMeasurements: IngredientMeasurement[];
-
-    public ingredientPreparations: IngredientPreparation[];
-
     public skills: Skill[];
 
     ngOnInit(): void {
@@ -44,27 +35,6 @@ export class CreateRecipe implements OnInit {
             .subscribe(success => {
                 if (success) {
                     this.courses = this.data.courses;
-                }
-            })
-
-        this.data.loadIngredients()
-            .subscribe(success => {
-                if (success) {
-                    this.ingredients = this.data.ingredients;
-                }
-            })
-
-        this.data.loadIngredientMeasurements()
-            .subscribe(success => {
-                if (success) {
-                    this.ingredientMeasurements = this.data.ingredientMeasurements;
-                }
-            })
-
-        this.data.loadIngredientPreparations()
-            .subscribe(success => {
-                if (success) {
-                    this.ingredientPreparations = this.data.ingredientPreparations;
                 }
             })
 

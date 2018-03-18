@@ -9,7 +9,7 @@ import { IngredientMeasurement } from '../shared/ingredientmeasurement';
 import { IngredientPreparation } from '../shared/ingredientpreparation';
 import { Skill } from '../shared/skill';
 import { Tag } from '../shared/tag';
-import { Recipe, RecipeCuisine, RecipeTag, RecipeNote, RecipeMethod } from '../shared/recipe';
+import { Recipe, RecipeCuisine, RecipeTag, RecipeNote, RecipeMethod, RecipeIngredient } from '../shared/recipe';
 import 'rxjs/add/operator/map';
 
 @Injectable()
@@ -140,6 +140,22 @@ export class DataService {
         rmethod.method = method;
 
         this.recipe.methods.push(rmethod);
+    }
+
+    public IngredientAddToRecipe(quantity, measurement: IngredientMeasurement, ingredient: Ingredient, preparation: IngredientPreparation) {
+
+        let ringredient: RecipeIngredient;
+
+        ringredient = new RecipeIngredient();
+        ringredient.quantity = quantity;
+        ringredient.measurementId = measurement.ingredientMeasurementId;
+        ringredient.measurementMeasurement = measurement.ingredientMeasurement;
+        ringredient.ingredientId = ingredient.ingredientId;
+        ringredient.ingredientName = ingredient.ingredientName;
+        ringredient.preparationId = preparation.ingredientPreparationId;
+        ringredient.preparationPreparation = preparation.ingredientPreparation;
+
+        this.recipe.ingredients.push(ringredient);
     }
 
     //TODO - Not functioning

@@ -197,35 +197,7 @@
         <div id="collapseIngredients" class="collapse show" aria-labelledby="collapseIngredients" data-parent="#recipe-ingredients">
             <div class="card-body">
                 <form id="ingredientInfo">
-                    <div class="form-row">
-                        <div class="form-group col-md-2">
-                            <label for="recipeIngredientQuantityInput">Quantity</label>
-                            <input type="number" class="form-control" id="recipeIngredientQuantityInput" />
-                        </div>
-                        <div class="form-group col-md-2">
-                            <label for="recipeIngredientMeasurementInput">Measurement</label>
-                            <select id="recipeIngredientMeasurementInput" class="form-control">
-                                <option selected>Choose...</option>
-                                <option *ngFor="let m of ingredientMeasurements">{{ m.ingredientMeasurement }}</option>
-                            </select>
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="recipeIngredientInput">Ingredient</label>
-                            <select id="recipeIngredientInput" class="form-control">
-                                <option selected>Choose...</option>
-                                <option *ngFor="let i of ingredients">{{ i.ingredientName }}</option>
-                            </select>
-                        </div>
-                        <div class="form-group col-md-2">
-                            <label for="recipeIngredientPreparationInput">Preparation</label>
-                            <select id="recipeIngredientPreparationInput" class="form-control">
-                                <option selected>Choose...</option>
-                                <option *ngFor="let p of ingredientPreparations">{{ p.ingredientPreparation }}</option>
-                            </select>
-                        </div>
-                    </div>
-                    <button type="button" class="btn btn-secondary">Add Ingredient</button>
-                    <button type="button" class="btn btn-secondary">Remove Ingredient</button>
+                    <recipe-ingredient></recipe-ingredient>
                 </form>
             </div>
         </div>

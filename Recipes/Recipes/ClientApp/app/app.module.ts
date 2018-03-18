@@ -10,6 +10,7 @@ import { AddRecipeCuisine } from './recipe/addRecipeCuisine.component';
 import { AddRecipeTag } from './recipe/addRecipeTag.component';
 import { AddRecipeNote } from './recipe/addRecipeNote.component';
 import { AddRecipeMethod } from './recipe/addRecipeMethod.component';
+import { AddRecipeIngredient } from './recipe/addRecipeIngredient.component';
 import { DataService } from './shared/dataService';
 
 let routes = [
@@ -25,7 +26,8 @@ let routes = [
       AddRecipeCuisine,
       AddRecipeTag,
       AddRecipeNote,
-      AddRecipeMethod
+      AddRecipeMethod,
+      AddRecipeIngredient
   ],
   imports: [
       BrowserModule,
