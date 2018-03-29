@@ -29,34 +29,10 @@ var CreateRecipe = /** @class */ (function () {
                 _this.courses = _this.data.courses;
             }
         });
-        this.data.loadIngredients()
-            .subscribe(function (success) {
-            if (success) {
-                _this.ingredients = _this.data.ingredients;
-            }
-        });
-        this.data.loadIngredientMeasurements()
-            .subscribe(function (success) {
-            if (success) {
-                _this.ingredientMeasurements = _this.data.ingredientMeasurements;
-            }
-        });
-        this.data.loadIngredientPreparations()
-            .subscribe(function (success) {
-            if (success) {
-                _this.ingredientPreparations = _this.data.ingredientPreparations;
-            }
-        });
         this.data.loadSkills()
             .subscribe(function (success) {
             if (success) {
                 _this.skills = _this.data.skills;
-            }
-        });
-        this.data.loadTags()
-            .subscribe(function (success) {
-            if (success) {
-                _this.tags = _this.data.tags;
             }
         });
     };

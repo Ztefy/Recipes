@@ -3,9 +3,7 @@
 <div class="input-group mb-3" *ngFor="let r of data.recipe.cuisine">
     <input type="text" readonly class="form-control" id="recipeCuisines" value="{{ r.cuisineId }} - {{ r.cuisineName }}" />
     <div class="input-group-append">
-        <button class="btn btn-secondary" type="button">Remove Cuisine</button>
-        <!--TODO - Not functioning
-        <button class="btn btn-secondary" type="button" (click)="removeCuisine(r)">Remove Cuisine</button>-->
+        <button class="btn btn-secondary" type="button" (click)="removeCuisine(r)">Remove Cuisine</button>
     </div>
 </div>
 

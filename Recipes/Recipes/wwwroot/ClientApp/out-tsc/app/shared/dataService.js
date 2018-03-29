@@ -90,16 +90,44 @@ var DataService = /** @class */ (function () {
             return true;
         });
     };
-    DataService.prototype.AddToRecipe = function (cuisine) {
+    DataService.prototype.CuisineAddToRecipe = function (cuisine) {
         var rcuisine;
         rcuisine = new recipe_1.RecipeCuisine();
         rcuisine.cuisineId = cuisine.cuisineId;
         rcuisine.cuisineName = cuisine.cuisineName;
         this.recipe.cuisine.push(rcuisine);
     };
-    DataService.prototype.RemoveFromRecipe = function (cuisine) {
-        var index = this.recipe.cuisine.findIndex(cuisine);
-        this.recipe.cuisine.splice(index, 1);
+    DataService.prototype.TagAddToRecipe = function (tag) {
+        var rtag;
+        rtag = new recipe_1.RecipeTag();
+        rtag.tagId = tag.tagId;
+        rtag.tagName = tag.tag;
+        this.recipe.tags.push(rtag);
+    };
+    DataService.prototype.NoteAddToRecipe = function (note) {
+        var rnote;
+        rnote = new recipe_1.RecipeNote();
+        rnote.note = note;
+        this.recipe.notes.push(rnote);
+    };
+    DataService.prototype.MethodAddToRecipe = function (method) {
+        var rmethod;
+        rmethod = new recipe_1.RecipeMethod();
+        rmethod.stepNumber = this.recipe.methods.length + 1;
+        rmethod.method = method;
+        this.recipe.methods.push(rmethod);
+    };
+    DataService.prototype.IngredientAddToRecipe = function (quantity, measurement, ingredient, preparation) {
+        var ringredient;
+        ringredient = new recipe_1.RecipeIngredient();
+        ringredient.quantity = quantity;
+        ringredient.measurementId = measurement.ingredientMeasurementId;
+        ringredient.measurementMeasurement = measurement.ingredientMeasurement;
+        ringredient.ingredientId = ingredient.ingredientId;
+        ringredient.ingredientName = ingredient.ingredientName;
+        ringredient.preparationId = preparation.ingredientPreparationId;
+        ringredient.preparationPreparation = preparation.ingredientPreparation;
+        this.recipe.ingredients.push(ringredient);
     };
     DataService = __decorate([
         core_1.Injectable(),

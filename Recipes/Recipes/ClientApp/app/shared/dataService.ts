@@ -110,6 +110,18 @@ export class DataService {
         this.recipe.cuisine.push(rcuisine);
     }
 
+
+    //TODO - Not functioning
+    public CuisineRemoveFromRecipe(cuisine: Cuisine) {
+        const index: number = this.recipe.cuisine.indexOf(cuisine);
+
+        if (index !== -1) {
+            this.recipe.cuisine.splice(index, 1);
+        }
+    }
+
+
+
     public TagAddToRecipe(tag: Tag) {
 
         let rtag: RecipeTag;
@@ -158,10 +170,4 @@ export class DataService {
         this.recipe.ingredients.push(ringredient);
     }
 
-    //TODO - Not functioning
-    //public RemoveFromRecipe(cuisine) {
-    //    const index: number = this.recipe.cuisine.findIndex(cuisine);
-
-    //    this.recipe.cuisine.splice(index, 1);
-    //}
 }

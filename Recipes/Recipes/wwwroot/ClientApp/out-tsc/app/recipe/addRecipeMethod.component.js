@@ -11,31 +11,22 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var dataService_1 = require("../shared/dataService");
-var AddRecipeCuisine = /** @class */ (function () {
-    function AddRecipeCuisine(data) {
+var AddRecipeMethod = /** @class */ (function () {
+    function AddRecipeMethod(data) {
         this.data = data;
     }
-    AddRecipeCuisine.prototype.ngOnInit = function () {
-        var _this = this;
-        this.data.loadCuisines()
-            .subscribe(function (success) {
-            if (success) {
-                _this.cuisines = _this.data.cuisines;
-            }
-        });
+    AddRecipeMethod.prototype.addMethod = function (method) {
+        this.data.MethodAddToRecipe(method);
     };
-    AddRecipeCuisine.prototype.addCuisine = function (cuisine) {
-        this.data.CuisineAddToRecipe(cuisine);
-    };
-    AddRecipeCuisine = __decorate([
+    AddRecipeMethod = __decorate([
         core_1.Component({
-            selector: 'recipe-cuisine',
-            templateUrl: 'addRecipeCuisine.component.html',
+            selector: 'recipe-method',
+            templateUrl: 'addRecipeMethod.component.html',
             styleUrls: []
         }),
         __metadata("design:paramtypes", [dataService_1.DataService])
-    ], AddRecipeCuisine);
-    return AddRecipeCuisine;
+    ], AddRecipeMethod);
+    return AddRecipeMethod;
 }());
-exports.AddRecipeCuisine = AddRecipeCuisine;
-//# sourceMappingURL=addRecipeCuisine.component.js.map
+exports.AddRecipeMethod = AddRecipeMethod;
+//# sourceMappingURL=addRecipeMethod.component.js.map

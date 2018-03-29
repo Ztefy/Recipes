@@ -11,31 +11,43 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var dataService_1 = require("../shared/dataService");
-var AddRecipeCuisine = /** @class */ (function () {
-    function AddRecipeCuisine(data) {
+var AddRecipeIngredient = /** @class */ (function () {
+    function AddRecipeIngredient(data) {
         this.data = data;
     }
-    AddRecipeCuisine.prototype.ngOnInit = function () {
+    AddRecipeIngredient.prototype.ngOnInit = function () {
         var _this = this;
-        this.data.loadCuisines()
+        this.data.loadIngredients()
             .subscribe(function (success) {
             if (success) {
-                _this.cuisines = _this.data.cuisines;
+                _this.ingredients = _this.data.ingredients;
+            }
+        });
+        this.data.loadIngredientMeasurements()
+            .subscribe(function (success) {
+            if (success) {
+                _this.ingredientMeasurements = _this.data.ingredientMeasurements;
+            }
+        });
+        this.data.loadIngredientPreparations()
+            .subscribe(function (success) {
+            if (success) {
+                _this.ingredientPreparations = _this.data.ingredientPreparations;
             }
         });
     };
-    AddRecipeCuisine.prototype.addCuisine = function (cuisine) {
-        this.data.CuisineAddToRecipe(cuisine);
+    AddRecipeIngredient.prototype.addIngredient = function (quantity, measurement, ingredient, preparation) {
+        this.data.IngredientAddToRecipe(quantity, measurement, ingredient, preparation);
     };
-    AddRecipeCuisine = __decorate([
+    AddRecipeIngredient = __decorate([
         core_1.Component({
-            selector: 'recipe-cuisine',
-            templateUrl: 'addRecipeCuisine.component.html',
+            selector: 'recipe-ingredient',
+            templateUrl: 'addRecipeIngredient.component.html',
             styleUrls: []
         }),
         __metadata("design:paramtypes", [dataService_1.DataService])
-    ], AddRecipeCuisine);
-    return AddRecipeCuisine;
+    ], AddRecipeIngredient);
+    return AddRecipeIngredient;
 }());
-exports.AddRecipeCuisine = AddRecipeCuisine;
-//# sourceMappingURL=addRecipeCuisine.component.js.map
+exports.AddRecipeIngredient = AddRecipeIngredient;
+//# sourceMappingURL=addRecipeIngredient.component.js.map

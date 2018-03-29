@@ -11,31 +11,31 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var dataService_1 = require("../shared/dataService");
-var AddRecipeCuisine = /** @class */ (function () {
-    function AddRecipeCuisine(data) {
+var AddRecipeTag = /** @class */ (function () {
+    function AddRecipeTag(data) {
         this.data = data;
     }
-    AddRecipeCuisine.prototype.ngOnInit = function () {
+    AddRecipeTag.prototype.ngOnInit = function () {
         var _this = this;
-        this.data.loadCuisines()
+        this.data.loadTags()
             .subscribe(function (success) {
             if (success) {
-                _this.cuisines = _this.data.cuisines;
+                _this.tags = _this.data.tags;
             }
         });
     };
-    AddRecipeCuisine.prototype.addCuisine = function (cuisine) {
-        this.data.CuisineAddToRecipe(cuisine);
+    AddRecipeTag.prototype.addTag = function (tag) {
+        this.data.TagAddToRecipe(tag);
     };
-    AddRecipeCuisine = __decorate([
+    AddRecipeTag = __decorate([
         core_1.Component({
-            selector: 'recipe-cuisine',
-            templateUrl: 'addRecipeCuisine.component.html',
+            selector: 'recipe-tag',
+            templateUrl: 'addRecipeTag.component.html',
             styleUrls: []
         }),
         __metadata("design:paramtypes", [dataService_1.DataService])
-    ], AddRecipeCuisine);
-    return AddRecipeCuisine;
+    ], AddRecipeTag);
+    return AddRecipeTag;
 }());
-exports.AddRecipeCuisine = AddRecipeCuisine;
-//# sourceMappingURL=addRecipeCuisine.component.js.map
+exports.AddRecipeTag = AddRecipeTag;
+//# sourceMappingURL=addRecipeTag.component.js.map

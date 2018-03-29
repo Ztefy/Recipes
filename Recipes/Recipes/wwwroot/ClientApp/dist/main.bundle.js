@@ -120,7 +120,7 @@ exports.AppModule = AppModule;
 /***/ "./ClientApp/app/recipe/addRecipeCuisine.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h6>Cuisine:</h6>\r\n\r\n<div class=\"input-group mb-3\" *ngFor=\"let r of data.recipe.cuisine\">\r\n    <input type=\"text\" readonly class=\"form-control\" id=\"recipeCuisines\" value=\"{{ r.cuisineId }} - {{ r.cuisineName }}\" />\r\n    <div class=\"input-group-append\">\r\n        <button class=\"btn btn-secondary\" type=\"button\">Remove Cuisine</button>\r\n        <!--TODO - Not functioning\r\n        <button class=\"btn btn-secondary\" type=\"button\" (click)=\"removeCuisine(r)\">Remove Cuisine</button>-->\r\n    </div>\r\n</div>\r\n\r\n<div class=\"input-group\">\r\n    <select class=\"custom-select\" [(ngModel)]=\"recipeCuisineInput\" placeholder=\"Choose...\">\r\n        <option *ngFor=\"let cu of cuisines\" [ngValue]=\"cu\">{{ cu.cuisineName }}</option>\r\n    </select>\r\n    <div class=\"input-group-append\">\r\n        <button class=\"btn btn-secondary\" type=\"button\" (click)=\"addCuisine(recipeCuisineInput)\">Add Cuisine</button>\r\n    </div>\r\n</div>"
+module.exports = "<h6>Cuisine:</h6>\r\n\r\n<div class=\"input-group mb-3\" *ngFor=\"let r of data.recipe.cuisine\">\r\n    <input type=\"text\" readonly class=\"form-control\" id=\"recipeCuisines\" value=\"{{ r.cuisineId }} - {{ r.cuisineName }}\" />\r\n    <div class=\"input-group-append\">\r\n        <button class=\"btn btn-secondary\" type=\"button\" (click)=\"removeCuisine(r)\">Remove Cuisine</button>\r\n    </div>\r\n</div>\r\n\r\n<div class=\"input-group\">\r\n    <select class=\"custom-select\" [(ngModel)]=\"recipeCuisineInput\" placeholder=\"Choose...\">\r\n        <option *ngFor=\"let cu of cuisines\" [ngValue]=\"cu\">{{ cu.cuisineName }}</option>\r\n    </select>\r\n    <div class=\"input-group-append\">\r\n        <button class=\"btn btn-secondary\" type=\"button\" (click)=\"addCuisine(recipeCuisineInput)\">Add Cuisine</button>\r\n    </div>\r\n</div>"
 
 /***/ }),
 
@@ -156,6 +156,10 @@ var AddRecipeCuisine = /** @class */ (function () {
     };
     AddRecipeCuisine.prototype.addCuisine = function (cuisine) {
         this.data.CuisineAddToRecipe(cuisine);
+    };
+    //TODO - Not functioning
+    AddRecipeCuisine.prototype.removeCuisine = function (cuisine) {
+        this.data.CuisineRemoveFromRecipe(cuisine);
     };
     AddRecipeCuisine = __decorate([
         core_1.Component({
@@ -552,6 +556,13 @@ var DataService = /** @class */ (function () {
         rcuisine.cuisineId = cuisine.cuisineId;
         rcuisine.cuisineName = cuisine.cuisineName;
         this.recipe.cuisine.push(rcuisine);
+    };
+    //TODO - Not functioning
+    DataService.prototype.CuisineRemoveFromRecipe = function (cuisine) {
+        var index = this.recipe.cuisine.indexOf(cuisine);
+        if (index !== -1) {
+            this.recipe.cuisine.splice(index, 1);
+        }
     };
     DataService.prototype.TagAddToRecipe = function (tag) {
         var rtag;
