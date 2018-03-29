@@ -147,6 +147,14 @@ export class DataService {
         this.recipe.notes.push(rnote);
     }
 
+    public NoteRemoveFromRecipe(note: RecipeNote) {
+        const index: number = this.recipe.notes.indexOf(note);
+
+        if (index !== -1) {
+            this.recipe.notes.splice(index, 1);
+        }
+    }
+
     public MethodAddToRecipe(method) {
 
         let rmethod: RecipeMethod;
@@ -182,4 +190,11 @@ export class DataService {
         this.recipe.ingredients.push(ringredient);
     }
 
+    public IngredientRemoveFromRecipe(ingredient: RecipeIngredient) {
+        const index: number = this.recipe.ingredients.indexOf(ingredient);
+
+        if (index !== -1) {
+            this.recipe.ingredients.splice(index, 1);
+        }
+    }
 }

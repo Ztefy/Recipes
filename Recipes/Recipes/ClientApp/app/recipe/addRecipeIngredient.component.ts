@@ -3,6 +3,8 @@ import { DataService } from '../shared/dataService';
 import { Ingredient } from '../shared/ingredient';
 import { IngredientMeasurement } from '../shared/ingredientmeasurement';
 import { IngredientPreparation } from '../shared/ingredientpreparation';
+import { RecipeIngredient } from '../shared/recipe';
+
 
 @Component({
     selector: 'recipe-ingredient',
@@ -45,5 +47,9 @@ export class AddRecipeIngredient implements OnInit{
 
     addIngredient(quantity, measurement: IngredientMeasurement, ingredient: Ingredient, preparation: IngredientPreparation) {
         this.data.IngredientAddToRecipe(quantity, measurement, ingredient, preparation);
+    }
+
+    removeIngredient(ingredient: RecipeIngredient) {
+        this.data.IngredientRemoveFromRecipe(ingredient);
     }
 }

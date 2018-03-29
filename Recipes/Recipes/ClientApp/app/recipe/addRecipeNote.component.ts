@@ -15,4 +15,8 @@ export class AddRecipeNote {
     addNote(note: RecipeNote) {
         this.data.NoteAddToRecipe(note);
     }
+
+    removeNote(note: RecipeNote) {
+        this.data.NoteRemoveFromRecipe(note);
+    }
 }

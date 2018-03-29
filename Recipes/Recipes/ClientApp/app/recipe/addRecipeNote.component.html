@@ -2,7 +2,7 @@
 <div class="input-group mb-3" *ngFor="let r of data.recipe.notes">
     <input type="text" readonly class="form-control" id="recipeNotes" value="{{ r.note }}" />
     <div class="input-group-append">
-        <button class="btn btn-secondary" type="button">Remove Note</button>
+        <button class="btn btn-secondary" type="button" (click)="removeNote(r)">Remove Note</button>
     </div>
 </div>
 

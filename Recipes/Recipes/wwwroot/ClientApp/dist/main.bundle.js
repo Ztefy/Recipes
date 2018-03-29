@@ -178,7 +178,7 @@ exports.AddRecipeCuisine = AddRecipeCuisine;
 /***/ "./ClientApp/app/recipe/addRecipeIngredient.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h6>Ingredient:</h6>\r\n\r\n<div class=\"input-group mb-3\" *ngFor=\"let r of data.recipe.ingredients\">\r\n    <input type=\"text\" readonly class=\"form-control\" id=\"recipeIngredients\" value=\"{{ r.quantity }} - {{ r.measurementMeasurement }} - {{ r.ingredientName }} - {{ r.preparationPreparation }}\" />\r\n    <div class=\"input-group-append\">\r\n        <button class=\"btn btn-secondary\" type=\"button\">Remove Ingredient</button>\r\n    </div>\r\n</div>\r\n\r\n<div class=\"form-row\">\r\n    <div class=\"form-group col-md-2\">\r\n        <label for=\"recipeIngredientQuantityInput\">Quantity</label>\r\n        <input type=\"number\" class=\"form-control\" [(ngModel)] =\"recipeIngredientQuantityInput\" />\r\n    </div>\r\n    <div class=\"form-group col-md-2\">\r\n        <label for=\"recipeIngredientMeasurementInput\">Measurement</label>\r\n        <select [(ngModel)]=\"recipeIngredientMeasurementInput\" class=\"form-control\" placeholder=\"Choose...\">\r\n            <option *ngFor=\"let m of ingredientMeasurements\" [ngValue]=\"m\">{{ m.ingredientMeasurement }}</option>\r\n        </select>\r\n    </div>\r\n    <div class=\"form-group col-md-4\">\r\n        <label for=\"recipeIngredientInput\">Ingredient</label>\r\n        <select [(ngModel)]=\"recipeIngredientInput\" class=\"form-control\" placeholder=\"Choose...\">\r\n            <option *ngFor=\"let i of ingredients\" [ngValue]=\"i\">{{ i.ingredientName }}</option>\r\n        </select>\r\n    </div>\r\n    <div class=\"form-group col-md-4\">\r\n        <label for=\"recipeIngredientPreparationInput\">Preparation</label>\r\n        <div class=\"input-group\">\r\n            <select [(ngModel)]=\"recipeIngredientPreparationInput\" class=\"custom-select\" placeholder=\"Choose...\">\r\n                <option *ngFor=\"let p of ingredientPreparations\" [ngValue]=\"p\">{{ p.ingredientPreparation }}</option>\r\n            </select>\r\n            <div class=\"input-group-append\">\r\n                <button type=\"button\" class=\"btn btn-secondary\" (click)=\"addIngredient(recipeIngredientQuantityInput, recipeIngredientMeasurementInput, recipeIngredientInput, recipeIngredientPreparationInput)\">Add Ingredient</button>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>"
+module.exports = "<h6>Ingredient:</h6>\r\n\r\n<div class=\"input-group mb-3\" *ngFor=\"let r of data.recipe.ingredients\">\r\n    <input type=\"text\" readonly class=\"form-control\" id=\"recipeIngredients\" value=\"{{ r.quantity }} - {{ r.measurementMeasurement }} - {{ r.ingredientName }} - {{ r.preparationPreparation }}\" />\r\n    <div class=\"input-group-append\">\r\n        <button class=\"btn btn-secondary\" type=\"button\" (click)=\"removeIngredient(r)\">Remove Ingredient</button>\r\n    </div>\r\n</div>\r\n\r\n<div class=\"form-row\">\r\n    <div class=\"form-group col-md-2\">\r\n        <label for=\"recipeIngredientQuantityInput\">Quantity</label>\r\n        <input type=\"number\" class=\"form-control\" [(ngModel)] =\"recipeIngredientQuantityInput\" />\r\n    </div>\r\n    <div class=\"form-group col-md-2\">\r\n        <label for=\"recipeIngredientMeasurementInput\">Measurement</label>\r\n        <select [(ngModel)]=\"recipeIngredientMeasurementInput\" class=\"form-control\" placeholder=\"Choose...\">\r\n            <option *ngFor=\"let m of ingredientMeasurements\" [ngValue]=\"m\">{{ m.ingredientMeasurement }}</option>\r\n        </select>\r\n    </div>\r\n    <div class=\"form-group col-md-4\">\r\n        <label for=\"recipeIngredientInput\">Ingredient</label>\r\n        <select [(ngModel)]=\"recipeIngredientInput\" class=\"form-control\" placeholder=\"Choose...\">\r\n            <option *ngFor=\"let i of ingredients\" [ngValue]=\"i\">{{ i.ingredientName }}</option>\r\n        </select>\r\n    </div>\r\n    <div class=\"form-group col-md-4\">\r\n        <label for=\"recipeIngredientPreparationInput\">Preparation</label>\r\n        <div class=\"input-group\">\r\n            <select [(ngModel)]=\"recipeIngredientPreparationInput\" class=\"custom-select\" placeholder=\"Choose...\">\r\n                <option *ngFor=\"let p of ingredientPreparations\" [ngValue]=\"p\">{{ p.ingredientPreparation }}</option>\r\n            </select>\r\n            <div class=\"input-group-append\">\r\n                <button type=\"button\" class=\"btn btn-secondary\" (click)=\"addIngredient(recipeIngredientQuantityInput, recipeIngredientMeasurementInput, recipeIngredientInput, recipeIngredientPreparationInput)\">Add Ingredient</button>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>"
 
 /***/ }),
 
@@ -226,6 +226,9 @@ var AddRecipeIngredient = /** @class */ (function () {
     };
     AddRecipeIngredient.prototype.addIngredient = function (quantity, measurement, ingredient, preparation) {
         this.data.IngredientAddToRecipe(quantity, measurement, ingredient, preparation);
+    };
+    AddRecipeIngredient.prototype.removeIngredient = function (ingredient) {
+        this.data.IngredientRemoveFromRecipe(ingredient);
     };
     AddRecipeIngredient = __decorate([
         core_1.Component({
@@ -294,7 +297,7 @@ exports.AddRecipeMethod = AddRecipeMethod;
 /***/ "./ClientApp/app/recipe/addRecipeNote.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h6>Note:</h6>\r\n<div class=\"input-group mb-3\" *ngFor=\"let r of data.recipe.notes\">\r\n    <input type=\"text\" readonly class=\"form-control\" id=\"recipeNotes\" value=\"{{ r.note }}\" />\r\n    <div class=\"input-group-append\">\r\n        <button class=\"btn btn-secondary\" type=\"button\">Remove Note</button>\r\n    </div>\r\n</div>\r\n\r\n<div class=\"input-group\">\r\n    <textarea class=\"form-control\" [(ngModel)]=\"recipeNoteInput\" rows=\"3\"></textarea>\r\n    <div class=\"input-group-append\">\r\n        <button class=\"btn btn-secondary\" type=\"button\" (click)=\"addNote(recipeNoteInput)\">Add Note</button>\r\n    </div>\r\n</div>"
+module.exports = "<h6>Note:</h6>\r\n<div class=\"input-group mb-3\" *ngFor=\"let r of data.recipe.notes\">\r\n    <input type=\"text\" readonly class=\"form-control\" id=\"recipeNotes\" value=\"{{ r.note }}\" />\r\n    <div class=\"input-group-append\">\r\n        <button class=\"btn btn-secondary\" type=\"button\" (click)=\"removeNote(r)\">Remove Note</button>\r\n    </div>\r\n</div>\r\n\r\n<div class=\"input-group\">\r\n    <textarea class=\"form-control\" [(ngModel)]=\"recipeNoteInput\" rows=\"3\"></textarea>\r\n    <div class=\"input-group-append\">\r\n        <button class=\"btn btn-secondary\" type=\"button\" (click)=\"addNote(recipeNoteInput)\">Add Note</button>\r\n    </div>\r\n</div>"
 
 /***/ }),
 
@@ -322,6 +325,9 @@ var AddRecipeNote = /** @class */ (function () {
     AddRecipeNote.prototype.addNote = function (note) {
         this.data.NoteAddToRecipe(note);
     };
+    AddRecipeNote.prototype.removeNote = function (note) {
+        this.data.NoteRemoveFromRecipe(note);
+    };
     AddRecipeNote = __decorate([
         core_1.Component({
             selector: 'recipe-note',
@@ -340,7 +346,7 @@ exports.AddRecipeNote = AddRecipeNote;
 /***/ "./ClientApp/app/recipe/addRecipeTag.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h6>Tag:</h6>\r\n\r\n<div class=\"input-group mb-3\" *ngFor=\"let r of data.recipe.tags\">\r\n    <input type=\"text\" readonly class=\"form-control\" id=\"recipeTags\" value=\"{{ r.tagId }} - {{ r.tagName }}\" />\r\n    <div class=\"input-group-append\">\r\n        <!--<button class=\"btn btn-secondary\" type=\"button\">Remove Tag</button>-->\r\n        <button class=\"btn btn-secondary\" type=\"button\" (click)=\"removeTag(r)\">Remove Tag</button>\r\n    </div>\r\n</div>\r\n\r\n<div class=\"input-group\">\r\n    <select class=\"custom-select\" [(ngModel)]=\"recipeTagInput\" placeholder=\"Choose...\">\r\n        <option *ngFor=\"let t of tags\" [ngValue]=\"t\">{{ t.tagName }}</option>\r\n    </select>\r\n    <div class=\"input-group-append\">\r\n        <button class=\"btn btn-secondary\" type=\"button\" (click)=\"addTag(recipeTagInput)\">Add Tag</button>\r\n    </div>\r\n</div>"
+module.exports = "<h6>Tag:</h6>\r\n\r\n<div class=\"input-group mb-3\" *ngFor=\"let r of data.recipe.tags\">\r\n    <input type=\"text\" readonly class=\"form-control\" id=\"recipeTags\" value=\"{{ r.tagId }} - {{ r.tagName }}\" />\r\n    <div class=\"input-group-append\">\r\n        <button class=\"btn btn-secondary\" type=\"button\" (click)=\"removeTag(r)\">Remove Tag</button>\r\n    </div>\r\n</div>\r\n\r\n<div class=\"input-group\">\r\n    <select class=\"custom-select\" [(ngModel)]=\"recipeTagInput\" placeholder=\"Choose...\">\r\n        <option *ngFor=\"let t of tags\" [ngValue]=\"t\">{{ t.tagName }}</option>\r\n    </select>\r\n    <div class=\"input-group-append\">\r\n        <button class=\"btn btn-secondary\" type=\"button\" (click)=\"addTag(recipeTagInput)\">Add Tag</button>\r\n    </div>\r\n</div>"
 
 /***/ }),
 
@@ -587,6 +593,12 @@ var DataService = /** @class */ (function () {
         rnote.note = note;
         this.recipe.notes.push(rnote);
     };
+    DataService.prototype.NoteRemoveFromRecipe = function (note) {
+        var index = this.recipe.notes.indexOf(note);
+        if (index !== -1) {
+            this.recipe.notes.splice(index, 1);
+        }
+    };
     DataService.prototype.MethodAddToRecipe = function (method) {
         var rmethod;
         rmethod = new recipe_1.RecipeMethod();
@@ -611,6 +623,12 @@ var DataService = /** @class */ (function () {
         ringredient.preparationId = preparation.ingredientPreparationId;
         ringredient.preparationPreparation = preparation.ingredientPreparation;
         this.recipe.ingredients.push(ringredient);
+    };
+    DataService.prototype.IngredientRemoveFromRecipe = function (ingredient) {
+        var index = this.recipe.ingredients.indexOf(ingredient);
+        if (index !== -1) {
+            this.recipe.ingredients.splice(index, 1);
+        }
     };
     DataService = __decorate([
         core_1.Injectable(),

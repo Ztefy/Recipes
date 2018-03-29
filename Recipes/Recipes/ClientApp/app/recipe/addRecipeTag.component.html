@@ -3,7 +3,6 @@
 <div class="input-group mb-3" *ngFor="let r of data.recipe.tags">
     <input type="text" readonly class="form-control" id="recipeTags" value="{{ r.tagId }} - {{ r.tagName }}" />
     <div class="input-group-append">
-        <!--<button class="btn btn-secondary" type="button">Remove Tag</button>-->
         <button class="btn btn-secondary" type="button" (click)="removeTag(r)">Remove Tag</button>
     </div>
 </div>
