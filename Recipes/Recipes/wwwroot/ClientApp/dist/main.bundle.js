@@ -245,7 +245,7 @@ exports.AddRecipeIngredient = AddRecipeIngredient;
 /***/ "./ClientApp/app/recipe/addRecipeMethod.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h6>Method:</h6>\r\n\r\n<div class=\"input-group mb-3\" *ngFor=\"let r of data.recipe.methods\">\r\n    <input type=\"text\" readonly class=\"form-control\" id=\"recipeMethods\" value=\"{{ r.stepNumber }}. {{ r.method }}\" />\r\n    <div class=\"input-group-append\">\r\n        <button class=\"btn btn-secondary\" type=\"button\">Remove Method</button>\r\n    </div>\r\n</div>\r\n\r\n<div class=\"input-group\">\r\n    <textarea class=\"form-control\" [(ngModel)]=\"recipeMethodInput\" rows=\"3\"></textarea>\r\n    <div class=\"input-group-append\">\r\n        <button class=\"btn btn-secondary\" type=\"button\" (click)=\"addMethod(recipeMethodInput)\">Add Method</button>\r\n    </div>\r\n</div>"
+module.exports = "<h6>Method:</h6>\r\n\r\n<div class=\"input-group mb-3\" *ngFor=\"let r of data.recipe.methods\">\r\n    <input type=\"text\" readonly class=\"form-control\" id=\"recipeMethods\" value=\"{{ r.stepNumber }}. {{ r.method }}\" />\r\n    <div class=\"input-group-append\">\r\n        <button class=\"btn btn-secondary\" type=\"button\" (click)=\"removeMethod(r)\">Remove Method</button>\r\n    </div>\r\n</div>\r\n\r\n<div class=\"input-group\">\r\n    <textarea class=\"form-control\" [(ngModel)]=\"recipeMethodInput\" rows=\"3\"></textarea>\r\n    <div class=\"input-group-append\">\r\n        <button class=\"btn btn-secondary\" type=\"button\" (click)=\"addMethod(recipeMethodInput)\">Add Method</button>\r\n    </div>\r\n</div>"
 
 /***/ }),
 
@@ -272,6 +272,9 @@ var AddRecipeMethod = /** @class */ (function () {
     }
     AddRecipeMethod.prototype.addMethod = function (method) {
         this.data.MethodAddToRecipe(method);
+    };
+    AddRecipeMethod.prototype.removeMethod = function (method) {
+        this.data.MethodRemoveFromRecipe(method);
     };
     AddRecipeMethod = __decorate([
         core_1.Component({
@@ -590,6 +593,12 @@ var DataService = /** @class */ (function () {
         rmethod.stepNumber = this.recipe.methods.length + 1;
         rmethod.method = method;
         this.recipe.methods.push(rmethod);
+    };
+    DataService.prototype.MethodRemoveFromRecipe = function (method) {
+        var index = this.recipe.methods.indexOf(method);
+        if (index !== -1) {
+            this.recipe.methods.splice(index, 1);
+        }
     };
     DataService.prototype.IngredientAddToRecipe = function (quantity, measurement, ingredient, preparation) {
         var ringredient;

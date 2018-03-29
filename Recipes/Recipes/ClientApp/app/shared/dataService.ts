@@ -158,6 +158,14 @@ export class DataService {
         this.recipe.methods.push(rmethod);
     }
 
+    public MethodRemoveFromRecipe(method: RecipeMethod) {
+        const index: number = this.recipe.methods.indexOf(method);
+
+        if (index !== -1) {
+            this.recipe.methods.splice(index, 1);
+        }
+    }
+
     public IngredientAddToRecipe(quantity, measurement: IngredientMeasurement, ingredient: Ingredient, preparation: IngredientPreparation) {
 
         let ringredient: RecipeIngredient;

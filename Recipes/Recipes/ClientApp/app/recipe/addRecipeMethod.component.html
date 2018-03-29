@@ -3,7 +3,7 @@
 <div class="input-group mb-3" *ngFor="let r of data.recipe.methods">
     <input type="text" readonly class="form-control" id="recipeMethods" value="{{ r.stepNumber }}. {{ r.method }}" />
     <div class="input-group-append">
-        <button class="btn btn-secondary" type="button">Remove Method</button>
+        <button class="btn btn-secondary" type="button" (click)="removeMethod(r)">Remove Method</button>
     </div>
 </div>
 

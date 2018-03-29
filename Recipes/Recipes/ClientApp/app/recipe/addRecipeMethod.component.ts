@@ -15,4 +15,8 @@ export class AddRecipeMethod {
     addMethod(method: RecipeMethod) {
         this.data.MethodAddToRecipe(method);
     }
+
+    removeMethod(method: RecipeMethod) {
+        this.data.MethodRemoveFromRecipe(method);
+    }
 }
