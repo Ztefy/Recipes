@@ -11,6 +11,6 @@ namespace Recipes.ViewModels
     {
         public int TagId { get; set; }
         [Required]
-        public string Tag { get; set; }
+        public string TagName { get; set; }
     }
 }

@@ -27,6 +27,9 @@ var AddRecipeTag = /** @class */ (function () {
     AddRecipeTag.prototype.addTag = function (tag) {
         this.data.TagAddToRecipe(tag);
     };
+    AddRecipeTag.prototype.removeTag = function (tag) {
+        this.data.TagRemoveFromRecipe(tag);
+    };
     AddRecipeTag = __decorate([
         core_1.Component({
             selector: 'recipe-tag',

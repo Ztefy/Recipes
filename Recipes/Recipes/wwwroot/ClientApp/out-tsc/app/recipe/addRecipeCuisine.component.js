@@ -27,6 +27,9 @@ var AddRecipeCuisine = /** @class */ (function () {
     AddRecipeCuisine.prototype.addCuisine = function (cuisine) {
         this.data.CuisineAddToRecipe(cuisine);
     };
+    AddRecipeCuisine.prototype.removeCuisine = function (cuisine) {
+        this.data.CuisineRemoveFromRecipe(cuisine);
+    };
     AddRecipeCuisine = __decorate([
         core_1.Component({
             selector: 'recipe-cuisine',

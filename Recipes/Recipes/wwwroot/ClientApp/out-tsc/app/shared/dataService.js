@@ -97,12 +97,24 @@ var DataService = /** @class */ (function () {
         rcuisine.cuisineName = cuisine.cuisineName;
         this.recipe.cuisine.push(rcuisine);
     };
+    DataService.prototype.CuisineRemoveFromRecipe = function (cuisine) {
+        var index = this.recipe.cuisine.indexOf(cuisine);
+        if (index !== -1) {
+            this.recipe.cuisine.splice(index, 1);
+        }
+    };
     DataService.prototype.TagAddToRecipe = function (tag) {
         var rtag;
         rtag = new recipe_1.RecipeTag();
         rtag.tagId = tag.tagId;
-        rtag.tagName = tag.tag;
+        rtag.tagName = tag.tagName;
         this.recipe.tags.push(rtag);
+    };
+    DataService.prototype.TagRemoveFromRecipe = function (tag) {
+        var index = this.recipe.tags.indexOf(tag);
+        if (index !== -1) {
+            this.recipe.tags.splice(index, 1);
+        }
     };
     DataService.prototype.NoteAddToRecipe = function (note) {
         var rnote;

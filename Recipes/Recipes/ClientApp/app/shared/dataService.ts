@@ -110,8 +110,6 @@ export class DataService {
         this.recipe.cuisine.push(rcuisine);
     }
 
-
-    //TODO - Not functioning
     public CuisineRemoveFromRecipe(cuisine: Cuisine) {
         const index: number = this.recipe.cuisine.indexOf(cuisine);
 
@@ -120,17 +118,23 @@ export class DataService {
         }
     }
 
-
-
     public TagAddToRecipe(tag: Tag) {
 
         let rtag: RecipeTag;
 
         rtag = new RecipeTag();
         rtag.tagId = tag.tagId;
-        rtag.tagName = tag.tag;
+        rtag.tagName = tag.tagName;
 
         this.recipe.tags.push(rtag);
+    }
+
+    public TagRemoveFromRecipe(tag: Tag) {
+        const index: number = this.recipe.tags.indexOf(tag);
+
+        if (index !== -1) {
+            this.recipe.tags.splice(index, 1);
+        }
     }
 
     public NoteAddToRecipe(note) {

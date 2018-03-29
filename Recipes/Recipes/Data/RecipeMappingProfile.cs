@@ -44,7 +44,7 @@ namespace Recipes.Data
                 .ReverseMap();
 
             CreateMap<Tag, TagViewModel>()
-                .ForMember(t => t.Tag, ex => ex.MapFrom(t => t.Name))
+                .ForMember(t => t.TagName, ex => ex.MapFrom(t => t.Name))
                 .ReverseMap();
 
             CreateMap<Recipe, RecipeViewModel>()

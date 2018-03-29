@@ -26,4 +26,8 @@ export class AddRecipeTag implements OnInit {
     addTag(tag: Tag) {
         this.data.TagAddToRecipe(tag);
     }
+
+    removeTag(tag: Tag) {
+        this.data.TagRemoveFromRecipe(tag);
+    }
 }

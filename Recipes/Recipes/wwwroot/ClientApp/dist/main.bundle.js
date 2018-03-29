@@ -157,7 +157,6 @@ var AddRecipeCuisine = /** @class */ (function () {
     AddRecipeCuisine.prototype.addCuisine = function (cuisine) {
         this.data.CuisineAddToRecipe(cuisine);
     };
-    //TODO - Not functioning
     AddRecipeCuisine.prototype.removeCuisine = function (cuisine) {
         this.data.CuisineRemoveFromRecipe(cuisine);
     };
@@ -338,7 +337,7 @@ exports.AddRecipeNote = AddRecipeNote;
 /***/ "./ClientApp/app/recipe/addRecipeTag.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h6>Tag:</h6>\r\n\r\n<div class=\"input-group mb-3\" *ngFor=\"let r of data.recipe.tags\">\r\n    <input type=\"text\" readonly class=\"form-control\" id=\"recipeTags\" value=\"{{ r.tagId }} - {{ r.tagName }}\" />\r\n    <div class=\"input-group-append\">\r\n        <button class=\"btn btn-secondary\" type=\"button\">Remove Tag</button>\r\n    </div>\r\n</div>\r\n\r\n<div class=\"input-group\">\r\n    <select class=\"custom-select\" [(ngModel)]=\"recipeTagInput\" placeholder=\"Choose...\">\r\n        <option *ngFor=\"let t of tags\" [ngValue]=\"t\">{{ t.tag }}</option>\r\n    </select>\r\n    <div class=\"input-group-append\">\r\n        <button class=\"btn btn-secondary\" type=\"button\" (click)=\"addTag(recipeTagInput)\">Add Tag</button>\r\n    </div>\r\n</div>"
+module.exports = "<h6>Tag:</h6>\r\n\r\n<div class=\"input-group mb-3\" *ngFor=\"let r of data.recipe.tags\">\r\n    <input type=\"text\" readonly class=\"form-control\" id=\"recipeTags\" value=\"{{ r.tagId }} - {{ r.tagName }}\" />\r\n    <div class=\"input-group-append\">\r\n        <!--<button class=\"btn btn-secondary\" type=\"button\">Remove Tag</button>-->\r\n        <button class=\"btn btn-secondary\" type=\"button\" (click)=\"removeTag(r)\">Remove Tag</button>\r\n    </div>\r\n</div>\r\n\r\n<div class=\"input-group\">\r\n    <select class=\"custom-select\" [(ngModel)]=\"recipeTagInput\" placeholder=\"Choose...\">\r\n        <option *ngFor=\"let t of tags\" [ngValue]=\"t\">{{ t.tagName }}</option>\r\n    </select>\r\n    <div class=\"input-group-append\">\r\n        <button class=\"btn btn-secondary\" type=\"button\" (click)=\"addTag(recipeTagInput)\">Add Tag</button>\r\n    </div>\r\n</div>"
 
 /***/ }),
 
@@ -374,6 +373,9 @@ var AddRecipeTag = /** @class */ (function () {
     };
     AddRecipeTag.prototype.addTag = function (tag) {
         this.data.TagAddToRecipe(tag);
+    };
+    AddRecipeTag.prototype.removeTag = function (tag) {
+        this.data.TagRemoveFromRecipe(tag);
     };
     AddRecipeTag = __decorate([
         core_1.Component({
@@ -557,7 +559,6 @@ var DataService = /** @class */ (function () {
         rcuisine.cuisineName = cuisine.cuisineName;
         this.recipe.cuisine.push(rcuisine);
     };
-    //TODO - Not functioning
     DataService.prototype.CuisineRemoveFromRecipe = function (cuisine) {
         var index = this.recipe.cuisine.indexOf(cuisine);
         if (index !== -1) {
@@ -568,8 +569,14 @@ var DataService = /** @class */ (function () {
         var rtag;
         rtag = new recipe_1.RecipeTag();
         rtag.tagId = tag.tagId;
-        rtag.tagName = tag.tag;
+        rtag.tagName = tag.tagName;
         this.recipe.tags.push(rtag);
+    };
+    DataService.prototype.TagRemoveFromRecipe = function (tag) {
+        var index = this.recipe.tags.indexOf(tag);
+        if (index !== -1) {
+            this.recipe.tags.splice(index, 1);
+        }
     };
     DataService.prototype.NoteAddToRecipe = function (note) {
         var rnote;
