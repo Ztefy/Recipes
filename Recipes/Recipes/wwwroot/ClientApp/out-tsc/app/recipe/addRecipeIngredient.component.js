@@ -39,6 +39,9 @@ var AddRecipeIngredient = /** @class */ (function () {
     AddRecipeIngredient.prototype.addIngredient = function (quantity, measurement, ingredient, preparation) {
         this.data.IngredientAddToRecipe(quantity, measurement, ingredient, preparation);
     };
+    AddRecipeIngredient.prototype.removeIngredient = function (ingredient) {
+        this.data.IngredientRemoveFromRecipe(ingredient);
+    };
     AddRecipeIngredient = __decorate([
         core_1.Component({
             selector: 'recipe-ingredient',

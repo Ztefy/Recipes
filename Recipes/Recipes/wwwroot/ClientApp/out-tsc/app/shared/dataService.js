@@ -13,6 +13,7 @@ var http_1 = require("@angular/common/http");
 var core_1 = require("@angular/core");
 var recipe_1 = require("../shared/recipe");
 require("rxjs/add/operator/map");
+var _ = require("lodash");
 var DataService = /** @class */ (function () {
     function DataService(http) {
         this.http = http;
@@ -91,11 +92,13 @@ var DataService = /** @class */ (function () {
         });
     };
     DataService.prototype.CuisineAddToRecipe = function (cuisine) {
-        var rcuisine;
-        rcuisine = new recipe_1.RecipeCuisine();
-        rcuisine.cuisineId = cuisine.cuisineId;
-        rcuisine.cuisineName = cuisine.cuisineName;
-        this.recipe.cuisine.push(rcuisine);
+        if (this.recipe.cuisine.findIndex(function (c) { return c.cuisineName === cuisine.cuisineName; }) == -1) {
+            var rcuisine = void 0;
+            rcuisine = new recipe_1.RecipeCuisine();
+            rcuisine.cuisineId = cuisine.cuisineId;
+            rcuisine.cuisineName = cuisine.cuisineName;
+            this.recipe.cuisine.push(rcuisine);
+        }
     };
     DataService.prototype.CuisineRemoveFromRecipe = function (cuisine) {
         var index = this.recipe.cuisine.indexOf(cuisine);
@@ -104,11 +107,13 @@ var DataService = /** @class */ (function () {
         }
     };
     DataService.prototype.TagAddToRecipe = function (tag) {
-        var rtag;
-        rtag = new recipe_1.RecipeTag();
-        rtag.tagId = tag.tagId;
-        rtag.tagName = tag.tagName;
-        this.recipe.tags.push(rtag);
+        if (this.recipe.tags.findIndex(function (t) { return t.tagName === tag.tagName; }) == -1) {
+            var rtag = void 0;
+            rtag = new recipe_1.RecipeTag();
+            rtag.tagId = tag.tagId;
+            rtag.tagName = tag.tagName;
+            this.recipe.tags.push(rtag);
+        }
     };
     DataService.prototype.TagRemoveFromRecipe = function (tag) {
         var index = this.recipe.tags.indexOf(tag);
@@ -117,29 +122,57 @@ var DataService = /** @class */ (function () {
         }
     };
     DataService.prototype.NoteAddToRecipe = function (note) {
-        var rnote;
-        rnote = new recipe_1.RecipeNote();
-        rnote.note = note;
-        this.recipe.notes.push(rnote);
+        if (this.recipe.notes.findIndex(function (n) { return n.note === note; }) == -1) {
+            var rnote = void 0;
+            rnote = new recipe_1.RecipeNote();
+            rnote.note = note;
+            this.recipe.notes.push(rnote);
+        }
+    };
+    DataService.prototype.NoteRemoveFromRecipe = function (note) {
+        var index = this.recipe.notes.indexOf(note);
+        if (index !== -1) {
+            this.recipe.notes.splice(index, 1);
+        }
     };
     DataService.prototype.MethodAddToRecipe = function (method) {
-        var rmethod;
-        rmethod = new recipe_1.RecipeMethod();
-        rmethod.stepNumber = this.recipe.methods.length + 1;
-        rmethod.method = method;
-        this.recipe.methods.push(rmethod);
+        if (this.recipe.methods.findIndex(function (m) { return m.method === method; }) == -1) {
+            var rmethod = void 0;
+            rmethod = new recipe_1.RecipeMethod();
+            rmethod.stepNumber = this.recipe.methods.length + 1;
+            rmethod.method = method;
+            this.recipe.methods.push(rmethod);
+        }
+    };
+    DataService.prototype.MethodRemoveFromRecipe = function (method) {
+        var index = this.recipe.methods.indexOf(method);
+        if (index !== -1) {
+            this.recipe.methods.splice(index, 1);
+        }
     };
     DataService.prototype.IngredientAddToRecipe = function (quantity, measurement, ingredient, preparation) {
-        var ringredient;
-        ringredient = new recipe_1.RecipeIngredient();
-        ringredient.quantity = quantity;
-        ringredient.measurementId = measurement.ingredientMeasurementId;
-        ringredient.measurementMeasurement = measurement.ingredientMeasurement;
-        ringredient.ingredientId = ingredient.ingredientId;
-        ringredient.ingredientName = ingredient.ingredientName;
-        ringredient.preparationId = preparation.ingredientPreparationId;
-        ringredient.preparationPreparation = preparation.ingredientPreparation;
-        this.recipe.ingredients.push(ringredient);
+        var index = this.recipe.ingredients.findIndex(function (i) { return i.ingredientName === ingredient.ingredientName; });
+        if (index == -1) {
+            var object = this.recipe.ingredients[index];
+            var ringredient = void 0;
+            ringredient = new recipe_1.RecipeIngredient();
+            ringredient.quantity = quantity;
+            ringredient.measurementId = measurement.ingredientMeasurementId;
+            ringredient.measurementMeasurement = measurement.ingredientMeasurement;
+            ringredient.ingredientId = ingredient.ingredientId;
+            ringredient.ingredientName = ingredient.ingredientName;
+            ringredient.preparationId = preparation.ingredientPreparationId;
+            ringredient.preparationPreparation = preparation.ingredientPreparation;
+            if (_.isEqual(object, ringredient) == false) {
+                this.recipe.ingredients.push(ringredient);
+            }
+        }
+    };
+    DataService.prototype.IngredientRemoveFromRecipe = function (ingredient) {
+        var index = this.recipe.ingredients.indexOf(ingredient);
+        if (index !== -1) {
+            this.recipe.ingredients.splice(index, 1);
+        }
     };
     DataService = __decorate([
         core_1.Injectable(),

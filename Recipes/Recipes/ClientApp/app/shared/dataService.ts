@@ -11,6 +11,7 @@ import { Skill } from '../shared/skill';
 import { Tag } from '../shared/tag';
 import { Recipe, RecipeCuisine, RecipeTag, RecipeNote, RecipeMethod, RecipeIngredient } from '../shared/recipe';
 import 'rxjs/add/operator/map';
+import * as _ from 'lodash';
 
 @Injectable()
 export class DataService {
@@ -101,13 +102,16 @@ export class DataService {
 
     public CuisineAddToRecipe(cuisine: Cuisine) {
 
-        let rcuisine: RecipeCuisine;
+        if (this.recipe.cuisine.findIndex(c => c.cuisineName === cuisine.cuisineName) == -1) {
 
-        rcuisine = new RecipeCuisine();
-        rcuisine.cuisineId = cuisine.cuisineId;
-        rcuisine.cuisineName = cuisine.cuisineName;
+            let rcuisine: RecipeCuisine;
 
-        this.recipe.cuisine.push(rcuisine);
+            rcuisine = new RecipeCuisine();
+            rcuisine.cuisineId = cuisine.cuisineId;
+            rcuisine.cuisineName = cuisine.cuisineName;
+
+            this.recipe.cuisine.push(rcuisine);
+        }
     }
 
     public CuisineRemoveFromRecipe(cuisine: Cuisine) {
@@ -120,13 +124,16 @@ export class DataService {
 
     public TagAddToRecipe(tag: Tag) {
 
-        let rtag: RecipeTag;
+        if (this.recipe.tags.findIndex(t => t.tagName === tag.tagName) == -1) {
 
-        rtag = new RecipeTag();
-        rtag.tagId = tag.tagId;
-        rtag.tagName = tag.tagName;
+            let rtag: RecipeTag;
 
-        this.recipe.tags.push(rtag);
+            rtag = new RecipeTag();
+            rtag.tagId = tag.tagId;
+            rtag.tagName = tag.tagName;
+
+            this.recipe.tags.push(rtag);
+        }
     }
 
     public TagRemoveFromRecipe(tag: Tag) {
@@ -139,12 +146,15 @@ export class DataService {
 
     public NoteAddToRecipe(note) {
 
-        let rnote: RecipeNote;
+        if (this.recipe.notes.findIndex(n => n.note === note) == -1) {
 
-        rnote = new RecipeNote();
-        rnote.note = note;
+            let rnote: RecipeNote;
 
-        this.recipe.notes.push(rnote);
+            rnote = new RecipeNote();
+            rnote.note = note;
+
+            this.recipe.notes.push(rnote);
+        }
     }
 
     public NoteRemoveFromRecipe(note: RecipeNote) {
@@ -157,13 +167,16 @@ export class DataService {
 
     public MethodAddToRecipe(method) {
 
-        let rmethod: RecipeMethod;
+        if (this.recipe.methods.findIndex(m => m.method === method) == -1) {
 
-        rmethod = new RecipeMethod();
-        rmethod.stepNumber = this.recipe.methods.length+1;
-        rmethod.method = method;
+            let rmethod: RecipeMethod;
 
-        this.recipe.methods.push(rmethod);
+            rmethod = new RecipeMethod();
+            rmethod.stepNumber = this.recipe.methods.length + 1;
+            rmethod.method = method;
+
+            this.recipe.methods.push(rmethod);
+        }
     }
 
     public MethodRemoveFromRecipe(method: RecipeMethod) {
@@ -176,18 +189,27 @@ export class DataService {
 
     public IngredientAddToRecipe(quantity, measurement: IngredientMeasurement, ingredient: Ingredient, preparation: IngredientPreparation) {
 
-        let ringredient: RecipeIngredient;
+        const index: number = this.recipe.ingredients.findIndex(
+            function (i) {
+                return i.ingredientName === ingredient.ingredientName && i.measurementMeasurement === measurement.ingredientMeasurement && i.preparationPreparation === preparation.ingredientPreparation && i.quantity === quantity;
+            }
+        );
 
-        ringredient = new RecipeIngredient();
-        ringredient.quantity = quantity;
-        ringredient.measurementId = measurement.ingredientMeasurementId;
-        ringredient.measurementMeasurement = measurement.ingredientMeasurement;
-        ringredient.ingredientId = ingredient.ingredientId;
-        ringredient.ingredientName = ingredient.ingredientName;
-        ringredient.preparationId = preparation.ingredientPreparationId;
-        ringredient.preparationPreparation = preparation.ingredientPreparation;
+        if (index == -1) {
 
-        this.recipe.ingredients.push(ringredient);
+            let ringredient: RecipeIngredient;
+
+            ringredient = new RecipeIngredient();
+            ringredient.quantity = quantity;
+            ringredient.measurementId = measurement.ingredientMeasurementId;
+            ringredient.measurementMeasurement = measurement.ingredientMeasurement;
+            ringredient.ingredientId = ingredient.ingredientId;
+            ringredient.ingredientName = ingredient.ingredientName;
+            ringredient.preparationId = preparation.ingredientPreparationId;
+            ringredient.preparationPreparation = preparation.ingredientPreparation;
+
+            this.recipe.ingredients.push(ringredient);
+        }
     }
 
     public IngredientRemoveFromRecipe(ingredient: RecipeIngredient) {

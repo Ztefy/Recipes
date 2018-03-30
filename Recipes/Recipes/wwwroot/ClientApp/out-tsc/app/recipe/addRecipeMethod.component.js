@@ -18,6 +18,9 @@ var AddRecipeMethod = /** @class */ (function () {
     AddRecipeMethod.prototype.addMethod = function (method) {
         this.data.MethodAddToRecipe(method);
     };
+    AddRecipeMethod.prototype.removeMethod = function (method) {
+        this.data.MethodRemoveFromRecipe(method);
+    };
     AddRecipeMethod = __decorate([
         core_1.Component({
             selector: 'recipe-method',

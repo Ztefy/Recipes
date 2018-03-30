@@ -27,7 +27,7 @@ export class AddRecipeCuisine implements OnInit {
         this.data.CuisineAddToRecipe(cuisine);
     }
 
-        removeCuisine(cuisine: Cuisine) {
+    removeCuisine(cuisine: Cuisine) {
         this.data.CuisineRemoveFromRecipe(cuisine);
     }
 }

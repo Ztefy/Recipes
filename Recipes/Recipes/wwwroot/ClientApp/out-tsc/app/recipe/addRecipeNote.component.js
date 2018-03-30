@@ -18,6 +18,9 @@ var AddRecipeNote = /** @class */ (function () {
     AddRecipeNote.prototype.addNote = function (note) {
         this.data.NoteAddToRecipe(note);
     };
+    AddRecipeNote.prototype.removeNote = function (note) {
+        this.data.NoteRemoveFromRecipe(note);
+    };
     AddRecipeNote = __decorate([
         core_1.Component({
             selector: 'recipe-note',
