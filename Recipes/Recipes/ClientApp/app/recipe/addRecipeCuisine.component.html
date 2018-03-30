@@ -12,7 +12,7 @@
         <option *ngFor="let cu of cuisines" [ngValue]="cu">{{ cu.cuisineName }}</option>
     </select>
     <div class="input-group-append">
-        <button class="btn btn-secondary" type="button" (click)="addCuisine(recipeCuisineInput)">Add Cuisine</button>
+        <button class="btn btn-secondary" type="button" (click)="addCuisine(recipeCuisineInput);recipeCuisineInput = null">Add Cuisine</button>
     </div>
 
 

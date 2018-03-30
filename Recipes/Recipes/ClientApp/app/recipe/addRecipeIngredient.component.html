@@ -31,7 +31,7 @@
                 <option *ngFor="let p of ingredientPreparations" [ngValue]="p">{{ p.ingredientPreparation }}</option>
             </select>
             <div class="input-group-append">
-                <button type="button" class="btn btn-secondary" (click)="addIngredient(recipeIngredientQuantityInput, recipeIngredientMeasurementInput, recipeIngredientInput, recipeIngredientPreparationInput)">Add Ingredient</button>
+                <button type="button" class="btn btn-secondary" (click)="addIngredient(recipeIngredientQuantityInput, recipeIngredientMeasurementInput, recipeIngredientInput, recipeIngredientPreparationInput); recipeIngredientQuantityInput = Null; recipeIngredientMeasurementInput = Null; recipeIngredientInput = Null; recipeIngredientPreparationInput = Null">Add Ingredient</button>
             </div>
         </div>
     </div>

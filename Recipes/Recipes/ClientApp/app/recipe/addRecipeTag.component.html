@@ -12,6 +12,6 @@
         <option *ngFor="let t of tags" [ngValue]="t">{{ t.tagName }}</option>
     </select>
     <div class="input-group-append">
-        <button class="btn btn-secondary" type="button" (click)="addTag(recipeTagInput)">Add Tag</button>
+        <button class="btn btn-secondary" type="button" (click)="addTag(recipeTagInput);recipeTagInput = Null">Add Tag</button>
     </div>
 </div>

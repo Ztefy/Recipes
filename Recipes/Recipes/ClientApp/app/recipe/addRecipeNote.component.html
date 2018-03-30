@@ -9,6 +9,6 @@
 <div class="input-group">
     <textarea class="form-control" [(ngModel)]="recipeNoteInput" rows="3"></textarea>
     <div class="input-group-append">
-        <button class="btn btn-secondary" type="button" (click)="addNote(recipeNoteInput)">Add Note</button>
+        <button class="btn btn-secondary" type="button" (click)="addNote(recipeNoteInput); recipeNoteInput = Null">Add Note</button>
     </div>
 </div>
