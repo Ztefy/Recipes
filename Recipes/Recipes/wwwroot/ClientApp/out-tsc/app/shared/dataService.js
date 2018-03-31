@@ -13,7 +13,6 @@ var http_1 = require("@angular/common/http");
 var core_1 = require("@angular/core");
 var recipe_1 = require("../shared/recipe");
 require("rxjs/add/operator/map");
-var _ = require("lodash");
 var DataService = /** @class */ (function () {
     function DataService(http) {
         this.http = http;
@@ -151,9 +150,10 @@ var DataService = /** @class */ (function () {
         }
     };
     DataService.prototype.IngredientAddToRecipe = function (quantity, measurement, ingredient, preparation) {
-        var index = this.recipe.ingredients.findIndex(function (i) { return i.ingredientName === ingredient.ingredientName; });
+        var index = this.recipe.ingredients.findIndex(function (i) {
+            return i.ingredientName === ingredient.ingredientName && i.measurementMeasurement === measurement.ingredientMeasurement && i.preparationPreparation === preparation.ingredientPreparation && i.quantity === quantity;
+        });
         if (index == -1) {
-            var object = this.recipe.ingredients[index];
             var ringredient = void 0;
             ringredient = new recipe_1.RecipeIngredient();
             ringredient.quantity = quantity;
@@ -163,9 +163,7 @@ var DataService = /** @class */ (function () {
             ringredient.ingredientName = ingredient.ingredientName;
             ringredient.preparationId = preparation.ingredientPreparationId;
             ringredient.preparationPreparation = preparation.ingredientPreparation;
-            if (_.isEqual(object, ringredient) == false) {
-                this.recipe.ingredients.push(ringredient);
-            }
+            this.recipe.ingredients.push(ringredient);
         }
     };
     DataService.prototype.IngredientRemoveFromRecipe = function (ingredient) {

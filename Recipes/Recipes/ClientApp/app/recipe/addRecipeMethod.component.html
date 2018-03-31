@@ -8,8 +8,17 @@
 </div>
 
 <div class="input-group">
-    <textarea class="form-control" [(ngModel)]="recipeMethodInput" rows="3"></textarea>
+    <textarea class="form-control" required minlength="5" [(ngModel)]="recipeMethodInput" #method="ngModel" rows="3"></textarea>
     <div class="input-group-append">
-        <button class="btn btn-secondary" type="button" (click)="addMethod(recipeMethodInput); recipeMethodInput = Null">Add Method</button>
+        <button class="btn btn-secondary" type="button" [disabled]="method.invalid" (click)="addMethod(recipeMethodInput); method.reset()">Add Method</button>
+    </div>
+</div>
+
+<div *ngIf="method.invalid && (method.dirty || method.touched)" class="alert alert-danger">
+    <div *ngIf="method.errors.required">
+        Method must be at least 5 characters long.
+    </div>
+    <div *ngIf="method.errors.minlength">
+        Method must be at least 5 characters long.
     </div>
 </div>

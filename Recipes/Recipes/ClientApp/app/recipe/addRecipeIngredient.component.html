@@ -1,7 +1,15 @@
 ﻿<h6>Ingredient:</h6>
 
-<div class="input-group mb-3" *ngFor="let r of data.recipe.ingredients">
-    <input type="text" readonly class="form-control" id="recipeIngredients" value="{{ r.quantity }} - {{ r.measurementMeasurement }} - {{ r.ingredientName }} - {{ r.preparationPreparation }}" />
+<div class="input-group mb-3" *ngFor="let r of data.recipe.ingredients" [ngSwitch]="true">
+
+    <input type="text" *ngSwitchCase="r.measurementMeasurement == null && r.preparationPreparation != null && r.quantity != null" readonly class="form-control" id="recipeIngredients" value="{{ r.quantity }} {{ r.ingredientName }}, {{ r.preparationPreparation }}" />
+    <input type="text" *ngSwitchCase="r.preparationPreparation == null && r.measurementMeasurement != null && r.quantity != null" readonly class="form-control" id="recipeIngredients" value="{{ r.quantity }} {{ r.measurementMeasurement }} {{ r.ingredientName }}" />
+    <input type="text" *ngSwitchCase="r.measurementMeasurement == null && r.preparationPreparation == null && r.quantity != null" readonly class="form-control" id="recipeIngredients" value="{{ r.quantity }} {{ r.ingredientName }}" />
+    <input type="text" *ngSwitchCase="r.measurementMeasurement != null && r.preparationPreparation != null && r.quantity != null" readonly class="form-control" id="recipeIngredients" value="{{ r.quantity }} {{ r.measurementMeasurement }} {{ r.ingredientName }}, {{ r.preparationPreparation }}" />
+    <input type="text" *ngSwitchCase="r.measurementMeasurement != null && r.preparationPreparation != null && r.quantity == null" readonly class="form-control" id="recipeIngredients" value="{{ r.measurementMeasurement }} {{ r.ingredientName }}, {{ r.preparationPreparation }}" />
+    <input type="text" *ngSwitchCase="r.measurementMeasurement == null && r.preparationPreparation != null && r.quantity == null" readonly class="form-control" id="recipeIngredients" value="{{ r.ingredientName }}, {{ r.preparationPreparation }}" />
+    <input type="text" *ngSwitchCase="r.measurementMeasurement != null && r.preparationPreparation == null && r.quantity == null" readonly class="form-control" id="recipeIngredients" value="{{ r.measurementMeasurement }} {{ r.ingredientName }}" />
+    <input type="text" *ngSwitchCase="r.measurementMeasurement == null && r.preparationPreparation == null && r.quantity == null" readonly class="form-control" id="recipeIngredients" value="{{ r.ingredientName }}" />
     <div class="input-group-append">
         <button class="btn btn-secondary" type="button" (click)="removeIngredient(r)">Remove Ingredient</button>
     </div>
@@ -10,28 +18,30 @@
 <div class="form-row">
     <div class="form-group col-md-2">
         <label for="recipeIngredientQuantityInput">Quantity</label>
-        <input type="number" min="0" class="form-control" [(ngModel)] ="recipeIngredientQuantityInput" />
+        <input type="number" min="0" class="form-control" [(ngModel)] ="recipeIngredientQuantityInput" #quantity="ngModel"/>
     </div>
     <div class="form-group col-md-2">
         <label for="recipeIngredientMeasurementInput">Measurement</label>
-        <select [(ngModel)]="recipeIngredientMeasurementInput" class="form-control" placeholder="Choose...">
+        <select [(ngModel)]="recipeIngredientMeasurementInput" class="form-control" #measurement="ngModel">
+            <option selected></option>
             <option *ngFor="let m of ingredientMeasurements" [ngValue]="m">{{ m.ingredientMeasurement }}</option>
         </select>
     </div>
     <div class="form-group col-md-4">
         <label for="recipeIngredientInput">Ingredient</label>
-        <select [(ngModel)]="recipeIngredientInput" class="form-control" placeholder="Choose...">
+        <select [(ngModel)]="recipeIngredientInput" class="form-control" #ingredient="ngModel">
             <option *ngFor="let i of ingredients" [ngValue]="i">{{ i.ingredientName }}</option>
         </select>
     </div>
     <div class="form-group col-md-4">
         <label for="recipeIngredientPreparationInput">Preparation</label>
         <div class="input-group">
-            <select [(ngModel)]="recipeIngredientPreparationInput" class="custom-select" placeholder="Choose...">
+            <select [(ngModel)]="recipeIngredientPreparationInput" class="custom-select" #preparation="ngModel">
+                <option selected></option>
                 <option *ngFor="let p of ingredientPreparations" [ngValue]="p">{{ p.ingredientPreparation }}</option>
             </select>
             <div class="input-group-append">
-                <button type="button" class="btn btn-secondary" (click)="addIngredient(recipeIngredientQuantityInput, recipeIngredientMeasurementInput, recipeIngredientInput, recipeIngredientPreparationInput); recipeIngredientQuantityInput = Null; recipeIngredientMeasurementInput = Null; recipeIngredientInput = Null; recipeIngredientPreparationInput = Null">Add Ingredient</button>
+                <button type="button" class="btn btn-secondary" [disabled]="!ingredient.dirty || !measurement.dirty || !preparation.dirty" (click)="addIngredient(recipeIngredientQuantityInput, recipeIngredientMeasurementInput, recipeIngredientInput, recipeIngredientPreparationInput); quantity.reset(); measurement.reset(); ingredient.reset(); preparation.reset()">Add Ingredient</button>
             </div>
         </div>
     </div>

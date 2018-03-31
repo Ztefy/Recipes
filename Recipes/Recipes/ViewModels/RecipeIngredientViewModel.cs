@@ -16,11 +16,9 @@ namespace Recipes.ViewModels
         public int IngredientId { get; set; }
         public string ingredientName { get; set; }
 
-        [Required]
         public int MeasurementId { get; set; }
         public string measurementMeasurement { get; set; }
 
-        [Required]
         public int PreparationId { get; set; }
         public string preparationPreparation { get; set; }
     }

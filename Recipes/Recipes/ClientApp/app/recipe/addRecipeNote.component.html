@@ -7,8 +7,17 @@
 </div>
 
 <div class="input-group">
-    <textarea class="form-control" [(ngModel)]="recipeNoteInput" rows="3"></textarea>
+    <textarea class="form-control" required minlength="5" [(ngModel)]="recipeNoteInput" #note="ngModel" rows="3"></textarea>
     <div class="input-group-append">
-        <button class="btn btn-secondary" type="button" (click)="addNote(recipeNoteInput); recipeNoteInput = Null">Add Note</button>
+        <button class="btn btn-secondary" type="button" [disabled]="note.invalid" (click)="addNote(recipeNoteInput); note.reset()">Add Note</button>
+    </div>
+</div>
+
+<div *ngIf="note.invalid && (note.dirty || note.touched)" class="alert alert-danger">
+    <div *ngIf="note.errors.required">
+        Note must be at least 5 characters long.
+    </div>
+    <div *ngIf="note.errors.minlength">
+        Note must be at least 5 characters long.
     </div>
 </div>
