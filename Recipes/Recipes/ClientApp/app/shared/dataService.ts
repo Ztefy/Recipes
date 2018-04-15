@@ -219,4 +219,59 @@ export class DataService {
             this.recipe.ingredients.splice(index, 1);
         }
     }
+
+    public CreateRecipe(image, title, portion, skill, preptime, category, cooktime, course, rating, calorie, protein, carb, fat, satfat, fibre, sugar, salt, location) {
+
+        this.recipe.recipeImage = image;
+        this.recipe.recipeName = title;
+        this.recipe.portions = portion;
+        this.recipe.skillSkillLevel = skill;
+        this.recipe.prepTime = preptime;
+        this.recipe.cookTime = cooktime;
+        this.recipe.categoryName = category;
+        this.recipe.courseName = course;
+        this.recipe.rating = rating;
+        this.recipe.calories = calorie;
+        this.recipe.protein = protein;
+        this.recipe.carbohydrates = carb;
+        this.recipe.fat = fat;
+        this.recipe.saturated = satfat;
+        this.recipe.fibre = fibre;
+        this.recipe.sugars = sugar;
+        this.recipe.salt = salt;
+
+        return this.http.post('/api/recipe', this.recipe)
+            .map(response => {
+                this.recipe = new Recipe();
+                return true;
+            });
+    }
+
+    public CreateBasicRecipe(image, title, portion, skill, preptime, category, cooktime, course, rating, calorie, protein, carb, fat, satfat, fibre, sugar, salt, location) {
+
+        this.recipe.recipeImage = image;
+        this.recipe.recipeName = title;
+        this.recipe.portions = portion;
+        this.recipe.skillSkillLevel = skill;
+        this.recipe.prepTime = preptime;
+        this.recipe.cookTime = cooktime;
+        this.recipe.categoryName = category;
+        this.recipe.courseName = course;
+        this.recipe.rating = rating;
+        this.recipe.calories = calorie;
+        this.recipe.protein = protein;
+        this.recipe.carbohydrates = carb;
+        this.recipe.fat = fat;
+        this.recipe.saturated = satfat;
+        this.recipe.fibre = fibre;
+        this.recipe.sugars = sugar;
+        this.recipe.salt = salt;
+        this.recipe.location = location;
+
+        return this.http.post('api/basicrecipe', this.recipe)
+            .map(response => {
+                this.recipe = new Recipe();
+                return true;
+            });
+    }
 }

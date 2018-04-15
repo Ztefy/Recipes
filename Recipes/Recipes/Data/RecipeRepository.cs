@@ -352,15 +352,106 @@ namespace Recipes.Data
             }
         }
 
-        //public void AddRecipe(Recipe newRecipe)
-        //{
-        //    // Convert new recipe to lookup of recipe
-        //    foreach (var ingredient in newRecipe.Ingredients)
-        //    {
-        //        ingredient.Ingredient = _ctx.Ingredient.Find(ingredient.Ingredient.IngredientId);
-        //    }
+        public void AddRecipe(Recipe newRecipe)
+        {
+            // Convert new Cuisines to lookup of cuisine
+            foreach (var cuisine in newRecipe.Cuisine)
+            {
+                cuisine.Cuisine = _ctx.Cuisine.Find(cuisine.Cuisine.CuisineId);
+            }
 
-        //    AddEntity(newRecipe);
-        //}
+            // Convert new Tags to lookup of tag
+            foreach (var tag in newRecipe.Tags)
+            {
+                tag.Tag = _ctx.Tag.Find(tag.Tag.TagId);
+            }
+
+            // Convert new Ingredients to lookup of measurement, ingredient & preparation
+            foreach (var ingredient in newRecipe.Ingredients)
+            {
+                ingredient.Ingredient = _ctx.Ingredient.Find(ingredient.Ingredient.IngredientId);
+                ingredient.Measurement = _ctx.IngredientMeasurement.Find(ingredient.Measurement.IngrMeasId);
+                ingredient.Preparation = _ctx.IngredientPreparation.Find(ingredient.Preparation.IngPrepId);
+            }
+
+            // Convert new Skill to lookup of skill
+            {
+                var skill = newRecipe.Skill;
+                skill = _ctx.Skill.Find(skill.SkillId);
+            }
+
+            // Convert new Category to lookup of category
+            {
+                var category = newRecipe.Category;
+                category = _ctx.Category.Find(category.CategoryId);
+            }
+
+            // Convert new Course to lookup of course
+            {
+                var course = newRecipe.Course;
+                course = _ctx.Course.Find(course.CourseId);
+            }
+
+            AddEntity(newRecipe);
+        }
+
+        public IEnumerable<Recipe> GetAllBasicRecipes()
+        {
+            try
+            {
+                _logger.LogInformation("GetAllBasicRecipes was called");
+                return _ctx.Recipes
+                    .OrderBy(r => r.RecipeName)
+                    .ToList();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Failed to get basic recipes: {ex}");
+                return null;
+            }
+        }
+
+        public Recipe GetBasicRecipeById(int id)
+        {
+            try
+            {
+                _logger.LogInformation("GetBasicRecipeById was called");
+
+                return _ctx.Recipes
+                        .Include(r => r.Skill)
+                        .Include(r => r.Course)
+                        .Include(r => r.Category)
+                        .Where(r => r.RecipeId == id)
+                        .FirstOrDefault();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Failed to get basic recipe: {ex}");
+                return null;
+            }
+        }
+
+        public void AddBasicRecipe(Recipe newRecipe)
+        {
+            // Convert new Skill to lookup of skill
+            {
+                var skill = newRecipe.Skill;
+                skill = _ctx.Skill.Find(skill.SkillId);
+            }
+
+            // Convert new Category to lookup of category
+            {
+                var category = newRecipe.Category;
+                category = _ctx.Category.Find(category.CategoryId);
+            }
+
+            // Convert new Course to lookup of course
+            {
+                var course = newRecipe.Course;
+                course = _ctx.Course.Find(course.CourseId);
+            }
+
+            AddEntity(newRecipe);
+        }
     }
 }

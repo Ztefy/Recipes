@@ -17,6 +17,7 @@ namespace Recipes.Data.Entities
         public int Rating { get; set; }
         public string PrepTime { get; set; }
         public string CookTime { get; set; }
+        public string Location { get; set; }
         public int? Calories { get; set; }
         public int? Fat { get; set; }
         public int? Saturated { get; set; }

@@ -3,18 +3,15 @@ import { DataService } from '../shared/dataService';
 import { Category } from '../shared/category';
 import { Course } from '../shared/course';
 import { Skill } from '../shared/skill';
-import { Tag } from '../shared/tag';
-import { AddRecipeCuisine } from '../recipe/addRecipeCuisine.component';
-import { AddRecipeTag } from '../recipe/addRecipeTag.component';
 import { Router } from '@angular/router';
 
 @Component({
-    selector: 'create-recipe',
-    templateUrl: 'createRecipe.component.html',
+    selector: 'create-basic-recipe',
+    templateUrl: 'createBasicRecipe.component.html',
     styleUrls: []
 })
 
-export class CreateRecipe implements OnInit {
+export class CreateBasicRecipe implements OnInit {
 
     constructor(private data: DataService/*, public router: Router*/) { }
 
@@ -49,14 +46,14 @@ export class CreateRecipe implements OnInit {
             })
     }
 
-    onCreateRecipe(image, title, portion, skill, preptime, category, cooktime, course, rating, calorie, protein, carb, fat, satfat, fibre, sugar, salt, location) {
+    onCreateBasicRecipe(image, title, portion, skill, preptime, category, cooktime, course, rating, calorie, protein, carb, fat, satfat, fibre, sugar, salt, location) {
 
-        this.data.CreateRecipe(image, title, portion, skill, preptime, category, cooktime, course, rating, calorie, protein, carb, fat, satfat, fibre, sugar, salt, location)
+        this.data.CreateBasicRecipe(image, title, portion, skill, preptime, category, cooktime, course, rating, calorie, protein, carb, fat, satfat, fibre, sugar, salt, location)
             .subscribe(success => {
                 if (success) {
                     //TODO Routing
                     //this.router.navigate(['/']);
                 }
-            }, err => this.errorMessage = "Failed to save recipe");
+            }, err => this.errorMessage = "Failed to save basic recipe");
     }
 }

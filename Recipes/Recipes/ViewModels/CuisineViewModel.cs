@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Recipes.Data.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -13,5 +14,6 @@ namespace Recipes.ViewModels
         [Required]
         [MinLength(3)]
         public string CuisineName { get; set; }
+
     }
 }

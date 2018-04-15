@@ -10,9 +10,8 @@ namespace Recipes.ViewModels
     public class RecipeIngredientViewModel
     {
         public int Id { get; set; }
-        public int Quantity { get; set; }
+        public int? Quantity { get; set; }
 
-        [Required]
         public int IngredientId { get; set; }
         public string ingredientName { get; set; }
 

@@ -5,13 +5,16 @@ import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
+import { DataService } from './shared/dataService';
+
 import { CreateRecipe } from './recipe/createRecipe.component';
 import { AddRecipeCuisine } from './recipe/addRecipeCuisine.component';
 import { AddRecipeTag } from './recipe/addRecipeTag.component';
 import { AddRecipeNote } from './recipe/addRecipeNote.component';
 import { AddRecipeMethod } from './recipe/addRecipeMethod.component';
 import { AddRecipeIngredient } from './recipe/addRecipeIngredient.component';
-import { DataService } from './shared/dataService';
+
+import { CreateBasicRecipe } from './basic_recipe/createBasicRecipe.component';
 
 let routes = [
     //{ path: "", component: Results },
@@ -27,7 +30,8 @@ let routes = [
       AddRecipeTag,
       AddRecipeNote,
       AddRecipeMethod,
-      AddRecipeIngredient
+      AddRecipeIngredient,
+      CreateBasicRecipe
   ],
   imports: [
       BrowserModule,

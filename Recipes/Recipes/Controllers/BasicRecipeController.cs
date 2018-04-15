@@ -13,14 +13,14 @@ using System.Threading.Tasks;
 namespace Recipes.Controllers
 {
     [Route("api/[Controller]")]
-    public class RecipeController : Controller
+    public class BasicRecipeController : Controller
     {
         private readonly IRecipeRepository _repository;
-        private readonly ILogger<RecipeController> _logger;
+        private readonly ILogger<BasicRecipeController> _logger;
         private readonly IMapper _mapper;
 
-        public RecipeController(IRecipeRepository repository,
-            ILogger<RecipeController> logger,
+        public BasicRecipeController(IRecipeRepository repository,
+            ILogger<BasicRecipeController> logger,
             IMapper mapper)
         {
             _repository = repository;
@@ -33,12 +33,12 @@ namespace Recipes.Controllers
         {
             try
             {
-                return Ok(_mapper.Map<IEnumerable<Recipe>, IEnumerable<RecipeViewModel>>(_repository.GetAllRecipes()));
+                return Ok(_mapper.Map<IEnumerable<Recipe>, IEnumerable<BasicRecipeViewModel>>(_repository.GetAllBasicRecipes()));
             }
             catch (Exception ex)
             {
-                _logger.LogError($"Failed to get recipes: {ex}");
-                return BadRequest("Failed to get recipes");
+                _logger.LogError($"Failed to get basic recipes: {ex}");
+                return BadRequest("Failed to get basic recipes");
             }
         }
 
@@ -47,33 +47,33 @@ namespace Recipes.Controllers
         {
             try
             {
-                var recipe = _repository.GetRecipeById(id);
+                var recipe = _repository.GetBasicRecipeById(id);
 
                 if (recipe != null)
-                    return Ok(_mapper.Map<Recipe, RecipeViewModel>(recipe));
+                    return Ok(_mapper.Map<Recipe, BasicRecipeViewModel>(recipe));
                 else return NotFound();
             }
             catch (Exception ex)
             {
-                _logger.LogError($"Failed to get recipe: {ex}");
-                return BadRequest("Failed to get recipe");
+                _logger.LogError($"Failed to get basic recipe: {ex}");
+                return BadRequest("Failed to get basic recipe");
             }
         }
 
         [HttpPost]
-        public IActionResult Post([FromBody]RecipeViewModel model)
+        public IActionResult Post([FromBody]BasicRecipeViewModel model)
         {
             // add it to the db
             try
             {
                 if (ModelState.IsValid)
                 {
-                    var newRecipe = _mapper.Map<RecipeViewModel, Recipe>(model);
+                    var newRecipe = _mapper.Map<BasicRecipeViewModel, Recipe>(model);
 
-                    _repository.AddRecipe(newRecipe);
+                    _repository.AddBasicRecipe(newRecipe);
                     if (_repository.SaveAll())
                     {
-                        return Created($"/api/recipe/{newRecipe.RecipeId}", _mapper.Map<Recipe, RecipeViewModel>(newRecipe));
+                        return Created($"/api/basicrecipe/{newRecipe.RecipeId}", _mapper.Map<Recipe, BasicRecipeViewModel>(newRecipe));
                     }
                 }
                 else
@@ -84,10 +84,10 @@ namespace Recipes.Controllers
             }
             catch (Exception ex)
             {
-                _logger.LogError($"Failed to save a new recipe: {ex}");
+                _logger.LogError($"Failed to save a new basic recipe: {ex}");
             }
 
-            return BadRequest("Failed to save new recipe");
+            return BadRequest("Failed to save new basic recipe");
         }
     }
 }

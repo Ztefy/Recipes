@@ -12,8 +12,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var dataService_1 = require("../shared/dataService");
 var CreateRecipe = /** @class */ (function () {
-    function CreateRecipe(data) {
-        this.data = data;
+    function CreateRecipe(data /*, public router: Router*/) {
+        this.data = data; /*, public router: Router*/
+        this.errorMessage = "";
     }
     CreateRecipe.prototype.ngOnInit = function () {
         var _this = this;
@@ -36,13 +37,23 @@ var CreateRecipe = /** @class */ (function () {
             }
         });
     };
+    CreateRecipe.prototype.onCreateRecipe = function (image, title, portion, skill, preptime, category, cooktime, course, rating, calorie, protein, carb, fat, satfat, fibre, sugar, salt) {
+        var _this = this;
+        this.data.CreateRecipe(image, title, portion, skill, preptime, category, cooktime, course, rating, calorie, protein, carb, fat, satfat, fibre, sugar, salt)
+            .subscribe(function (success) {
+            if (success) {
+                //TODO Routing
+                //this.router.navigate(['/']);
+            }
+        }, function (err) { return _this.errorMessage = "Failed to save recipe"; });
+    };
     CreateRecipe = __decorate([
         core_1.Component({
             selector: 'create-recipe',
             templateUrl: 'createRecipe.component.html',
             styleUrls: []
         }),
-        __metadata("design:paramtypes", [dataService_1.DataService])
+        __metadata("design:paramtypes", [dataService_1.DataService /*, public router: Router*/])
     ], CreateRecipe);
     return CreateRecipe;
 }());

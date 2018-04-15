@@ -145,6 +145,7 @@ namespace Recipes.Data
                     Fibre = 3,
                     Protein = 15,
                     Salt = 1,
+                    Location = "Book 1",
 
                     Skill = skill.First(),
                     Course = course.First(),

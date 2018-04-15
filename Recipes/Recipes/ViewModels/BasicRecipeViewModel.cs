@@ -1,5 +1,4 @@
-﻿using Recipes.Data.Entities;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -8,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Recipes.ViewModels
 {
-    public class RecipeViewModel
+    public class BasicRecipeViewModel
     {
         public int RecipeId { get; set; }
         [Required]
@@ -33,24 +32,14 @@ namespace Recipes.ViewModels
         public int? Fibre { get; set; }
         public int? Protein { get; set; }
         public int? Salt { get; set; }
-
-        public ICollection<RecipeIngredientViewModel> Ingredients { get; set; }
-        public ICollection<RecipeMethodViewModel> Methods { get; set; }
-        public ICollection<RecipeNoteViewModel> Notes { get; set; }
-        public ICollection<RecipeCuisineViewModel> Cuisine { get; set; }
-        public ICollection<RecipeTagViewModel> Tags { get; set; }
-
         [Required]
         public int SkillId { get; set; }
         public string skillSkillLevel { get; set; }
-
         [Required]
         public int CourseId { get; set; }
         public string courseName { get; set; }
-
         [Required]
         public int CategoryId { get; set; }
         public string categoryName { get; set; }
-
     }
 }

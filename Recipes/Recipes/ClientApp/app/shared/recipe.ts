@@ -14,6 +14,7 @@
     fibre: number;
     protein: number;
     salt: number;
+    location: string;
     ingredients: Array<RecipeIngredient> = new Array<RecipeIngredient>();
     methods: Array<RecipeMethod> = new Array <RecipeMethod>();
     notes: Array<RecipeNote> = new Array <RecipeNote>();

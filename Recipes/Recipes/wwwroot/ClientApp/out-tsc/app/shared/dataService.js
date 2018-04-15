@@ -174,6 +174,31 @@ var DataService = /** @class */ (function () {
             this.recipe.ingredients.splice(index, 1);
         }
     };
+    DataService.prototype.CreateRecipe = function (image, title, portion, skill, preptime, category, cooktime, course, rating, calorie, protein, carb, fat, satfat, fibre, sugar, salt) {
+        var _this = this;
+        this.recipe.recipeImage = image;
+        this.recipe.recipeName = title;
+        this.recipe.portions = portion;
+        this.recipe.skillSkillLevel = skill;
+        this.recipe.prepTime = preptime;
+        this.recipe.cookTime = cooktime;
+        this.recipe.categoryName = category;
+        this.recipe.courseName = course;
+        this.recipe.rating = rating;
+        this.recipe.calories = calorie;
+        this.recipe.protein = protein;
+        this.recipe.carbohydrates = carb;
+        this.recipe.fat = fat;
+        this.recipe.saturated = satfat;
+        this.recipe.fibre = fibre;
+        this.recipe.sugars = sugar;
+        this.recipe.salt = salt;
+        return this.http.post('/api/recipe', this.recipe)
+            .map(function (response) {
+            _this.recipe = new recipe_1.Recipe();
+            return true;
+        });
+    };
     DataService = __decorate([
         core_1.Injectable(),
         __metadata("design:paramtypes", [http_1.HttpClient])
