@@ -1,17 +1,19 @@
 ﻿<h6>Cuisine:</h6>
 
 <div class="input-group mb-3" *ngFor="let r of data.recipe.cuisine">
-    <input type="text" readonly class="form-control" id="recipeCuisines" value="{{ r.cuisineName }}" />
+    <input type="text" readonly class="form-control" id="recipeCuisines" value="{{ r.cuisineId }} - {{ r.cuisineName }}" />
     <div class="input-group-append">
         <button class="btn btn-secondary" type="button" (click)="removeCuisine(r)">Remove Cuisine</button>
     </div>
 </div>
 
 <div class="input-group">
-    <select class="custom-select" [(ngModel)]="recipeCuisineInput" #cuisine="ngModel" placeholder="Choose...">
+    <select class="custom-select" [(ngModel)]="recipeCuisineInput" placeholder="Choose...">
         <option *ngFor="let cu of cuisines" [ngValue]="cu">{{ cu.cuisineName }}</option>
     </select>
     <div class="input-group-append">
-        <button class="btn btn-secondary" type="button" [disabled]="!cuisine.dirty" (click)="addCuisine(recipeCuisineInput);cuisine.reset()">Add Cuisine</button>
+        <button class="btn btn-secondary" type="button" (click)="addCuisine(recipeCuisineInput);recipeCuisineInput = null">Add Cuisine</button>
     </div>
+
+
 </div>

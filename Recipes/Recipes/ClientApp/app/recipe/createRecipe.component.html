@@ -23,15 +23,7 @@
                         <div class="col col-md-8">
                             <div class="form-group">
                                 <label for="recipeTitleInput">Recipe Title</label>
-                                <input type="text" class="form-control" name="recipeTitleInput" required minlength="4" [(ngModel)]="recipeTitleInput" #title="ngModel" />
-                            </div>
-                            <div *ngIf="title.invalid && (title.dirty || title.touched)" class="alert alert-danger">
-                                <div *ngIf="title.errors.required">
-                                    Title is required.
-                                </div>
-                                <div *ngIf="title.errors.minlength">
-                                    Title must be at least 4 characters long.
-                                </div>
+                                <input type="text" class="form-control" id="recipeTitleInput" />
                             </div>
                         </div>
                     </div>
@@ -42,21 +34,16 @@
                         <div class="col">
                             <div class="form-group">
                                 <label for="recipePortionInput">Number of portions</label>
-                                <input type="number" min="1" class="form-control" name="recipePortionInput" required [(ngModel)]="recipePortionInput" #portion="ngModel" />
-                            </div>
-                            <div *ngIf="portion.invalid && (portion.dirty || portion.touched)" class="alert alert-danger">
-                                Portion is required.
+                                <input type="number" min="0" class="form-control" id="recipePortionInput" />
                             </div>
                         </div>
                         <div class="col">
                             <div class="form-group">
                                 <label for="recipeSkillInput">Skill</label>
-                                <select name="recipeSkillInput" class="form-control" [(ngModel)]="recipeSkillInput" #skill="ngModel" placeholder="Choose...">
+                                <select id="recipeSkillInput" class="form-control">
+                                    <option selected>Choose...</option>
                                     <option *ngFor="let s of skills">{{ s.skill }}</option>
                                 </select>
-                            </div>
-                            <div *ngIf="!skill.dirty" class="alert alert-danger">
-                                A skill level needs to be chosen.
                             </div>
                         </div>
                     </div>
@@ -65,23 +52,16 @@
                         <div class="col">
                             <div class="form-group">
                                 <label for="recipePrepTimeInput">Prep time</label>
-                                <input type="text" class="form-control" name="recipePrepTimeInput" minlength="3" [(ngModel)]="recipePrepTimeInput" #preptime="ngModel" />
-                            </div>
-                            <div *ngIf="preptime.invalid && (preptime.dirty || preptime.touched)" class="alert alert-danger">
-                                <div *ngIf="preptime.errors.minlength">
-                                    Prep time must be at least 3 characters long.
-                                </div>
+                                <input type="text" class="form-control" id="recipePrepTimeInput" />
                             </div>
                         </div>
                         <div class="col">
                             <div class="form-group">
                                 <label for="recipeCategoryInput">Category</label>
-                                <select name="recipeCategoryInput" class="form-control" [(ngModel)]="recipeCategoryInput" #category="ngModel" placeholder="Choose...">
+                                <select id="recipeCategoryInput" class="form-control">
+                                    <option selected>Choose...</option>
                                     <option *ngFor="let ca of categories">{{ ca.categoryName }}</option>
                                 </select>
-                            </div>
-                            <div *ngIf="!category.dirty" class="alert alert-danger">
-                                A category needs to be chosen.
                             </div>
                         </div>
                     </div>
@@ -90,23 +70,16 @@
                         <div class="col">
                             <div class="form-group">
                                 <label for="recipeCookTimeInput">Cook time</label>
-                                <input type="text" class="form-control" name="recipeCookTimeInput" minlength="3" [(ngModel)]="recipeCookTimeInput" #cooktime="ngModel" />
-                            </div>
-                            <div *ngIf="cooktime.invalid && (cooktime.dirty || cooktime.touched)" class="alert alert-danger">
-                                <div *ngIf="cooktime.errors.minlength">
-                                    Cook time must be at least 3 characters long.
-                                </div>
+                                <input type="text" class="form-control" id="recipeCookTimeInput" />
                             </div>
                         </div>
                         <div class="col">
                             <div class="form-group">
                                 <label for="recipeCourseInput">Course</label>
-                                <select name="recipeCourseInput" class="form-control" [(ngModel)]="recipeCourseInput" #course="ngModel" placeholder="Choose...">
+                                <select id="recipeCourseInput" class="form-control">
+                                    <option selected>Choose...</option>
                                     <option *ngFor="let co of courses">{{ co.courseName }}</option>
                                 </select>
-                            </div>
-                            <div *ngIf="!course.dirty" class="alert alert-danger">
-                                A course needs to be chosen.
                             </div>
                         </div>
                     </div>
