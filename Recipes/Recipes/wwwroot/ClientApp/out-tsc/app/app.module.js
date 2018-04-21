@@ -12,13 +12,14 @@ var http_1 = require("@angular/common/http");
 var router_1 = require("@angular/router");
 var forms_1 = require("@angular/forms");
 var app_component_1 = require("./app.component");
+var dataService_1 = require("./shared/dataService");
 var createRecipe_component_1 = require("./recipe/createRecipe.component");
 var addRecipeCuisine_component_1 = require("./recipe/addRecipeCuisine.component");
 var addRecipeTag_component_1 = require("./recipe/addRecipeTag.component");
 var addRecipeNote_component_1 = require("./recipe/addRecipeNote.component");
 var addRecipeMethod_component_1 = require("./recipe/addRecipeMethod.component");
 var addRecipeIngredient_component_1 = require("./recipe/addRecipeIngredient.component");
-var dataService_1 = require("./shared/dataService");
+var createBasicRecipe_component_1 = require("./basic_recipe/createBasicRecipe.component");
 var routes = [];
 var AppModule = /** @class */ (function () {
     function AppModule() {
@@ -32,7 +33,8 @@ var AppModule = /** @class */ (function () {
                 addRecipeTag_component_1.AddRecipeTag,
                 addRecipeNote_component_1.AddRecipeNote,
                 addRecipeMethod_component_1.AddRecipeMethod,
-                addRecipeIngredient_component_1.AddRecipeIngredient
+                addRecipeIngredient_component_1.AddRecipeIngredient,
+                createBasicRecipe_component_1.CreateBasicRecipe
             ],
             imports: [
                 platform_browser_1.BrowserModule,

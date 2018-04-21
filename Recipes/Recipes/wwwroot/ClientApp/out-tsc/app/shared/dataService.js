@@ -13,7 +13,6 @@ var http_1 = require("@angular/common/http");
 var core_1 = require("@angular/core");
 var recipe_1 = require("../shared/recipe");
 require("rxjs/add/operator/map");
-var _ = require("lodash");
 var DataService = /** @class */ (function () {
     function DataService(http) {
         this.http = http;
@@ -151,9 +150,10 @@ var DataService = /** @class */ (function () {
         }
     };
     DataService.prototype.IngredientAddToRecipe = function (quantity, measurement, ingredient, preparation) {
-        var index = this.recipe.ingredients.findIndex(function (i) { return i.ingredientName === ingredient.ingredientName; });
+        var index = this.recipe.ingredients.findIndex(function (i) {
+            return i.ingredientName === ingredient.ingredientName && i.measurementMeasurement === measurement.ingredientMeasurement && i.preparationPreparation === preparation.ingredientPreparation && i.quantity === quantity;
+        });
         if (index == -1) {
-            var object = this.recipe.ingredients[index];
             var ringredient = void 0;
             ringredient = new recipe_1.RecipeIngredient();
             ringredient.quantity = quantity;
@@ -163,9 +163,7 @@ var DataService = /** @class */ (function () {
             ringredient.ingredientName = ingredient.ingredientName;
             ringredient.preparationId = preparation.ingredientPreparationId;
             ringredient.preparationPreparation = preparation.ingredientPreparation;
-            if (_.isEqual(object, ringredient) == false) {
-                this.recipe.ingredients.push(ringredient);
-            }
+            this.recipe.ingredients.push(ringredient);
         }
     };
     DataService.prototype.IngredientRemoveFromRecipe = function (ingredient) {
@@ -174,7 +172,7 @@ var DataService = /** @class */ (function () {
             this.recipe.ingredients.splice(index, 1);
         }
     };
-    DataService.prototype.CreateRecipe = function (image, title, portion, skill, preptime, category, cooktime, course, rating, calorie, protein, carb, fat, satfat, fibre, sugar, salt) {
+    DataService.prototype.CreateRecipe = function (image, title, portion, skill, preptime, category, cooktime, course, rating, calorie, protein, carb, fat, satfat, fibre, sugar, salt, location) {
         var _this = this;
         this.recipe.recipeImage = image;
         this.recipe.recipeName = title;
@@ -194,6 +192,32 @@ var DataService = /** @class */ (function () {
         this.recipe.sugars = sugar;
         this.recipe.salt = salt;
         return this.http.post('/api/recipe', this.recipe)
+            .map(function (response) {
+            _this.recipe = new recipe_1.Recipe();
+            return true;
+        });
+    };
+    DataService.prototype.CreateBasicRecipe = function (image, title, portion, skill, preptime, category, cooktime, course, rating, calorie, protein, carb, fat, satfat, fibre, sugar, salt, location) {
+        var _this = this;
+        this.recipe.recipeImage = image;
+        this.recipe.recipeName = title;
+        this.recipe.portions = portion;
+        this.recipe.skillSkillLevel = skill;
+        this.recipe.prepTime = preptime;
+        this.recipe.cookTime = cooktime;
+        this.recipe.categoryName = category;
+        this.recipe.courseName = course;
+        this.recipe.rating = rating;
+        this.recipe.calories = calorie;
+        this.recipe.protein = protein;
+        this.recipe.carbohydrates = carb;
+        this.recipe.fat = fat;
+        this.recipe.saturated = satfat;
+        this.recipe.fibre = fibre;
+        this.recipe.sugars = sugar;
+        this.recipe.salt = salt;
+        this.recipe.location = location;
+        return this.http.post('api/basicrecipe', this.recipe)
             .map(function (response) {
             _this.recipe = new recipe_1.Recipe();
             return true;

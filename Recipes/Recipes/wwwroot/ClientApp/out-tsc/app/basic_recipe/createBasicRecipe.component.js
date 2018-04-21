@@ -11,12 +11,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var dataService_1 = require("../shared/dataService");
-var CreateRecipe = /** @class */ (function () {
-    function CreateRecipe(data /*, public router: Router*/) {
+var CreateBasicRecipe = /** @class */ (function () {
+    function CreateBasicRecipe(data /*, public router: Router*/) {
         this.data = data; /*, public router: Router*/
         this.errorMessage = "";
     }
-    CreateRecipe.prototype.ngOnInit = function () {
+    CreateBasicRecipe.prototype.ngOnInit = function () {
         var _this = this;
         this.data.loadCategories()
             .subscribe(function (success) {
@@ -37,25 +37,25 @@ var CreateRecipe = /** @class */ (function () {
             }
         });
     };
-    CreateRecipe.prototype.onCreateRecipe = function (image, title, portion, skill, preptime, category, cooktime, course, rating, calorie, protein, carb, fat, satfat, fibre, sugar, salt, location) {
+    CreateBasicRecipe.prototype.onCreateBasicRecipe = function (image, title, portion, skill, preptime, category, cooktime, course, rating, calorie, protein, carb, fat, satfat, fibre, sugar, salt, location) {
         var _this = this;
-        this.data.CreateRecipe(image, title, portion, skill, preptime, category, cooktime, course, rating, calorie, protein, carb, fat, satfat, fibre, sugar, salt, location)
+        this.data.CreateBasicRecipe(image, title, portion, skill, preptime, category, cooktime, course, rating, calorie, protein, carb, fat, satfat, fibre, sugar, salt, location)
             .subscribe(function (success) {
             if (success) {
                 //TODO Routing
                 //this.router.navigate(['/']);
             }
-        }, function (err) { return _this.errorMessage = "Failed to save recipe"; });
+        }, function (err) { return _this.errorMessage = "Failed to save basic recipe"; });
     };
-    CreateRecipe = __decorate([
+    CreateBasicRecipe = __decorate([
         core_1.Component({
-            selector: 'create-recipe',
-            templateUrl: 'createRecipe.component.html',
+            selector: 'create-basic-recipe',
+            templateUrl: 'createBasicRecipe.component.html',
             styleUrls: []
         }),
         __metadata("design:paramtypes", [dataService_1.DataService /*, public router: Router*/])
-    ], CreateRecipe);
-    return CreateRecipe;
+    ], CreateBasicRecipe);
+    return CreateBasicRecipe;
 }());
-exports.CreateRecipe = CreateRecipe;
-//# sourceMappingURL=createRecipe.component.js.map
+exports.CreateBasicRecipe = CreateBasicRecipe;
+//# sourceMappingURL=createBasicRecipe.component.js.map

@@ -434,22 +434,13 @@ namespace Recipes.Data
         public void AddBasicRecipe(Recipe newRecipe)
         {
             // Convert new Skill to lookup of skill
-            {
-                var skill = newRecipe.Skill;
-                skill = _ctx.Skill.Find(skill.SkillId);
-            }
+            newRecipe.Skill = _ctx.Skill.Find(newRecipe.Skill.SkillId);
 
             // Convert new Category to lookup of category
-            {
-                var category = newRecipe.Category;
-                category = _ctx.Category.Find(category.CategoryId);
-            }
+            newRecipe.Category = _ctx.Category.Find(newRecipe.Category.CategoryId);
 
             // Convert new Course to lookup of course
-            {
-                var course = newRecipe.Course;
-                course = _ctx.Course.Find(course.CourseId);
-            }
+            newRecipe.Course = _ctx.Course.Find(newRecipe.Course.CourseId);
 
             AddEntity(newRecipe);
         }
